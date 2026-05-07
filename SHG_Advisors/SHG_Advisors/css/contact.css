@@ -1,0 +1,234 @@
+.connect-form-wrapper {
+  margin: auto;
+  max-width: 775px;
+  height: auto;
+}
+
+.connect-top {
+  margin: 0 auto;
+  text-align: center;
+  max-width: 685px;
+}
+
+.connect-top h2 {
+  color: #1c2e4a;
+}
+
+.connect-top p {
+  color: #777777;
+  font-size: 18px;
+  line-height: 27px;
+}
+
+.connect-cta {
+  margin: 20px;
+}
+
+.contact-section {
+  background-color: #fcfaf5;
+  text-align: center;
+}
+
+.contact-cards {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  gap: 40px;
+  padding-top: 38px;
+}
+
+.contact-card {
+  min-width: 480px;
+  padding: 40px;
+  border-radius: 10px;
+  border: 1px solid #c09a3a1f;
+  transition:
+    box-shadow 0.3s ease,
+    background-color 0.3s ease;
+}
+
+.contact-card:hover {
+  box-shadow: 40px 54px 114px 0px #c09a3a17;
+  background-color: #ffffff;
+}
+
+.contact-img {
+  margin: auto;
+  width: 90px;
+  height: 90px;
+  border-radius: 50%;
+  background-color: #f6f0e3;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.contact-card:hover .contact-img {
+  background: #c09a3a;
+}
+
+.contact-card:hover .contact-img img {
+    filter: brightness(0) invert(1);
+}
+
+.contact-card h6 {
+  color: #c09a3a;
+  font-size: 32px;
+  margin: 10px 0;
+}
+
+.connect-form-wrapper textarea.form-control {
+  height: auto;
+  min-height: 140px;
+}
+
+.contact-card p {
+  color: #777777;
+  font-size: 18px;
+}
+
+.career-section {
+  text-align: center;
+}
+
+.career h2 span {
+  color: #2a4570;
+}
+
+.career p {
+  margin: auto;
+  max-width: 740px;
+  color: #777777;
+  font-size: 18px;
+}
+
+.career-btn {
+  margin-top: 40px;
+}
+
+/* ====== MD — Tablets ====== */
+@media (max-width: 991px) {
+  .connect-form {
+    padding: 80px 20px;
+  }
+
+  .connect-top h2 {
+    font-size: 36px;
+    line-height: 46px;
+  }
+
+  .connect-top p {
+    font-size: 16px;
+  }
+
+  .contact-section {
+    padding: 80px 20px;
+  }
+
+  .contact-info h3 {
+    font-size: 40px;
+    line-height: 52px;
+  }
+
+  .contact-cards {
+    flex-wrap: wrap;
+    gap: 24px;
+  }
+
+  .contact-card {
+    min-width: 320px;
+    padding: 30px;
+  }
+
+  .contact-card h6 {
+    font-size: 24px;
+  }
+
+  .contact-card p {
+    font-size: 16px;
+  }
+
+  .career-section {
+    padding: 80px 40px;
+  }
+
+  .career p {
+    font-size: 16px;
+  }
+}
+
+/* ====== SM — Mobile ====== */
+@media (max-width: 576px) {
+  .connect-form {
+    padding: 50px 16px;
+  }
+
+  .connect-top h2 {
+    font-size: 28px;
+    line-height: 38px;
+  }
+
+  .connect-top p {
+    font-size: 15px;
+    line-height: 24px;
+  }
+
+  .connect-cta {
+    margin: 12px 0;
+  }
+
+  .contact-section {
+    padding: 60px 16px;
+  }
+
+  .contact-info h3 {
+    font-size: 30px;
+    line-height: 42px;
+  }
+
+  .contact-cards {
+    flex-direction: column;
+    align-items: center;
+    gap: 16px;
+  }
+
+  .contact-card {
+    min-width: unset;
+    width: 100%;
+    padding: 24px 20px;
+  }
+
+  .contact-card h6 {
+    font-size: 20px;
+  }
+
+  .contact-card p {
+    font-size: 15px;
+  }
+
+  .career-section {
+    padding: 60px 16px;
+  }
+
+  .career h2 {
+    font-size: 28px;
+    line-height: 38px;
+  }
+
+  .career p {
+    font-size: 15px;
+    max-width: 100%;
+  }
+
+  .career-btn {
+    margin-top: 28px;
+  }
+
+  .career-btn a,
+  .career-btn button {
+    width: 100%;
+    display: block;
+    text-align: center;
+  }
+}

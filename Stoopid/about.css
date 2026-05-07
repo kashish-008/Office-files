@@ -1,0 +1,201 @@
+/* ============================================
+   ABOUT PAGE — about.css
+   Imports on top of your existing style.css
+   All existing variables (--red, --white, etc.)
+   and header/footer/nav styles are reused.
+============================================ */
+
+/* ============================================
+   HERO SECTION
+============================================ */
+.about-hero {
+  width: 100%;
+  height: 340px;
+  background-image:
+    linear-gradient(rgba(0, 0, 0, 0.55), rgba(0, 0, 0, 0.55)),
+    url("assets/about-hero.jpg");
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.about-hero__content h1 {
+  font-family: "Nohemi-bold", var(--font-sans);
+  font-size: 52px;
+  color: var(--white);
+  text-align: center;
+  text-transform: uppercase;
+  line-height: 1.15;
+  letter-spacing: 0.04em;
+}
+
+.about-hero__content h1 span {
+  color: var(--red);
+}
+
+/* ============================================
+   BRAND STORY SECTION
+============================================ */
+.brand-story {
+  max-width: 1920px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 80px 20px 60px;
+  gap: 30px;
+}
+
+.brand-story h2 {
+  font-family: "Nohemi-bold", var(--font-sans);
+  font-size: 36px;
+  color: var(--red);
+  text-align: center;
+  letter-spacing: 0.04em;
+}
+
+.brand-story p {
+  font-family: "Gellix-regular", var(--font-sans);
+  font-size: 18px;
+  color: var(--white);
+  text-align: center;
+  max-width: 740px;
+  line-height: 1.75;
+}
+
+/* ============================================
+   BELIEF SECTION (image left + text right)
+============================================ */
+.belief-section {
+  max-width: 1160px;
+  margin: 20px auto 80px;
+  display: flex;
+  align-items: center;
+  gap: 80px;
+}
+
+.belief-section__image {
+  flex-shrink: 0;
+  width: 320px;
+  height: 340px;
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+.belief-section__image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.belief-section__text h2 {
+  font-family: "Nohemi-bold", var(--font-sans);
+  font-size: 32px;
+  color: var(--white);
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  line-height: 1.2;
+  margin-bottom: 20px;
+}
+
+.belief-section__text h2 span {
+  color: var(--red);
+}
+
+.belief-section__text p {
+  font-family: "Gellix-regular", var(--font-sans);
+  font-size: 17px;
+  color: var(--white);
+  line-height: 1.8;
+}
+
+/* ============================================
+   REVIEWS SECTION
+   (reused from style.css — only overrides here)
+============================================ */
+.reviews {
+  padding: 60px 20px 20px;
+}
+
+.reviews img[alt="5 star rating"] {
+  margin: 10px 0 20px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.reviews__join {
+  color: var(--red) !important;
+  font-family: "Gellix-medium", var(--font-sans) !important;
+  font-size: 18px !important;
+  margin-top: 10px;
+}
+
+/* ============================================
+   INGREDIENTS SECTION
+   (reused from style.css — label added below icon)
+============================================ */
+.ingredient {
+  padding: 60px 20px 80px;
+}
+
+.ingredient h2 {
+  color: var(--red);
+  font-family: "Nohemi-bold", var(--font-sans);
+  text-align: center;
+  font-size: 45px;
+  line-height: 55px;
+  letter-spacing: 0.04em;
+  margin-bottom: 16px;
+}
+
+.ingredient > p {
+  font-family: "Gellix-regular", var(--font-sans);
+  font-size: 22px;
+  text-align: center;
+  color: var(--white);
+  margin-bottom: 10px;
+}
+
+/* Icon grid with labels */
+.icons {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 20px;
+  margin-top: 50px;
+  margin-bottom: 60px;
+}
+
+.icon-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+  width: 140px;
+}
+
+.icon-item img {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+}
+
+.icon-item span {
+  font-family: "Gellix-medium", var(--font-sans);
+  font-size: 13px;
+  color: var(--white);
+  text-align: center;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+}
+
+/* ============================================
+   MEDIA QUERIES
+============================================ */
+@media (max-width: 1920px) {
+  .about-hero {
+    width: 100%;
+  }
+}

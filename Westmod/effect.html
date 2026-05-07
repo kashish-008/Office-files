@@ -1,0 +1,604 @@
+<!DOCTYPE html>
+<html lang="en" style="margin: 0; padding: 0; width: 100%; height: 100%; overflow: hidden;">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Grid Blob Animation | The Yard Reinvented</title>
+    <style>
+        :root {
+            --bg: #060a0f;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            width: 100vw;
+            height: 100vh;
+            height: 100dvh;
+            overflow: hidden;
+            background: var(--bg);
+            font-family: system-ui, -apple-system, sans-serif;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: default;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        canvas {
+            display: block;
+            position: fixed;
+            inset: 0;
+            width: 100%;
+            height: 100%;
+            image-rendering: auto;
+        }
+
+        /* Subtle vignette overlay */
+        .vignette {
+            position: fixed;
+            inset: 0;
+            pointer-events: none;
+            z-index: 2;
+            background:
+                radial-gradient(ellipse at center, transparent 55%, rgba(6, 10, 15, 0.55) 85%, rgba(6, 10, 15, 0.85) 100%);
+        }
+
+        /* Info badge */
+        .info-badge {
+            position: fixed;
+            bottom: 28px;
+            left: 50%;
+            transform: translateX(-50%);
+            z-index: 10;
+            pointer-events: none;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            padding: 8px 18px;
+            border-radius: 40px;
+            background: rgba(255, 255, 255, 0.03);
+            border: 1px solid rgba(255, 255, 255, 0.08);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+        }
+        .info-badge .dot-indicator {
+            width: 7px;
+            height: 7px;
+            border-radius: 50%;
+            background: #4d8cec;
+            box-shadow: 0 0 10px #4d8cec, 0 0 24px rgba(77, 140, 236, 0.5);
+            animation: pulse-dot 2.4s ease-in-out infinite;
+        }
+        @keyframes pulse-dot {
+            0%,
+            100% {
+                box-shadow: 0 0 8px #4d8cec, 0 0 20px rgba(77, 140, 236, 0.4);
+            }
+            50% {
+                box-shadow: 0 0 18px #6aafff, 0 0 38px rgba(77, 160, 255, 0.7);
+            }
+        }
+        .info-badge span {
+            font-size: 12px;
+            letter-spacing: 0.04em;
+            color: rgba(255, 255, 255, 0.55);
+            white-space: nowrap;
+        }
+    </style>
+</head>
+<body>
+    <canvas id="gridCanvas"></canvas>
+    <div class="vignette"></div>
+    <div class="info-badge">
+        <div class="dot-indicator"></div>
+        <span>random walk · grid topology</span>
+    </div>
+
+    <script>
+        (function() {
+            const canvas = document.getElementById('gridCanvas');
+            const ctx = canvas.getContext('2d');
+
+            // ──────────────────────────────────────
+            // Configuration
+            // ──────────────────────────────────────
+            const CONFIG = {
+                gridCols: 8, // number of square cells horizontally
+                gridRows: 5, // number of square cells vertically
+                padding: 70, // minimum padding around grid (px)
+                gapSize: 18, // total gap at each intersection (px) — lines stop this far apart
+                dotRadius: 3.2, // radius of corner dots
+                blobSpeed: 0.55, // edges per second (1 edge = 1 cell width)
+                trailLength: 28, // number of trail samples
+                trailSampleInterval: 3, // sample every N frames
+                // Colors
+                lineColor: 'rgba(180,195,215,0.13)',
+                dotColor: 'rgba(210,220,240,0.7)',
+                dotGlowColor: 'rgba(180,200,230,0.25)',
+                blobCoreColor: '#b8d4ff',
+                blobMidColor: '#5b9cf5',
+                blobOuterColor: '#2d5390',
+            };
+
+            // ──────────────────────────────────────
+            // State
+            // ──────────────────────────────────────
+            let grid = null; // { nodes, edges, cellSize, offsetX, offsetY, cols, rows }
+            let blob = null; // { currentNodeIdx, nextNodeIdx, progress, trail: [{x,y,age}] }
+            let frameCount = 0;
+            let lastTime = performance.now();
+
+            // ──────────────────────────────────────
+            // Grid construction
+            // ──────────────────────────────────────
+            function buildGrid(canvasW, canvasH) {
+                const { gridCols, gridRows, padding, gapSize } = CONFIG;
+
+                // Calculate cell size to fit within padded canvas
+                const availW = canvasW - padding * 2;
+                const availH = canvasH - padding * 2;
+                const cellSizeFromW = availW / gridCols;
+                const cellSizeFromH = availH / gridRows;
+                const cellSize = Math.min(cellSizeFromW, cellSizeFromH);
+
+                // Actual grid dimensions
+                const gridW = cellSize * gridCols;
+                const gridH = cellSize * gridRows;
+                const offsetX = (canvasW - gridW) / 2;
+                const offsetY = (canvasH - gridH) / 2;
+
+                const nodeCols = gridCols + 1;
+                const nodeRows = gridRows + 1;
+
+                // Build nodes
+                const nodes = [];
+                for (let r = 0; r < nodeRows; r++) {
+                    for (let c = 0; c < nodeCols; c++) {
+                        nodes.push({
+                            col: c,
+                            row: r,
+                            x: offsetX + c * cellSize,
+                            y: offsetY + r * cellSize,
+                            neighbors: [], // will be populated
+                        });
+                    }
+                }
+
+                // Helper to get node index
+                const nodeIndex = (c, r) => r * nodeCols + c;
+
+                // Build edges and neighbor relationships
+                const edges = [];
+                const gapHalf = gapSize / 2;
+
+                // Horizontal edges
+                for (let r = 0; r < nodeRows; r++) {
+                    for (let c = 0; c < gridCols; c++) {
+                        const idxA = nodeIndex(c, r);
+                        const idxB = nodeIndex(c + 1, r);
+                        const nodeA = nodes[idxA];
+                        const nodeB = nodes[idxB];
+                        edges.push({
+                            from: idxA,
+                            to: idxB,
+                            fromX: nodeA.x + gapHalf,
+                            fromY: nodeA.y,
+                            toX: nodeB.x - gapHalf,
+                            toY: nodeB.y,
+                            isHorizontal: true,
+                        });
+                        nodeA.neighbors.push(idxB);
+                        nodeB.neighbors.push(idxA);
+                    }
+                }
+
+                // Vertical edges
+                for (let r = 0; r < gridRows; r++) {
+                    for (let c = 0; c < nodeCols; c++) {
+                        const idxA = nodeIndex(c, r);
+                        const idxB = nodeIndex(c, r + 1);
+                        const nodeA = nodes[idxA];
+                        const nodeB = nodes[idxB];
+                        edges.push({
+                            from: idxA,
+                            to: idxB,
+                            fromX: nodeA.x,
+                            fromY: nodeA.y + gapHalf,
+                            toX: nodeB.x,
+                            toY: nodeB.y - gapHalf,
+                            isHorizontal: false,
+                        });
+                        nodeA.neighbors.push(idxB);
+                        nodeB.neighbors.push(idxA);
+                    }
+                }
+
+                return {
+                    nodes,
+                    edges,
+                    cellSize,
+                    offsetX,
+                    offsetY,
+                    nodeCols,
+                    nodeRows,
+                    gapHalf,
+                };
+            }
+
+            // ──────────────────────────────────────
+            // Initialize blob
+            // ──────────────────────────────────────
+            function initBlob(grid) {
+                // Start at a random interior node for more interesting initial movement
+                const interiorNodes = grid.nodes.filter(
+                    n => n.col > 0 && n.col < grid.nodeCols - 1 && n.row > 0 && n.row < grid.nodeRows - 1
+                );
+                const startNode = interiorNodes[Math.floor(Math.random() * interiorNodes.length)];
+                const startIdx = grid.nodes.indexOf(startNode);
+
+                // Pick random neighbor
+                const neighbors = startNode.neighbors;
+                const nextIdx = neighbors[Math.floor(Math.random() * neighbors.length)];
+
+                return {
+                    currentNodeIdx: startIdx,
+                    nextNodeIdx: nextIdx,
+                    progress: Math.random() * 0.5, // start partially along the edge
+                    trail: [],
+                };
+            }
+
+            // ──────────────────────────────────────
+            // Get blob world position
+            // ──────────────────────────────────────
+            function getBlobPosition(blob, grid) {
+                const fromNode = grid.nodes[blob.currentNodeIdx];
+                const toNode = grid.nodes[blob.nextNodeIdx];
+                const t = Math.max(0, Math.min(1, blob.progress));
+                return {
+                    x: fromNode.x + (toNode.x - fromNode.x) * t,
+                    y: fromNode.y + (toNode.y - fromNode.y) * t,
+                };
+            }
+
+            // ──────────────────────────────────────
+            // Advance blob along its path
+            // ──────────────────────────────────────
+            function advanceBlob(blob, grid, dt) {
+                const speed = CONFIG.blobSpeed; // edges per second
+                blob.progress += speed * dt;
+
+                while (blob.progress >= 1.0) {
+                    // Arrived at nextNode
+                    blob.progress -= 1.0;
+                    blob.currentNodeIdx = blob.nextNodeIdx;
+
+                    // Pick new random neighbor
+                    const currentNode = grid.nodes[blob.currentNodeIdx];
+                    const neighbors = currentNode.neighbors;
+
+                    if (neighbors.length === 0) {
+                        // Shouldn't happen, but safety
+                        blob.nextNodeIdx = blob.currentNodeIdx;
+                        blob.progress = 0;
+                        break;
+                    }
+
+                    // Random choice from all neighbors (including reverse)
+                    const pick = neighbors[Math.floor(Math.random() * neighbors.length)];
+                    blob.nextNodeIdx = pick;
+                }
+
+                // Clamp progress
+                blob.progress = Math.max(0, Math.min(1, blob.progress));
+            }
+
+            // ──────────────────────────────────────
+            // Update trail
+            // ──────────────────────────────────────
+            function updateTrail(blob, grid, frameCount) {
+                if (frameCount % CONFIG.trailSampleInterval === 0) {
+                    const pos = getBlobPosition(blob, grid);
+                    blob.trail.push({ x: pos.x, y: pos.y, age: 0 });
+                    // Limit trail length
+                    while (blob.trail.length > CONFIG.trailLength) {
+                        blob.trail.shift();
+                    }
+                }
+                // Age all trail points
+                for (const tp of blob.trail) {
+                    tp.age += 1;
+                }
+            }
+
+            // ──────────────────────────────────────
+            // Rendering
+            // ──────────────────────────────────────
+            function drawBackground(ctx, w, h) {
+                // Deep dark background with subtle radial gradient
+                const grad = ctx.createRadialGradient(w * 0.5, h * 0.4, h * 0.08, w * 0.5, h * 0.5, Math.max(w, h) * 0.9);
+                grad.addColorStop(0, '#0d1520');
+                grad.addColorStop(0.5, '#080d14');
+                grad.addColorStop(1, '#04080c');
+                ctx.fillStyle = grad;
+                ctx.fillRect(0, 0, w, h);
+            }
+
+            function drawGridLines(ctx, grid) {
+                const { edges, gapHalf } = grid;
+
+                ctx.strokeStyle = CONFIG.lineColor;
+                ctx.lineWidth = 1;
+                ctx.lineCap = 'round';
+                ctx.beginPath();
+
+                for (const edge of edges) {
+                    ctx.moveTo(edge.fromX, edge.fromY);
+                    ctx.lineTo(edge.toX, edge.toY);
+                }
+                ctx.stroke();
+            }
+
+            function drawDots(ctx, grid) {
+                const { nodes, gapHalf } = grid;
+                const dotR = CONFIG.dotRadius;
+
+                // Subtle glow under dots
+                ctx.fillStyle = CONFIG.dotGlowColor;
+                for (const node of nodes) {
+                    ctx.beginPath();
+                    ctx.arc(node.x, node.y, dotR + 2.5, 0, Math.PI * 2);
+                    ctx.fill();
+                }
+
+                // Crisp dot core
+                ctx.fillStyle = CONFIG.dotColor;
+                for (const node of nodes) {
+                    ctx.beginPath();
+                    ctx.arc(node.x, node.y, dotR, 0, Math.PI * 2);
+                    ctx.fill();
+                }
+            }
+
+            function drawBlobGlow(ctx, blob, grid) {
+                const pos = getBlobPosition(blob, grid);
+                const { blobCoreColor, blobMidColor, blobOuterColor } = CONFIG;
+
+                // ── Trail (fading behind) ──
+                const trailLen = blob.trail.length;
+                for (let i = 0; i < trailLen; i++) {
+                    const tp = blob.trail[i];
+                    const ageRatio = tp.age / CONFIG.trailLength;
+                    // Fade out with age
+                    const alpha = Math.max(0, (1 - ageRatio) * 0.45);
+                    const size = 3 + (1 - ageRatio) * 10;
+                    if (alpha < 0.005) continue;
+
+                    // Outer glow
+                    const tg = ctx.createRadialGradient(tp.x, tp.y, 0, tp.x, tp.y, size * 2.5);
+                    tg.addColorStop(0, `rgba(90,155,240,${alpha * 0.8})`);
+                    tg.addColorStop(0.35, `rgba(60,120,210,${alpha * 0.45})`);
+                    tg.addColorStop(0.7, `rgba(30,70,150,${alpha * 0.12})`);
+                    tg.addColorStop(1, 'rgba(10,30,60,0)');
+                    ctx.fillStyle = tg;
+                    ctx.beginPath();
+                    ctx.arc(tp.x, tp.y, size * 2.5, 0, Math.PI * 2);
+                    ctx.fill();
+
+                    // Core dot
+                    ctx.fillStyle = `rgba(180,210,255,${alpha})`;
+                    ctx.beginPath();
+                    ctx.arc(tp.x, tp.y, size * 0.35, 0, Math.PI * 2);
+                    ctx.fill();
+                }
+
+                // ── Main blob: layered radial gradients for rich glow ──
+
+                // Layer 1: Broad outer glow (very soft, large)
+                const outerGlow = ctx.createRadialGradient(pos.x, pos.y, 0, pos.x, pos.y, 55);
+                outerGlow.addColorStop(0, 'rgba(45,83,144,0.35)');
+                outerGlow.addColorStop(0.25, 'rgba(40,75,135,0.22)');
+                outerGlow.addColorStop(0.5, 'rgba(30,55,105,0.08)');
+                outerGlow.addColorStop(0.75, 'rgba(15,30,60,0.015)');
+                outerGlow.addColorStop(1, 'rgba(0,0,0,0)');
+                ctx.fillStyle = outerGlow;
+                ctx.beginPath();
+                ctx.arc(pos.x, pos.y, 55, 0, Math.PI * 2);
+                ctx.fill();
+
+                // Layer 2: Mid glow
+                const midGlow = ctx.createRadialGradient(pos.x, pos.y, 0, pos.x, pos.y, 26);
+                midGlow.addColorStop(0, 'rgba(80,150,240,0.55)');
+                midGlow.addColorStop(0.3, 'rgba(60,125,220,0.38)');
+                midGlow.addColorStop(0.6, 'rgba(35,80,170,0.12)');
+                midGlow.addColorStop(1, 'rgba(10,30,70,0)');
+                ctx.fillStyle = midGlow;
+                ctx.beginPath();
+                ctx.arc(pos.x, pos.y, 26, 0, Math.PI * 2);
+                ctx.fill();
+
+                // Layer 3: Tight bright glow
+                const innerGlow = ctx.createRadialGradient(pos.x, pos.y, 0, pos.x, pos.y, 11);
+                innerGlow.addColorStop(0, 'rgba(200,225,255,0.85)');
+                innerGlow.addColorStop(0.3, 'rgba(140,190,245,0.6)');
+                innerGlow.addColorStop(0.7, 'rgba(60,130,220,0.18)');
+                innerGlow.addColorStop(1, 'rgba(20,60,130,0)');
+                ctx.fillStyle = innerGlow;
+                ctx.beginPath();
+                ctx.arc(pos.x, pos.y, 11, 0, Math.PI * 2);
+                ctx.fill();
+
+                // Layer 4: Bright core
+                const coreGlow = ctx.createRadialGradient(pos.x, pos.y, 0, pos.x, pos.y, 4.5);
+                coreGlow.addColorStop(0, 'rgba(255,255,255,0.95)');
+                coreGlow.addColorStop(0.35, 'rgba(220,235,255,0.8)');
+                coreGlow.addColorStop(0.7, 'rgba(150,200,245,0.3)');
+                coreGlow.addColorStop(1, 'rgba(60,130,220,0)');
+                ctx.fillStyle = coreGlow;
+                ctx.beginPath();
+                ctx.arc(pos.x, pos.y, 4.5, 0, Math.PI * 2);
+                ctx.fill();
+
+                // ── Extra specular highlight ──
+                ctx.fillStyle = 'rgba(255,255,255,0.7)';
+                ctx.beginPath();
+                ctx.arc(pos.x - 1.2, pos.y - 1.5, 1.6, 0, Math.PI * 2);
+                ctx.fill();
+            }
+
+            function drawBlobGlowAtNode(ctx, node, grid) {
+                // Draw a subtle extra glow when blob is exactly at a node
+                // (This is called separately for nodes the blob is currently at/very near)
+                const { blobOuterColor } = CONFIG;
+                const extraGlow = ctx.createRadialGradient(node.x, node.y, 0, node.x, node.y, 18);
+                extraGlow.addColorStop(0, 'rgba(70,140,230,0.4)');
+                extraGlow.addColorStop(0.5, 'rgba(40,100,190,0.15)');
+                extraGlow.addColorStop(1, 'rgba(10,30,70,0)');
+                ctx.fillStyle = extraGlow;
+                ctx.beginPath();
+                ctx.arc(node.x, node.y, 18, 0, Math.PI * 2);
+                ctx.fill();
+            }
+
+            // ──────────────────────────────────────
+            // Main render
+            // ──────────────────────────────────────
+            function render(ctx, canvas, grid, blob) {
+                const w = canvas.width;
+                const h = canvas.height;
+
+                ctx.clearRect(0, 0, w, h);
+                drawBackground(ctx, w, h);
+                drawGridLines(ctx, grid);
+                drawDots(ctx, grid);
+
+                // Check if blob is near a node (for extra glow)
+                const pos = getBlobPosition(blob, grid);
+                const nearThreshold = grid.cellSize * 0.12;
+                for (const node of grid.nodes) {
+                    const dx = pos.x - node.x;
+                    const dy = pos.y - node.y;
+                    const dist = Math.sqrt(dx * dx + dy * dy);
+                    if (dist < nearThreshold) {
+                        drawBlobGlowAtNode(ctx, node, grid);
+                    }
+                }
+
+                drawBlobGlow(ctx, blob, grid);
+            }
+
+            // ──────────────────────────────────────
+            // Resize handler
+            // ──────────────────────────────────────
+            function resize() {
+                const dpr = Math.min(window.devicePixelRatio || 1, 2); // cap at 2x for performance
+                const w = window.innerWidth;
+                const h = window.innerHeight;
+
+                canvas.width = w * dpr;
+                canvas.height = h * dpr;
+                canvas.style.width = w + 'px';
+                canvas.style.height = h + 'px';
+                ctx.setTransform(1, 0, 0, 1, 0, 0);
+                ctx.scale(dpr, dpr);
+
+                // Rebuild grid
+                grid = buildGrid(w, h);
+
+                // Reinitialize blob if needed
+                if (!blob || blob.currentNodeIdx >= grid.nodes.length) {
+                    blob = initBlob(grid);
+                } else {
+                    // Try to keep blob state valid; if indices are out of bounds, reinit
+                    if (
+                        blob.currentNodeIdx >= grid.nodes.length ||
+                        blob.nextNodeIdx >= grid.nodes.length
+                    ) {
+                        blob = initBlob(grid);
+                    } else {
+                        // Ensure nextNodeIdx is still a valid neighbor
+                        const currentNode = grid.nodes[blob.currentNodeIdx];
+                        if (!currentNode.neighbors.includes(blob.nextNodeIdx)) {
+                            const neighbors = currentNode.neighbors;
+                            if (neighbors.length > 0) {
+                                blob.nextNodeIdx = neighbors[Math.floor(Math.random() * neighbors.length)];
+                            } else {
+                                blob = initBlob(grid);
+                            }
+                        }
+                        blob.progress = Math.max(0, Math.min(1, blob.progress));
+                    }
+                }
+            }
+
+            // ──────────────────────────────────────
+            // Animation loop
+            // ──────────────────────────────────────
+            function animate(timestamp) {
+                let dt = (timestamp - lastTime) / 1000;
+                lastTime = timestamp;
+
+                // Clamp dt to avoid jumps after tab switch
+                if (dt > 0.25) dt = 0.25;
+                if (dt <= 0) dt = 0.016;
+
+                frameCount++;
+
+                if (grid && blob) {
+                    advanceBlob(blob, grid, dt);
+                    updateTrail(blob, grid, frameCount);
+                    render(ctx, canvas, grid, blob);
+                }
+
+                requestAnimationFrame(animate);
+            }
+
+            // ──────────────────────────────────────
+            // Initialization
+            // ──────────────────────────────────────
+            function init() {
+                resize();
+                blob = initBlob(grid);
+                // Pre-populate trail
+                const pos = getBlobPosition(blob, grid);
+                for (let i = 0; i < CONFIG.trailLength; i++) {
+                    blob.trail.push({ x: pos.x, y: pos.y, age: CONFIG.trailLength - i });
+                }
+                lastTime = performance.now();
+                requestAnimationFrame(animate);
+            }
+
+            // ──────────────────────────────────────
+            // Event listeners
+            // ──────────────────────────────────────
+            let resizeTimeout;
+            window.addEventListener('resize', () => {
+                clearTimeout(resizeTimeout);
+                resizeTimeout = setTimeout(() => {
+                    resize();
+                }, 180);
+            });
+
+            // Handle orientation change on mobile
+            window.addEventListener('orientationchange', () => {
+                setTimeout(resize, 300);
+            });
+
+            // Start
+            init();
+
+            console.log('%c🔷 Grid Blob Animation Ready %c| %cRandom walk on square topology',
+                'color:#7eb8ff;font-weight:bold;',
+                '',
+                'color:#aaa;');
+            console.log('%c  Lines detached · Dots at vertices · Blue glow blob',
+                'color:#888;font-style:italic;');
+        })();
+    </script>
+</body>
+</html>

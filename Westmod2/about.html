@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/resp.css">
+</head>
+
+<style>
+
+    /* Our Expertise */
+    .expertise {
+        padding: 120px 0;
+    }
+
+    .expertise-heading {
+        font-size: 18px;
+        text-transform: uppercase;
+        color: var(--color-muted);
+        margin-bottom: 18px;
+        text-align: center;
+    }
+
+    .expertise h2 {
+        font-size: 57px;
+        font-weight: 500;
+        /* line-height: 67px; */
+        color: var(--color-text);
+        margin: auto;
+        text-align: center;
+        max-width: 740px;
+        margin-bottom: 28px;
+    }
+
+    .expertise p {
+        font-size: 22px;
+        font-family: var(--font-sf);
+        font-weight: 400;
+        text-align: center;
+        color: var(--color-muted);
+        max-width: 790px;
+        margin: auto;
+        margin-bottom: 25px;
+    }
+
+    /* ========== @media (max-width: 1499px) ========== */
+    @media (max-width: 1499px) {
+        /* Expertise section */
+        .expertise h2 {
+            font-size: 52px;
+        }
+        .expertise p {
+            font-size: 20px;
+        }
+    }
+
+    /* ========== @media (max-width: 1200px) ========== */
+    @media (max-width: 1200px) {
+        /* Expertise section */
+        .expertise {
+            padding: 100px 0;
+        }
+        .expertise-heading {
+            font-size: 16px;
+        }
+        .expertise h2 {
+            font-size: 48px;
+        }
+        .expertise p {
+            font-size: 18px;
+        }
+    }
+
+    /* ========== @media (max-width: 991px) ========== */
+    @media (max-width: 991px) {
+        /* Expertise section */
+        .expertise {
+            padding: 80px 20px;
+        }
+        .expertise-heading {
+            font-size: 14px;
+        }
+        .expertise h2 {
+            font-size: 40px;
+            max-width: 700px;
+        }
+        .expertise p {
+            font-size: 16px;
+            max-width: 700px;
+        }
+    }
+
+    /* ========== @media (max-width: 768px) ========== */
+    @media (max-width: 768px) {
+        /* Expertise section */
+        .expertise {
+            padding: 60px 16px;
+        }
+        .expertise-heading {
+            font-size: 13px;
+            margin-bottom: 14px;
+        }
+        .expertise h2 {
+            font-size: 28px;
+            max-width: 90%;
+        }
+        .expertise p {
+            font-size: 14px;
+            max-width: 90%;
+        }
+    }
+</style>
+
+<body>
+
+    <!-- header -->
+
+    <!-- main -->
+    <div class="main">
+
+        <!-- hero-section -->
+        <section class="hero" id="heroSection">
+            <canvas id="dashedGridCanvas" class="hero-canvas"></canvas>
+            <div class="hero-content about-hero-content">
+                <p>Westmod Studio</p>
+                <h1>Designed Around Your Vision, Built with Lasting Expertise</h1>
+                <h6>Designing and Building Pools That Go Beyond Expectations by Blending Clean Aesthetics, Smart
+                    Engineering, and a Deep Understanding of Modern Living</h6>
+            </div>
+        </section>
+
+        <!-- our story -->
+        <section class="story" id="story">
+            <div class="container">
+                <h2 class="story-heading">Our story, our values</h2>
+
+                <div class="story-grid">
+                    <!-- Left Column -->
+                    <div class="story-col">
+                        <p>Every backyard holds the potential to become something extraordinary. Yet many pool projects
+                            fall short—limited designs, poor planning, and outdated construction methods often lead to
+                            compromised results. We saw an opportunity to change that.</p>
+                        <p>Our approach brings together thoughtful design, modern construction techniques, and a
+                            streamlined process to deliver pools that are both visually stunning and built to last. From
+                            selecting the right size to customizing every detail, we make the entire experience simple,
+                            transparent, and efficient.</p>
+                    </div>
+
+                    <!-- Right Column -->
+                    <div class="story-col">
+                        <p>We're redefining how pools are designed and built.</p>
+                        <p>We focus on creating tailored pool solutions that fit your space, your lifestyle, and your
+                            vision—without unnecessary complexity. By combining expertise with a customer-first
+                            approach, we ensure every project is delivered with precision and care.</p>
+                        <p>With a commitment to quality materials, clean aesthetics, and reliable execution, we are
+                            setting a new standard for modern pool construction—helping homeowners transform their
+                            outdoor spaces with confidence.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- EXPERTISE SECTION -->
+        <section class="expertise" id="expertise">
+            <div class="container">
+                <p class="expertise-heading">Our Expertise</p>
+                <h2>Driven by craftsmanship in design & precision in construction</h2>
+                <p>We bring together modern design thinking and proven construction expertise to deliver pools that are
+                    built to last. Our team focuses on quality, efficiency, and attention to detail at every stage—from
+                    planning to final finish.
+                </p>
+                <p>With a strong foundation in pool building and a commitment to innovation, we create outdoor spaces
+                    that are both visually striking and structurally sound.</p>
+            </div>
+        </section>
+
+        <!-- Footer Section  -->
+
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
+        <script src="js/grid.js"></script>
+        <script src="js/script.js"></script>
+    </div>
+</body>
+
+</html>

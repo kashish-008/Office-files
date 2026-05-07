@@ -1,0 +1,242 @@
+@import url("https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap");
+
+.apply {
+  padding: 130px 10px;
+  margin: auto;
+}
+
+.form-wrapper {
+  max-width: 1080px;
+  margin: 0 auto;
+  box-shadow: 40px 54px 114px 0px #c09a3a17;
+  border-radius: 30px;
+  padding: 77px 122px;
+  background-color: white;
+}
+
+.form-top {
+  text-align: center;
+  max-width: 638px;
+  margin: 0 auto;
+}
+
+.form-top h2 {
+  color: #000;
+}
+
+.form-top p {
+  color: #777777;
+  font-size: 18px;
+  line-height: 27px;
+  padding-bottom: 33px;
+}
+
+.form-middle {
+  margin-top: 48px;
+}
+
+.form-middle h3 {
+  font-size: 24px;
+  font-weight: 600;
+  color: #2c2c2c;
+}
+
+.form-middle small {
+  font-size: 15px;
+  color: #777777;
+  margin-top: 4px;
+  display: block;
+}
+
+.file-text {
+  font-weight: 400;
+  color: #000;
+  font-size: 18px;
+}
+
+.file-text p {
+  color: #777;
+  font-size: 15px;
+}
+
+.certificates {
+  margin-top: 10px;
+  color: #777;
+}
+
+.file-selected {
+  border-color: #28a745;
+  background: #e7f1ff;
+}
+
+.file-selected i {
+  color: #28a745;
+}
+
+#file-upload {
+  display: none;
+}
+
+.form-wrapper label {
+  margin-top: 18px;
+}
+
+.form-label {
+  font-size: 15px;
+  font-weight: 400;
+  color: #000000;
+  margin-bottom: 7px;
+  display: block;
+}
+
+.form-control {
+  border: 1px solid #c09a3a1f;
+  border-radius: 5px;
+  height: 60px;
+  padding: 10px 14px;
+  font-size: 15px;
+  color: #000000;
+  background-color: #fff;
+}
+
+.form-control:focus {
+  border-color: #c09a3a;
+  box-shadow: 0 0 0 3px rgba(192, 154, 58, 0);
+  outline: none;
+}
+
+.form-wrapper textarea.form-control {
+  height: auto;
+  min-height: 140px;
+}
+
+.form-wrapper input[type="date"]::-webkit-calendar-picker-indicator {
+  opacity: 0.5;
+  cursor: pointer;
+}
+
+.custom-file-upload {
+  cursor: pointer;
+  background: #c09a3a0d;
+  transition: all 0.3s ease;
+  padding: 40px;
+  border: 2px dashed #c09a3a4d;
+  border-radius: 15px;
+  text-align: center;
+  font-size: 1.2rem;
+  margin-top: 0;
+}
+
+.custom-file-upload:hover {
+  background: #bb963a1c;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.custom-file-upload i {
+  font-size: 40px;
+  color: #0d6efd;
+  margin-bottom: 10px;
+  transition: transform 0.3s ease;
+}
+
+.custom-file-upload:hover i {
+  transform: scale(1.1);
+}
+
+/* ====== MD — Tablets ====== */
+@media (max-width: 991px) {
+  .apply {
+    padding: 80px 10px;
+  }
+
+  .form-wrapper {
+    padding: 60px 60px;
+  }
+
+  .form-top h2 {
+    font-size: 36px;
+  }
+
+  .form-top p {
+    font-size: 16px;
+  }
+
+  .form-middle h3 {
+    font-size: 20px;
+  }
+}
+
+/* ====== SM — Mobile ====== */
+@media (max-width: 576px) {
+  .apply {
+    padding: 50px 10px;
+  }
+
+  .form-wrapper {
+    padding: 40px 20px;
+    border-radius: 16px;
+  }
+
+  .form-top h2 {
+    font-size: 28px;
+    line-height: 38px;
+  }
+
+  .form-top p {
+    font-size: 15px;
+    line-height: 24px;
+    padding-bottom: 20px;
+  }
+
+  .form-middle {
+    margin-top: 30px;
+  }
+
+  .form-middle h3 {
+    font-size: 18px;
+    margin-bottom: 16px;
+  }
+
+  .form-control {
+    height: 52px;
+    font-size: 14px;
+  }
+
+  .form-wrapper textarea.form-control {
+    height: auto;
+  }
+
+  .form-label {
+    font-size: 14px;
+  }
+
+  .form-wrapper label {
+    margin-top: 10px;
+  }
+
+  .custom-file-upload {
+    padding: 24px 16px;
+  }
+
+  .custom-file-upload i {
+    font-size: 30px;
+  }
+
+  .file-text {
+    font-size: 15px;
+  }
+
+  .file-text p {
+    font-size: 13px;
+  }
+
+  .certificates p {
+    font-size: 13px;
+  }
+
+  button.btn {
+    width: 100%;
+    padding: 16px;
+    font-size: 15px;
+  }
+}

@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Grid Hero</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    }
+
+    /* ── Hero Section ── */
+    .hero {
+      position: relative;
+      width: 100%;
+      height: 100vh;
+      background: #ffffff;
+      overflow: hidden;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    /* ── Canvas sits behind everything ── */
+    #gridCanvas {
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+    }
+
+    /* ── Hero content sits on top ── */
+    .hero-content {
+      position: relative;
+      z-index: 2;
+      text-align: center;
+    }
+
+    .hero-label {
+      font-size: 11px;
+      letter-spacing: 0.15em;
+      color: #999999;
+      text-transform: uppercase;
+      margin-bottom: 16px;
+    }
+
+    .hero-title {
+      font-size: 52px;
+      font-weight: 600;
+      color: #111111;
+      line-height: 1.15;
+      max-width: 600px;
+    }
+
+    .hero-btn {
+      display: inline-block;
+      margin-top: 32px;
+      padding: 14px 32px;
+      background: #111111;
+      color: #ffffff;
+      font-size: 14px;
+      font-weight: 500;
+      letter-spacing: 0.04em;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      text-decoration: none;
+      transition: background 0.2s;
+    }
+
+    .hero-btn:hover {
+      background: #333333;
+    }
+  </style>
+</head>
+<body>
+
+  <section class="hero">
+    <canvas id="gridCanvas"></canvas>
+
+    <div class="hero-content">
+      <p class="hero-label">Request a quote</p>
+      <h1 class="hero-title">Get a Tailored Quote for Your Pool Design</h1>
+      <a href="#" class="hero-btn">Get a Quote</a>
+    </div>
+  </section>
+
+  <script>
+    const canvas = document.getElementById('gridCanvas');
+    const ctx = canvas.getContext('2d');
+
+    // ── Config ─────────────────────────────────
+    const CELL        = 60;    // grid cell size in px
+    const DASH        = [5, 6]; // [dash length, gap length]
+    const SPEED       = 0.5;   // animation speed (higher = faster)
+    const FADE_RADIUS = 0.52;  // radial fade spread (lower = fades sooner)
+    const LINE_COLOR  = '170,170,170'; // RGB of grid line color
+    // ───────────────────────────────────────────
+
+    let vOffset = 0; // controls vertical dash movement
+    let hOffset = 0; // controls horizontal dash movement
+    let W, H;
+
+    function resize() {
+      W = canvas.width  = canvas.offsetWidth;
+      H = canvas.height = canvas.offsetHeight;
+    }
+
+    /*
+     * radialAlpha()
+     * Returns opacity (0 to 1) based on distance from center.
+     * Center → alpha 1 (fully visible)
+     * Corners → alpha 0 (fully invisible)
+     */
+    function radialAlpha(x, y) {
+      const dx   = (x - W / 2) / (W * FADE_RADIUS);
+      const dy   = (y - H / 2) / (H * FADE_RADIUS);
+      const dist = Math.sqrt(dx * dx + dy * dy);
+      return Math.max(0, 1 - dist);
+    }
+
+    function draw() {
+      ctx.clearRect(0, 0, W, H);
+      ctx.setLineDash(DASH);
+      ctx.lineWidth = 1;
+
+      // fixed vertical line X positions
+      const vLines = [];
+      for (let x = CELL; x < W; x += CELL) vLines.push(x);
+
+      // fixed horizontal line Y positions
+      const hLines = [];
+      for (let y = CELL; y < H; y += CELL) hLines.push(y);
+
+      /*
+       * Vertical lines — lines are FIXED at their X positions
+       * lineDashOffset increases → dashes appear to move UP
+       */
+      for (const x of vLines) {
+        const alpha = radialAlpha(x, H / 2);
+        if (alpha <= 0.01) continue;
+
+        ctx.strokeStyle  = `rgba(${LINE_COLOR}, ${alpha})`;
+        ctx.lineDashOffset = vOffset;
+
+        ctx.beginPath();
+        ctx.moveTo(x, 0);
+        ctx.lineTo(x, H);
+        ctx.stroke();
+      }
+
+      /*
+       * Horizontal lines — lines are FIXED at their Y positions
+       * negative lineDashOffset → dashes appear to move RIGHT
+       */
+      for (const y of hLines) {
+        const alpha = radialAlpha(W / 2, y);
+        if (alpha <= 0.01) continue;
+
+        ctx.strokeStyle    = `rgba(${LINE_COLOR}, ${alpha})`;
+        ctx.lineDashOffset = -hOffset;
+
+        ctx.beginPath();
+        ctx.moveTo(0, y);
+        ctx.lineTo(W, y);
+        ctx.stroke();
+      }
+
+      // increment offsets each frame to animate the dashes
+      vOffset += SPEED;
+      hOffset += SPEED;
+
+      requestAnimationFrame(draw);
+    }
+
+    // init
+    resize();
+    window.addEventListener('resize', resize);
+    draw();
+  </script>
+
+</body>
+</html>

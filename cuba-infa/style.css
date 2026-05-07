@@ -1,0 +1,206 @@
+@import url("https://fonts.googleapis.com/css2?family=Cal+Sans&family=Caveat+Brush&family=Google+Sans:ital,opsz,wght@0,17..18,400..700;1,17..18,400..700&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Outfit:wght@100..900&family=Roboto:ital,wght@0,100..900;1,100..900&family=Volkhov:ital,wght@0,400;0,700;1,400;1,700&display=swap");
+@font-face {
+  font-family: "Satoshi";
+  src:
+    url("/font/Satoshi-Black.woff2") format("woff2"),
+    url("/font/Satoshi-Black.woff") format("woff");
+}
+@font-face {
+  font-family: "Satoshi";
+  src:
+    url("/font/Satoshi-Black.woff2") format("woff2"),
+    url("/font/Satoshi-Black.woff") format("woff");
+}
+@font-face {
+  font-family: "Satoshi";
+  src:
+    url("/font/Satoshi-Bold.woff2") format("woff2"),
+    url("/font/Satoshi-Bold.woff") format("woff");
+}
+@font-face {
+  font-family: "Satoshi";
+  src:
+    url("/font/Satoshi-Light.woff2") format("woff2"),
+    url("/font/Satoshi-Light.woff") format("woff");
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html,
+body {
+  height: 100%;
+  width: 100%;
+}
+
+.title {
+  margin: auto;
+  text-align: center;
+  max-width: 824px;
+}
+
+.title > h1 {
+  font-size: 3rem;
+  margin: 32px 0;
+  font-family: "Cal Sans";
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  gap: 60px;
+}
+
+.main {
+  background-color: white;
+  min-height: 578px;
+  width: 1115px;
+  margin: auto;
+  overflow: visible;
+  display: grid;
+  place-items: center;
+  padding: 48px 0;
+  border-radius: 40px;
+  box-shadow: #bfbfbf7d 1px 3px 14px 0px;
+  position: sticky;
+  top: 0;
+  z-index: 1;
+}
+
+/* Stacking order for sibling .main sections */
+main > .main:nth-child(1) {
+  z-index: 1;
+}
+
+main > .main:nth-child(2) {
+  z-index: 2;
+}
+
+main > .main:nth-child(3) {
+  z-index: 3;
+}
+
+main > .main:nth-child(4) {
+  z-index: 4;
+}
+
+main > .main:nth-child(5) {
+  z-index: 5;
+}
+
+main > .main:nth-child(n + 6) {
+  z-index: 10;
+}
+
+.hero {
+  max-width: 1035px;
+  width: 100%;
+  height: auto;
+  display: grid;
+  grid-template-columns: 1.5fr 1fr;
+  column-gap: 24px;
+  /* background-color: aquamarine; */
+  overflow: visible;
+}
+
+/* ------------LEFT----------------- */
+
+.left {
+  height: auto;
+  position: relative;
+  /* height: 100vh; */
+}
+
+.right {
+  height: auto;
+  position: relative;
+}
+
+.card {
+  position: sticky;
+  top: 0;
+  height: 480px;
+  overflow: hidden;
+  border-radius: 40px;
+  box-shadow: #bfbfbf7d 1px 3px 14px 0px;
+}
+
+.card:nth-child(1) {
+  z-index: 1;
+}
+.card:nth-child(2) {
+  z-index: 2;
+}
+.card:nth-child(3) {
+  z-index: 3;
+}
+.card:nth-child(4) {
+  z-index: 4;
+}
+
+.card:not(:last-child) {
+  margin-bottom: 40px;
+}
+
+.card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* ------------RIGHT----------------- */
+
+.text-area {
+  position: sticky;
+  top: 0;
+  height: 480px;
+  display: flex;
+  align-items: start;
+  padding: 0 60px;
+  background-color: white;
+  border-radius: 40px;
+}
+
+.text-area:nth-child(1) {
+  z-index: 1;
+}
+.text-area:nth-child(2) {
+  z-index: 2;
+}
+.text-area:nth-child(3) {
+  z-index: 3;
+}
+.text-area:nth-child(4) {
+  z-index: 4;
+}
+
+.text-area:not(:last-child) {
+  margin-bottom: 24px;
+}
+
+.text-area h2 {
+  font-size: 3rem;
+  font-family: "Cal Sans";
+  color: #155dfc;
+  width: 300px;
+  height: 106px;
+  margin-top: 37px;
+  margin-bottom: 10px;
+}
+
+.text-area p {
+  font-size: 1.2rem;
+  font-family: "Satoshi";
+  line-height: 1.35;
+  color: #888;
+  width: 300px;
+  height: 290px;
+  margin-bottom: 37px;
+}
+
+section {
+  width: 100%;
+  height: 100%;
+}

@@ -1,0 +1,60 @@
+* {
+margin: 0;
+padding: 0;
+box-sizing: border-box;
+}
+html,
+body{
+height: 100%;
+width: 100%;
+
+}
+
+/* -----------------FLEX-------------------------- */
+
+/* body{
+    background-color: aqua;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+main{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    border: 1px solid black;
+    width: 1000px;
+    overflow-x: hidden;
+    
+}
+
+.box{
+    width: 200px;
+    height: 200px;
+    background-color: beige;
+    flex-shrink: 0;
+} */
+
+/* -----------GRID----------------- */
+
+body {
+  background-color: aquamarine;
+  display: grid;
+  place-content: center;
+}
+
+main {
+  display: grid;
+  grid-auto-flow: column;
+  grid-auto-columns: 200px;
+  gap: 10px;
+  width: 950px; 
+  overflow-x: hidden;
+  border: 1px solid black;
+}
+
+.box {
+  height: 200px;
+  background-color: beige;
+}

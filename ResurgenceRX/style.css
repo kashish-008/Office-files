@@ -1,0 +1,535 @@
+@import url("https://fonts.cdnfonts.com/css/neue-haas-grotesk-display-pro");
+@import url("https://fonts.cdnfonts.com/css/canela-text-trial");
+@import url("https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html,
+body {
+  height: 100%;
+  width: 100%;
+}
+
+body {
+  font-family: "Neue Haas Grotesk Display Pro", sans-serif;
+}
+
+a {
+  text-decoration: none;
+}
+
+img {
+  display: block;
+}
+
+.journey {
+  padding: 100px 0;
+  background: #fdfbfb;
+}
+
+.j-top {
+  text-align: center;
+}
+
+.j-top h2 {
+  margin: 0 auto;
+  font-weight: 500;
+  font-size: 64px;
+  line-height: 72px;
+  letter-spacing: 2%;
+  max-width: 488px;
+}
+
+.j-span {
+  font-family: "Canela Condensed Trial", sans-serif;
+  color: #9248c3;
+  font-weight: 400;
+  font-style: italic;
+}
+
+.j-top p {
+  margin: 8px 0 30px;
+  font-weight: 500;
+  color: #242d34;
+  font-size: 24px;
+  line-height: 32px;
+  letter-spacing: 2%;
+}
+
+.j-cards {
+  display: flex;
+  place-content: center;
+  gap: 60px;
+}
+
+.j-card {
+  overflow: hidden;
+  height: auto;
+  max-width: 690px;
+  background: transparent;
+  border-radius: 30px;
+  border: 1px solid #242d340f;
+  transform-origin: center;
+  transition:
+    transform 200ms ease,
+    box-shadow 200ms ease;
+  will-change: transform, box-shadow;
+  /* animation: jcard-entrance 420ms ease both; */
+}
+
+.j-card:hover {
+  background: #ffffff;
+  transform: translateY(-8px);
+  box-shadow: 0 18px 40px rgba(36, 45, 52, 0.12);
+}
+
+/* @keyframes jcard-entrance {
+  from {
+    transform: translateY(10px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+} */
+
+.j-card-img {
+  position: relative;
+}
+
+.j-tag {
+  position: absolute;
+  top: 30px;
+  right: 30px;
+  background-color: #ffffff;
+  color: #242d34;
+  border-radius: 80px;
+  font-size: 12px;
+  line-height: 22px;
+  font-weight: 500;
+  letter-spacing: 2%;
+  padding: 7px 23.5px;
+  white-space: nowrap;
+}
+
+.j-card-info {
+  padding: 28px 40px 43px;
+}
+
+.j-card-info-top {
+  max-width: 583px;
+}
+
+.j-card-info-top h6 {
+  color: #9248c3;
+  font-size: 18px;
+  line-height: 28px;
+  letter-spacing: 2%;
+  font-weight: 500;
+  margin: 28px 0 9px;
+}
+
+.j-card-info h4 {
+  color: #242d34;
+  font-size: 38px;
+  line-height: 100%;
+  letter-spacing: 2%;
+  font-weight: 600;
+}
+
+.j-card-info-top p {
+  color: #242d34;
+  font-size: 18px;
+  line-height: 28px;
+  letter-spacing: 2%;
+  font-weight: 500;
+  margin: 4px 0 27px;
+}
+
+.j-pill {
+  border-radius: 140px;
+  background: rgba(36, 45, 52, 0.05);
+  padding: 8px 10px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.j-tab {
+  color: #000000;
+  text-transform: uppercase;
+  border-radius: 180px;
+  height: 46px;
+  width: 300px;
+  display: flex;
+  place-content: center;
+  padding: 13.5px 0;
+}
+
+.j-tab-active {
+  background: #242d34;
+  color: #ffffff;
+}
+
+.j-tab-active img {
+  filter: brightness(100%);
+}
+
+.j-tab p {
+  font-size: 16px;
+  line-height: 100%;
+  font-weight: 600;
+  letter-spacing: 2%;
+  margin: 0;
+  margin-left: 10px;
+  display: flex;
+  align-items: center;
+}
+
+.j-tab img {
+  width: 16px;
+  height: 16px;
+}
+
+.price h4 {
+  color: #9248c3;
+  margin: 22.34px 0 4px;
+}
+
+.price p {
+  color: #242d34;
+  font-size: 18px;
+  line-height: 28px;
+  letter-spacing: 2%;
+  font-weight: 500;
+}
+
+.divider {
+  height: 1px;
+  width: 610px;
+  background: #242d340f;
+  margin: 21.34px 0 27.35px;
+}
+
+.j-list h6 {
+  color: #242d34;
+  font-size: 24px;
+  line-height: 24px;
+  letter-spacing: 2%;
+  font-weight: 600;
+}
+
+.j-list ul {
+  color: #000000;
+  list-style: none;
+  padding: 0;
+  margin: 9px 0 34px;
+  font-size: 24px;
+  line-height: 45px;
+  letter-spacing: 2%;
+  font-weight: 500;
+}
+
+.j-list ul li {
+  position: relative;
+  padding-left: 30px;
+}
+
+.j-list ul li::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  background: url("assets/tick.svg") no-repeat center center;
+  background-size: contain;
+  width: 21px;
+  height: 18px;
+}
+
+.semaglutide-btn {
+  background: transparent;
+  border-radius: 180px;
+  border: 1px solid #242d340f;
+  color: #000000;
+  text-transform: uppercase;
+  padding: 16.5px;
+  font-size: 16px;
+  line-height: 100%;
+  font-weight: 600;
+  letter-spacing: 2%;
+  display: block;
+  text-align: center;
+  transition: transform 200ms ease;
+  white-space: nowrap;
+}
+
+.j-card:hover .semaglutide-btn {
+  background: #9248c3;
+  color: #ffffff;
+}
+
+/* -----Tab Content Container------- */
+.j-tab-content {
+  display: block;
+}
+
+.j-pane {
+  display: none;
+}
+
+.j-pane-active {
+  display: block;
+  animation: pane-fade 200ms ease-in;
+}
+
+@keyframes pane-fade {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.j-tab {
+  cursor: pointer;
+  transition: all 200ms ease;
+}
+
+.j-card-image {
+  display: none;
+  width: 100%;
+  height: auto;
+}
+
+.j-card-image-active {
+  display: block;
+  animation: image-fade 300ms ease-in;
+}
+
+@keyframes image-fade {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+/* -------Table------ */
+.table {
+  padding: 100px 0;
+  background-color: #fdfbfb;
+}
+
+.table-top {
+  text-align: center;
+}
+
+.table-top h2 {
+  background: transparent;
+  font-weight: 500;
+  font-size: 64px;
+  line-height: 72px;
+  letter-spacing: 2%;
+  margin: 0;
+}
+
+.table-wrapper {
+  width: 100%;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+  padding: 95px 0;
+}
+
+.table-info {
+  border-radius: 30px;
+  border: 1px solid #f0efef;
+  background: transparent !important;
+  display: grid;
+  grid-template-columns: 1fr 1.2fr 1fr;
+  gap: 0;
+  margin: 0 auto;
+  position: relative;
+}
+
+.col2-container {
+  position: relative;
+  z-index: 2;
+}
+
+.table-col {
+  display: flex;
+  flex-direction: column;
+}
+
+.table-col:not(:last-child) {
+  border-right: 1px solid #f0efef;
+}
+
+/*  */
+.table-header {
+  padding: 24px 60px;
+  border-bottom: 1px solid #f0efef;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.table-header h3 {
+  font-size: 24px;
+  line-height: 24px;
+  letter-spacing: 2%;
+  font-weight: 600;
+  color: #242d34;
+  margin: 0;
+}
+
+.table-header svg {
+  width: 100%;
+  height: auto;
+  max-width: 280px;
+}
+
+.table > :not(caption) > * > * {
+  padding: 0;
+}
+
+/* Table Row */
+.table-row {
+  padding: 22px 60px;
+  border-top: 1px solid #f0efef;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.table-col.table-col-center {
+  background: #ffffff;
+}
+
+.table-row p {
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 28px;
+  letter-spacing: 2%;
+  color: #242d34;
+  margin: 0;
+}
+
+/* --------Center-col------- */
+
+.table-col-center {
+  display: flex;
+  position: absolute;
+  flex-direction: column;
+  border-right: 1px solid #f0efef;
+  background: #ffffff;
+  border-radius: 30px;
+  top: -60px;
+  left: 0;
+  width: 100%;
+  height: calc(100% + 100px); 
+  z-index: 10;
+}
+
+.table-row-center {
+  border-top: 1px solid #f0efef;
+  margin: auto;
+}
+
+.table-header-c {
+  margin: 0 auto;
+  border-bottom: 1px solid #f0efef;
+  width: 100%;
+}
+
+.center-header {
+  margin: 44px 74px;
+}
+
+.center-span {
+  color: #9248c3;
+  font-style: italic;
+}
+
+.table-col-center .table-row-center {
+  padding: 13.5px 181.4px;
+  position: relative;
+  width: 100%;
+  margin: 0;
+}
+
+.table-row-center p {
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 45px;
+  letter-spacing: 2%;
+  color: #000000;
+  margin: 0 auto;
+  padding-left: 31px;
+  width: 100%;
+  white-space: nowrap;
+}
+
+.table-row-center p::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 33%;
+  transform: translateY(-50%);
+  background: url("assets/tick.svg") no-repeat center center;
+  background-size: contain;
+  width: 21px;
+  height: 18px;
+}
+
+.table-row-center-pr {
+  padding: 21.5px 0;
+  margin: 0 auto;
+}
+
+.table-row-center-pr .price-text {
+  font-weight: 600;
+  font-size: 20px;
+  color: #242d34;
+  margin: 0;
+  line-height: 100%;
+}
+
+.row3-p .price-text {
+  font-weight: 600;
+  font-size: 20px;
+  color: #242d34;
+}
+
+.row3 {
+  padding: 13.5px 60px;
+}
+
+.row3 p {
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 45px;
+  letter-spacing: 2%;
+  color: #000000;
+  position: relative;
+  padding-left: 31px;
+}
+
+.row3 p::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 0;
+  transform: translateY(-50%);
+  background: url("assets/x.svg") no-repeat center center;
+  background-size: contain;
+  width: 21px;
+  height: 18px;
+}

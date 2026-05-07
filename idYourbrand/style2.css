@@ -1,0 +1,1131 @@
+@font-face {
+  font-family: neue-bold;
+  src: url("fonts/neue-haas-grotesk-display-pro-cufonfonts/NeueHaasDisplayBold.ttf");
+  font-display: swap; /* prevents invisible text while font loads */
+}
+@font-face {
+  font-family: neue-light;
+  src: url("fonts/neue-haas-grotesk-display-pro-cufonfonts/NeueHaasDisplayLight.ttf");
+  font-display: swap;
+}
+@font-face {
+  font-family: neue-medium;
+  src: url("fonts/neue-haas-grotesk-display-pro-cufonfonts/NeueHaasDisplayMedium.ttf");
+  font-display: swap;
+}
+@font-face {
+  font-family: neue-boldi;
+  src: url("fonts/neue-haas-grotesk-display-pro-cufonfonts/NeueHaasDisplayBoldItalic.ttf");
+  font-display: swap;
+}
+@font-face {
+  font-family: neue-thin;
+  src: url("fonts/neue-haas-grotesk-display-pro-cufonfonts/NeueHaasDisplayThin.ttf");
+  font-display: swap;
+}
+
+/* DESIGN TOKENS — Update these to change site-wide appearance
+   Colors, fonts, spacing, and border radius all controlled here.
+   Adding new variables here makes the code more maintainable. */
+:root {
+  /* Brand colors */
+  --color-orange: #ffa559;
+  --color-black: #000000;
+  --color-white: #ffffff;
+  --color-dark-card: #1e1e1e;
+  --color-text: #111111;
+  --color-text-muted: #8a8a8a;
+  --color-text-body: #444444;
+  --color-border: #a9a9a9;
+
+  /* Font families */
+  --font-bold: neue-bold, sans-serif;
+  --font-light: neue-light, sans-serif;
+  --font-medium: neue-medium, sans-serif;
+  --font-boldi: neue-boldi, sans-serif;
+  --font-thin: neue-thin, sans-serif;
+
+  /* Spacing scale */
+  --space-xs: 8px;
+  --space-sm: 16px;
+  --space-md: 24px;
+  --space-lg: 40px;
+  --space-xl: 60px;
+  --space-2xl: 100px;
+
+  /* Border radius */
+  --radius-sm: 7px;
+  --radius-md: 14px;
+  --radius-lg: 20px;
+
+  /* Letter spacing */
+  --tracking: 0.02em;
+}
+
+/* GLOBAL STYLES & RESETS
+   Base styling applied to all elements for consistency. */
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: var(--font-light);
+  color: var(--color-text);
+  background: var(--color-white);
+  overflow-x: hidden;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+button {
+  cursor: pointer;
+  border: none;
+  font-family: var(--font-light);
+}
+
+/* REUSABLE UTILITIES — Components used across multiple sections */
+
+/* Section headings — used by program, work, section4 */
+.section-title {
+  font-family: var(--font-bold);
+  /* Responsive: scales from 25px on mobile to 54px on desktop */
+  font-size: clamp(25px, 4vw, 54px);
+  line-height: 1.2;
+  letter-spacing: var(--tracking);
+  color: var(--color-text);
+  text-align: center;
+  margin-bottom: var(--space-lg);
+}
+
+/* Orange label above bullet list */
+.list-label {
+  /* Orange label for list headings — update color in :root --color-orange */
+  font-family: var(--font-bold) !important;
+  font-size: clamp(16px, 1.5vw, 22px);
+  color: var(--color-orange) !important;
+  letter-spacing: var(--tracking);
+  margin-bottom: 12px;
+}
+
+/* Bullet list — shared by program card and section4 */
+.feature-list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-xs);
+  padding-left: 0;
+  /* Bullet points added via ::before pseudo-element */
+}
+
+.feature-list li {
+  font-family: var(--font-thin);
+  /* font-size: clamp(14px, 1.1vw, 16px); */
+  font-size: 16px;
+  color: var(--color-text);
+  padding-left: 14px;
+  position: relative;
+  line-height: 1.6;
+  letter-spacing: var(--tracking);
+  margin-bottom: 10px;
+}
+
+.feature-list li::before {
+  content: "•";
+  position: absolute;
+  left: 0px;
+  color: var(--color-text);
+}
+
+/* PRIMARY BUTTONS — Orange solid, used for main CTAs */
+
+/* Solid orange — primary action */
+.btn-primary {
+  background-color: var(--color-orange);
+  color: var(--color-white);
+  font-family: var(--font-light);
+  font-size: 16px;
+  padding: 16px 60px;
+  border-radius: var(--radius-sm);
+  border: none;
+  transition: opacity 0.2s ease;
+  /* Update --color-orange in :root to change button color globally */
+}
+
+.btn-primary:hover {
+  opacity: 0.88;
+}
+
+/* White ghost — used on dark (hero) backgrounds */
+.btn-ghost {
+  /* Light border button on dark backgrounds (hero section) */
+  background: transparent;
+  color: var(--color-white);
+  font-family: var(--font-light);
+  font-size: 16px;
+  padding: 19px 33px;
+  border-radius: var(--radius-sm);
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  transition: background 0.2s ease;
+}
+
+.btn-ghost:hover {
+  background: rgba(255, 255, 255, 0.1);
+}
+
+/* Dark outline — used on white backgrounds */
+.btn-outline-dark {
+  /* Outline button on light backgrounds — used in "How It Works" section */
+  background: transparent;
+  color: var(--color-text);
+  font-family: var(--font-light);
+  font-size: 16px;
+  padding: 19px 33px;
+  border-radius: var(--radius-sm);
+  border: 1px solid rgba(0, 0, 0, 0.13);
+  transition: background 0.2s ease;
+  max-width: 196px;
+  height: 56px;
+}
+
+.btn-outline-dark:hover {
+  background: rgba(0, 0, 0, 0.05);
+}
+
+/* HELPER UTILITIES — Component wrappers and overlays
+   Used by How It Works circles and image sections */
+
+/* Wrapper needed so badge can position relative to the circle */
+.circle-wrapper {
+  position: relative;
+  display: inline-block;
+}
+
+/* Orange number badge — top right of circle */
+.step-badge {
+  /* Orange number badge on top-right of circle — adjust top/right for positioning */
+  position: absolute;
+  top: 5px;
+  right: 31px;
+  width: 32px;
+  height: 32px;
+  background-color: var(--color-orange);
+  color: var(--color-white);
+  border-radius: 50%;
+  font-family: var(--font-bold);
+  font-size: 14px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Wrapper holds both image and overlay text together */
+.img-wrapper {
+  /* Wraps image and overlay text together
+     border-radius creates rounded corners on both image and overlay. */
+  position: relative;
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+}
+
+/* Dark gradient at bottom-left so text is readable over image */
+.img-wrapper::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.6) 0%, transparent 60%);
+  border-radius: var(--radius-lg);
+}
+
+/* Text sits on top of the gradient */
+.img-overlay-text {
+  position: absolute;
+  bottom: 50px;
+  left: clamp(16px, 4vw, 55px);
+  /* max-width controls how far right the text goes — never overflows */
+  max-width: 45%;
+  width: max-content;
+  z-index: 1;
+  font-family: var(--font-bold);
+  font-size: clamp(14px, 2vw, 32px);
+  color: var(--color-white);
+  line-height: 1.45;
+  letter-spacing: var(--tracking);
+}
+
+.img-overlay-text em {
+  font-family: var(--font-boldi);
+  font-style: italic;
+}
+
+/* NAVIGATION */
+.site-header {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.nav {
+  background-color: var(--color-black);
+  height: 85px;
+  display: flex;
+  align-items: center;
+  padding: 25px 60px !important;
+  justify-content: space-between;
+}
+
+.nav .logo img {
+  height: auto;
+  max-width: 308px;
+}
+
+/* Nav links — visible on desktop */
+.nav-links {
+  display: flex;
+  align-items: center;
+  gap: var(--space-md);
+  /* Hidden on mobile — shown via JavaScript toggle */
+}
+
+.nav-toggle {
+  display: none;
+  flex-direction: column;
+  gap: 5px;
+  background: none;
+  border: none;
+  padding: 8px;
+  cursor: pointer;
+  /* Show on mobile via @media (max-width: 768px) */
+}
+
+.nav-toggle span {
+  display: block;
+  width: 24px;
+  height: 2px;
+  background: var(--color-white);
+  border-radius: 2px;
+  transition:
+    transform 0.3s ease,
+    opacity 0.3s ease;
+}
+
+/* SECTION 1 — Hero Banner
+   Full-height black section with centered content.
+   Change min-height to adjust section height on desktop. */
+.section1 {
+  background-color: var(--color-black);
+  min-height: 95vh;
+  /* Adjust min-height to change hero section height */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.hero-inner {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  color: var(--color-white);
+  padding: var(--space-xl) var(--space-lg);
+}
+
+.brand {
+  height: auto;
+  max-width: 133px;
+}
+
+.hero-tag {
+  color: var(--color-orange);
+  margin: 29px 0 17px;
+  font-family: var(--font-bold);
+  /* Responsive: 18px mobile → 26px desktop */
+  font-size: clamp(18px, 1.8vw, 26px);
+  letter-spacing: var(--tracking);
+}
+
+.hero-inner h1 {
+  font-family: var(--font-bold);
+  /* Responsive fluid size: scales from 36px to 76px */
+  font-size: clamp(36px, 5.5vw, 76px);
+  line-height: 1.13;
+  letter-spacing: var(--tracking);
+}
+
+.hero-sub {
+  font-family: var(--font-light);
+  font-size: clamp(16px, 1.5vw, 22px);
+  line-height: 1.6;
+  letter-spacing: var(--tracking);
+  color: var(--color-white);
+  margin-top: var(--space-sm);
+}
+
+.btns {
+  margin-top: var(--space-md);
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+/* SECTION 2 — Brands Ticker, Programs Card, How It Works */
+.section2 {
+  background: var(--color-white);
+  padding: var(--space-xl) 0;
+}
+
+/* ── Team logos ── */
+.team {
+  text-align: center;
+  margin-bottom: var(--space-xl);
+}
+
+.team h2 {
+  font-family: var(--font-bold);
+  font-size: clamp(22px, 2.5vw, 32px);
+  color: var(--color-text);
+  margin-bottom: var(--space-md);
+  line-height: 1.4;
+}
+
+/* ── Infinite logo ticker ── */
+.brands-track {
+  overflow: hidden;
+  -webkit-mask-image: linear-gradient(
+    to right,
+    transparent 0%,
+    black 10%,
+    black 90%,
+    transparent 100%
+  );
+  mask-image: linear-gradient(
+    to right,
+    transparent 0%,
+    black 10%,
+    black 90%,
+    transparent 100%
+  );
+  margin-bottom: 48px;
+}
+
+.brands-inner {
+  display: flex;
+  align-items: center;
+  gap: 80px;
+  width: max-content;
+  /* Infinite scroll animation — adjust duration (20s) to control speed */
+  animation: scroll-brands 20s linear infinite;
+}
+
+.brands-inner img {
+  height: 30px;
+  object-fit: contain;
+  filter: grayscale(100%);
+  opacity: 0.75;
+  flex-shrink: 0;
+}
+
+@keyframes scroll-brands {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    /* Scrolls 50% of total width for seamless loop */
+    transform: translateX(-50%);
+  }
+}
+
+.brands img {
+  height: 30px;
+  object-fit: contain;
+  filter: grayscale(100%);
+  opacity: 0.75;
+}
+
+.team hr {
+  border: none;
+  border-top: 2px solid var(--color-border);
+}
+
+/* ── Uniform Programs card ── */
+.program {
+  margin-top: var(--space-xl);
+}
+
+.cards {
+  display: flex;
+  align-items: flex-start;
+  gap: var(--space-lg);
+}
+
+.card-left {
+  flex: 0 0 50%;
+}
+
+.card-left img {
+  width: 100%;
+  height: 662px;
+  object-fit: cover;
+  border-radius: 23px;
+}
+
+.card-right {
+  flex: 1;
+  padding-top: var(--space-xs);
+}
+
+.card-right h3 {
+  font-family: var(--font-bold);
+  font-size: clamp(26px, 3vw, 40px);
+  color: var(--color-text);
+  margin-bottom: 14px;
+}
+
+.card-right > p {
+  font-family: var(--font-light);
+  font-size: clamp(16px, 1.5vw, 20px);
+  color: #8a8a8a;
+  line-height: 1.7;
+  letter-spacing: var(--tracking);
+  margin-bottom: var(--space-md);
+}
+
+/* ── How It Works ── */
+.section-work {
+  background: linear-gradient(
+    180deg,
+    rgba(255, 165, 89, 0.05) 0%,
+    var(--color-white) 100%
+  );
+  background: url("assets/Vector\ 1.png") no-repeat center;
+}
+
+.work {
+  text-align: center;
+  margin-top: var(--space-2xl);
+  padding-bottom: var(--space-xl);
+}
+
+.work .section-title {
+  padding-top: 130px;
+}
+
+.fact {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  gap: clamp(40px, 6vw, 58px);
+  flex-wrap: wrap;
+}
+
+.features {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 300px;
+  max-width: 100%;
+}
+
+.features .circle {
+  background: var(--color-white);
+  border-radius: 50%;
+  height: 200px;
+  width: 200px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0px 32px 44px 0px rgba(41, 49, 37, 0.08);
+}
+
+.features h4 {
+  font-family: var(--font-bold);
+  font-size: clamp(16px, 1.4vw, 20px);
+  line-height: 1.5;
+  letter-spacing: var(--tracking);
+  margin-top: 15px;
+  margin-bottom: var(--space-xs);
+}
+
+.features p {
+  font-family: var(--font-light);
+  font-size: clamp(13px, 1vw, 15px);
+  color: #555;
+  line-height: 1.6;
+}
+
+.work-btns {
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+  flex-wrap: wrap;
+  margin-top: var(--space-xl);
+}
+
+.work-btns .btn-primary,
+.work-btns .btn-outline-dark {
+  /* Equal width buttons in "How It Works" section */
+  width: 196px;
+  height: 56px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px 15px;
+}
+
+/* SECTION 3 — Already a Client?
+   White top (image) → Black bottom (text) gradient background.
+   Adjust gradient stop at 400px for different section splitting. */
+.section3 {
+  /* 400px white, then transitions to black — adjust for different layouts */
+  background: linear-gradient(
+    to bottom,
+    var(--color-white) 0px,
+    var(--color-white) 400px,
+    var(--color-black) 400px,
+    var(--color-black) 100%
+  );
+  padding-top: var(--space-xl);
+  padding-bottom: var(--space-lg);
+}
+
+.section3-img {
+  max-width: 1400px;
+  margin: 0 auto var(--space-xl);
+  padding: 0 var(--space-lg);
+}
+
+.section3-img img {
+  width: 100%;
+  height: 686px;
+  /* Change object-fit to 'cover' for cropped images, 'contain' for full visibility */
+  object-fit: cover;
+  border-radius: var(--radius-lg);
+}
+
+.already-client {
+  text-align: center;
+  padding: 0 var(--space-lg);
+}
+
+.already-client h2 {
+  font-family: var(--font-bold);
+  /* Responsive: 48px → 94px based on viewport width */
+  font-size: clamp(48px, 6.5vw, 94px);
+  letter-spacing: var(--tracking);
+  line-height: 1;
+  color: var(--color-white);
+  margin-bottom: var(--space-sm);
+}
+
+.already-client p {
+  font-family: var(--font-light);
+  color: var(--color-white);
+  font-size: clamp(16px, 1.5vw, 22px);
+  letter-spacing: var(--tracking);
+  line-height: 1.5;
+  margin-bottom: var(--space-md);
+}
+
+/* ═══════════════════════════════════════════════════════
+   B2B TAGLINE
+========================================================= */
+.b2b-tagline {
+  background: var(--color-white);
+  padding: 80px var(--space-md);
+  text-align: center;
+}
+
+.b2b-tagline p {
+  font-family: var(--font-medium);
+  font-size: clamp(24px, 3.2vw, 46px);
+  line-height: 1.3;
+  letter-spacing: var(--tracking);
+  color: var(--color-text);
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+/* SECTION 4 — Built Around Your Business
+   Two-column layout: left text + right quote card.
+   Quote card has position: relative for logo positioning. */
+.section4 {
+  background: var(--color-white);
+  padding: 80px 0;
+}
+
+.section4-cards {
+  display: flex;
+  align-items: flex-start;
+  gap: var(--space-lg);
+}
+
+#s4p {
+  color: #000000 !important;
+}
+
+/* ── Left text ── */
+.section4-left {
+  flex: 1;
+  min-width: 0;
+  padding-top: 75px;
+}
+
+/* Decorative orange bar above text */
+.orange-bar {
+  width: 64px;
+  height: 3px;
+  background: var(--color-orange);
+  margin-bottom: var(--space-md);
+}
+
+.section4-sub,
+.section4-desc {
+  font-family: var(--font-light);
+  font-size: clamp(15px, 1.4vw, 20px);
+  color: var(--color-text-muted);
+  line-height: 1.7;
+  margin-bottom: 12px;
+}
+
+.section4-desc {
+  margin-bottom: var(--space-md);
+}
+
+.section4-left .list-label {
+  color: var(--color-text);
+  font-size: clamp(15px, 1.4vw, 22px);
+}
+
+/* ── Right quote card ── */
+.section4-right {
+  flex: 0 0 min(633px, 50%);
+}
+
+.quote-card {
+  background: var(--color-black);
+  border-radius: var(--radius-md);
+  padding: 36px;
+  color: var(--color-white);
+  position: relative;
+  /* Logo positioned absolute inside — adjust top/right values */
+  min-height: 665px;
+  max-width: 633px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+}
+
+.quote-logo {
+  position: absolute;
+  top: 24px;
+  right: 24px;
+}
+
+.quote-logo img {
+  height: 88px;
+  width: 88px;
+  object-fit: contain;
+}
+
+.quote-icon {
+  margin-bottom: var(--space-md);
+  width: 40px;
+}
+
+.quote-text {
+  font-family: var(--font-boldi);
+  font-size: 30px;
+  line-height: 1.75;
+  color: #f0f0f0;
+  font-style: italic;
+  margin-bottom: var(--space-md);
+}
+
+.quote-author {
+  font-family: var(--font-light);
+  font-size: clamp(15px, 1.4vw, 22px);
+  color: var(--color-white);
+}
+
+/* SECTION 5 — Call-to-Action Card
+   Centered orange card with button — high visibility section. */
+.section5 {
+  background: var(--color-white);
+  padding: var(--space-xl) var(--space-lg);
+  display: flex;
+  justify-content: center;
+}
+
+.cta-card {
+  background: var(--color-orange);
+  border-radius: var(--radius-lg);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  width: 100%;
+  max-width: 1400px;
+  min-height: 390px;
+}
+
+.cta-card h2 {
+  font-family: var(--font-bold);
+  font-size: clamp(28px, 3vw, 40px);
+  letter-spacing: var(--tracking);
+  color: var(--color-white);
+  margin-bottom: 10px;
+}
+
+.cta-card p {
+  font-family: var(--font-light);
+  font-size: 15px;
+  color: var(--color-white);
+  margin-bottom: var(--space-md);
+  opacity: 0.9;
+}
+
+/* White button on orange background */
+.cta-btn {
+  /* White button on orange background — inverts on hover */
+  background: var(--color-white);
+  border: 2px solid var(--color-white);
+  color: var(--color-text);
+  font-family: var(--font-light);
+  font-size: 16px;
+  padding: 12px 36px;
+  border-radius: var(--radius-sm);
+  transition: color 0.2s ease;
+}
+
+.cta-btn:hover {
+  color: var(--color-orange);
+}
+
+/* FOOTER — Copyright & Social Links */
+.site-footer {
+  background: var(--color-white);
+  padding: 36px var(--space-lg) 28px;
+  text-align: center;
+}
+
+.footer-icons {
+  display: flex;
+  justify-content: center;
+  gap: var(--space-md);
+  margin-bottom: 14px;
+}
+
+.social {
+  height: 80px;
+  width: 80px;
+  background: var(--color-white);
+  border-radius: 50%;
+  border: 1px solid lightgray;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  transition: border-color 0.2s ease;
+  /* Accent border on hover — adjust transition duration if needed */
+}
+
+.social:hover {
+  border-color: var(--color-orange);
+}
+
+.social img {
+  width: 22px;
+  height: 22px;
+  object-fit: contain;
+}
+
+.site-footer p {
+  font-family: var(--font-medium);
+  font-size: 18px;
+  line-height: 32px;
+  letter-spacing: var(--tracking);
+  color: var(--color-text);
+}
+
+/* RESPONSIVE BREAKPOINTS
+/* Tablet and below (max-width: 1024px) */
+@media (max-width: 1023px) {
+  /* Stack layouts, reduce image heights, adjust spacing */
+  .nav {
+    padding: 0 var(--space-lg);
+  }
+
+  .brand {
+    max-width: 100px;
+  }
+
+  .nav .logo img {
+    max-width: 190px;
+  }
+
+  /* Cards stack vertically */
+  .cards {
+    flex-direction: column;
+  }
+
+  .card-left {
+    flex: unset;
+    width: 100%;
+    padding: 0 10px;
+  }
+
+  .card-left img {
+    height: 400px;
+  }
+
+  /* Quote card goes full width */
+  .section4-cards {
+    flex-direction: column;
+  }
+
+  .section4-right {
+    flex: unset;
+    width: 100%;
+    padding: 0 10px;
+  }
+
+  /* How It Works: reduce gap */
+  .fact {
+    gap: var(--space-lg);
+  }
+
+  .section3 {
+    /* Adjust gradient stop (300px) for mobile layout — change if needed */
+    background: linear-gradient(
+      to bottom,
+      var(--color-white) 0px,
+      var(--color-white) 300px,
+      var(--color-black) 300px,
+      var(--color-black) 100%
+    );
+  }
+
+  .section3-img img {
+    height: 420px;
+  }
+
+  .img-overlay-text {
+  bottom: 50px;
+  left: 28px;
+  max-width: 55%;
+  font-size: clamp(13px, 1.6vw, 20px);
+}
+}
+
+/* Mobile devices (max-width: 768px) */
+@media (max-width: 768px) {
+  /* Hide nav links, show hamburger; stack all layouts; reduce heights */
+  .section4-left {
+    padding: 0 10px;
+  }
+
+  .card-left img {
+    width: 300px;
+    margin: auto;
+  }
+
+  .card-right {
+    padding: 0 10px;
+  }
+
+  .work {
+    margin-top: 0;
+    padding-bottom: 0;
+  }
+
+  /* ── Nav: show hamburger, hide links ── */
+  .nav {
+    padding: 0 var(--space-md);
+    position: relative;
+    flex-wrap: wrap;
+    height: auto;
+    min-height: 70px;
+  }
+
+  .nav-toggle {
+    display: flex; /* show hamburger button */
+  }
+
+  /* Dropdown drawer — hidden by default */
+  .nav-links {
+    display: none;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: var(--space-sm);
+    width: 100%;
+    padding: var(--space-sm) 0 var(--space-md);
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+  }
+
+  /* JS adds .is-open to show the drawer */
+  .nav-links.is-open {
+    display: flex;
+  }
+
+  /* ── Hero ── */
+  .hero-inner {
+    padding: var(--space-xl) var(--space-md);
+  }
+
+  .hero-inner h1 br {
+    display: none;
+  }
+
+  .btns {
+    flex-direction: column;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .btn-primary,
+  .btn-ghost,
+  .btn-outline-dark {
+    width: 60%;
+    height: 44px;
+    padding: 10px 15px;
+    text-align: center;
+    max-width: none;
+  }
+
+  /* ── Section 2 ── */
+  .section2 {
+    padding: var(--space-lg) 0;
+  }
+
+  .brands {
+    gap: var(--space-lg);
+  }
+
+  .brands img {
+    height: 22px;
+  }
+
+  .card-left img {
+    height: 260px;
+  }
+
+  /* How It Works: single column */
+  .fact {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .features {
+    width: 100%;
+    max-width: 320px;
+  }
+
+  .work .section-title {
+    padding-top: var(--space-xl);
+  }
+
+  .work-btns {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .work-btns .btn-primary,
+  .work-btns .btn-outline-dark {
+    width: 60%;
+    height: 44px;
+  }
+
+  /* ── Section 3 ── */
+  .section3 {
+    background: linear-gradient(
+      to bottom,
+      var(--color-white) 0px,
+      var(--color-white) 172px,
+      var(--color-black) 172px,
+      var(--color-black) 100%
+    );
+    /* padding-top: var(--space-lg); */
+  }
+
+  .section3-img {
+    /* padding: 0 var(--space-md); */
+    margin-bottom: var(--space-lg);
+  }
+
+  .section3-img img {
+    height: 220px;
+    border-radius: var(--radius-md);
+  }
+
+  .img-overlay-text {
+  bottom: 10px;
+  left: 14px;
+  max-width: 75%;
+  font-size: clamp(10px, 2.5vw, 13px);
+  line-height: 1.4;
+}
+
+  .img-overlay-text br {
+    display: none;
+  }
+
+  /* ── B2B Tagline ── */
+  .b2b-tagline {
+    padding-top: 30px;
+    padding-bottom: 0;
+  }
+
+  /* ── Section 4 ── */
+  .section4 {
+    padding: var(--space-xl) 0;
+  }
+
+  .quote-card {
+    min-height: 400px;
+  }
+
+  .quote-text {
+    font-size: 13px;
+  }
+
+  /* ── Section 5 ── */
+  .section5 {
+    padding: 0 20px;
+  }
+
+  .cta-card {
+    padding: var(--space-lg) var(--space-md);
+    border-radius: var(--radius-md);
+  }
+
+  /* ── Footer ── */
+  .social {
+    height: 50px;
+    width: 50px;
+  }
+
+  .site-footer p {
+    font-size: 14px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .brands-inner {
+    animation: none;
+    flex-wrap: wrap;
+    justify-content: center;
+    width: auto;
+  }
+}

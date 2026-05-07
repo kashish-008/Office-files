@@ -1,0 +1,713 @@
+@media (min-width: 1400px) {
+  .container,
+  .container-lg,
+  .container-md,
+  .container-sm,
+  .container-xl,
+  .container-xxl {
+    max-width: 1499px;
+  }
+}
+
+@media (max-width: 1399px) {
+.table-top h2 {
+  font-size: 43px;
+  line-height: 40px;
+}
+
+  .table-info {
+    display: grid;
+    grid-template-columns: 200px 270px 200px;
+    width: max-content;
+    position: relative;
+    gap: 0;
+  }
+
+  .table-col-center {
+    left: 0px;
+    width: 250px;
+    top: -54.7px;
+    z-index: 10;
+  }
+
+  .table-header {
+    padding: 20px 30px;
+  }
+  .table-header h3 {
+    font-size: 15px;
+    line-height: 0px;
+  }
+
+  .table-row-center-pr {
+    padding: 16.5px 0;
+  }
+
+  .table-row.row3-p {
+    padding: 15px 30px;
+  }
+
+  .table-col-center .table-row-center {
+    padding: 15px 44px;
+  }
+
+  .table-row-center-pr .price-text,
+  .row3-p .price-text {
+    font-size: 15px;
+  }
+
+  .table-row {
+    padding: 15px 30px;
+  }
+  .table-row p {
+    font-size: 10px;
+    line-height: normal;
+    margin: 0;
+    white-space: nowrap;
+  }
+
+  .center-header {
+    margin: 19px 30px;
+  }
+  h3.center-header img {
+    width: 190px;
+    margin: 37.5px auto;
+  }
+
+  .table-row-center p,
+  .table-row p {
+    font-weight: 500;
+    font-size: 15px;
+    line-height: normal;
+  }
+
+  .table-row-center p::before {
+    left: 60px;
+    width: 11px;
+    height: 11px;
+  }
+
+  .row3 p::before {
+    left: 15px;
+    width: 11px;
+    height: 11px;
+  }
+}
+
+@media (max-width: 1224px) {
+  .table-info {
+    display: grid;
+    grid-template-columns: 180px 250px 180px;
+    width: max-content;
+    position: relative;
+    gap: 0;
+  }
+
+  .table-col-center {
+    left: 0px;
+    width: 250px;
+    top: -54.7px;
+    z-index: 10;
+  }
+
+  .table-header {
+    padding: 20px 30px;
+  }
+  .table-header h3 {
+    font-size: 15px;
+    line-height: 0px;
+  }
+
+  .table-row-center-pr {
+    padding: 16.5px 0;
+  }
+
+  .table-row.row3-p {
+    padding: 15px 30px;
+  }
+
+  .table-col-center .table-row-center {
+    padding: 15px 44px;
+  }
+
+  .table-row-center-pr .price-text,
+  .row3-p .price-text {
+    font-size: 15px;
+  }
+
+  .table-row {
+    padding: 15px 30px;
+  }
+  .table-row p {
+    font-size: 10px;
+    line-height: normal;
+    margin: 0;
+    white-space: nowrap;
+  }
+
+  .center-header {
+    margin: 19px 30px;
+  }
+  h3.center-header img {
+    width: 190px;
+    margin: 37.5px auto;
+  }
+
+  .table-row-center p,
+  .table-row p {
+    font-weight: 500;
+    font-size: 15px;
+    line-height: normal;
+  }
+
+  .table-row-center p::before {
+    left: 60px;
+    width: 11px;
+    height: 11px;
+  }
+
+  .row3 p::before {
+    left: 15px;
+    width: 11px;
+    height: 11px;
+  }
+}
+
+/* ===== TABLET (max-width: 1024px) ===== */
+@media (max-width: 1024px) {
+  .container,
+  .container-md,
+  .container-sm {
+    max-width: 1000px;
+  }
+
+  .journey {
+    padding: 60px 0;
+  }
+
+  .j-top h2 {
+    font-size: 48px;
+    line-height: 56px;
+    max-width: 100%;
+    padding: 0 20px;
+  }
+
+  .j-top p {
+    font-size: 20px;
+    line-height: 28px;
+    padding: 0 20px;
+  }
+
+  .j-cards {
+    gap: 40px;
+    padding: 0 20px;
+  }
+
+  .j-card {
+    max-width: 100%;
+  }
+
+  .j-card-info {
+    padding: 24px 30px 35px;
+  }
+  .j-card-info-top h6,
+  .j-card-info-top p {
+    font-size: 13px;
+    line-height: 20px;
+    margin: 4px 0 16px;
+  }
+
+  .j-pill {
+    width: 100%;
+    height: auto;
+    flex-wrap: wrap;
+  }
+
+  .price p {
+    font-size: 13px;
+    line-height: 20px;
+  }
+
+  .j-tab {
+    width: auto;
+    flex: 1;
+    height: 44px;
+    padding: 12px 0;
+  }
+
+  .j-tab p {
+    font-size: 14px;
+  }
+
+  .j-list h6 {
+    font-size: 20px;
+  }
+
+  .j-list ul {
+    font-size: 15px;
+    line-height: 28px;
+  }
+
+  .divider {
+    width: 100%;
+  }
+
+  .semaglutide-btn {
+    padding: 14px 100px;
+    font-size: 14px;
+  }
+
+  .price h4 {
+    font-size: 28px;
+  }
+
+  .table-info {
+    display: grid;
+    grid-template-columns: 180px 250px 180px;
+    width: max-content;
+    position: relative;
+    gap: 0;
+  }
+
+  .table-col-center {
+    left: 0px;
+    width: 250px;
+    top: -54.7px;
+    z-index: 10;
+  }
+
+  .table-header {
+    padding: 20px 30px;
+  }
+  .table-header h3 {
+    font-size: 15px;
+    line-height: 0px;
+  }
+
+  .table-row-center-pr {
+    padding: 16.5px 0;
+  }
+
+  .table-row.row3-p {
+    padding: 15px 30px;
+  }
+
+  .table-col-center .table-row-center {
+    padding: 15px 44px;
+  }
+
+  .table-row-center-pr .price-text,
+  .row3-p .price-text {
+    font-size: 15px;
+  }
+
+  .table-row {
+    padding: 15px 30px;
+  }
+  .table-row p {
+    font-size: 10px;
+    line-height: normal;
+    margin: 0;
+    white-space: nowrap;
+  }
+
+  .center-header {
+    margin: 19px 30px;
+  }
+  h3.center-header img {
+    width: 190px;
+    margin: 37.5px auto;
+  }
+
+  .table-row-center p,
+  .table-row p {
+    font-weight: 500;
+    font-size: 15px;
+    line-height: normal;
+  }
+
+  .table-row-center p::before {
+    left: 60px;
+    width: 11px;
+    height: 11px;
+  }
+
+  .row3 p::before {
+    left: 15px;
+    width: 11px;
+    height: 11px;
+  }
+}
+
+/* ===== MOBILE (max-width: 768px) ===== */
+@media (max-width: 768px) {
+  .journey {
+    padding: 40px 0;
+  }
+
+  .j-top {
+    margin-bottom: 40px;
+  }
+
+  .j-top h2 {
+    font-size: 32px;
+    line-height: 40px;
+    max-width: 100%;
+    padding: 0 16px;
+  }
+
+  .j-top p {
+    font-size: 16px;
+    line-height: 24px;
+    margin: 8px 0 24px;
+    padding: 0 16px;
+  }
+
+  .j-cards {
+    gap: 24px;
+    padding: 0 16px;
+    flex-direction: column;
+  }
+
+  .j-card {
+    max-width: 100%;
+  }
+
+  .j-card-info {
+    padding: 20px 20px 28px;
+  }
+
+  .j-card-info-top h6 {
+    font-size: 16px;
+    margin: 20px 0 8px;
+  }
+
+  .j-card-info h4 {
+    font-size: 28px;
+  }
+
+  .j-card-info-top p {
+    font-size: 15px;
+    line-height: 24px;
+    margin: 4px 0 20px;
+  }
+
+  .j-pill {
+    width: 100%;
+    height: auto;
+    border-radius: 100px;
+    padding: 6px 8px;
+    gap: 8px;
+  }
+
+  .j-tab {
+    width: auto;
+    flex: 1;
+    height: 40px;
+    border-radius: 100px;
+    padding: 10px 0;
+  }
+
+  .j-tab p {
+    font-size: 12px;
+    margin-left: 6px;
+  }
+
+  .j-tab img {
+    width: 14px;
+    height: 14px;
+  }
+
+  .j-tag {
+    top: 20px;
+    right: 20px;
+    font-size: 10px;
+    padding: 5px 15px;
+    border-radius: 60px;
+  }
+
+  .price h4 {
+    font-size: 24px;
+    margin: 16px 0 2px;
+  }
+
+  .price p {
+    font-size: 14px;
+    line-height: 20px;
+  }
+
+  .divider {
+    width: 100%;
+    margin: 16px 0 20px;
+  }
+
+  .j-list h6 {
+    font-size: 18px;
+    line-height: 24px;
+    margin-bottom: 12px;
+  }
+
+  .j-list ul {
+    font-size: 14px;
+    line-height: 28px;
+    margin: 8px 0 24px;
+  }
+
+  .j-list ul li {
+    padding-left: 26px;
+  }
+
+  .j-list ul li::before {
+    width: 18px;
+    height: 16px;
+  }
+
+  .semaglutide-btn {
+    padding: 12px 40px;
+    font-size: 12px;
+    width: 100%;
+    text-align: center;
+  }
+
+  .semaglutide-btn:hover {
+    transform: scale(1.02);
+  }
+
+  .table-wrapper {
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    padding-top: 60px;
+    padding-bottom: 60px;
+  }
+
+  .table-info {
+    display: grid;
+    grid-template-columns: 180px 250px 180px;
+    width: max-content;
+    position: relative;
+    gap: 0;
+  }
+
+  .table-col-center {
+    left: 0px;
+    width: 250px;
+    top: -54.7px;
+    z-index: 10;
+  }
+
+  .table-header {
+    padding: 20px 30px;
+  }
+  .table-header h3 {
+    font-size: 15px;
+    line-height: 0px;
+  }
+
+  .table-row-center-pr {
+    padding: 16.5px 0;
+  }
+
+  .table-row.row3-p {
+    padding: 15px 30px;
+  }
+
+  .table-col-center .table-row-center {
+    padding: 15px 44px;
+  }
+
+  .table-row-center-pr .price-text,
+  .row3-p .price-text {
+    font-size: 15px;
+  }
+
+  .table-row {
+    padding: 15px 30px;
+  }
+  .table-row p {
+    font-size: 10px;
+    line-height: normal;
+    margin: 0;
+    white-space: nowrap;
+  }
+
+  .center-header {
+    margin: 19px 30px;
+  }
+  h3.center-header img {
+    width: 190px;
+    margin: 37.5px auto;
+  }
+
+  .table-row-center p,
+  .table-row p {
+    font-weight: 500;
+    font-size: 15px;
+    line-height: normal;
+  }
+
+  .table-row-center p::before {
+    left: 60px;
+    width: 11px;
+    height: 11px;
+  }
+
+  .row3 p::before {
+    left: 15px;
+    width: 11px;
+    height: 11px;
+  }
+}
+
+/* ===== SMALL MOBILE (max-width: 480px) ===== */
+@media (max-width: 480px) {
+  .journey {
+    padding: 30px 0;
+  }
+
+  .j-top h2 {
+    font-size: 24px;
+    line-height: 32px;
+    padding: 0 12px;
+  }
+
+  .j-top p {
+    font-size: 14px;
+    line-height: 20px;
+    padding: 0 12px;
+  }
+
+  .j-cards {
+    padding: 0 12px;
+  }
+
+  .j-card-info {
+    padding: 16px 16px 24px;
+  }
+
+  .j-card-info h4 {
+    font-size: 24px;
+  }
+
+  .j-pill {
+    padding: 5px 6px;
+  }
+
+  .j-tab {
+    height: 36px;
+    padding: 8px 0;
+  }
+
+  .j-tab p {
+    font-size: 11px;
+  }
+
+  .j-list h6 {
+    font-size: 16px;
+  }
+
+  .j-list ul li::before {
+    width: 10px;
+    height: 10px;
+  }
+
+  .j-list ul {
+    font-size: 13px;
+    line-height: 26px;
+  }
+
+  .j-list ul li {
+    padding-left: 13px;
+  }
+
+  .price h4 {
+    font-size: 22px;
+  }
+
+  .semaglutide-btn {
+    padding: 10px 30px;
+    font-size: 11px;
+  }
+
+  .table-top h2 {
+    font-size: 26px;
+  }
+
+  /* .table-header {
+    padding: 20px 30px;
+  }
+
+  .table-header h3 {
+    font-size: 15px;
+    line-height: 0px;
+  }
+
+  .table-row {
+    padding: 15px 30px;
+  }
+
+  .table-row p {
+    font-size: 10px;
+    line-height: 0px;
+    margin: 0;
+    white-space: nowrap;
+  }
+
+  .row3-p .price-text {
+    font-size: 14px;
+  }
+
+  .row3 {
+    padding: 13.5px 30px;
+  }
+
+  .row3 p {
+    font-size: 15px;
+    line-height: 3px;
+    padding-left: 15px;
+  }
+
+  .row3 p::before {
+    top: 18%;
+    left: 0;
+    width: 11px;
+    height: 11px;
+  }
+
+  .center-header {
+    margin: 19px 30px;
+  }
+
+  h3.center-header img {
+    width: 150px;
+  }
+
+  .table-row-center-pr {
+    padding: 10px 0;
+  }
+
+  .table-row-center-pr .price-text {
+    font-size: 14px;
+  }
+
+  .table-col-center .table-row-center {
+    padding: 14px 30px;
+  }
+
+  .table-row-center p {
+    font-weight: 500;
+    font-size: 15px;
+    line-height: 1.9px;
+  }
+
+  .table-row-center p::before {
+    top: 50%;
+    left: 21%;
+    width: 11px;
+    height: 11px;
+  }
+
+  .table-col-center {
+    top: -54.7px;
+    left: 30%;
+    padding-bottom: 60px;
+  } */
+}

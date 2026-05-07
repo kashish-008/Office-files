@@ -1,0 +1,1051 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>NexaFlow — Build. Launch. Scale.</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous" />
+    <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;500;600;700;800&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;1,9..40,300&display=swap" rel="stylesheet" />
+
+    <style>
+      /* =============================================
+         CSS VARIABLES & RESET
+      ============================================= */
+      :root {
+        --brand-primary: #0A0A0F;
+        --brand-accent: #5B5BF6;
+        --brand-accent-light: #7B7BFF;
+        --brand-accent-glow: rgba(91, 91, 246, 0.15);
+        --brand-surface: #F7F7FE;
+        --brand-card: #FFFFFF;
+        --brand-text: #0A0A0F;
+        --brand-muted: #6B7080;
+        --brand-border: rgba(91, 91, 246, 0.12);
+        --brand-border-soft: rgba(0, 0, 0, 0.06);
+
+        --ease-out-expo: cubic-bezier(0.16, 1, 0.3, 1);
+        --ease-in-out-quart: cubic-bezier(0.76, 0, 0.24, 1);
+        --transition-fast: 0.18s var(--ease-out-expo);
+        --transition-med: 0.35s var(--ease-out-expo);
+        --transition-slow: 0.6s var(--ease-out-expo);
+
+        --radius-sm: 8px;
+        --radius-md: 14px;
+        --radius-lg: 22px;
+        --radius-xl: 32px;
+        --shadow-soft: 0 2px 12px rgba(0,0,0,0.06), 0 1px 3px rgba(0,0,0,0.04);
+        --shadow-card: 0 8px 32px rgba(0,0,0,0.08), 0 2px 8px rgba(0,0,0,0.04);
+        --shadow-accent: 0 8px 32px rgba(91, 91, 246, 0.22);
+      }
+
+      *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+      html { scroll-behavior: smooth; }
+
+      body {
+        font-family: 'DM Sans', sans-serif;
+        background-color: var(--brand-surface);
+        color: var(--brand-text);
+        line-height: 1.6;
+        overflow-x: hidden;
+        -webkit-font-smoothing: antialiased;
+      }
+
+      h1, h2, h3, h4, h5, h6 { font-family: 'Syne', sans-serif; }
+
+      /* =============================================
+         NAVBAR
+      ============================================= */
+      .navbar {
+        background: rgba(247, 247, 254, 0.82) !important;
+        backdrop-filter: blur(18px) saturate(180%);
+        -webkit-backdrop-filter: blur(18px) saturate(180%);
+        border-bottom: 1px solid var(--brand-border-soft);
+        padding: 0.85rem 0;
+        position: sticky;
+        top: 0;
+        z-index: 1000;
+        transition: box-shadow var(--transition-fast), background var(--transition-fast);
+      }
+
+      .navbar.scrolled {
+        box-shadow: var(--shadow-soft);
+        background: rgba(247, 247, 254, 0.96) !important;
+      }
+
+      .navbar-brand {
+        font-family: 'Syne', sans-serif;
+        font-weight: 800;
+        font-size: 1.35rem;
+        color: var(--brand-text) !important;
+        letter-spacing: -0.02em;
+        display: flex;
+        align-items: center;
+        gap: 8px;
+        text-decoration: none;
+        transition: opacity var(--transition-fast);
+      }
+
+      .navbar-brand:hover { opacity: 0.75; }
+
+      .brand-icon {
+        width: 32px;
+        height: 32px;
+        background: var(--brand-accent);
+        border-radius: 8px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 14px;
+        transition: transform var(--transition-med), box-shadow var(--transition-med);
+      }
+
+      .navbar-brand:hover .brand-icon {
+        transform: rotate(-8deg) scale(1.08);
+        box-shadow: var(--shadow-accent);
+      }
+
+      .nav-link {
+        font-family: 'DM Sans', sans-serif;
+        font-weight: 500;
+        font-size: 0.9rem;
+        color: var(--brand-muted) !important;
+        padding: 0.4rem 0.85rem !important;
+        border-radius: var(--radius-sm);
+        transition: color var(--transition-fast), background var(--transition-fast);
+        position: relative;
+      }
+
+      .nav-link::after {
+        content: '';
+        position: absolute;
+        bottom: 2px;
+        left: 50%;
+        transform: translateX(-50%) scaleX(0);
+        width: 16px;
+        height: 2px;
+        background: var(--brand-accent);
+        border-radius: 2px;
+        transition: transform var(--transition-med);
+      }
+
+      .nav-link:hover { color: var(--brand-text) !important; }
+      .nav-link:hover::after, .nav-link.active::after { transform: translateX(-50%) scaleX(1); }
+      .nav-link.active { color: var(--brand-text) !important; font-weight: 600; }
+
+      /* =============================================
+         BUTTONS
+      ============================================= */
+      .btn {
+        font-family: 'DM Sans', sans-serif;
+        font-weight: 500;
+        font-size: 0.9rem;
+        border-radius: var(--radius-sm);
+        padding: 0.55rem 1.3rem;
+        transition: all var(--transition-fast);
+        position: relative;
+        overflow: hidden;
+      }
+
+      .btn::before {
+        content: '';
+        position: absolute;
+        inset: 0;
+        background: white;
+        opacity: 0;
+        transition: opacity 0.15s ease;
+      }
+
+      .btn:hover::before { opacity: 0.1; }
+      .btn:active { transform: scale(0.97); }
+
+      .btn-primary {
+        background: var(--brand-accent) !important;
+        border-color: var(--brand-accent) !important;
+        color: white !important;
+        box-shadow: 0 2px 8px rgba(91, 91, 246, 0.25);
+      }
+
+      .btn-primary:hover {
+        background: var(--brand-accent-light) !important;
+        border-color: var(--brand-accent-light) !important;
+        box-shadow: var(--shadow-accent);
+        transform: translateY(-1px);
+      }
+
+      .btn-primary:active { transform: translateY(0) scale(0.97); }
+
+      .btn-outline-primary {
+        border-color: var(--brand-border) !important;
+        color: var(--brand-text) !important;
+        background: transparent !important;
+      }
+
+      .btn-outline-primary:hover {
+        background: var(--brand-accent-glow) !important;
+        border-color: var(--brand-accent) !important;
+        color: var(--brand-accent) !important;
+        transform: translateY(-1px);
+      }
+
+      .btn-outline-login {
+        border: none;
+        background: none;
+        color: var(--brand-muted) !important;
+        padding: 0.55rem 1rem;
+      }
+
+      .btn-outline-login:hover {
+        color: var(--brand-text) !important;
+        background: rgba(0,0,0,0.04) !important;
+      }
+
+      /* =============================================
+         HERO SECTION
+      ============================================= */
+      .hero-section {
+        padding: 6rem 0 5rem;
+        background: linear-gradient(160deg, #F0F0FF 0%, #F7F7FE 50%, #FAFAFF 100%);
+        position: relative;
+        overflow: hidden;
+      }
+
+      .hero-section::before {
+        content: '';
+        position: absolute;
+        top: -120px;
+        right: -120px;
+        width: 500px;
+        height: 500px;
+        background: radial-gradient(circle, rgba(91, 91, 246, 0.12) 0%, transparent 70%);
+        pointer-events: none;
+        animation: pulse-glow 6s ease-in-out infinite;
+      }
+
+      .hero-section::after {
+        content: '';
+        position: absolute;
+        bottom: -80px;
+        left: -80px;
+        width: 350px;
+        height: 350px;
+        background: radial-gradient(circle, rgba(91, 91, 246, 0.07) 0%, transparent 70%);
+        pointer-events: none;
+        animation: pulse-glow 8s ease-in-out infinite reverse;
+      }
+
+      @keyframes pulse-glow {
+        0%, 100% { transform: scale(1); opacity: 1; }
+        50% { transform: scale(1.15); opacity: 0.7; }
+      }
+
+      .hero-badge {
+        display: inline-flex;
+        align-items: center;
+        gap: 6px;
+        background: white;
+        border: 1px solid var(--brand-border);
+        border-radius: 100px;
+        padding: 5px 14px 5px 8px;
+        font-size: 0.78rem;
+        font-weight: 500;
+        color: var(--brand-muted);
+        margin-bottom: 1.5rem;
+        box-shadow: var(--shadow-soft);
+        animation: slide-down 0.6s var(--ease-out-expo) both;
+      }
+
+      .hero-badge-dot {
+        width: 6px;
+        height: 6px;
+        background: #22C55E;
+        border-radius: 50%;
+        animation: blink 2s ease-in-out infinite;
+      }
+
+      @keyframes blink {
+        0%, 100% { opacity: 1; }
+        50% { opacity: 0.3; }
+      }
+
+      .hero-title {
+        font-size: clamp(2.6rem, 6vw, 4.2rem);
+        font-weight: 800;
+        line-height: 1.08;
+        letter-spacing: -0.03em;
+        color: var(--brand-text);
+        animation: slide-up 0.7s var(--ease-out-expo) 0.1s both;
+      }
+
+      .hero-title .accent-word {
+        color: var(--brand-accent);
+        position: relative;
+      }
+
+      .hero-title .accent-word::after {
+        content: '';
+        position: absolute;
+        bottom: 4px;
+        left: 0;
+        width: 100%;
+        height: 3px;
+        background: var(--brand-accent);
+        border-radius: 2px;
+        opacity: 0.3;
+      }
+
+      .hero-desc {
+        font-size: 1.08rem;
+        font-weight: 300;
+        color: var(--brand-muted);
+        max-width: 520px;
+        margin: 1.25rem auto 2.25rem;
+        line-height: 1.7;
+        animation: slide-up 0.7s var(--ease-out-expo) 0.2s both;
+      }
+
+      .hero-actions {
+        animation: slide-up 0.7s var(--ease-out-expo) 0.3s both;
+      }
+
+      .btn-hero-primary {
+        background: var(--brand-accent) !important;
+        border-color: var(--brand-accent) !important;
+        color: white !important;
+        font-size: 0.95rem !important;
+        padding: 0.75rem 2rem !important;
+        border-radius: 10px !important;
+        box-shadow: 0 4px 16px rgba(91, 91, 246, 0.3);
+      }
+
+      .btn-hero-primary:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 8px 28px rgba(91, 91, 246, 0.38) !important;
+        background: var(--brand-accent-light) !important;
+      }
+
+      .btn-hero-secondary {
+        font-size: 0.95rem !important;
+        padding: 0.75rem 1.75rem !important;
+        border-radius: 10px !important;
+        color: var(--brand-text) !important;
+        background: white !important;
+        border: 1px solid var(--brand-border-soft) !important;
+        box-shadow: var(--shadow-soft);
+      }
+
+      .btn-hero-secondary:hover {
+        transform: translateY(-2px);
+        border-color: var(--brand-border) !important;
+        box-shadow: var(--shadow-card) !important;
+      }
+
+      /* =============================================
+         SECTION COMMON
+      ============================================= */
+      .section-label {
+        display: inline-block;
+        font-size: 0.72rem;
+        font-weight: 700;
+        letter-spacing: 0.12em;
+        text-transform: uppercase;
+        color: var(--brand-accent);
+        background: var(--brand-accent-glow);
+        border: 1px solid rgba(91, 91, 246, 0.2);
+        padding: 4px 12px;
+        border-radius: 100px;
+        margin-bottom: 0.85rem;
+      }
+
+      .section-heading {
+        font-size: clamp(1.8rem, 4vw, 2.5rem);
+        font-weight: 800;
+        letter-spacing: -0.025em;
+        color: var(--brand-text);
+        line-height: 1.15;
+      }
+
+      .section-sub {
+        color: var(--brand-muted);
+        font-weight: 300;
+        font-size: 1rem;
+        max-width: 480px;
+        margin: 0 auto;
+        line-height: 1.7;
+      }
+
+      /* =============================================
+         WHY CHOOSE US — CARDS
+      ============================================= */
+      .why-section {
+        padding: 5rem 0;
+        background: white;
+      }
+
+      .feature-card {
+        background: var(--brand-card);
+        border: 1px solid var(--brand-border-soft);
+        border-radius: var(--radius-lg);
+        padding: 2.25rem 2rem;
+        height: 100%;
+        text-align: center;
+        position: relative;
+        overflow: hidden;
+        transition: transform var(--transition-med), box-shadow var(--transition-med), border-color var(--transition-med);
+        cursor: default;
+      }
+
+      .feature-card::before {
+        content: '';
+        position: absolute;
+        inset: 0;
+        background: linear-gradient(135deg, var(--brand-accent-glow) 0%, transparent 60%);
+        opacity: 0;
+        transition: opacity var(--transition-med);
+        pointer-events: none;
+      }
+
+      .feature-card:hover {
+        transform: translateY(-6px);
+        box-shadow: var(--shadow-card);
+        border-color: var(--brand-border);
+      }
+
+      .feature-card:hover::before { opacity: 1; }
+
+      .card-icon-wrap {
+        width: 60px;
+        height: 60px;
+        border-radius: 16px;
+        background: var(--brand-accent-glow);
+        border: 1px solid rgba(91, 91, 246, 0.15);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 1.6rem;
+        margin: 0 auto 1.25rem;
+        transition: transform var(--transition-med), background var(--transition-med);
+      }
+
+      .feature-card:hover .card-icon-wrap {
+        transform: scale(1.12) rotate(-5deg);
+        background: rgba(91, 91, 246, 0.18);
+      }
+
+      .feature-card h5 {
+        font-size: 1.05rem;
+        font-weight: 700;
+        letter-spacing: -0.01em;
+        margin-bottom: 0.65rem;
+        color: var(--brand-text);
+      }
+
+      .feature-card p {
+        font-size: 0.88rem;
+        color: var(--brand-muted);
+        line-height: 1.65;
+        margin: 0;
+        font-weight: 300;
+      }
+
+      /* =============================================
+         FEATURES GRID
+      ============================================= */
+      .features-section {
+        padding: 5.5rem 0;
+        background: var(--brand-surface);
+      }
+
+      .feature-item {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        padding: 1.75rem 1.5rem;
+        border-radius: var(--radius-md);
+        transition: background var(--transition-fast), transform var(--transition-med);
+      }
+
+      .feature-item:hover { background: white; transform: translateY(-4px); }
+
+      .feature-item-icon {
+        width: 52px;
+        height: 52px;
+        border-radius: 14px;
+        background: var(--brand-accent);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 1.4rem;
+        margin-bottom: 1rem;
+        transition: transform var(--transition-med), box-shadow var(--transition-med);
+        box-shadow: 0 4px 12px rgba(91, 91, 246, 0.2);
+      }
+
+      .feature-item:hover .feature-item-icon {
+        transform: scale(1.1) rotate(6deg);
+        box-shadow: var(--shadow-accent);
+      }
+
+      .feature-item h5 {
+        font-size: 1rem;
+        font-weight: 700;
+        letter-spacing: -0.01em;
+        margin-bottom: 0.4rem;
+      }
+
+      .feature-item p {
+        font-size: 0.85rem;
+        color: var(--brand-muted);
+        margin: 0;
+        font-weight: 300;
+        line-height: 1.6;
+      }
+
+      /* =============================================
+         TESTIMONIALS
+      ============================================= */
+      .testimonials-section {
+        padding: 5rem 0;
+        background: white;
+      }
+
+      .testimonial-card {
+        background: var(--brand-surface);
+        border: 1px solid var(--brand-border-soft);
+        border-radius: var(--radius-lg);
+        padding: 2rem;
+        height: 100%;
+        position: relative;
+        transition: transform var(--transition-med), box-shadow var(--transition-med), border-color var(--transition-med);
+      }
+
+      .testimonial-card:hover {
+        transform: translateY(-5px);
+        box-shadow: var(--shadow-card);
+        border-color: var(--brand-border);
+      }
+
+      .testimonial-stars {
+        color: #F59E0B;
+        font-size: 0.8rem;
+        letter-spacing: 1px;
+        margin-bottom: 1rem;
+      }
+
+      .testimonial-quote {
+        font-size: 0.92rem;
+        color: var(--brand-text);
+        line-height: 1.7;
+        font-weight: 300;
+        font-style: italic;
+        margin-bottom: 1.25rem;
+      }
+
+      .testimonial-avatar {
+        width: 38px;
+        height: 38px;
+        border-radius: 50%;
+        background: var(--brand-accent);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 0.85rem;
+        font-weight: 700;
+        color: white;
+        font-family: 'Syne', sans-serif;
+        flex-shrink: 0;
+        transition: transform var(--transition-med);
+      }
+
+      .testimonial-card:hover .testimonial-avatar { transform: scale(1.1) rotate(-5deg); }
+
+      .testimonial-name {
+        font-family: 'Syne', sans-serif;
+        font-size: 0.92rem;
+        font-weight: 700;
+        color: var(--brand-text);
+        margin-bottom: 1px;
+      }
+
+      .testimonial-role {
+        font-size: 0.78rem;
+        color: var(--brand-muted);
+        font-weight: 400;
+      }
+
+      /* =============================================
+         FOOTER
+      ============================================= */
+      .footer {
+        background: var(--brand-primary);
+        color: rgba(255,255,255,0.55);
+        padding-top: 4rem;
+      }
+
+      .footer-brand-name {
+        font-family: 'Syne', sans-serif;
+        font-weight: 800;
+        font-size: 1.35rem;
+        color: white;
+        letter-spacing: -0.02em;
+        display: flex;
+        align-items: center;
+        gap: 8px;
+        text-decoration: none;
+        margin-bottom: 0.85rem;
+      }
+
+      .footer-brand-icon {
+        width: 30px;
+        height: 30px;
+        background: var(--brand-accent);
+        border-radius: 7px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 12px;
+        transition: transform var(--transition-med);
+      }
+
+      .footer-brand-name:hover .footer-brand-icon { transform: rotate(-8deg) scale(1.08); }
+
+      .footer-desc {
+        font-size: 0.87rem;
+        color: rgba(255,255,255,0.45);
+        line-height: 1.7;
+        font-weight: 300;
+        margin-bottom: 1.5rem;
+      }
+
+      .footer-heading {
+        font-family: 'Syne', sans-serif;
+        font-size: 0.82rem;
+        font-weight: 700;
+        letter-spacing: 0.08em;
+        text-transform: uppercase;
+        color: rgba(255,255,255,0.85);
+        margin-bottom: 1rem;
+      }
+
+      .footer-links { list-style: none; padding: 0; }
+
+      .footer-links li { margin-bottom: 0.5rem; }
+
+      .footer-links a, .footer-link {
+        font-size: 0.88rem;
+        color: rgba(255,255,255,0.45);
+        text-decoration: none;
+        transition: color var(--transition-fast), transform var(--transition-fast);
+        display: inline-block;
+        font-weight: 300;
+      }
+
+      .footer-links a:hover, .footer-link:hover {
+        color: white;
+        transform: translateX(3px);
+      }
+
+      .footer-social-link {
+        width: 36px;
+        height: 36px;
+        border-radius: var(--radius-sm);
+        background: rgba(255,255,255,0.07);
+        border: 1px solid rgba(255,255,255,0.1);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 0.85rem;
+        text-decoration: none;
+        color: rgba(255,255,255,0.6) !important;
+        transition: all var(--transition-fast);
+      }
+
+      .footer-social-link:hover {
+        background: var(--brand-accent);
+        border-color: var(--brand-accent);
+        color: white !important;
+        transform: translateY(-3px);
+        box-shadow: 0 4px 14px rgba(91, 91, 246, 0.4);
+      }
+
+      .footer-bottom {
+        border-top: 1px solid rgba(255,255,255,0.07);
+        padding: 1.4rem 0;
+        margin-top: 3rem;
+        font-size: 0.82rem;
+        color: rgba(255,255,255,0.3);
+      }
+
+      .footer-bottom a {
+        color: rgba(255,255,255,0.4);
+        text-decoration: none;
+        transition: color var(--transition-fast);
+      }
+
+      .footer-bottom a:hover { color: rgba(255,255,255,0.8); }
+
+      /* =============================================
+         SCROLL ANIMATIONS
+      ============================================= */
+      @keyframes slide-up {
+        from { opacity: 0; transform: translateY(28px); }
+        to   { opacity: 1; transform: translateY(0); }
+      }
+
+      @keyframes slide-down {
+        from { opacity: 0; transform: translateY(-16px); }
+        to   { opacity: 1; transform: translateY(0); }
+      }
+
+      @keyframes fade-in {
+        from { opacity: 0; }
+        to   { opacity: 1; }
+      }
+
+      .reveal {
+        opacity: 0;
+        transform: translateY(30px);
+        transition: opacity 0.65s var(--ease-out-expo), transform 0.65s var(--ease-out-expo);
+      }
+
+      .reveal.visible {
+        opacity: 1;
+        transform: translateY(0);
+      }
+
+      /* Staggered children */
+      .reveal-stagger > * {
+        opacity: 0;
+        transform: translateY(24px);
+        transition: opacity 0.55s var(--ease-out-expo), transform 0.55s var(--ease-out-expo);
+      }
+
+      .reveal-stagger.visible > *:nth-child(1) { opacity: 1; transform: none; transition-delay: 0.05s; }
+      .reveal-stagger.visible > *:nth-child(2) { opacity: 1; transform: none; transition-delay: 0.12s; }
+      .reveal-stagger.visible > *:nth-child(3) { opacity: 1; transform: none; transition-delay: 0.19s; }
+      .reveal-stagger.visible > *:nth-child(4) { opacity: 1; transform: none; transition-delay: 0.26s; }
+      .reveal-stagger.visible > *:nth-child(5) { opacity: 1; transform: none; transition-delay: 0.33s; }
+      .reveal-stagger.visible > *:nth-child(6) { opacity: 1; transform: none; transition-delay: 0.40s; }
+
+      /* =============================================
+         RESPONSIVE TWEAKS
+      ============================================= */
+      @media (max-width: 768px) {
+        .hero-section { padding: 4rem 0 3.5rem; }
+        .hero-title { font-size: 2.4rem; }
+        .navbar-collapse { padding: 1rem 0; }
+        .navbar-nav { gap: 0; }
+        .nav-link::after { display: none; }
+      }
+    </style>
+  </head>
+  <body>
+
+    <!-- ============ NAVBAR ============ -->
+    <nav class="navbar navbar-expand-lg" id="mainNav">
+      <div class="container">
+        <a class="navbar-brand" href="#">
+          <div class="brand-icon">⚡</div>
+          NexaFlow
+        </a>
+
+        <button class="navbar-toggler border-0 shadow-none" type="button"
+          data-bs-toggle="collapse" data-bs-target="#navbarNav"
+          aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav ms-auto align-items-lg-center gap-lg-1">
+            <li class="nav-item"><a class="nav-link active" href="#">Home</a></li>
+            <li class="nav-item"><a class="nav-link" href="#">Features</a></li>
+            <li class="nav-item"><a class="nav-link" href="#">Pricing</a></li>
+            <li class="nav-item"><a class="nav-link" href="#">About Us</a></li>
+          </ul>
+
+          <div class="d-flex align-items-center ms-lg-4 mt-3 mt-lg-0 gap-2">
+            <a href="#" class="btn btn-outline-login">Login</a>
+            <a href="#" class="btn btn-primary">Sign Up Free</a>
+          </div>
+        </div>
+      </div>
+    </nav>
+
+    <!-- ============ HERO ============ -->
+    <section class="hero-section">
+      <div class="container text-center position-relative">
+        <div class="hero-badge">
+          <span class="hero-badge-dot"></span>
+          Now in Public Beta — Try for Free
+        </div>
+
+        <h1 class="hero-title">
+          Build faster.<br>
+          Launch <span class="accent-word">smarter</span>.<br>
+          Scale confidently.
+        </h1>
+
+        <p class="hero-desc">
+          NexaFlow gives your team everything needed to ship modern products — clean UI, optimized performance, and infrastructure that grows with you.
+        </p>
+
+        <div class="hero-actions d-flex justify-content-center gap-3 flex-wrap">
+          <a href="#" class="btn btn-hero-primary">Get Started Free →</a>
+          <a href="#" class="btn btn-hero-secondary">See How It Works</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ WHY CHOOSE US ============ -->
+    <section class="why-section">
+      <div class="container">
+        <div class="text-center mb-5 reveal">
+          <span class="section-label">Why NexaFlow</span>
+          <h2 class="section-heading">Modern solutions for<br>modern teams</h2>
+          <p class="section-sub mt-2">Built for speed, designed for simplicity, trusted by thousands of developers.</p>
+        </div>
+
+        <div class="row g-4 reveal-stagger">
+          <div class="col-12 col-md-6 col-lg-4">
+            <div class="feature-card">
+              <div class="card-icon-wrap">⚡</div>
+              <h5>Fast Performance</h5>
+              <p>Lightning-fast load times with smooth interactions across every device and network condition.</p>
+            </div>
+          </div>
+
+          <div class="col-12 col-md-6 col-lg-4">
+            <div class="feature-card">
+              <div class="card-icon-wrap">📱</div>
+              <h5>Responsive by Default</h5>
+              <p>Pixel-perfect layouts that adapt seamlessly from mobile to large desktop screens.</p>
+            </div>
+          </div>
+
+          <div class="col-12 col-md-6 col-lg-4">
+            <div class="feature-card">
+              <div class="card-icon-wrap">🎯</div>
+              <h5>User Focused</h5>
+              <p>Intuitive design patterns built with real user research and accessibility best practices.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ FEATURES ============ -->
+    <section class="features-section">
+      <div class="container">
+        <div class="text-center mb-5 reveal">
+          <span class="section-label">Features</span>
+          <h2 class="section-heading">Everything you need<br>to ship great products</h2>
+          <p class="section-sub mt-2">A complete toolkit — from development to deployment.</p>
+        </div>
+
+        <div class="row g-3 reveal-stagger">
+          <div class="col-md-6 col-lg-4">
+            <div class="feature-item">
+              <div class="feature-item-icon">⚡</div>
+              <h5>Fast Performance</h5>
+              <p>Optimized for speed and smooth user experience out of the box.</p>
+            </div>
+          </div>
+
+          <div class="col-md-6 col-lg-4">
+            <div class="feature-item">
+              <div class="feature-item-icon">📱</div>
+              <h5>Responsive Design</h5>
+              <p>Works perfectly on mobile, tablet, and desktop without extra config.</p>
+            </div>
+          </div>
+
+          <div class="col-md-6 col-lg-4">
+            <div class="feature-item">
+              <div class="feature-item-icon">🔒</div>
+              <h5>Enterprise Security</h5>
+              <p>Built with best-in-class security practices for safety and reliability.</p>
+            </div>
+          </div>
+
+          <div class="col-md-6 col-lg-4">
+            <div class="feature-item">
+              <div class="feature-item-icon">🎯</div>
+              <h5>Easy to Use</h5>
+              <p>Clean, intuitive interface designed for teams of any technical level.</p>
+            </div>
+          </div>
+
+          <div class="col-md-6 col-lg-4">
+            <div class="feature-item">
+              <div class="feature-item-icon">⚙️</div>
+              <h5>Customizable</h5>
+              <p>Easily adapts to your existing workflow and tech stack requirements.</p>
+            </div>
+          </div>
+
+          <div class="col-md-6 col-lg-4">
+            <div class="feature-item">
+              <div class="feature-item-icon">☁️</div>
+              <h5>Cloud Native</h5>
+              <p>Scalable infrastructure ready for modern cloud deployment pipelines.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ TESTIMONIALS ============ -->
+    <section class="testimonials-section">
+      <div class="container">
+        <div class="text-center mb-5 reveal">
+          <span class="section-label">Testimonials</span>
+          <h2 class="section-heading">Loved by developers<br>worldwide</h2>
+          <p class="section-sub mt-2">Join thousands of teams already building with NexaFlow.</p>
+        </div>
+
+        <div class="row g-4 reveal-stagger">
+          <div class="col-md-6 col-lg-4">
+            <div class="testimonial-card">
+              <div class="testimonial-stars">★★★★★</div>
+              <p class="testimonial-quote">"This framework made my workflow 10x faster. The documentation is excellent and the community is incredibly supportive."</p>
+              <div class="d-flex align-items-center gap-3">
+                <div class="testimonial-avatar">JD</div>
+                <div>
+                  <div class="testimonial-name">John Doe</div>
+                  <div class="testimonial-role">Frontend Developer, TechCorp</div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-6 col-lg-4">
+            <div class="testimonial-card">
+              <div class="testimonial-stars">★★★★★</div>
+              <p class="testimonial-quote">"Clean design and incredibly easy to use. Perfect for both beginners and experienced teams who want to ship fast."</p>
+              <div class="d-flex align-items-center gap-3">
+                <div class="testimonial-avatar">SK</div>
+                <div>
+                  <div class="testimonial-name">Sarah Khan</div>
+                  <div class="testimonial-role">UI Designer, StudioX</div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-6 col-lg-4">
+            <div class="testimonial-card">
+              <div class="testimonial-stars">★★★★★</div>
+              <p class="testimonial-quote">"Loved the responsiveness and flexibility. We cut our development time significantly after switching to NexaFlow."</p>
+              <div class="d-flex align-items-center gap-3">
+                <div class="testimonial-avatar">RS</div>
+                <div>
+                  <div class="testimonial-name">Rahul Sharma</div>
+                  <div class="testimonial-role">Software Engineer, Startify</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ FOOTER ============ -->
+    <footer class="footer">
+      <div class="container">
+        <div class="row gy-4">
+
+          <div class="col-lg-4 col-md-12 mb-2">
+            <a class="footer-brand-name" href="#">
+              <div class="footer-brand-icon">⚡</div>
+              NexaFlow
+            </a>
+            <p class="footer-desc">Build modern, responsive products with clean UI and optimized performance. Trusted by 10,000+ developers.</p>
+            <div class="d-flex gap-2">
+              <a href="#" class="footer-social-link" aria-label="Website">🌐</a>
+              <a href="#" class="footer-social-link" aria-label="Twitter">🐦</a>
+              <a href="#" class="footer-social-link" aria-label="Facebook">📘</a>
+            </div>
+          </div>
+
+          <div class="col-6 col-md-3 col-lg-2 offset-lg-2">
+            <p class="footer-heading">Company</p>
+            <ul class="footer-links">
+              <li><a href="#">About</a></li>
+              <li><a href="#">Careers</a></li>
+              <li><a href="#">Blog</a></li>
+            </ul>
+          </div>
+
+          <div class="col-6 col-md-3 col-lg-2">
+            <p class="footer-heading">Product</p>
+            <ul class="footer-links">
+              <li><a href="#">Features</a></li>
+              <li><a href="#">Pricing</a></li>
+              <li><a href="#">Docs</a></li>
+            </ul>
+          </div>
+
+          <div class="col-6 col-md-3 col-lg-2">
+            <p class="footer-heading">Support</p>
+            <ul class="footer-links">
+              <li><a href="#">Help Center</a></li>
+              <li><a href="#">Contact</a></li>
+              <li><a href="#">Privacy</a></li>
+            </ul>
+          </div>
+
+        </div>
+
+        <div class="footer-bottom d-flex flex-column flex-md-row justify-content-between align-items-center">
+          <p class="mb-2 mb-md-0">© 2026 NexaFlow, Inc. All rights reserved.</p>
+          <div class="d-flex gap-3">
+            <a href="#">Terms of Service</a>
+            <a href="#">Privacy Policy</a>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+
+    <script>
+      // ── Navbar scroll effect ──
+      const nav = document.getElementById('mainNav');
+      window.addEventListener('scroll', () => {
+        nav.classList.toggle('scrolled', window.scrollY > 20);
+      }, { passive: true });
+
+      // ── Scroll reveal with IntersectionObserver ──
+      const revealObserver = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('visible');
+            revealObserver.unobserve(entry.target); // animate only once
+          }
+        });
+      }, { threshold: 0.12, rootMargin: '0px 0px -40px 0px' });
+
+      document.querySelectorAll('.reveal, .reveal-stagger').forEach(el => {
+        revealObserver.observe(el);
+      });
+
+      // ── Active nav link highlight on scroll ──
+      const sections = document.querySelectorAll('section[id]');
+      const navLinks = document.querySelectorAll('.nav-link');
+
+      const sectionObserver = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            navLinks.forEach(link => link.classList.remove('active'));
+            const activeLink = document.querySelector(`.nav-link[href="#${entry.target.id}"]`);
+            if (activeLink) activeLink.classList.add('active');
+          }
+        });
+      }, { threshold: 0.5 });
+
+      sections.forEach(section => sectionObserver.observe(section));
+    </script>
+
+  </body>
+</html>

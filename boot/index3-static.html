@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Stack Scroll Card</title>
+
+  <style>
+
+    /* ── Basic Reset ── */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      background: #0c0c0c;
+      color: white;
+      font-family: sans-serif;
+    }
+
+    /* ─────────────────────────────────────────
+       LAYOUT — two columns side by side
+    ───────────────────────────────────────── */
+    .layout {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      align-items: start;        /* important: lets each side manage its own height */
+      width: 80%;
+      margin: auto;
+      border: 5px solid red;
+    }
+
+    /* ─────────────────────────────────────────
+       LEFT SIDE — images scroll and stack
+    ───────────────────────────────────────── */
+    .left-col {
+      height: 400vh;
+      border: 5px solid green;
+    }
+
+    .card {
+      position: sticky;
+      /* top: 100px; */
+      height: 100vh;
+      /* place-self: center; */
+      overflow: hidden;
+      border: 2px solid rgb(0, 51, 255);
+    }
+
+    .card:nth-child(1) { z-index: 1; }
+    .card:nth-child(2) { z-index: 2; }
+    .card:nth-child(3) { z-index: 3; }
+    .card:nth-child(4) { z-index: 4; }
+
+    .card img {
+      width: 100%;
+      height: 100%;
+      object-fit:cover;
+      display: block;
+    }
+
+    /* ─────────────────────────────────────────
+                      RIGHT SIDE — 
+    ───────────────────────────────────────── */
+    .right-col {
+      position: sticky;
+      top: 0;
+      height: 100vh;
+      border: 5px solid rgb(255, 234, 0);
+      /* Center content vertically and horizontally */
+      display: flex;
+      align-items: center;
+      padding: 250px 60px;
+    }
+
+    /* The single static text div */
+    .text-box {
+      max-width: 420px;
+    }
+
+    .text-box h2 {
+      font-size: 2.2rem;
+      line-height: 1.3;
+      margin-bottom: 20px;
+      color: white;
+    }
+
+    .text-box p {
+      font-size: 1rem;
+      line-height: 1.8;
+      color: #888;
+      margin-bottom: 16px;
+    }
+
+    /* ── Mobile ── */
+    @media (max-width: 768px) {
+      .layout {
+        grid-template-columns: 1fr;
+      }
+
+      .left-col {
+        height: auto;
+      }
+
+      .card {
+        position: relative;
+        height: 70vw;
+        min-height: 250px;
+      }
+
+      .right-col {
+        position: relative;
+        height: auto;
+        padding: 50px 30px;
+      }
+    }
+
+  </style>
+</head>
+<body>
+
+  <div class="layout">
+
+    <!-- LEFT — 4 stacking image cards -->
+    <div class="left-col">
+
+      <div class="card">
+        <img src="https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=800&q=80" alt="Mountains" />
+      </div>
+
+      <div class="card">
+        <img src="https://images.unsplash.com/photo-1518020382113-a7e8fc38eac9?w=800&q=80" alt="Ocean" />
+      </div>
+
+      <div class="card">
+        <img src="https://images.unsplash.com/photo-1448375240586-882707db888b?w=800&q=80" alt="Forest" />
+      </div>
+
+      <div class="card">
+        <img src="https://images.unsplash.com/photo-1469474968028-56623f02e42e?w=800&q=80" alt="Desert" />
+      </div>
+
+    </div>
+
+    <!-- RIGHT — one static div, never moves, never changes -->
+    <div class="right-col">
+      <div class="text-box">
+
+        <h2>The World is Bigger Than You Think</h2>
+
+        <p>
+          From the highest mountain peaks to the darkest ocean floors,
+          our planet holds wonders that most people will never see.
+          Every corner of the Earth tells a story millions of years in the making.
+        </p>
+
+        <p>
+          Towering mountain ranges stretch above the clouds where the air
+          is too thin to breathe. Oceans hide entire ecosystems in complete
+          darkness. Forests breathe and communicate underground. Deserts
+          bloom after a single drop of rain.
+        </p>
+
+        <p>
+          Scroll through the images and let nature remind you how small —
+          and how lucky — we really are.
+        </p>
+
+      </div>
+    </div>
+
+  </div>
+
+  <section style="background-color: aqua; height: 100vh; width: 98.8vw;">
+
+  </section>
+
+</body>
+</html>
