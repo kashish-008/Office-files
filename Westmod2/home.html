@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Home-page</title>
+        <link
+            href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+            rel="stylesheet">
+        <link rel="stylesheet" href="css/style.css">
+        <link rel="stylesheet" href="css/resp.css">
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    </head>
+    <body>
+        <!-- header -->
+        <header>
+            <div class="container">
+                <nav>
+                    <div class="logo">
+                        <img src="assets/logo.svg" alt="logo">
+                    </div>
+                    <div class="nav-links">
+                        <ul>
+                            <li><a href="#">Home</a></li>
+                            <li><a href="#">Shop Pools</a></li>
+                            <li><a href="#">About Us</a></li>
+                            <li><a href="#">FAQ</a></li>
+                        </ul>
+                        <a href="#" class="nav-cta">Get In Touch</a>
+                    </div>
+                </nav>
+            </div>
+        </header>
+        <!-- main -->
+        <cri class="main">
+
+            <!-- hero-section -->
+            <section class="hero home-hero" id="heroSection">
+                <canvas id="dashedGridCanvas" class="hero-canvas"></canvas>
+                <div class="hero-content contact-hero">
+                    <p>Get in touch</p>
+                    <h1>Crafted Pools Begin with a Conversation</h1>
+                </div>
+            </section>
+
+<section class="modern" id="modern">
+    <div class="modern-sticky">
+        <div class="modern-img-wrap">
+            <img src="assets/Mask group (1).png" alt="Pool" class="modern-img" />
+            <div class="modern-text">
+                <h2>Where Modern Design Meets Practical Functionality to Deliver Pools That Are Built Around You</h2>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="drag" id="drag">
+
+    <!-- custom cursor -->
+    <div class="drag-cursor" id="dragCursor">
+        <img src="assets/Group 195.png" alt="drag" />
+    </div>
+
+    <div class="drag-heading">
+        <h2>Shop Your <span>Studio</span> Pool</h2>
+    </div>
+
+    <div class="drag-slider-wrap">
+        <div class="swiper dragSwiper">
+            <div class="swiper-wrapper">
+
+                <!-- Card 1 -->
+                <div class="swiper-slide">
+                    <div class="drag-card">
+                        <img src="assets/Rectangle 15.png" alt="Pool Only" />
+                    </div>
+                </div>
+
+                <!-- Card 2 -->
+                <div class="swiper-slide">
+                    <div class="drag-card">
+                        <img src="assets/Rectangle 14.png" alt="Spool" />
+                        <div class="drag-card-label">Spool</div>
+                    </div>
+                </div>
+
+                <!-- Card 3 -->
+                <div class="swiper-slide">
+                    <div class="drag-card">
+                        <img src="assets/rectangle16.png" alt="Pool with Coping" />
+                        <div class="drag-card-label">Pool with Coping</div>
+                    </div>
+                </div>
+
+                <!-- Card 4 -->
+                <div class="swiper-slide">
+                    <div class="drag-card">
+                        <img src="assets/Rectangle 14.png" alt="Lap Pool" />
+                        <div class="drag-card-label">Lap Pool</div>
+                    </div>
+                </div>
+
+                <!-- Card 5 -->
+                <div class="swiper-slide">
+                    <div class="drag-card">
+                        <img src="assets/Rectangle 15.png" alt="Infinity Pool" />
+                        <div class="drag-card-label">Infinity Pool</div>
+                    </div>
+                </div>
+
+                <!-- Card 6 -->
+                <div class="swiper-slide">
+                    <div class="drag-card">
+                        <img src="assets/rectangle16.png 16.png" alt="Resort Pool" />
+                        <div class="drag-card-label">Resort Pool</div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <!-- active card info — always below first visible card -->
+    <div class="drag-info">
+        <div class="drag-info-left">
+            <p class="drag-info-name">Pool Only</p>
+            <p class="drag-info-price">starting at <span>$63,500</span></p>
+            <p class="drag-info-sizes">3 Sizes to Choose From</p>
+        </div>
+        <div class="drag-info-right">
+            <button class="drag-shop-btn">Shop Now</button>
+        </div>
+    </div>
+
+</section>
+            <!-- Footer Section  -->
+            <footer class="site-footer">
+                <div>
+                    <img class="vector4" src="assets/Vector4.png" alt>
+                    <img class="vector5" src="assets/Vector5.png" alt>
+                </div>
+
+                <div class="container">
+                    <div class="footer-inner">
+                        <!-- Left Column -->
+                        <div class="footer-brand">
+                            <div class="footer-logo"><img
+                                    src="assets/footerlogo.png" alt></div>
+                            <div class="footer-copyright"><p>Copyright
+                                    Westwood
+                                    Studio &copy; 2026<br>All Rights
+                                    Reserved</p></div>
+                        </div>
+                        <!-- Right Column -->
+                        <div class="footer-links">
+                            <div class="quick-links">
+                                <h4>Quick Links</h4>
+                                <ul>
+                                    <li><a href="#">Home</a></li>
+                                    <li><a href="#">Shop Points</a></li>
+                                    <li><a href="#">About Us</a></li>
+                                    <li><a href="#">FAQ</a></li>
+                                    <li><a href="#">Contact</a></li>
+                                </ul>
+                            </div>
+                            <div class="social-section">
+                                <h4>Connect with our experts today.</h4>
+                                <ul class="social-links">
+                                    <li><a href="#">Twitter</a></li>
+                                    <li><a href="#"> Facebook</a></li>
+                                    <li><a href="#"> Linkedin</a></li>
+                                    <li><a href="#">Instagram</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </footer>
+            <script
+                src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
+                <script src="js/drag.js"></script>
+            <script src="js/grid.js"></script>
+            <script src="js/script.js"></script>
+        </body>
+    </html>

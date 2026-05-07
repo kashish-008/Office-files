@@ -1,0 +1,419 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nivedna — Portfolio</title>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@500&family=Inter:ital,opsz,wght@0,14..32,300;0,14..32,400;0,14..32,500;0,14..32,600;0,14..32,700;1,14..32,400;1,14..32,500&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- Font Awesome 6 -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+    <!-- AOS CSS -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="i2.css">
+    <link rel="stylesheet" href="i2-responsive.css">
+</head>
+<body>
+
+    <!-- ==================== NAVIGATION ==================== -->
+    <nav class="nav" id="navbar">
+        <div class="nav__inner">
+            <a href="#home" class="nav__logo">Nived<span>na</span></a>
+            <button class="nav__hamburger" id="hamburger" aria-label="Toggle menu">
+                <span></span><span></span><span></span>
+            </button>
+            <ul class="nav__links" id="navLinks">
+                <li><a href="#home" data-nav-link>Home</a></li>
+                <li><a href="#about" data-nav-link>About</a></li>
+                <li><a href="#projects" data-nav-link>Projects</a></li>
+                <li><a href="#achievements" data-nav-link>Achievements</a></li>
+                <li><a href="#contact" data-nav-link>Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- ==================== HERO ==================== -->
+    <section class="section section--hero" id="home">
+        <div class="hero">
+            <div class="hero__content" data-aos="fade-in" data-aos-duration="900">
+                <p class="section__label">✦ Hello, I'm</p>
+                <h1>Nived<span>na</span></h1>
+                <p class="hero__tagline">
+                    <em>Computer Science Engineering Student</em> &nbsp;|&nbsp; Web Developer &nbsp;|&nbsp; Problem Solver
+                </p>
+                <div class="hero__buttons">
+                    <a href="#contact" class="btn btn--primary" data-nav-link>
+                        <i class="fa-regular fa-paper-plane"></i> Get in Touch
+                    </a>
+                    <a href="https://github.com/Nivedna01" target="_blank" rel="noopener noreferrer" class="btn btn--outline">
+                        <i class="fa-brands fa-github"></i> GitHub
+                    </a>
+                    <a href="https://www.linkedin.com/in/nivedna-7b3b522ba" target="_blank" rel="noopener noreferrer" class="btn btn--outline">
+                        <i class="fa-brands fa-linkedin-in"></i> LinkedIn
+                    </a>
+                </div>
+            </div>
+            <div class="hero__avatar-wrap" data-aos="fade-in" data-aos-duration="900" data-aos-delay="200">
+                <div class="hero__avatar">
+                    N
+                    <div class="hero__avatar-ring"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==================== ABOUT ==================== -->
+    <section class="section" id="about">
+        <p class="section__label" data-aos="fade-up">✧ A Little About Me</p>
+        <h2 class="section__title section__title--squiggly" data-aos="fade-up" data-aos-delay="100">Professional Summary</h2>
+        <div class="about-grid" data-aos="fade-up" data-aos-delay="200">
+            <div class="about__summary">
+                Motivated and detail-oriented Computer Science Engineering student with strong analytical thinking and problem-solving abilities. Eager to learn business processes, documentation, and workflow analysis while contributing to team objectives. Known for quick learning, clear communication, and the ability to understand and organize information effectively.
+            </div>
+            <div class="about__sidebar">
+                <div class="about-card" data-aos="fade-left" data-aos-delay="300">
+                    <div class="about-card__title">📍 Location</div>
+                    <div class="about-card__content">
+                        <i class="fa-solid fa-location-dot"></i> VPO Simbli, Bhangala, Punjab — Pin: 144306
+                    </div>
+                </div>
+                <div class="about-card" data-aos="fade-left" data-aos-delay="400">
+                    <div class="about-card__title">🌐 Languages</div>
+                    <div class="about-card__content">
+                        <i class="fa-solid fa-language"></i> English &nbsp;|&nbsp; Hindi &nbsp;|&nbsp; Punjabi
+                    </div>
+                </div>
+                <div class="about-card" data-aos="fade-left" data-aos-delay="500">
+                    <div class="about-card__title">🎨 Interests & Hobbies</div>
+                    <div class="about-card__content">
+                        <i class="fa-solid fa-music"></i> Listening to music &nbsp;|&nbsp; <i class="fa-solid fa-pencil"></i> Sketching &nbsp;|&nbsp; <i class="fa-solid fa-person-walking"></i> Dancing
+                    </div>
+                </div>
+                <div class="about-card" data-aos="fade-left" data-aos-delay="600">
+                    <div class="about-card__title">📅 D.O.B</div>
+                    <div class="about-card__content">
+                        <i class="fa-solid fa-cake-candles"></i> 05 December, 2005
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==================== SKILLS ==================== -->
+    <section class="section" id="skills">
+        <p class="section__label" data-aos="fade-up">✧ What I Bring</p>
+        <h2 class="section__title section__title--squiggly" data-aos="fade-up" data-aos-delay="100">Skills & Competencies</h2>
+        <div class="skills-grid">
+            <div class="skills-col" data-aos="fade-right" data-aos-delay="200">
+                <div class="skills-col__title"><i class="fa-solid fa-code" style="color:var(--accent);"></i> Technical Skills</div>
+                <div class="skills-chips">
+                    <span class="chip">C</span>
+                    <span class="chip">C++</span>
+                    <span class="chip">Java</span>
+                    <span class="chip">HTML5</span>
+                    <span class="chip">CSS3</span>
+                    <span class="chip">JavaScript</span>
+                    <span class="chip">React</span>
+                    <span class="chip">Tailwind CSS</span>
+                    <span class="chip">SQL</span>
+                    <span class="chip">MongoDB</span>
+                    <span class="chip">Node.js</span>
+                    <span class="chip">Express</span>
+                    <span class="chip">Git & GitHub</span>
+                    <span class="chip">APIs</span>
+                    <span class="chip">GSAP</span>
+                </div>
+            </div>
+            <div class="skills-col" data-aos="fade-left" data-aos-delay="300">
+                <div class="skills-col__title"><i class="fa-solid fa-users" style="color:var(--indigo);"></i> Interpersonal Skills</div>
+                <div class="skills-chips">
+                    <span class="chip chip--soft">Effective Team Leader</span>
+                    <span class="chip chip--soft">Collaborative Team Member</span>
+                    <span class="chip chip--soft">Time Management</span>
+                    <span class="chip chip--soft">Active Listener</span>
+                    <span class="chip chip--soft">Adaptability</span>
+                    <span class="chip chip--soft">Quick Learner</span>
+                    <span class="chip chip--soft">Clear Communication</span>
+                    <span class="chip chip--soft">Problem Solving</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==================== FEATURED PROJECTS ==================== -->
+    <section class="section" id="projects">
+        <p class="section__label" data-aos="fade-up">✧ My Work</p>
+        <h2 class="section__title section__title--squiggly" data-aos="fade-up" data-aos-delay="100">Featured Projects</h2>
+        <div class="projects-grid">
+            <!-- EatSmart -->
+            <div class="project-card" data-aos="fade-up" data-aos-delay="200">
+                <div class="project-card__thumb">
+                    <i class="fa-solid fa-utensils"></i>
+                </div>
+                <div class="project-card__body">
+                    <span class="project-card__role">Team Leader — NSD'25</span>
+                    <h3 class="project-card__title">EatSmart</h3>
+                    <p class="project-card__desc">Organizes nutritional info for packaged snacks & cold drinks. Features an Article Section with facts/news and a Recipe Section with healthy alternatives & nutritional analysis.</p>
+                    <div class="project-card__tech">
+                        <span>HTML</span><span>CSS</span><span>JavaScript</span><span>APIs</span><span>GSAP</span>
+                    </div>
+                    <a href="https://github.com/Nivedna01/EatSmart01" target="_blank" rel="noopener noreferrer" class="project-card__link">
+                        View on GitHub <i class="fa-solid fa-arrow-right"></i>
+                    </a>
+                </div>
+            </div>
+            <!-- EMS Pro -->
+            <div class="project-card" data-aos="fade-up" data-aos-delay="300">
+                <div class="project-card__thumb project-card__thumb--alt1">
+                    <i class="fa-solid fa-building-shield"></i>
+                </div>
+                <div class="project-card__body">
+                    <span class="project-card__role">Developer</span>
+                    <h3 class="project-card__title">EMS Pro</h3>
+                    <p class="project-card__desc">Role-based authentication with Local Storage data management. Contact Us queries reach Admin panel; dedicated Admin module for employee task assignment.</p>
+                    <div class="project-card__tech">
+                        <span>HTML</span><span>CSS</span><span>JavaScript</span>
+                    </div>
+                    <a href="https://github.com/Nivedna01/IEMS-pro" target="_blank" rel="noopener noreferrer" class="project-card__link">
+                        View on GitHub <i class="fa-solid fa-arrow-right"></i>
+                    </a>
+                </div>
+            </div>
+            <!-- HotelEase -->
+            <div class="project-card" data-aos="fade-up" data-aos-delay="400">
+                <div class="project-card__thumb project-card__thumb--alt2">
+                    <i class="fa-solid fa-hotel"></i>
+                </div>
+                <div class="project-card__body">
+                    <span class="project-card__role">Developer</span>
+                    <h3 class="project-card__title">HotelEase</h3>
+                    <p class="project-card__desc">Secure authentication via Clerk, responsive MERN-stack interface for seamless hotel service access and management.</p>
+                    <div class="project-card__tech">
+                        <span>MongoDB</span><span>Express</span><span>React</span><span>Node</span><span>Clerk</span>
+                    </div>
+                    <a href="https://github.com/Nivedna01/HotelEase" target="_blank" rel="noopener noreferrer" class="project-card__link">
+                        View on GitHub <i class="fa-solid fa-arrow-right"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==================== MORE WORK / MINI PROJECTS ==================== -->
+    <section class="section" id="more-work">
+        <p class="section__label" data-aos="fade-up">✧ Tinkering & Exploration</p>
+        <h2 class="section__title section__title--squiggly" data-aos="fade-up" data-aos-delay="100">More Work</h2>
+        <div class="mini-grid" data-aos="fade-up" data-aos-delay="200">
+            <a href="https://github.com/Nivedna01/Amazon-clone" target="_blank" rel="noopener noreferrer" class="mini-card">
+                <span class="mini-card__icon"><i class="fa-brands fa-aws"></i></span>
+                <span class="mini-card__title">Amazon-clone</span>
+                <span class="mini-card__tech">HTML, CSS, JavaScript</span>
+                <span class="mini-card__arrow"><i class="fa-solid fa-arrow-up-right-from-square"></i></span>
+            </a>
+            <a href="https://github.com/Nivedna01/Netflix-clone" target="_blank" rel="noopener noreferrer" class="mini-card">
+                <span class="mini-card__icon"><i class="fa-solid fa-film"></i></span>
+                <span class="mini-card__title">Netflix-clone</span>
+                <span class="mini-card__tech">HTML, CSS, JavaScript, React</span>
+                <span class="mini-card__arrow"><i class="fa-solid fa-arrow-up-right-from-square"></i></span>
+            </a>
+            <a href="https://github.com/Nivedna01/Sweet-Recipes" target="_blank" rel="noopener noreferrer" class="mini-card">
+                <span class="mini-card__icon"><i class="fa-solid fa-cookie-bite"></i></span>
+                <span class="mini-card__title">Sweet-Recipes</span>
+                <span class="mini-card__tech">HTML, CSS, JavaScript</span>
+                <span class="mini-card__arrow"><i class="fa-solid fa-arrow-up-right-from-square"></i></span>
+            </a>
+            <a href="https://github.com/Nivedna01/Solar-System-website" target="_blank" rel="noopener noreferrer" class="mini-card">
+                <span class="mini-card__icon"><i class="fa-solid fa-globe"></i></span>
+                <span class="mini-card__title">Solar-System-website</span>
+                <span class="mini-card__tech">HTML, CSS, JavaScript, Three.js</span>
+                <span class="mini-card__arrow"><i class="fa-solid fa-arrow-up-right-from-square"></i></span>
+            </a>
+            <a href="https://github.com/Nivedna01/Scat-Booking-System" target="_blank" rel="noopener noreferrer" class="mini-card">
+                <span class="mini-card__icon"><i class="fa-solid fa-ticket"></i></span>
+                <span class="mini-card__title">Scat-Booking-System</span>
+                <span class="mini-card__tech">HTML, CSS, JavaScript</span>
+                <span class="mini-card__arrow"><i class="fa-solid fa-arrow-up-right-from-square"></i></span>
+            </a>
+            <a href="https://github.com/Nivedna01/StonePaperScissorGame" target="_blank" rel="noopener noreferrer" class="mini-card">
+                <span class="mini-card__icon"><i class="fa-solid fa-hand-scissors"></i></span>
+                <span class="mini-card__title">StonePaperScissorGame</span>
+                <span class="mini-card__tech">HTML, CSS, JavaScript</span>
+                <span class="mini-card__arrow"><i class="fa-solid fa-arrow-up-right-from-square"></i></span>
+            </a>
+            <a href="https://github.com/Nivedna01/Tic-tac-ToeGame" target="_blank" rel="noopener noreferrer" class="mini-card">
+                <span class="mini-card__icon"><i class="fa-solid fa-table-cells"></i></span>
+                <span class="mini-card__title">Tic-tac-ToeGame</span>
+                <span class="mini-card__tech">HTML, CSS, JavaScript</span>
+                <span class="mini-card__arrow"><i class="fa-solid fa-arrow-up-right-from-square"></i></span>
+            </a>
+        </div>
+    </section>
+
+    <!-- ==================== ACHIEVEMENTS & CERTIFICATIONS ==================== -->
+    <section class="section" id="achievements">
+        <p class="section__label" data-aos="fade-up">✧ Milestones</p>
+        <h2 class="section__title section__title--squiggly" data-aos="fade-up" data-aos-delay="100">Achievements & Certifications</h2>
+        <div class="achieve-grid">
+            <div class="achieve-col" data-aos="fade-right" data-aos-delay="200">
+                <div class="achieve-col__title"><i class="fa-solid fa-medal" style="color:#e0b845;"></i> Academic Achievements</div>
+                <div class="achieve-item">
+                    <span class="achieve-item__icon"><i class="fa-solid fa-trophy"></i></span>
+                    <div class="achieve-item__text">
+                        <strong>WWT All-India Women Tech Hackathon</strong>
+                        <span>Ranked Top 100 among 700+ teams</span>
+                    </div>
+                </div>
+                <div class="achieve-item">
+                    <span class="achieve-item__icon"><i class="fa-solid fa-award"></i></span>
+                    <div class="achieve-item__text">
+                        <strong>National Science Day 2025 (NSD'25)</strong>
+                        <span>6th position among 250+ teams</span>
+                    </div>
+                </div>
+            </div>
+            <div class="achieve-col" data-aos="fade-left" data-aos-delay="300">
+                <div class="achieve-col__title"><i class="fa-solid fa-certificate" style="color:var(--indigo);"></i> Certifications</div>
+                <div class="achieve-item">
+                    <span class="achieve-item__icon achieve-item__icon--cert"><i class="fa-solid fa-cloud"></i></span>
+                    <div class="achieve-item__text">
+                        <strong>AWS Academy</strong>
+                        <span>Cloud Computing & Data Engineering</span>
+                    </div>
+                </div>
+                <div class="achieve-item">
+                    <span class="achieve-item__icon achieve-item__icon--cert"><i class="fa-solid fa-database"></i></span>
+                    <div class="achieve-item__text">
+                        <strong>MongoDB University</strong>
+                        <span>Introduction to MongoDB</span>
+                    </div>
+                </div>
+                <div class="achieve-item">
+                    <span class="achieve-item__icon achieve-item__icon--cert"><i class="fa-solid fa-file-code"></i></span>
+                    <div class="achieve-item__text">
+                        <strong>Infosys Springboard</strong>
+                        <span>HTML5 & CSS3</span>
+                    </div>
+                </div>
+                <div class="achieve-item">
+                    <span class="achieve-item__icon achieve-item__icon--cert"><i class="fa-solid fa-layer-group"></i></span>
+                    <div class="achieve-item__text">
+                        <strong>Antier Solutions</strong>
+                        <span>MERN Stack Development</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==================== EDUCATION & EXTRA-CURRICULAR ==================== -->
+    <section class="section" id="education">
+        <p class="section__label" data-aos="fade-up">✧ Journey So Far</p>
+        <h2 class="section__title section__title--squiggly" data-aos="fade-up" data-aos-delay="100">Education & Extra-Curricular</h2>
+        <div class="edu-grid">
+            <div class="edu-col" data-aos="fade-right" data-aos-delay="200">
+                <div class="edu-col__title"><i class="fa-solid fa-graduation-cap" style="color:var(--accent);"></i> Education</div>
+                <div class="edu-timeline">
+                    <div class="edu-timeline__item">
+                        <strong>B.Tech — Computer Science & Engineering</strong>
+                        <span>Chandigarh Group of Colleges, Landran (2023–2027)</span>
+                        <span class="highlight">CGPA: 8.65</span>
+                    </div>
+                    <div class="edu-timeline__item">
+                        <strong>Intermediate (PBSE)</strong>
+                        <span>Senior Secondary School, Bhangala (2022–2023)</span>
+                        <span class="highlight">94.6%</span>
+                    </div>
+                    <div class="edu-timeline__item">
+                        <strong>Matriculation (CBSE)</strong>
+                        <span>Global Public School Bangla, Bhangala (2020–2021)</span>
+                        <span class="highlight">87%</span>
+                    </div>
+                </div>
+            </div>
+            <div class="edu-col" data-aos="fade-left" data-aos-delay="300">
+                <div class="edu-col__title"><i class="fa-solid fa-star" style="color:var(--indigo);"></i> Extra-Curricular & Co-Curricular</div>
+                <div class="extra-item">
+                    <i class="fa-solid fa-users-gear"></i>
+                    <span><strong>PR Member, ACM Club</strong> — Assisted in organizing DSA & Placement Webinar</span>
+                </div>
+                <div class="extra-item">
+                    <i class="fa-solid fa-gavel"></i>
+                    <span><strong>MUN'24</strong> — Participated at CGC Landran</span>
+                </div>
+                <div class="extra-item">
+                    <i class="fa-solid fa-store"></i>
+                    <span><strong>Dropshipping Event</strong> — Participated in intra & inter-college e-commerce exposure</span>
+                </div>
+                <div class="extra-item">
+                    <i class="fa-solid fa-lightbulb"></i>
+                    <span><strong>Other Interests:</strong> Software Engineering, Web Development, Full Stack Development</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==================== CONTACT ==================== -->
+    <section class="section" id="contact">
+        <p class="section__label" data-aos="fade-up">✧ Let's Connect</p>
+        <h2 class="section__title section__title--squiggly" data-aos="fade-up" data-aos-delay="100">Get in Touch</h2>
+        <div class="contact-grid">
+            <div class="contact-info" data-aos="fade-up" data-aos-delay="200">
+                <a href="mailto:nivedna96@gmail.com" class="contact-info__item">
+                    <i class="fa-solid fa-envelope"></i> nivedna96@gmail.com
+                </a>
+                <a href="https://www.linkedin.com/in/nivedna-7b3b522ba" target="_blank" rel="noopener noreferrer" class="contact-info__item">
+                    <i class="fa-brands fa-linkedin"></i> LinkedIn Profile
+                </a>
+                <a href="https://github.com/Nivedna01" target="_blank" rel="noopener noreferrer" class="contact-info__item">
+                    <i class="fa-brands fa-github"></i> GitHub Profile
+                </a>
+                <div class="contact-info__item">
+                    <i class="fa-solid fa-location-dot"></i> VPO Simbli, Bhangala, Punjab — 144306
+                </div>
+            </div>
+            <div class="contact-note" data-aos="fade-up" data-aos-delay="300">
+                <p>
+                    <i class="fa-solid fa-quote-left" style="color:var(--accent);opacity:0.5;font-size:1.5rem;"></i><br>
+                    I'm always open to exciting opportunities, collaborations, and conversations.
+                    Whether it's a project idea, a hackathon team-up, or just a friendly hello — don't hesitate to reach out!
+                </p>
+                <a href="mailto:nivedna96@gmail.com" class="btn btn--primary">
+                    <i class="fa-regular fa-paper-plane"></i> Send an Email
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==================== FOOTER ==================== -->
+    <footer class="footer">
+        <div class="footer__links">
+            <a href="#home" data-nav-link>Home</a>
+            <a href="#about" data-nav-link>About</a>
+            <a href="#projects" data-nav-link>Projects</a>
+            <a href="#achievements" data-nav-link>Achievements</a>
+            <a href="#contact" data-nav-link>Contact</a>
+        </div>
+        <p>Handcrafted with <i class="fa-solid fa-heart"></i> — &copy; 2025 Nivedna. All rights reserved.</p>
+        <p style="font-size:0.75rem;margin-top:0.3rem;color:#b0a8a2;">Last updated: 2025</p>
+    </footer>
+
+    <!-- ==================== SCROLL TO TOP ==================== -->
+    <button class="scroll-top" id="scrollTopBtn" aria-label="Scroll to top">
+        <i class="fa-solid fa-arrow-up"></i>
+    </button>
+
+    <!-- ==================== SCRIPTS ==================== -->
+    <!-- AOS -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js">
+    </script>
+    <!-- Lenis -->
+    <script src="https://cdn.jsdelivr.net/npm/@studio-freight/lenis@1.0.42/dist/lenis.min.js">
+    </script>
+    <script src="i2.js"></script>
+</body>
+</html>

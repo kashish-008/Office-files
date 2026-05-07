@@ -1,0 +1,37 @@
+@media (max-width: 768px) {
+    .hamburger { display: flex; }
+
+    .nav-links {
+        position: fixed;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        background: rgba(254, 250, 245, 0.98);
+        flex-direction: column;
+        padding: 2rem;
+        transform: translateY(-100%);
+        opacity: 0;
+        visibility: hidden;
+        transition: all 0.3s ease;
+    }
+
+    .nav-links.active {
+        transform: translateY(0);
+        opacity: 1;
+        visibility: visible;
+    }
+
+    .hero-content { grid-template-columns: 1fr; gap: 3rem; text-align: center; }
+    .avatar { width: 250px; height: 250px; margin: 0 auto; }
+    .section { padding: 4rem 5%; }
+    .about-content, .contact-content, .skills-grid, .achievements-grid { grid-template-columns: 1fr; gap: 2rem; }
+    .timeline::before { left: 20px; }
+    .timeline-item { flex-direction: column !important; padding-left: 0 !important; padding-right: 0 !important; margin-bottom: 3rem; }
+    .timeline-content { max-width: 100%; margin-left: 50px; }
+    .cta-buttons { justify-content: center; }
+}
+
+@media (max-width: 480px) {
+    .projects-grid { grid-template-columns: 1fr; }
+    .mini-projects-grid { grid-template-columns: repeat(2, 1fr); }
+}

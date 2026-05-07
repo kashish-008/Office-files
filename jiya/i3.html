@@ -1,0 +1,837 @@
+
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Nivedna — Portfolio</title>
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&family=Space+Grotesk:wght@400;600;700&display=swap" rel="stylesheet">
+
+  <!-- AOS -->
+  <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
+
+  <!-- Font Awesome 6 Free -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+
+  <!-- Lenis (smooth scroll) -->
+  <script src="https://cdn.jsdelivr.net/npm/@studio-freight/lenis@0.2.29/bundled/lenis.min.js"></script>
+
+  <style>
+    :root{
+      --bg:#faf9f6;
+      --text:#1e1b1b;
+      --muted:#6b6766;
+      --accent:#d46a4a; /* terracotta */
+      --accent-2:#5b6c9b; /* soft indigo */
+      --card:#fff;
+      --radius:14px;
+      --glass: rgba(255,255,255,0.6);
+      --shadow: 0 8px 24px rgba(30,27,27,0.06);
+      --squiggle: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="200" height="20"><path d="M0 10 C30 0 60 20 90 10 C120 0 150 20 200 10" stroke="%23d46a4a" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round" /></svg>');
+    }
+     [data-aos] {
+            opacity: 1 !important;
+            visibility: visible !important;
+            transform: none !important;
+        }
+
+    /* Very light noise texture */
+    body::before{
+      content:"";
+      position:fixed; inset:0; pointer-events:none;
+      background-image: radial-gradient(rgba(0,0,0,0.01) 1px, transparent 1px);
+      background-size: 3px 3px;
+      opacity:0.6;
+      mix-blend-mode: overlay;
+      z-index:0;
+    }
+
+    html,body{
+      height:100%;
+      background: linear-gradient(180deg,var(--bg), #fff 60%);
+      color:var(--text);
+      font-family:Inter, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+      -webkit-font-smoothing:antialiased;
+      -moz-osx-font-smoothing:grayscale;
+      line-height:1.6;
+      scroll-behavior: auto; /* Lenis will handle */
+    }
+
+    a{ color:var(--accent-2); text-decoration:none; }
+    a:hover{ text-decoration:underline; text-underline-offset:4px; }
+
+    /* Container */
+    .wrap{
+      max-width:1100px;
+      margin:0 auto;
+      padding:28px;
+      position:relative;
+      z-index:1;
+    }
+
+    /* Nav */
+    header{
+      position:fixed;
+      top:18px;
+      left:0; right:0;
+      z-index:40;
+      display:flex;
+      justify-content:center;
+      pointer-events:none;
+    }
+    .nav{
+      width:calc(100% - 56px);
+      max-width:1100px;
+      background:transparent;
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      padding:12px 18px;
+      border-radius:12px;
+      transition:all .35s ease;
+      pointer-events:auto;
+      backdrop-filter: blur(6px);
+    }
+    .nav.solid{
+      background: linear-gradient(180deg, rgba(255,255,255,0.85), rgba(255,255,255,0.7));
+      box-shadow: var(--shadow);
+    }
+    .brand{
+      display:flex; gap:12px; align-items:center;
+    }
+    .logo{
+      width:56px; height:56px; border-radius:12px;
+      display:grid; place-items:center;
+      background: linear-gradient(135deg,var(--accent), #f2b8a0);
+      color:white; font-family: 'Space Grotesk', sans-serif;
+      font-weight:700; font-size:20px;
+      box-shadow: 0 6px 18px rgba(212,106,74,0.18);
+      transform: rotate(-2deg);
+    }
+    .brand h1{ font-family:'Space Grotesk', sans-serif; font-size:16px; margin:0; color:var(--text); }
+    .brand p{ margin:0; font-size:12px; color:var(--muted); }
+
+    nav ul{ display:flex; gap:14px; align-items:center; margin:0; padding:0; list-style:none; }
+    nav a{ padding:8px 10px; border-radius:8px; color:var(--text); font-weight:600; font-size:14px; }
+    nav a:hover{ background:rgba(91,108,155,0.06); transform:translateY(-2px); transition:all .18s ease; }
+
+    /* Mobile menu */
+    .hamburger{ display:none; background:transparent; border:0; font-size:20px; color:var(--text); }
+    .mobile-menu{ display:none; position:absolute; right:18px; top:70px; background:var(--card); padding:12px; border-radius:12px; box-shadow:var(--shadow); }
+
+    /* Hero */
+    .hero{
+      display:grid;
+      grid-template-columns: 1fr 360px;
+      gap:28px;
+      align-items:center;
+      padding:120px 0 60px;
+    }
+    .intro{
+      background: linear-gradient(180deg, rgba(255,255,255,0.9), rgba(255,255,255,0.95));
+      padding:28px;
+      border-radius:18px;
+      box-shadow: var(--shadow);
+      position:relative;
+      overflow:visible;
+    }
+    .intro h2{
+      font-family:'Space Grotesk', sans-serif;
+      font-size:34px; margin:0 0 8px; letter-spacing:-0.6px;
+    }
+    .tagline{ font-style:italic; color:var(--muted); margin-bottom:14px; display:block; }
+    .intro p{ margin:0 0 18px; color:var(--text); max-width:60ch; }
+
+    .cta{
+      display:flex; gap:12px; flex-wrap:wrap;
+    }
+    .btn{
+      display:inline-flex; gap:10px; align-items:center;
+      padding:10px 14px; border-radius:12px; font-weight:600;
+      background:linear-gradient(90deg,var(--accent), #f29a7f);
+      color:white; border:0; cursor:pointer; box-shadow: 0 8px 18px rgba(212,106,74,0.12);
+      transition:transform .18s ease, box-shadow .18s ease;
+    }
+    .btn.secondary{
+      background:transparent; color:var(--accent-2); border:1px solid rgba(91,108,155,0.08);
+      box-shadow:none;
+    }
+    .btn:hover{ transform:translateY(-4px); }
+
+    /* Avatar */
+    .avatar{
+      width:100%; height:100%;
+      display:flex; align-items:center; justify-content:center;
+      padding:28px;
+    }
+    .avatar .badge{
+      width:220px; height:220px; border-radius:50%;
+      display:grid; place-items:center; font-family:'Space Grotesk';
+      font-size:64px; color:white; font-weight:700;
+      background: conic-gradient(from 120deg, #f6d6c9, #f2b8a0, #d46a4a 40%, #5b6c9b 80%);
+      box-shadow: 0 18px 40px rgba(91,108,155,0.08);
+      transform: rotate(-3deg);
+      transition:transform .6s cubic-bezier(.2,.9,.3,1);
+    }
+    .avatar .badge:hover{ transform: rotate(0deg) scale(1.03); }
+
+    /* Squiggly heading underline */
+    .squiggle{
+      display:inline-block;
+      background-image: var(--squiggle);
+      background-repeat:no-repeat;
+      background-size: 100% 18px;
+      padding-bottom:6px;
+      margin-left:6px;
+      vertical-align:middle;
+    }
+
+    /* Sections */
+    section{
+      padding:48px 0;
+      position:relative;
+    }
+    .section-card{
+      background:linear-gradient(180deg, rgba(255,255,255,0.95), rgba(255,255,255,0.98));
+      border-radius:var(--radius);
+      padding:18px;
+      box-shadow:var(--shadow);
+    }
+
+    /* About layout */
+    .about-grid{
+      display:grid;
+      grid-template-columns: 1fr 320px;
+      gap:22px;
+      align-items:start;
+    }
+    .personal-card{
+      padding:18px; border-radius:14px; background:linear-gradient(180deg,#fff,#fffefc);
+      box-shadow: 0 8px 20px rgba(91,108,155,0.04);
+    }
+    .personal-card h4{ margin:0 0 8px; font-size:16px; }
+    .personal-card p{ margin:0; color:var(--muted); font-size:14px; }
+
+    /* Skills */
+    .skills{
+      display:grid;
+      grid-template-columns: 1fr 1fr;
+      gap:18px;
+    }
+    .chips{ display:flex; flex-wrap:wrap; gap:10px; }
+    .chip{
+      padding:8px 12px; border-radius:999px; background:linear-gradient(90deg,#fff,#fffefc);
+      border:1px solid rgba(30,27,27,0.04); font-weight:600; font-size:13px; color:var(--text);
+      box-shadow: 0 6px 14px rgba(30,27,27,0.04);
+      transition:transform .18s ease;
+    }
+    .chip:hover{ transform:translateY(-4px); }
+
+    /* Featured projects */
+    .projects-grid{
+      display:grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap:18px;
+    }
+    .project{
+      padding:18px; border-radius:16px; background:linear-gradient(180deg,#fff,#fffefc);
+      box-shadow:var(--shadow); position:relative; overflow:hidden;
+      transition:transform .22s cubic-bezier(.2,.9,.3,1), box-shadow .22s;
+      min-height:180px;
+    }
+    .project:hover{ transform:translateY(-8px) rotate(-0.4deg); box-shadow: 0 18px 40px rgba(30,27,27,0.08); }
+    .project .thumb{
+      height:86px; border-radius:12px; display:flex; align-items:center; justify-content:center;
+      color:white; font-weight:700; font-family:'Space Grotesk';
+      margin-bottom:12px;
+      background: linear-gradient(135deg, rgba(91,108,155,0.95), rgba(212,106,74,0.9));
+      box-shadow: inset 0 -6px 18px rgba(0,0,0,0.06);
+    }
+    .project h3{ margin:0 0 8px; font-size:18px; }
+    .project p{ margin:0 0 12px; color:var(--muted); font-size:14px; }
+    .project .meta{ display:flex; gap:8px; align-items:center; flex-wrap:wrap; }
+
+    /* Mini projects */
+    .mini-grid{
+      display:grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap:12px;
+    }
+    .mini{
+      padding:12px; border-radius:12px; background:linear-gradient(180deg,#fff,#fffefc);
+      border:1px solid rgba(30,27,27,0.03); display:flex; align-items:center; justify-content:space-between;
+      gap:10px; transition:transform .18s ease;
+    }
+    .mini:hover{ transform:translateY(-6px) rotate(0.6deg); box-shadow: 0 12px 30px rgba(30,27,27,0.06); }
+
+    /* Achievements & certs */
+    .two-col{
+      display:grid; grid-template-columns: 1fr 1fr; gap:18px;
+    }
+    .award{ display:flex; gap:12px; align-items:flex-start; padding:12px; border-radius:12px; background:linear-gradient(90deg,#fff,#fffefc); }
+    .award i{ font-size:28px; color:var(--accent); margin-top:4px; }
+    .cert{ display:flex; gap:12px; align-items:center; padding:12px; border-radius:12px; background:linear-gradient(90deg,#fff,#fffefc); }
+
+    /* Timeline */
+    .timeline{ display:flex; flex-direction:column; gap:12px; }
+    .edu{ padding:12px; border-radius:12px; background:linear-gradient(180deg,#fff,#fffefc); border-left:4px solid rgba(91,108,155,0.08); }
+
+    /* Contact */
+    .contact-grid{ display:grid; grid-template-columns: 1fr 360px; gap:18px; align-items:start; }
+    .contact-card{ padding:18px; border-radius:14px; background:linear-gradient(180deg,#fff,#fffefc); box-shadow:var(--shadow); }
+    .socials{ display:flex; gap:12px; margin-top:12px; }
+    .socials a{ display:inline-flex; align-items:center; gap:8px; padding:8px 10px; border-radius:10px; background:rgba(91,108,155,0.04); color:var(--accent-2); font-weight:700; }
+
+    /* Footer */
+    footer{ padding:28px 0; text-align:center; color:var(--muted); font-size:14px; }
+
+    /* Scroll to top */
+    .to-top{
+      position:fixed; right:18px; bottom:18px; z-index:60; display:none;
+      background:var(--accent-2); color:white; border-radius:12px; padding:10px 12px; box-shadow:0 12px 30px rgba(91,108,155,0.18);
+      cursor:pointer; border:0;
+    }
+
+    /* Responsive */
+    @media (max-width:1024px){
+      .hero{ grid-template-columns: 1fr 260px; }
+      .projects-grid{ grid-template-columns: repeat(2, 1fr); }
+      .mini-grid{ grid-template-columns: repeat(2, 1fr); }
+      .about-grid{ grid-template-columns: 1fr 300px; }
+      .contact-grid{ grid-template-columns: 1fr; }
+    }
+    @media (max-width:768px){
+      .nav{ padding:10px; }
+      .hamburger{ display:block; }
+      nav ul{ display:none; }
+      .mobile-menu{ display:block; }
+      .hero{ grid-template-columns: 1fr; padding-top:90px; gap:18px; }
+      .avatar{ order:-1; }
+      .projects-grid{ grid-template-columns: 1fr; }
+      .mini-grid{ grid-template-columns: 1fr; }
+      .about-grid{ grid-template-columns: 1fr; }
+      .skills{ grid-template-columns: 1fr; }
+      .two-col{ grid-template-columns: 1fr; }
+      .wrap{ padding:18px; }
+    }
+
+    /* small micro-interactions */
+    .icon-shift{ transition:transform .18s ease; display:inline-block; }
+    .btn:hover .icon-shift{ transform:translateX(6px); }
+
+    /* subtle irregularities */
+    .project:nth-child(2n){ transform-origin:center; }
+    .project:nth-child(3n){ margin-top:6px; }
+    .mini:nth-child(odd){ transform-origin:left; }
+  </style>
+</head>
+<body>
+
+  <!-- Header / Nav -->
+  <header>
+    <div class="nav" id="topNav" role="navigation" aria-label="Main navigation">
+      <div class="brand" aria-hidden="false">
+        <div class="logo" aria-hidden="true">N</div>
+        <div>
+          <h1>Nivedna</h1>
+          <p>Computer Science Engineering Student</p>
+        </div>
+      </div>
+
+      <nav>
+        <ul>
+          <li><a href="#home" data-link>Home</a></li>
+          <li><a href="#about" data-link>About</a></li>
+          <li><a href="#projects" data-link>Projects</a></li>
+          <li><a href="#achievements" data-link>Achievements</a></li>
+          <li><a href="#contact" data-link>Contact</a></li>
+        </ul>
+      </nav>
+
+      <button class="hamburger" id="hambtn" aria-label="Open menu"><i class="fa fa-bars"></i></button>
+
+      <div class="mobile-menu" id="mobileMenu" style="display:none;">
+        <a href="#home" data-link style="display:block;padding:8px 6px;">Home</a>
+        <a href="#about" data-link style="display:block;padding:8px 6px;">About</a>
+        <a href="#projects" data-link style="display:block;padding:8px 6px;">Projects</a>
+        <a href="#achievements" data-link style="display:block;padding:8px 6px;">Achievements</a>
+        <a href="#contact" data-link style="display:block;padding:8px 6px;">Contact</a>
+      </div>
+    </div>
+  </header>
+
+  <main id="main" data-scroll-container>
+    <div class="wrap">
+
+      <!-- HERO -->
+      <section id="home" class="hero" data-aos="fade-in" data-aos-delay="0">
+        <div class="intro section-card" data-aos="fade-up" data-aos-delay="80">
+          <h2>Nivedna <span class="squiggle" aria-hidden="true"></span></h2>
+          <span class="tagline">Computer Science Engineering Student | Web Developer | Problem Solver</span>
+          <p><strong>Motivated and detail-oriented Computer Science Engineering student</strong> with strong analytical thinking and problem-solving abilities. Eager to learn business processes, documentation, and workflow analysis while contributing to team objectives. Known for quick learning, clear communication, and the ability to understand and organize information effectively.</p>
+
+          <div class="cta" aria-hidden="false">
+            <a class="btn" href="mailto:nivedna96@gmail.com" title="Email Nivedna"><i class="fa fa-envelope icon-shift"></i> Contact</a>
+            <a class="btn secondary" href="https://github.com/Nivedna01" target="_blank" rel="noopener noreferrer"><i class="fa fa-code icon-shift"></i> GitHub</a>
+            <a class="btn secondary" href="https://www.linkedin.com/in/nivedna-7b3b522ba" target="_blank" rel="noopener noreferrer"><i class="fa fa-linkedin icon-shift"></i> LinkedIn</a>
+          </div>
+
+          <div style="margin-top:16px; color:var(--muted); font-size:13px;">
+            <strong>Location:</strong> VPO Simbli, Bhangala, Punjab (Pin: 144306)
+          </div>
+        </div>
+
+        <div class="avatar" data-aos="fade-right" data-aos-delay="120">
+          <div class="badge" aria-hidden="true">N</div>
+        </div>
+      </section>
+
+      <!-- ABOUT -->
+      <section id="about" data-aos="fade-up" data-aos-delay="40">
+        <div class="section-card">
+          <div style="display:flex; justify-content:space-between; align-items:center; gap:12px; margin-bottom:12px;">
+            <h3 style="margin:0; font-family:'Space Grotesk';">About</h3>
+            <div style="color:var(--muted); font-size:13px;">Languages: English | Hindi | Punjabi</div>
+          </div>
+
+          <div class="about-grid">
+            <div>
+              <p style="margin-top:0;"> <strong>Professional Summary</strong><br>
+                Motivated and detail-oriented Computer Science Engineering student with strong analytical thinking and problem-solving abilities. Eager to learn business processes, documentation, and workflow analysis while contributing to team objectives. Known for quick learning, clear communication, and the ability to understand and organize information effectively.
+              </p>
+
+              <h4 style="margin-top:18px;">Interpersonal Skills</h4>
+              <div class="chips" aria-hidden="false">
+                <span class="chip">Effective Team Leader</span>
+                <span class="chip">Collaborative Team Member</span>
+                <span class="chip">Time Management</span>
+                <span class="chip">Active Listener</span>
+                <span class="chip">Adaptability</span>
+              </div>
+
+              <h4 style="margin-top:18px;">Interests & Hobbies</h4>
+              <div style="color:var(--muted);">Listening to music | Sketching | Dancing</div>
+            </div>
+
+            <aside class="personal-card" aria-label="Personal details">
+              <h4>Quick Details</h4>
+              <p><strong>Email:</strong> <a href="mailto:nivedna96@gmail.com">nivedna96@gmail.com</a></p>
+              <p><strong>Location:</strong> VPO Simbli, Bhangala, Punjab</p>
+              <p><strong>Education:</strong> B.Tech CSE (2023-2027) — CGPA: 8.65</p>
+              <p><strong>Languages:</strong> English, Hindi, Punjabi</p>
+              <p style="margin-top:8px; color:var(--muted); font-size:13px;">Mother’s Name: Sudarshana Devi<br>Father’s Name: Balraj Singh<br>D.O.B: 05/12/2005</p>
+            </aside>
+          </div>
+        </div>
+      </section>
+
+      <!-- SKILLS -->
+      <section id="skills" data-aos="fade-up" data-aos-delay="40">
+        <div class="section-card">
+          <h3 style="margin-top:0; font-family:'Space Grotesk';">Technical & Interpersonal Skills</h3>
+          <div class="skills" style="margin-top:12px;">
+            <div>
+              <h4 style="margin-bottom:8px;">Technical Competencies</h4>
+              <div class="chips" aria-hidden="false">
+                <span class="chip">C</span>
+                <span class="chip">C++</span>
+                <span class="chip">Java</span>
+                <span class="chip">HTML5</span>
+                <span class="chip">CSS3</span>
+                <span class="chip">JavaScript</span>
+                <span class="chip">React</span>
+                <span class="chip">Tailwind CSS</span>
+                <span class="chip">SQL</span>
+              </div>
+              <div style="margin-top:12px; color:var(--muted); font-size:13px;">Other Interests: Software Engineering, Web development, Full Stack Development</div>
+            </div>
+
+            <div>
+              <h4 style="margin-bottom:8px;">Interpersonal</h4>
+              <div class="chips">
+                <span class="chip">Leadership</span>
+                <span class="chip">Communication</span>
+                <span class="chip">Organization</span>
+                <span class="chip">Problem Solving</span>
+                <span class="chip">Collaboration</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- PROJECTS -->
+      <section id="projects" data-aos="fade-up" data-aos-delay="40">
+        <div style="display:flex; justify-content:space-between; align-items:center; gap:12px; margin-bottom:12px;">
+          <h3 style="margin:0; font-family:'Space Grotesk';">Featured Projects</h3>
+          <div style="color:var(--muted); font-size:13px;">Selected work from CV & GitHub</div>
+        </div>
+
+        <div class="projects-grid">
+          <!-- EatSmart -->
+          <article class="project" data-aos="fade-up" data-aos-delay="80" aria-labelledby="eatTitle">
+            <div class="thumb" aria-hidden="true">ES</div>
+            <h3 id="eatTitle">EatSmart <small style="font-weight:600;color:var(--muted);font-size:13px;">(Team Leader NSD’25)</small></h3>
+            <p>Led development of a website that organizes nutritional info for packaged snacks & cold drinks. Designed Article Section (facts/news) and Recipe Section with healthy alternatives & nutritional analysis.</p>
+            <div class="meta">
+              <span class="chip">HTML</span>
+              <span class="chip">CSS</span>
+              <span class="chip">JavaScript</span>
+              <span class="chip">APIs</span>
+              <a class="chip" href="https://github.com/Nivedna01/EatSmart01" target="_blank" rel="noopener noreferrer"><i class="fa fa-github"></i> Repo</a>
+            </div>
+          </article>
+
+          <!-- EMS Pro -->
+          <article class="project" data-aos="fade-up" data-aos-delay="120" aria-labelledby="emsTitle">
+            <div class="thumb" aria-hidden="true">EM</div>
+            <h3 id="emsTitle">EMS Pro <small style="font-weight:600;color:var(--muted);font-size:13px;">(Developer)</small></h3>
+            <p>Role-based authentication, Local Storage for data management. Contact Us queries reach Admin panel; Admin module for employee task assignment.</p>
+            <div class="meta">
+              <span class="chip">HTML</span>
+              <span class="chip">CSS</span>
+              <span class="chip">JavaScript</span>
+              <a class="chip" href="https://github.com/Nivedna01/IEMS-pro" target="_blank" rel="noopener noreferrer"><i class="fa fa-github"></i> Repo</a>
+            </div>
+          </article>
+
+          <!-- HotelEase -->
+          <article class="project" data-aos="fade-up" data-aos-delay="160" aria-labelledby="hotelTitle">
+            <div class="thumb" aria-hidden="true">HE</div>
+            <h3 id="hotelTitle">HotelEase <small style="font-weight:600;color:var(--muted);font-size:13px;">(Developer)</small></h3>
+            <p>Secure authentication (Clerk), responsive interface for hotel service access. Built with MERN stack for robust backend and dynamic UI.</p>
+            <div class="meta">
+              <span class="chip">MERN</span>
+              <span class="chip">Clerk</span>
+              <a class="chip" href="https://github.com/Nivedna01/HotelEase" target="_blank" rel="noopener noreferrer"><i class="fa fa-github"></i> Repo</a>
+            </div>
+          </article>
+        </div>
+
+        <!-- More Work -->
+        <div style="margin-top:22px;">
+          <h4 style="margin:0 0 10px;">More Work</h4>
+          <div class="mini-grid" data-aos="fade-up" data-aos-delay="200">
+            <div class="mini">
+              <div>
+                <strong>Amazon-clone</strong><div style="font-size:13px;color:var(--muted);">HTML, CSS</div>
+              </div>
+              <a href="https://github.com/Nivedna01/Amazon-clone" target="_blank" rel="noopener noreferrer"><i class="fa fa-github"></i></a>
+            </div>
+
+            <div class="mini">
+              <div>
+                <strong>Netflix-clone</strong><div style="font-size:13px;color:var(--muted);">HTML, CSS, JS</div>
+              </div>
+              <a href="https://github.com/Nivedna01/Netflix-clone" target="_blank" rel="noopener noreferrer"><i class="fa fa-github"></i></a>
+            </div>
+
+            <div class="mini">
+              <div>
+                <strong>Sweet-Recipes</strong><div style="font-size:13px;color:var(--muted);">HTML, CSS</div>
+              </div>
+              <a href="https://github.com/Nivedna01/Sweet-Recipes" target="_blank" rel="noopener noreferrer"><i class="fa fa-github"></i></a>
+            </div>
+
+            <div class="mini">
+              <div>
+                <strong>Solar-System-website</strong><div style="font-size:13px;color:var(--muted);">HTML, CSS, JS</div>
+              </div>
+              <a href="https://github.com/Nivedna01/Solar-System-website" target="_blank" rel="noopener noreferrer"><i class="fa fa-github"></i></a>
+            </div>
+
+            <div class="mini">
+              <div>
+                <strong>Scat-Booking-System</strong><div style="font-size:13px;color:var(--muted);">HTML, JS</div>
+              </div>
+              <a href="https://github.com/Nivedna01/Scat-Booking-System" target="_blank" rel="noopener noreferrer"><i class="fa fa-github"></i></a>
+            </div>
+
+            <div class="mini">
+              <div>
+                <strong>StonePaperScissorGame</strong><div style="font-size:13px;color:var(--muted);">JavaScript</div>
+              </div>
+              <a href="https://github.com/Nivedna01/StonePaperScissorGame" target="_blank" rel="noopener noreferrer"><i class="fa fa-github"></i></a>
+            </div>
+
+            <div class="mini">
+              <div>
+                <strong>Tic-tac-ToeGame</strong><div style="font-size:13px;color:var(--muted);">JavaScript</div>
+              </div>
+              <a href="https://github.com/Nivedna01/Tic-tac-ToeGame" target="_blank" rel="noopener noreferrer"><i class="fa fa-github"></i></a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Achievements & Certifications -->
+      <section id="achievements" data-aos="fade-up" data-aos-delay="40">
+        <div class="section-card">
+          <h3 style="margin-top:0; font-family:'Space Grotesk';">Achievements & Certifications</h3>
+
+          <div class="two-col" style="margin-top:12px;">
+            <div>
+              <h4 style="margin-bottom:8px;">Achievements</h4>
+              <div class="award" data-aos="fade-left" data-aos-delay="80">
+                <i class="fa fa-medal"></i>
+                <div>
+                  <strong>WWT All-India Women Tech Hackathon</strong>
+                  <div style="color:var(--muted); font-size:13px;">Ranked Top 100 among 700+ teams.</div>
+                </div>
+              </div>
+
+              <div class="award" data-aos="fade-left" data-aos-delay="120">
+                <i class="fa fa-trophy"></i>
+                <div>
+                  <strong>National Science Day 2025 (NSD’25)</strong>
+                  <div style="color:var(--muted); font-size:13px;">6th position among 250+ teams.</div>
+                </div>
+              </div>
+            </div>
+
+            <div>
+              <h4 style="margin-bottom:8px;">Certifications</h4>
+              <div class="cert" data-aos="fade-right" data-aos-delay="80">
+                <i class="fa fa-certificate" style="color:var(--accent-2)"></i>
+                <div>
+                  <strong>AWS Academy</strong>
+                  <div style="color:var(--muted); font-size:13px;">Cloud Computing & Data Engineering</div>
+                </div>
+              </div>
+
+              <div class="cert" data-aos="fade-right" data-aos-delay="120">
+                <i class="fa fa-certificate" style="color:#6aa84f"></i>
+                <div>
+                  <strong>MongoDB University</strong>
+                  <div style="color:var(--muted); font-size:13px;">Introduction to MongoDB</div>
+                </div>
+              </div>
+
+              <div class="cert" data-aos="fade-right" data-aos-delay="160">
+                <i class="fa fa-certificate" style="color:#f1c232"></i>
+                <div>
+                  <strong>Infosys Springboard</strong>
+                  <div style="color:var(--muted); font-size:13px;">HTML5 & CSS3</div>
+                </div>
+              </div>
+
+              <div class="cert" data-aos="fade-right" data-aos-delay="200">
+                <i class="fa fa-certificate" style="color:#8e7cc3"></i>
+                <div>
+                  <strong>Antier Solutions</strong>
+                  <div style="color:var(--muted); font-size:13px;">MERN Stack Development</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Education & Extra Curricular -->
+      <section id="education" data-aos="fade-up" data-aos-delay="40">
+        <div class="section-card">
+          <h3 style="margin-top:0; font-family:'Space Grotesk';">Education & Extra Curricular</h3>
+
+          <div style="display:flex; gap:18px; margin-top:12px; flex-wrap:wrap;">
+            <div style="flex:1; min-width:260px;">
+              <div class="timeline">
+                <div class="edu" data-aos="fade-up" data-aos-delay="80">
+                  <strong>B.Tech CSE</strong> — Chandigarh Group of Colleges, Landran (2023-2027)
+                  <div style="color:var(--muted); font-size:13px;">CGPA: 8.65</div>
+                </div>
+
+                <div class="edu" data-aos="fade-up" data-aos-delay="120">
+                  <strong>Intermediate (PBSE)</strong> — Senior Secondary School, Bhangala (2022-2023)
+                  <div style="color:var(--muted); font-size:13px;">94.6%</div>
+                </div>
+
+                <div class="edu" data-aos="fade-up" data-aos-delay="160">
+                  <strong>Matriculation (CBSE)</strong> — Global Public School Bangla, Bhangala (2020-2021)
+                  <div style="color:var(--muted); font-size:13px;">87%</div>
+                </div>
+              </div>
+            </div>
+
+            <div style="flex:1; min-width:260px;">
+              <h4 style="margin-top:0;">Extra-Curricular & Co-Curricular</h4>
+              <div style="margin-top:8px;">
+                <p style="margin:0 0 8px;"><strong>PR member, ACM Club</strong> — Assisted in organizing DSA & Placement Webinar</p>
+                <p style="margin:0 0 8px;"><strong>MUN’24</strong> — Participated at CGC Landran</p>
+                <p style="margin:0 0 8px;"><strong>Dropshipping Event</strong> — Participated in intra & inter-college e-commerce event</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Contact -->
+      <section id="contact" data-aos="fade-up" data-aos-delay="40">
+        <div class="section-card">
+          <h3 style="margin-top:0; font-family:'Space Grotesk';">Contact</h3>
+
+          <div class="contact-grid" style="margin-top:12px;">
+            <div class="contact-card" data-aos="fade-up" data-aos-delay="80">
+              <p style="margin:0 0 8px;"><strong>Email</strong><br><a href="mailto:nivedna96@gmail.com">nivedna96@gmail.com</a></p>
+              <p style="margin:0 0 8px;"><strong>LinkedIn</strong><br><a href="https://www.linkedin.com/in/nivedna-7b3b522ba" target="_blank" rel="noopener noreferrer">linkedin.com/in/nivedna-7b3b522ba</a></p>
+              <p style="margin:0 0 8px;"><strong>GitHub</strong><br><a href="https://github.com/Nivedna01" target="_blank" rel="noopener noreferrer">github.com/Nivedna01</a></p>
+              <p style="margin:0 0 8px;"><strong>Location</strong><br>VPO Simbli, Bhangala, Punjab (Pin: 144306)</p>
+
+              <div style="margin-top:12px;">
+                <strong>Quick message</strong>
+                <form style="margin-top:8px;" action="mailto:nivedna96@gmail.com" method="post" enctype="text/plain">
+                  <input type="text" name="name" placeholder="Your name" style="width:100%; padding:10px; border-radius:8px; border:1px solid rgba(30,27,27,0.06); margin-bottom:8px;">
+                  <input type="email" name="email" placeholder="Your email" style="width:100%; padding:10px; border-radius:8px; border:1px solid rgba(30,27,27,0.06); margin-bottom:8px;">
+                  <textarea name="message" placeholder="Message" rows="4" style="width:100%; padding:10px; border-radius:8px; border:1px solid rgba(30,27,27,0.06); margin-bottom:8px;"></textarea>
+                  <button class="btn" type="submit">Send</button>
+                </form>
+              </div>
+            </div>
+
+            <aside class="contact-card" data-aos="fade-left" data-aos-delay="120">
+              <h4 style="margin-top:0;">Connect</h4>
+              <div class="socials">
+                <a href="mailto:nivedna96@gmail.com" target="_blank" rel="noopener noreferrer"><i class="fa fa-envelope"></i> Email</a>
+                <a href="https://github.com/Nivedna01" target="_blank" rel="noopener noreferrer"><i class="fa fa-github"></i> GitHub</a>
+                <a href="https://www.linkedin.com/in/nivedna-7b3b522ba" target="_blank" rel="noopener noreferrer"><i class="fa fa-linkedin"></i> LinkedIn</a>
+              </div>
+
+              <div style="margin-top:18px; color:var(--muted); font-size:13px;">
+                <strong>Academic Achievements</strong>
+                <ul style="margin:8px 0 0 18px; padding:0; color:var(--muted);">
+                  <li>WWT All-India Women Tech Hackathon — Top 100</li>
+                  <li>NSD’25 — 6th position</li>
+                </ul>
+              </div>
+            </aside>
+          </div>
+        </div>
+      </section>
+
+      <!-- Footer -->
+      <footer data-aos="fade-up" data-aos-delay="40">
+        <div style="max-width:1100px;margin:0 auto;padding:8px;">
+          <div style="display:flex; justify-content:space-between; align-items:center; gap:12px; flex-wrap:wrap;">
+            <div style="text-align:left;">
+              <strong style="font-family:'Space Grotesk';">Nivedna</strong>
+              <div style="color:var(--muted); font-size:13px;">Computer Science Engineering Student</div>
+            </div>
+
+            <div style="text-align:right; color:var(--muted); font-size:13px;">
+              <div>© <span id="year"></span> Nivedna • Crafted with ♥</div>
+            </div>
+          </div>
+        </div>
+      </footer>
+
+    </div>
+  </main>
+
+  <button class="to-top" id="toTop" aria-label="Scroll to top"><i class="fa fa-arrow-up"></i></button>
+
+  <!-- AOS -->
+  <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+
+  <script>
+    // Initialize Lenis for smooth scrolling
+    const lenis = new Lenis();
+
+    function raf(time) {
+      lenis.raf(time);
+      requestAnimationFrame(raf);
+    }
+    requestAnimationFrame(raf);
+
+    // AOS init
+    AOS.init({ duration: 800, offset: 100, once: true });
+
+    // Nav solid on scroll
+    const nav = document.querySelector('.nav');
+    const topNav = document.getElementById('topNav');
+    function checkNav(){
+      if(window.scrollY > 40) nav.classList.add('solid'); else nav.classList.remove('solid');
+      // show to-top
+      const toTop = document.getElementById('toTop');
+      if(window.scrollY > 300) toTop.style.display = 'block'; else toTop.style.display = 'none';
+    }
+    checkNav();
+    window.addEventListener('scroll', checkNav, { passive:true });
+
+    // Mobile menu toggle
+    const hambtn = document.getElementById('hambtn');
+    const mobileMenu = document.getElementById('mobileMenu');
+    hambtn.addEventListener('click', () => {
+      const open = mobileMenu.style.display === 'block';
+      mobileMenu.style.display = open ? 'none' : 'block';
+    });
+
+    // Smooth anchor links using Lenis
+    document.querySelectorAll('[data-link]').forEach(link=>{
+      link.addEventListener('click', (e)=>{
+        e.preventDefault();
+        const href = link.getAttribute('href');
+        if(!href || href.charAt(0) !== '#') return;
+        const id = href.slice(1);
+        const el = document.getElementById(id);
+        if(el){
+          // close mobile menu if open
+          if(window.innerWidth < 768) mobileMenu.style.display = 'none';
+          lenis.scrollTo(el, { offset: -20, duration: 1.2 });
+        }
+      });
+    });
+
+    // Scroll to top button
+    document.getElementById('toTop').addEventListener('click', ()=>{
+      lenis.scrollTo(0, { duration: 0.9 });
+    });
+
+    // Set year
+    document.getElementById('year').textContent = new Date().getFullYear();
+
+    // Micro-interaction: slight random rotation on hover for cards (human, handcrafted feel)
+    document.querySelectorAll('.project, .mini').forEach((card, idx)=>{
+      const base = (idx % 3) - 1; // -1,0,1
+      card.style.transform = `rotate(${base * 0.2}deg)`;
+      card.addEventListener('mouseenter', ()=>{
+        card.style.transition = 'transform .28s cubic-bezier(.2,.9,.3,1)';
+        card.style.transform = `translateY(-8px) rotate(${(base*0.2)-0.6}deg)`;
+      });
+      card.addEventListener('mouseleave', ()=>{
+        card.style.transform = `rotate(${base * 0.2}deg)`;
+      });
+    });
+
+    // Small accessibility: focus outlines for keyboard users
+    document.addEventListener('keyup', (e)=>{
+      if(e.key === 'Tab') document.body.classList.add('show-focus');
+    });
+
+    // Ensure AOS refresh after Lenis scroll events (keeps animations in sync)
+    lenis.on('scroll', () => {
+      AOS.refreshHard();
+    });
+
+    // Gentle reveal for hero badge (tiny bounce)
+    const badge = document.querySelector('.badge');
+    if(badge){
+      badge.animate([
+        { transform: 'translateY(0) rotate(-3deg)' },
+        { transform: 'translateY(-6px) rotate(0deg)' },
+        { transform: 'translateY(0) rotate(-2deg)' }
+      ], { duration: 1600, iterations: 1, easing: 'cubic-bezier(.2,.9,.3,1)', delay: 400 });
+    }
+
+    // Ensure internal links from external loads scroll correctly
+    if(location.hash){
+      const id = location.hash.slice(1);
+      const el = document.getElementById(id);
+      if(el){
+        setTimeout(()=> lenis.scrollTo(el, { offset:-20, duration:1.2 }), 300);
+      }
+    }
+  </script>
+</body>
+</html>
+```
