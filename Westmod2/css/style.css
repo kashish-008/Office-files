@@ -903,12 +903,9 @@ form.contact-form {
 }
 
 .drag-heading h2 {
-    font-family: 'Suisse Int\'l', sans-serif;
-    font-weight: 500;
     font-size: 97px;
     line-height: 107px;
-    letter-spacing: 0%;
-    color: #000;
+    color: var(--color-text);
     margin: 0;
 }
 
