@@ -15,7 +15,7 @@ document.addEventListener("DOMContentLoaded", () => {
   })
     .to(loaderFill, {
       width: "100%",
-      duration: 2.2,
+      duration: 2,
       ease: "none",
       onUpdate() {
         const fillWidth = loaderFill.getBoundingClientRect().width;
