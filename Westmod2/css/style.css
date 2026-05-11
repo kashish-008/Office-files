@@ -1271,7 +1271,7 @@ form.contact-form {
   }
 }
 
-/* ── Cell border animation (same as naics-card__border) ── */
+/* ── Cell border animation */
 .cell-border {
   position: absolute;
   inset: 0;
@@ -1346,7 +1346,6 @@ form.contact-form {
 /* ---------ready--------- */
 .ready {
   text-align: center;
-  padding-bottom: 100px;
   position: relative;
 }
 
@@ -1398,4 +1397,117 @@ form.contact-form {
   left: 69.67%;
 }
 
+/* ── FAQ Section ── */
+.faq {
+  padding-bottom: 100px;
+  position: relative;
+}
 
+.faq-title {
+  font-size: 77px;
+  padding-top: 150px;
+  color: var(--color-text);
+  text-align: center;
+  margin: auto;
+  margin-bottom: 60px;
+  max-width: 929px;
+}
+
+.faq-list {
+  max-width: 989px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+/* ── Each FAQ item ── */
+.faq-item {
+  width: 100%;
+  max-width: 989px;
+  border: 1px solid #2420210f;
+  border-radius: 10px;
+  overflow: hidden;
+  transition: border-color 0.2s ease;
+}
+
+.faq-item[open] {
+  border-color: rgba(36, 32, 33, 0.12);
+}
+
+/* ── Summary (question row) ── */
+.faq-summary {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 22px 28px;
+  cursor: pointer;
+  list-style: none; /* remove default triangle */
+  font-family: var(--font-sf);
+  font-weight: 600;
+  font-size: 24px;
+  color: var(--color-text);
+  gap: 16px;
+  user-select: none;
+}
+
+/* remove default arrow in all browsers */
+.faq-summary::-webkit-details-marker {
+  display: none;
+}
+.faq-summary::marker {
+  display: none;
+}
+
+/* ── Chevron icon ── */
+.faq-icon {
+  flex-shrink: 0;
+  width: 32px;
+  height: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.3s ease;
+}
+
+.faq-item[open] .faq-icon {
+  transform: rotate(180deg);
+}
+
+/* ── Answer body ── */
+.faq-body {
+  padding: 0 28px 22px;
+  font-family: var(--font-sf);
+  font-size: 20px;
+  font-weight: 400;
+  color: var(--color-muted);
+  line-height: 1.7;
+}
+
+.faq .vector6 {
+  position: absolute;
+  left: -30px;
+  top: 0;
+}
+
+.faq .vector7 {
+  position: absolute;
+  right: -30px;
+  top: -30px;
+}
+
+/* ── Responsive ── */
+@media (max-width: 768px) {
+  .faq-title {
+    font-size: 42px;
+  }
+
+  .faq-summary {
+    font-size: 18px;
+    padding: 18px 20px;
+  }
+
+  .faq-body {
+    padding: 0 20px 18px;
+  }
+}
