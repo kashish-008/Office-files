@@ -1535,14 +1535,6 @@ form.contact-form {
   font-weight: 400;
 }
 
-.choose-wrap {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 100px;
-  margin-bottom: 30px;
-}
-
 .l-text {
   width: 100%;
   max-width: 400px;
@@ -1580,7 +1572,7 @@ form.contact-form {
 .choose-wrap > .choose-l,
 .choose-wrap > .choose-r {
   flex: 1;
-  min-width: 0; /
+  min-width: 0;
 }
 
 .card-img-wrap img {
@@ -1597,6 +1589,8 @@ form.contact-form {
 }
 
 .choose-wrap {
+  gap: 100px;
+  margin-bottom: 30px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -1607,7 +1601,7 @@ form.contact-form {
   width: 100%;
   opacity: 0;
   pointer-events: none;
-  transition: none; 
+  transition: none;
 }
 
 .choose-wrap.active {
@@ -1615,4 +1609,11 @@ form.contact-form {
   pointer-events: all;
 }
 
-
+.home-hero,
+.drag,
+.your-pool,
+.trusted,
+.ready,
+.faq {
+  overflow: hidden;
+}
