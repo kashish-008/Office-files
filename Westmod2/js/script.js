@@ -88,4 +88,9 @@ gsap
       g(Math.round(e.progress * (t - 1)));
     },
   });
+
+  window.addEventListener("resize", () => {
+  ScrollTrigger.refresh();
+});
+
 })();
