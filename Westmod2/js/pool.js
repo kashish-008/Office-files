@@ -7,6 +7,20 @@ document.addEventListener("DOMContentLoaded", () => {
   const parts = Array.from(container.querySelectorAll(".pool-part img"));
   if (!poolImg || parts.length === 0) return;
 
+  // Get all pp-img containers with their p tags
+  const ppImgContainers = Array.from(container.querySelectorAll(".pp-img"));
+  const ppImgMap = new Map();
+  ppImgContainers.forEach((container) => {
+    const img = container.querySelector("img");
+    const p = container.querySelector("p");
+    if (img && p) {
+      const imgIndex = parts.indexOf(img);
+      if (imgIndex !== -1) {
+        ppImgMap.set(imgIndex, p);
+      }
+    }
+  });
+
   let ticking = false;
   const clamp = (v, a, b) => Math.min(b, Math.max(a, v));
 
@@ -45,10 +59,39 @@ document.addEventListener("DOMContentLoaded", () => {
         p.style.transform = `translate(-50%, calc(-50% + ${i * 8}px)) scale(${0.6 + 0.4 * local})`;
         p.style.opacity = `${local}`;
         p.style.zIndex = `${1100 - i}`;
+
+        // If this image has an associated p tag, animate it to the left
+        if (ppImgMap.has(i)) {
+          const ppText = ppImgMap.get(i);
+          ppText.classList.add("show");
+          ppText.style.position = "fixed";
+          ppText.style.left = `${centerX - 360}px`; // 360px to the left of the image
+
+          // Different vertical positions for each text
+          let textTop = centerY;
+          if (i === 0)
+            textTop = centerY - 10; // Pool-1 text (top position)
+          else if (i === 3)
+            textTop = centerY; // Pool-4 text (middle position)
+          else if (i === 5) textTop = centerY + 150; // Pool-6 text (bottom position)
+
+          ppText.style.top = `${textTop}px`;
+          ppText.style.transform = `translate(0, -50%) scale(${0.6 + 0.4 * local})`; // Scale with image
+          ppText.style.opacity = `${local}`;
+          ppText.style.zIndex = `${1099}`;
+        }
       } else {
         p.classList.remove("show");
         p.style.opacity = "0";
         p.style.pointerEvents = "none";
+
+        // Reset p tag if it has one
+        if (ppImgMap.has(i)) {
+          const ppText = ppImgMap.get(i);
+          ppText.classList.remove("show");
+          ppText.style.opacity = "0";
+          ppText.style.pointerEvents = "none";
+        }
       }
     }
   }
