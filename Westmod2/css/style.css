@@ -97,7 +97,6 @@ ul {
 }
 
 /*------Header-------*/
-
 header {
   position: absolute;
   top: 0;
@@ -1616,4 +1615,34 @@ form.contact-form {
 .ready,
 .faq {
   overflow: hidden;
+}
+
+
+/* ------engineer------ */
+.engineer-top img{
+  margin: auto;
+}
+
+.engineer-mid{
+  display: flex;
+  align-items: center;
+  gap: 30px;
+  margin-top: 40px;
+}
+
+.mid-l h2{
+  font-size: 97px;
+  max-width: 950px;
+}
+
+.mid-r p{
+  color: var(--color-muted);
+  font-size: 24px;
+  font-family: var(--font-sf);
+  font-weight: 400;
+  max-width: 494px;
+}
+
+.pool-img img{
+  margin: auto;
 }
