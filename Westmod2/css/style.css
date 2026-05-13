@@ -815,7 +815,6 @@ form.contact-form {
 /* ---------home-page-------- */
 .modern {
   width: 100%;
-  /* tall enough for slow cinematic scroll */
   height: 400vh;
   background: #fff;
   position: relative;
@@ -1650,17 +1649,10 @@ form.contact-form {
   max-width: 494px;
 }
 
-.pool-img img {
-  display: block;
-  margin: 0 auto;
-  max-width: 100%;
-  height: auto;
-}
-
-/* Engineer pool: sticky main image, sequential reveal of parts */
 .engineer-pool {
   position: relative;
 }
+
 .engineer-pool .pool-img {
   position: -webkit-sticky;
   position: sticky;
@@ -1670,6 +1662,7 @@ form.contact-form {
   align-items: center;
   justify-content: center;
 }
+
 .engineer-pool .pool-img img {
   width: 600px;
   max-width: 90%;
@@ -1679,16 +1672,19 @@ form.contact-form {
     transform 0.6s ease;
   will-change: opacity, transform;
 }
+
 .engineer-pool .pool-img.fade-out img {
   opacity: 0;
-  transform: scale(0.98) translateY(-20px);
+  transform: scale(0.9) translateY(-20px);
   pointer-events: none;
 }
+
 .engineer-pool .pool-part {
   position: static;
   min-height: 100vh;
   margin-top: 0;
 }
+
 .engineer-pool .pool-part img {
   position: fixed;
   width: 400px;
@@ -1701,9 +1697,11 @@ form.contact-form {
     transform 0.7s cubic-bezier(0.2, 0.8, 0.2, 1);
   will-change: opacity, transform;
 }
+
 .engineer-pool .pool-part img.show {
   opacity: 1;
 }
+
 .engineer-pool .pool-part img.show {
   opacity: 1;
   transform: translateY(0) scale(1);
