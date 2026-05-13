@@ -28,22 +28,21 @@ document.addEventListener("DOMContentLoaded", () => {
     const n = parts.length;
     const centerX = window.innerWidth / 2;
     const centerY = window.innerHeight / 2;
+    const revealInterval = 0.05; // gap between each image reveal
 
     for (let i = 0; i < n; i++) {
       const p = parts[i];
-      const localProgress = clamp(
-        (progress - partsStart) / (1 - partsStart),
-        0,
-        1,
-      );
-      const local = clamp((localProgress - i * 0.08) / 0.5, 0, 1);
+      // each image reveals at a different scroll threshold
+      const revealThreshold = partsStart + i * revealInterval;
+      const local = clamp((progress - revealThreshold) / 0.05, 0, 1);
 
       if (local > 0 && progress < 1.0) {
         p.classList.add("show");
         p.style.position = "fixed";
         p.style.left = `${centerX}px`;
         p.style.top = `${centerY}px`;
-        p.style.transform = `translate(-50%, calc(-50% + ${i * 8}px)) scale(${0.95 + 0.05 * local})`;
+        // scale from 0.6 to 1 as user scrolls
+        p.style.transform = `translate(-50%, calc(-50% + ${i * 8}px)) scale(${0.6 + 0.4 * local})`;
         p.style.opacity = `${local}`;
         p.style.zIndex = `${1100 - i}`;
       } else {
