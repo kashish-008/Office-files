@@ -33,7 +33,7 @@ document.addEventListener("DOMContentLoaded", () => {
   ScrollTrigger.create({
     trigger: container,
     start: "top 50%",
-    end: "bottom 50%",
+    end: "bottom bottom",
     scrub: true,
 
     onUpdate(self) {
@@ -66,7 +66,7 @@ document.addEventListener("DOMContentLoaded", () => {
             top: centerY,
             xPercent: -50,
             yPercent: -50,
-            y: index * 8,
+            y: index * 1,
             scale: 0.6 + 0.4 * layerProgress,
             opacity: layerProgress,
             zIndex: 1100 - index,

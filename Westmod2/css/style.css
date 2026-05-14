@@ -1518,6 +1518,8 @@ form.contact-form {
   background-size: cover;
   color: var(--color-white);
   padding-bottom: 60px;
+  position: relative;
+  z-index: 1200;
 }
 
 .your-pool h2 {
@@ -1677,13 +1679,12 @@ form.contact-form {
 
 .engineer-pool .pool-part img {
   position: fixed;
-  width: 400px;
+  width: 480px;
   height: auto;
   max-width: 85%;
   display: block;
   opacity: 0;
 }
-
 
 .engineer-pool .pool-part img.show {
   opacity: 1;
@@ -1709,7 +1710,7 @@ form.contact-form {
   opacity: 0;
   pointer-events: none;
   bottom: 20px;
-  left: 26%;
+  left: 20%;
   transform: translateX(-50%);
   white-space: nowrap;
 }
@@ -1719,6 +1720,26 @@ form.contact-form {
   opacity: 1;
   transform: translateX(-50%) translateY(0);
 }
+
+p.text-1 {
+  top: 127px !important;
+  left: 25% !important;
+}
+
+p.text-2 {
+  top: 250px !important;
+  left: 24% !important;
+}
+
+p.text-3 {
+  top: 320px !important;
+  left: 22% !important;
+}
+
+p.text-4 {
+  left: 22% !important;
+}
+
 
 .dot {
   display: inline-block;
