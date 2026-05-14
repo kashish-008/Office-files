@@ -1,106 +1,103 @@
 document.addEventListener("DOMContentLoaded", () => {
-  // Get main container and images
+  // Get all needed elements
   const container = document.querySelector(".engineer-pool");
   if (!container) return;
 
   const poolImgWrap = container.querySelector(".pool-img");
-  const poolImg = poolImgWrap?.querySelector("img") ?? null;
-  const parts = Array.from(container.querySelectorAll(".pool-part img"));
-  if (!poolImg || !parts.length) return;
+  const poolImg = poolImgWrap?.querySelector("img");
+  const layerImages = Array.from(container.querySelectorAll(".pool-part img"));
 
-  // Create a map linking each image to its text label
-  const textMap = new Map();
-  Array.from(container.querySelectorAll(".pp-img")).forEach((el) => {
-    const img = el.querySelector("img");
-    const text = el.querySelector("p");
+  if (!poolImg || !layerImages.length) return;
+
+  // Create a map of image index to text label
+  const textLabels = new Map();
+  container.querySelectorAll(".pp-img").forEach((wrapper) => {
+    const img = wrapper.querySelector("img");
+    const text = wrapper.querySelector("p");
     if (img && text) {
-      const index = parts.indexOf(img);
-      if (index !== -1) textMap.set(index, text);
+      const index = layerImages.indexOf(img);
+      if (index !== -1) textLabels.set(index, text);
     }
   });
 
-  // Helper function to limit a value between min and max
-  const clamp = (val, min, max) => Math.min(max, Math.max(min, val));
-
-  // Animation settings
+  // Setup positions and animation settings
   const centerX = window.innerWidth / 2;
   const centerY = window.innerHeight / 2;
-  const startDelay = 0.35; // When layers start revealing
-  const layerGap = 0.05; // Time gap between each layer
+  const textOffsets = { 1: -150, 3: -50, 5: 150 };
+  const animationDelay = 0.55;
+  const animationGap = 0.05;
 
-  let animationFrame = null;
+  // Register GSAP plugin and create ScrollTrigger
+  gsap.registerPlugin(ScrollTrigger);
 
-  function update() {
-    // Calculate scroll progress (0 to 1)
-    const rect = container.getBoundingClientRect();
-    const progress = clamp(
-      (window.innerHeight * 0.5 - rect.top) / (rect.height || 1),
-      0,
-      1,
-    );
+  ScrollTrigger.create({
+    trigger: container,
+    start: "top 50%",
+    end: "bottom 50%",
+    scrub: true,
 
-    // Fade out main pool image
-    const mainOpacity = clamp(1 - progress * 3, 0, 1);
-    poolImg.style.opacity = mainOpacity;
-    poolImg.style.transform = `scale(${1 - (1 - mainOpacity) * 0.02}) translateY(${-20 * (1 - mainOpacity)}px)`;
-    poolImgWrap.classList.toggle("fade-out", progress > 0.05);
+    onUpdate(self) {
+      const progress = self.progress;
 
-    // Animate each layer
-    parts.forEach((layer, i) => {
-      const revealStart = startDelay + i * layerGap;
-      const layerProgress = clamp((progress - revealStart) / layerGap, 0, 1);
-      const isVisible = layerProgress > 0 && progress < 1;
+      // Fade out main pool image
+      const opacity = gsap.utils.clamp(0, 1, 1 - progress * 2 );
+      gsap.set(poolImg, {
+        opacity: opacity,
+        scale: 1 - (1 - opacity) * 0.02,
+        y: -20 * (1 - opacity),
+      });
+      // poolImgWrap.classList.toggle("fade-out", progress > 0.05);
 
-      if (isVisible) {
-        layer.classList.add("show");
-        layer.style.position = "fixed";
-        layer.style.left = `${centerX}px`;
-        layer.style.top = `${centerY}px`;
-        layer.style.transform = `translate(-50%, calc(-50% + ${i * 8}px)) scale(${0.6 + 0.4 * layerProgress})`;
-        layer.style.opacity = layerProgress;
-        layer.style.zIndex = 1100 - i;
+      // Animate each layer
+      layerImages.forEach((layer, index) => {
+        const startPoint = animationDelay + index * animationGap;
+        const layerProgress = gsap.utils.clamp(
+          0,
+          1,
+          (progress - startPoint) / animationGap,
+        );
+        const isVisible = layerProgress > 0 && progress < 1;
 
-        // Animate text label if it exists
-        if (textMap.has(i)) {
-          const text = textMap.get(i);
-          text.classList.add("show");
-          text.style.position = "fixed";
-          text.style.left = `${centerX - 360}px`;
+        if (isVisible) {
+          layer.classList.add("show");
+          gsap.set(layer, {
+            position: "fixed",
+            left: centerX,
+            top: centerY,
+            xPercent: -50,
+            yPercent: -50,
+            y: index * 8,
+            scale: 0.6 + 0.4 * layerProgress,
+            opacity: layerProgress,
+            zIndex: 1100 - index,
+          });
 
-          // Set different vertical positions for specific text
-          const textPositions = { 0: -10, 3: 0, 5: 150 };
-          text.style.top = `${centerY + (textPositions[i] || 0)}px`;
+          // Show text label
+          if (textLabels.has(index)) {
+            const textLabel = textLabels.get(index);
+            const offsetY = textOffsets[index] ?? 0;
+            textLabel.classList.add("show");
+            gsap.set(textLabel, {
+              position: "fixed",
+              top: centerY + offsetY,
+              opacity: layerProgress,
+              zIndex: 1099,
+            });
+          }
+        } else {
+          layer.classList.remove("show");
+          gsap.set(layer, { opacity: 0, pointerEvents: "none" });
 
-          text.style.transform = `translate(0, -50%) scale(${0.6 + 0.4 * layerProgress})`;
-          text.style.opacity = layerProgress;
-          text.style.zIndex = 1099;
+          if (textLabels.has(index)) {
+            const textLabel = textLabels.get(index);
+            textLabel.classList.remove("show");
+            gsap.set(textLabel, { opacity: 0, pointerEvents: "none" });
+          }
         }
-      } else {
-        layer.classList.remove("show");
-        layer.style.opacity = "0";
-        layer.style.pointerEvents = "none";
+      });
+    },
+  });
 
-        // Hide text label if it exists
-        if (textMap.has(i)) {
-          const text = textMap.get(i);
-          text.classList.remove("show");
-          text.style.opacity = "0";
-          text.style.pointerEvents = "none";
-        }
-      }
-    });
-
-    animationFrame = null;
-  }
-
-  // Scroll and resize event handler
-  const onScroll = () => {
-    if (!animationFrame) {
-      animationFrame = requestAnimationFrame(update);
-    }
-  };
-
-  window.addEventListener("scroll", onScroll, { passive: true });
-  window.addEventListener("resize", onScroll);
-  update(); // Initial call
+  // Update on window resize
+  window.addEventListener("resize", () => ScrollTrigger.refresh());
 });
