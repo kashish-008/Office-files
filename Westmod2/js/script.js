@@ -1,4 +1,36 @@
 gsap.registerPlugin(ScrollTrigger);
+
+// Parallax effect for home-hero section
+const heroSection = document.querySelector(".home-hero");
+const heroContent = document.querySelector(".home-hero .hero-content");
+
+if (heroSection && heroContent) {
+  gsap.to(heroContent, {
+    scrollTrigger: {
+      trigger: heroSection,
+      start: "top top",
+      end: "bottom top",
+      scrub: 1,
+      markers: false,
+    },
+    y: 100,
+    ease: "sine.out",
+  });
+
+  // Blur effect only on background image via CSS variable
+  gsap.to(heroSection, {
+    scrollTrigger: {
+      trigger: heroSection,
+      start: "top top",
+      end: "bottom top",
+      scrub: 1,
+      markers: false,
+    },
+    "--bg-blur": "5px",
+    ease: "sine.out",
+  });
+}
+
 const i = document.querySelector(".modern-img-wrap"),
   t = document.querySelector(".modern-text"),
   w = window.innerWidth,
@@ -90,7 +122,6 @@ gsap
   });
 
   window.addEventListener("resize", () => {
-  ScrollTrigger.refresh();
-});
-
+    ScrollTrigger.refresh();
+  });
 })();

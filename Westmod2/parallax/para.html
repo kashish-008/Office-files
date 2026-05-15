@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Stage 2: 3D CSS Parallax</title>
+    <link rel="stylesheet" href="para.css" />
+  </head>
+  <body>
+    <!-- The main viewport controlling the 3D perspective -->
+    <div class="parallax-viewport">
+      <!-- A group binds layers together so they scroll at relative speeds -->
+      <div class="parallax-group">
+        <!-- Deep Background Layer (Slowest) -->
+        <div class="parallax-layer layer-back">
+          <div class="bg-image"></div>
+        </div>
+
+        <!-- Mid-ground Layer (Normal Speed) -->
+        <div class="parallax-layer layer-base">
+          <div class="content-box">
+            <h1>CSS 3D Depth</h1>
+            <p>Scroll down to watch the layers separate.</p>
+          </div>
+        </div>
+
+        <!-- NEW: Foreground Layer (Fastest) -->
+        <div class="parallax-layer layer-fore">
+          <div class="floating-badge">FAST FOREGROUND</div>
+        </div>
+      </div>
+
+      <!-- Normal static section following the parallax group -->
+      <section class="buffer-section">
+        <h2>Next Section</h2>
+        <p>This area scrolls normally without any 3D layers.</p>
+      </section>
+    </div>
+  </body>

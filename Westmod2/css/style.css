@@ -143,7 +143,6 @@ nav {
 
 .nav-links ul li a {
   font-size: 15px;
-  color: var(--color-dark);
   font-family: var(--font-medium);
   transition: opacity 0.2s;
 }
@@ -1624,7 +1623,7 @@ form.contact-form {
   background-repeat: no-repeat;
   background-position: center center;
   background-size: cover;
-  background-attachment: fixed;
+  /* background-attachment: fixed; */
 }
 
 .engineer-top img {
@@ -1740,7 +1739,6 @@ p.text-4 {
   left: 22% !important;
 }
 
-
 .dot {
   display: inline-block;
   vertical-align: middle;
@@ -1771,3 +1769,38 @@ p.text-4 {
     width: 90%;
   }
 }
+
+/* ---Home-hero---- */
+.home-hero {
+  position: relative;
+  height: 100vh;
+  overflow: hidden;
+  --bg-blur: 0px;
+}
+
+.home-hero::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url("../assets/Mask\ group.png");
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+  z-index: 0;
+  filter: blur(var(--bg-blur));
+}
+
+.home-hero .hero-content {
+  position: relative;
+  z-index: 1;
+}
+
+.home-hero .hero-content p,
+h1 {
+  color: white !important;
+  max-width: 1185px !important;
+}
+
