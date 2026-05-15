@@ -1,0 +1,274 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Para5</title>
+    <style>
+      /* ---------- Reset & basics ---------- */
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      body {
+        font-family: system-ui, sans-serif;
+        background: #111;
+      }
+
+      /* ---------- Section common ---------- */
+      section {
+        position: relative;
+        height: 100vh;
+        overflow: hidden; /* prevents elements from peeking out */
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: white;
+        text-align: center;
+      }
+
+      /* ---------- Section 1: Hero ---------- */
+      .hero {
+        background: #000; /* fallback */
+      }
+      .hero-bg {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 120%;
+        background: url("https://picsum.photos/id/102/1600/900") center/cover;
+        will-change: transform, opacity;
+        z-index: 1;
+      }
+      .hero-text {
+        position: relative;
+        z-index: 2;
+        max-width: 800px;
+        padding: 2rem;
+      }
+
+      /* ---------- Section 2: Image slide from left ---------- */
+      .slide-section {
+        background: #1a1a1a;
+      }
+      .slide-img {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 50%;
+        height: 100%;
+        background: url("https://picsum.photos/id/60/800/1000") center/cover;
+        will-change: transform;
+        z-index: 1;
+      }
+      .slide-text {
+        position: relative;
+        z-index: 2;
+        width: 50%;
+        margin-left: 50%;
+        padding: 2rem;
+      }
+
+      /* ---------- Section 3: Multi-layer scene ---------- */
+      .layer-section {
+        background: #000;
+      }
+      .layer {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 150%; /* extra height for movement */
+        will-change: transform;
+      }
+      .layer--sky {
+        background: linear-gradient(to bottom, #87ceeb, #b0e0e6);
+        z-index: 1;
+      }
+      .layer--mountains {
+        background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600"><path d="M0,300 L200,100 L400,350 L600,50 L800,400 L800,600 L0,600 Z" fill="%234a6741"/></svg>')
+          center/cover;
+        z-index: 2;
+      }
+      .layer--ground {
+        z-index: 3;
+      }
+      .layer-text {
+        position: relative;
+        z-index: 10;
+        max-width: 800px;
+        padding: 2rem;
+      }
+
+      /* ---------- Section 4: Pinned story card ---------- */
+      .pin-section {
+        background: #222;
+      }
+      .story-card {
+        width: 80%;
+        max-width: 600px;
+        padding: 3rem;
+        background: rgba(255, 255, 255, 0.1);
+        backdrop-filter: blur(10px);
+        border-radius: 2rem;
+        will-change: transform, opacity;
+      }
+
+      /* ---------- Spacer to see sections clearly ---------- */
+      .spacer {
+        height: 30vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background: #000;
+        color: #aaa;
+        font-size: 1.2rem;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Spacer above first section -->
+    <div class="spacer">⬇️ Scroll down – 4 parallax examples ⬇️</div>
+
+    <!-- ======== SECTION 1: HERO ======== -->
+    <section class="hero">
+      <div class="hero-bg" id="heroBg"></div>
+      <div class="hero-text">
+        <h1 style="font-size: 4rem">Mountains at Dawn</h1>
+        <p style="font-size: 1.5rem">
+          The background moves slowly, text moves faster.
+        </p>
+      </div>
+    </section>
+
+    <div class="spacer">⬇️ Next: image slides from left ⬇️</div>
+
+    <!-- ======== SECTION 2: IMAGE SLIDE ======== -->
+    <section class="slide-section">
+      <div class="slide-img" id="slideImg"></div>
+      <div class="slide-text">
+        <h2 style="font-size: 3rem">Meet the Forest</h2>
+        <p style="font-size: 1.2rem">
+          The image enters from the left as you scroll.
+        </p>
+      </div>
+    </section>
+
+    <div class="spacer">⬇️ Next: multi‑layer depth ⬇️</div>
+
+    <!-- ======== SECTION 3: MULTI-LAYER ======== -->
+    <section class="layer-section">
+      <div class="layer layer--sky" id="skyLayer"></div>
+      <div class="layer layer--mountains" id="mountainsLayer"></div>
+      <div class="layer layer--ground" id="groundLayer"></div>
+      <div class="layer-text">
+        <h2 style="font-size: 3rem">Three Layers of Depth</h2>
+        <p style="font-size: 1.2rem">
+          Sky moves a tiny bit, mountains more, ground fastest.
+        </p>
+      </div>
+    </section>
+
+    <div class="spacer">⬇️ Last: pinned card that fades ⬇️</div>
+
+    <!-- ======== SECTION 4: PINNED CARD ======== -->
+    <section class="pin-section" id="pinSection">
+      <div class="story-card" id="storyCard">
+        <h2 style="font-size: 3rem">This card is pinned</h2>
+        <p>It fades out and shrinks while the section stays in place.</p>
+      </div>
+    </section>
+
+    <div class="spacer" style="height: 100vh">
+      🎉 You made it through! Scroll back up to see effects again.
+    </div>
+
+    <!-- ======== GSAP + ScrollTrigger ======== -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+
+    <script>
+      // Register the plugin
+      gsap.registerPlugin(ScrollTrigger);
+
+      // ---------- SECTION 1: Hero parallax ----------
+      gsap.to("#heroBg", {
+        y: "-20%", // background moves up 20% of its own height → slow, distant
+        opacity: 0, // fade out as we leave
+        ease: "none",
+        scrollTrigger: {
+          trigger: ".hero",
+          start: "top top",
+          end: "bottom top",
+          scrub: true,
+        },
+      });
+
+      // ---------- SECTION 2: Image slides from left ----------
+      // The image starts off-screen to the left (set via CSS translateX or in GSAP)
+      // We'll use "from" tween: it starts at -100% and goes to 0%
+      gsap.from("#slideImg", {
+        x: "-100%", // starts fully to the left (outside)
+        ease: "none",
+        scrollTrigger: {
+          trigger: ".slide-section",
+          start: "top bottom", // when section top hits viewport bottom
+          end: "bottom top",
+          scrub: true,
+        },
+      });
+
+      // ---------- SECTION 3: Multi-layer ----------
+      // Sky moves the slowest (most distant), ground moves fastest (closest)
+      gsap.to("#skyLayer", {
+        y: "-10%", // tiny movement = far away
+        ease: "none",
+        scrollTrigger: {
+          trigger: ".layer-section",
+          start: "top bottom",
+          end: "bottom top",
+          scrub: true,
+        },
+      });
+
+      gsap.to("#mountainsLayer", {
+        y: "-25%", // moderate movement
+        ease: "none",
+        scrollTrigger: {
+          trigger: ".layer-section",
+          start: "top bottom",
+          end: "bottom top",
+          scrub: true,
+        },
+      });
+
+      gsap.to("#groundLayer", {
+        y: "-40%", // biggest movement = closest to viewer
+        ease: "none",
+        scrollTrigger: {
+          trigger: ".layer-section",
+          start: "top bottom",
+          end: "bottom top",
+          scrub: true,
+        },
+      });
+
+      // ---------- SECTION 4: Pinned card ----------
+      gsap.to("#storyCard", {
+        opacity: 0,
+        scale: 0.8, // shrink a bit
+        ease: "none",
+        scrollTrigger: {
+          trigger: ".pin-section",
+          start: "top top",
+          end: "+=100%", // pins for 100% of the section's height (creates extra scroll distance)
+          scrub: true,
+          pin: true, // the section stays fixed while we animate
+          pinSpacing: true, // adds extra space so we can scroll through the animation
+        },
+      });
+    </script>
+  </body>
+</html>

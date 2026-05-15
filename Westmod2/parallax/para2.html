@@ -1,0 +1,83 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>para2</title>
+    <link rel="stylesheet" href="para.css" />
+  </head>
+  <body>
+    <style>
+      .horizontal-section {
+        height: 100vh;
+        overflow: hidden;
+        position: relative;
+      }
+      .cards {
+        display: flex;
+        height: 100%;
+        will-change: transform;
+      }
+      .card {
+        min-width: 80vw;
+        height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 4rem;
+        color: white;
+        background: #333;
+        border-right: 2px solid #fff;
+      }
+      .card:nth-child(1) {
+        background: #e74c3c;
+      }
+      .card:nth-child(2) {
+        background: #3498db;
+      }
+      .card:nth-child(3) {
+        background: #2ecc71;
+      }
+      .card:nth-child(4) {
+        background: #9b59b6;
+      }
+    </style>
+
+    <section class="horizontal-section">
+      <div class="cards">
+        <div class="card">Card 1</div>
+        <div class="card">Card 2</div>
+        <div class="card">Card 3</div>
+        <div class="card">Card 4</div>
+      </div>
+    </section>
+
+    <section class="buffer-section">
+        <h2>Next Section</h2>
+        <p>This area scrolls normally without any 3D layers.</p>
+      </section>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+
+    <script>
+      gsap.registerPlugin(ScrollTrigger);
+
+      const cards = document.querySelector(".cards");
+      const section = document.querySelector(".horizontal-section");
+
+      gsap.to(cards, {
+        x: () => -(cards.scrollWidth - document.documentElement.clientWidth),
+        ease: "none",
+        scrollTrigger: {
+          trigger: section,
+          pin: true,
+          scrub: 1,
+          start: "top top",
+          end: () => `+=${cards.scrollWidth - window.innerWidth}`,
+          invalidateOnRefresh: true,
+        },
+      });
+    </script>
+  </body>
+</html>
