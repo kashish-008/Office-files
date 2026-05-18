@@ -39,11 +39,10 @@ gsap
   .timeline({
     scrollTrigger: {
       trigger: ".modern",
-      start: "-50%",
-      end: "+=220vh",
-      scrub: 0.5,
-      pin: true,
-      pinSpacing: true,
+      start: "top bottom",
+      end: "+=300vh",
+      scrub: 0.6,
+      pin: false,
       onLeave: () =>
         gsap.to(t, { opacity: 1, duration: 0.8, ease: "power2.out" }),
       onEnterBack: () => gsap.to(t, { opacity: 0, duration: 0.3 }),
@@ -76,7 +75,7 @@ gsap
   }
   window.addEventListener("load", place);
   window.addEventListener("resize", place);
-})(); 
+})();
 
 (function () {
   const s = document.getElementById("yourPool"),

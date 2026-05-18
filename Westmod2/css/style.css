@@ -815,6 +815,7 @@ form.contact-form {
   width: 100%;
   background: #fff;
   position: relative;
+  margin-bottom: 100px;
 }
 
 .modern-sticky {
@@ -831,8 +832,8 @@ form.contact-form {
 
 .modern-img-wrap {
   position: relative;
-  width: 700px;
-  height: 320px;
+  width: 300px;
+  height: 180px;
   overflow: hidden;
   border-radius: 4px;
 }
