@@ -696,3 +696,283 @@
     line-height: 1.6;
   }
 }
+
+
+/* ===========================
+   Original styles (unchanged)
+   =========================== */
+/* … (your full original CSS, kept as‑is) … */
+
+/* ===========================
+   New Responsive Additions
+   =========================== */
+:root {
+  /* … keep your existing custom props … */
+}
+
+/* ---------- Fluid Typography ---------- */
+h1 {
+  font-size: clamp(2rem, 8vw, 3.5rem);     /* ~32px → 56px */
+}
+h2 {
+  font-size: clamp(2rem, 5vw, 3rem);
+}
+p {
+  font-size: clamp(1rem, 2vw, 1.125rem);
+}
+
+/* Large display headings */
+.drag-heading h2,
+.ready h2,
+.mid-l h2 {
+  font-size: clamp(2.5rem, 12vw, 6.0625rem); /* 40px → 97px */
+}
+
+.faq-title,
+.trusted h2 {
+  font-size: clamp(2rem, 10vw, 4.8125rem);   /* 32px → 77px */
+}
+
+.your-pool h2 {
+  font-size: clamp(2rem, 8vw, 4.1875rem);    /* 32px → 67px */
+}
+
+.choose-l h3 {
+  font-size: clamp(1.8rem, 6vw, 2.9375rem);  /* 29px → 47px */
+}
+
+/* Adjust secondary text */
+.hero-content p {
+  font-size: clamp(0.875rem, 2vw, 1.125rem);
+}
+
+/* ---------- Global Spacing ---------- */
+.container {
+  padding-left: clamp(1rem, 5vw, 0rem);
+  padding-right: clamp(1rem, 5vw, 0rem);
+}
+
+section {
+  padding: clamp(3rem, 10vw, 6.25rem) 0;    /* 48px → 100px */
+}
+
+/* ---------- Header & Navigation ---------- */
+header {
+  padding-top: clamp(0.75rem, 3vw, 1.625rem);
+}
+
+nav {
+  padding: clamp(0.5rem, 2vw, 1.125rem);
+  border-radius: 12px;
+}
+
+.logo img {
+  height: clamp(1.5rem, 5vw, 2.25rem);
+}
+
+.nav-links {
+  gap: clamp(1rem, 4vw, 3.75rem);
+}
+
+.nav-links ul {
+  gap: clamp(0.75rem, 3vw, 2.25rem);
+}
+
+.nav-links ul li a {
+  font-size: clamp(0.8125rem, 2vw, 0.9375rem);
+}
+
+.nav-cta {
+  padding: clamp(0.5rem, 1.5vw, 0.75rem) clamp(1rem, 2vw, 1.375rem);
+  font-size: clamp(0.75rem, 1.8vw, 0.875rem);
+}
+
+/* Hamburger button (hidden on desktop) */
+.hamburger {
+  display: none;
+  flex-direction: column;
+  gap: 5px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+}
+
+.hamburger span {
+  display: block;
+  width: 24px;
+  height: 2px;
+  background: #111;
+  border-radius: 2px;
+  transition: 0.3s;
+}
+
+/* ---------- Hero Section ---------- */
+.home-hero {
+  height: 100vh;
+}
+
+/* ---------- Drag Section ---------- */
+.drag-cursor {
+  display: block;          /* shown only on non-touch via JS */
+}
+
+/* hide cursor on touch devices via JS class addition */
+body.touch .drag-cursor {
+  display: none !important;
+}
+
+.drag-heading {
+  padding: 0 clamp(1rem, 5vw, 3.75rem);
+  margin-bottom: clamp(1.5rem, 4vw, 2.5rem);
+}
+
+.drag-slider-wrap {
+  padding-left: clamp(1rem, 5vw, 3.75rem);
+}
+
+.drag-info {
+  padding: clamp(0.5rem, 3vw, 1.25rem) clamp(1rem, 5vw, 3.75rem) 0;
+  max-width: clamp(18rem, 80vw, 47rem);
+}
+
+/* Mobile slider cards already sized in original media query */
+@media (max-width: 480px) {
+  .swiper-slide {
+    width: 85vw !important;
+    height: auto;
+  }
+  .swiper-slide.swiper-slide-active {
+    width: 90vw !important;
+    height: auto;
+  }
+}
+
+/* ---------- Modern Section ---------- */
+/* On tablet/mobile, the expand animation is disabled via JS */
+.modern-sticky {
+  /* keep as‑is for desktop, JS disables pinning below 1024px */
+}
+
+/* ---------- Engineer Pool (mobile fallback) ---------- */
+@media (max-width: 768px) {
+  .engineer-pool .pool-img {
+    display: none;                     /* hide the sticky big image */
+  }
+
+  .engineer-pool .pool-part img {
+    position: static !important;       /* stack vertically */
+    width: 100% !important;
+    max-width: 400px;
+    opacity: 1 !important;
+    margin: 0 auto 1.5rem auto;
+    display: block;
+  }
+
+  .engineer-pool .pool-part .pp-img p {
+    position: static !important;
+    opacity: 1 !important;
+    font-size: clamp(1rem, 4vw, 1.5rem);
+    text-align: center;
+    margin-top: 0.25rem;
+    transform: none !important;
+  }
+
+  .dot, .line {
+    display: none;                     /* simplify labels */
+  }
+
+  .pool-part {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+/* ---------- Trusted Grid (mobile) ---------- */
+@media (max-width: 768px) {
+  .trusted-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1rem;
+  }
+
+  .grid-cell {
+    flex: 1 1 40%;
+    min-width: 130px;
+    min-height: auto;
+    border: 1px solid rgba(228,228,228,0.3);
+  }
+
+  .logo-cell {
+    padding: 2rem 1rem;
+  }
+}
+
+/* ---------- Your Pool Section ---------- */
+@media (max-width: 768px) {
+  .choose-wrap {
+    flex-direction: column;
+    gap: 2rem;
+    text-align: center;
+  }
+
+  .choose-l-text {
+    justify-content: center;
+  }
+
+  .card-img-wrap {
+    max-width: 90%;
+    margin: 0 auto;
+  }
+
+  .choose-wrap-container {
+    height: auto;
+    position: static;
+  }
+
+  .choose-wrap {
+    position: static;
+    opacity: 1;
+    pointer-events: auto;
+    margin-bottom: 3rem;
+  }
+
+  /* all steps visible at once */
+  .choose-wrap.active {
+    /* no special treatment needed */
+  }
+}
+
+/* ---------- FAQ ---------- */
+@media (max-width: 480px) {
+  .faq-summary {
+    font-size: clamp(1rem, 5vw, 1.25rem);
+    padding: 1rem;
+  }
+}
+
+/* ---------- Footer ---------- */
+@media (max-width: 768px) {
+  .footer-inner {
+    flex-direction: column;
+    gap: 2rem;
+  }
+  .footer-links {
+    gap: 2rem;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+  }
+  .quick-links h4,
+  .social-section h4 {
+    font-size: clamp(1.2rem, 5vw, 1.6875rem);
+  }
+}
+
+/* ---------- Disable fixed backgrounds on mobile (performance) ---------- */
+@media (max-width: 768px) {
+  .engineer {
+    background-attachment: scroll;
+  }
+}
