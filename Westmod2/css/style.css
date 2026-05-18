@@ -831,8 +831,8 @@ form.contact-form {
 
 .modern-img-wrap {
   position: relative;
-  width: 300px;
-  height: 180px;
+  width: 700px;
+  height: 320px;
   overflow: hidden;
   border-radius: 4px;
 }
@@ -1522,12 +1522,19 @@ body.loading {
 .your-pool {
   background-image: url("../assets/Rectangle 13.png");
   background-repeat: no-repeat;
-  background-position: center center;
+  background-position: top;
   background-size: cover;
   color: var(--color-white);
-  padding-bottom: 60px;
   position: relative;
   z-index: 9999;
+  max-height: 100vh;
+  height: 100%;
+}
+
+.union {
+  position: absolute;
+  left: 474px;
+  top: -85px;
 }
 
 .trusted,
@@ -1540,7 +1547,7 @@ body.loading {
 }
 
 .your-pool h2 {
-  padding-top: 50px;
+  margin-top: 52px;
   font-size: 67px;
   text-align: center;
 }
@@ -1582,8 +1589,8 @@ body.loading {
 }
 
 .card-img-wrap {
-  max-width: 415px;
-  height: 393px;
+  max-width: 525px;
+  height: auto;
 }
 
 .choose-wrap > .choose-l,

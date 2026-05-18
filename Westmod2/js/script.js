@@ -39,7 +39,7 @@ gsap
   .timeline({
     scrollTrigger: {
       trigger: ".modern",
-      start: "top top",
+      start: "-50%",
       end: "+=220vh",
       scrub: 0.5,
       pin: true,
@@ -76,7 +76,7 @@ gsap
   }
   window.addEventListener("load", place);
   window.addEventListener("resize", place);
-})();
+})(); 
 
 (function () {
   const s = document.getElementById("yourPool"),
