@@ -40,9 +40,10 @@ gsap
     scrollTrigger: {
       trigger: ".modern",
       start: "top top",
-      end: "bottom bottom",
-      scrub: 1.5,
-      pin: !1,
+      end: "+=220vh",
+      scrub: 0.5,
+      pin: true,
+      pinSpacing: true,
       onLeave: () =>
         gsap.to(t, { opacity: 1, duration: 0.8, ease: "power2.out" }),
       onEnterBack: () => gsap.to(t, { opacity: 0, duration: 0.3 }),

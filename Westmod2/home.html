@@ -18,8 +18,22 @@
     />
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
   </head>
-  <body>
+  <body class="loading">
     <!-- loader -->
+    <div id="loader" class="loader">
+      <div id="loaderContent" class="loader-content">
+        <div class="loader-brand" style="font-weight: 700; letter-spacing: 1px">
+          Westmod Studio
+        </div>
+        <div id="loaderTrack" class="loader-bar-wrap">
+          <div class="loader-bar-track">
+            <div id="loaderFill" class="loader-bar-fill"></div>
+            <div id="loaderDot" class="loader-bar-dot"></div>
+          </div>
+        </div>
+      </div>
+      <div id="loaderBlob" class="loader-blob"></div>
+    </div>
 
     <!-- header -->
     <header>

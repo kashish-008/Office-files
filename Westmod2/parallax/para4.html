@@ -75,7 +75,7 @@
           const maxTilt = 15; // degrees
 
           card.parentElement.addEventListener("mousemove", (e) => {
-              console.log(e); 
+            console.log(e);
             const rect = card.parentElement.getBoundingClientRect();
             const x = (e.clientX - rect.left) / rect.width - 0.5; // -0.5 to 0.5
             const y = (e.clientY - rect.top) / rect.height - 0.5;

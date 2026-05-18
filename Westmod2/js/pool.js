@@ -84,19 +84,9 @@ document.addEventListener("DOMContentLoaded", () => {
       });
     },
 
-    onComplete() {
-      layerImages.forEach((layer) =>
-        showElement(layer, { position: "fixed", opacity: 1, scale: 1 }),
-      );
-      textLabels.forEach((text) =>
-        showElement(text, { position: "fixed", opacity: 1 }),
-      );
-    },
+ 
 
-    onLeave() {
-      layerImages.forEach(hideElement);
-      textLabels.forEach(hideElement);
-    },
+  
   });
 
   window.addEventListener("resize", () => ScrollTrigger.refresh());
