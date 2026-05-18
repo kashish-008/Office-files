@@ -1128,6 +1128,13 @@ body.loading {
   transition: opacity 0.45s ease;
 }
 
+/* prevent background scroll while loader is visible */
+.no-scroll {
+  position: fixed;
+  width: 100%;
+  overflow: hidden;
+}
+
 /* page hidden */
 #mainContent {
   opacity: 0;

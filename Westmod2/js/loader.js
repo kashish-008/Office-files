@@ -3,6 +3,12 @@ document.addEventListener("DOMContentLoaded", () => {
   const loaderFill = document.getElementById("loaderFill");
   const loaderDot = document.getElementById("loaderDot");
   const loaderBlob = document.getElementById("loaderBlob");
+  let _lockedScroll = 0;
+
+  // lock page scroll while loader is visible
+  _lockedScroll = window.scrollY || window.pageYOffset || 0;
+  document.body.classList.add("no-scroll");
+  document.body.style.top = `-${_lockedScroll}px`;
 
   // single concise timeline: fade in → progress → hide content → blob wipe + body fade → remove loader
   const tl = gsap.timeline({ delay: 0.3 });
@@ -37,6 +43,12 @@ document.addEventListener("DOMContentLoaded", () => {
     )
     .to("body", { opacity: 1, duration: 0.45, ease: "power1.out" }, "<")
     .add(() =>
-      gsap.delayedCall(0.35, () => gsap.set("#loader", { display: "none" })),
+      gsap.delayedCall(0.35, () => {
+        gsap.set("#loader", { display: "none" });
+        // restore scroll position and remove lock
+        document.body.classList.remove("no-scroll");
+        document.body.style.top = "";
+        window.scrollTo(0, _lockedScroll);
+      }),
     );
 });
