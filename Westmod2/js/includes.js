@@ -18,7 +18,6 @@
     }
     console.warn("includes.js: could not load host page.");
   }
-
   async function apply() {
     const html = await getPage();
     if (html) {
