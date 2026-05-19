@@ -1,512 +1,489 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>V1-Home Page</title>
-        <!-- Bootstrap CSS -->
-        <link
-            href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
-            rel="stylesheet">
-        <!-- AOS CSS -->
-        <link
-            href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css"
-            rel="stylesheet">
-        <link rel="stylesheet" href="css/style.css">
-        <link rel="stylesheet" href="css/resp.css">
-    </head>
-    <body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>V1-Home Page</title>
+    <!-- Bootstrap CSS -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <!-- AOS CSS -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/resp.css" />
+  </head>
+  <body>
+    <!-- Header -->
+    <header>
+      <div class="container">
+        <nav>
+          <div
+            class="company-logo"
+            data-aos="fade-down"
+            data-aos-duration="600"
+          >
+            <img src="assets/logo.svg" alt="forex" />
+          </div>
 
-        <!-- Header -->
-        <header>
-            <div class="container">
-                <nav>
-                    <div class="company-logo" data-aos="fade-down"
-                        data-aos-duration="600">
-                        <img src="assets/logo.svg" alt="forex">
-                    </div>
+          <div
+            class="access"
+            data-aos="fade-down"
+            data-aos-duration="600"
+            data-aos-delay="100"
+          >
+            <a class="activate-access-btn anim-radial" href="#"
+              >Activate My Access</a
+            >
+          </div>
+        </nav>
+      </div>
+    </header>
+    <!-- hero-section -->
+    <section class="hero-section" id="heroSection">
+      <div class="container">
+        <div class="hero-content">
+          <h1 data-aos="fade-up" data-aos-duration="800">
+            90% of <span class="span-text">Forex courses</span>
+            are recycled information
+          </h1>
+          <p data-aos="fade-up" data-aos-duration="800" data-aos-delay="150">
+            Random concepts won't make you profitable. What you need is one
+            clear trade plan based on liquidity and order flow.
+          </p>
+        </div>
+      </div>
+    </section>
 
-                    <div class="access" data-aos="fade-down"
-                        data-aos-duration="600" data-aos-delay="100">
-                        <a class="activate-access-btn anim-radial"
-                            href="#">Activate My Access</a>
-                    </div>
-                </nav>
-            </div>
-        </header>
-
-        <!-- Main -->
-        < class="main">
-
-            <!-- hero-section -->
-            <section class="hero-section" id="heroSection">
-                <div class="container">
-                    <div class="hero-content">
-                        <h1 data-aos="fade-up" data-aos-duration="800">
-                            90% of <span class="span-text">Forex courses</span>
-                            are recycled information
-                        </h1>
-                        <p data-aos="fade-up" data-aos-duration="800"
-                            data-aos-delay="150">
-                            Random concepts won't make you profitable. What you
-                            need is one clear trade plan based on liquidity and
-                            order flow.
-                        </p>
-                    </div>
-                </div>
-            </section>
-
-            <!-- welkom-section -->
-            <section class="welkom-section" id="welkomSection">
-                <div class="container">
-
-                    <div class="welkom-img" data-aos="fade-up"
-                        data-aos-duration="800">
-                        <img class="video-img clickable-video"
-                            src="assets/maninblack.png">
-                        <img class="pause-img clickable-video"
-                            src="assets/pause.png">
-                        <div class="video-container" id="videoContainer">
-                            <iframe width="100%" height="100%"
-                                src="https://www.youtube.com/embed/sxqjMcLG9yE?autoplay=1&controls=1&modestbranding=1&rel=0"
-                                frameborder="0"
-                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                                allowfullscreen>
-                            </iframe>
-                            <button class="close-video-btn"
-                                id="closeVideoBtn">×</button>
-                        </div>
-                    </div>
-
-                    <a class="free-trial-btn anim-radial" href="#">Start 7-Day
-                        Free Access</a>
-
-                    <div class="welkom-tags">
-
-                        <div class="welkom-tag" data-aos="fade-up"
-                            data-aos-delay="0">
-                            <p>Complete trade plan (50+ pages)</p>
-                        </div>
-                        <div class="welkom-tag" data-aos="fade-up"
-                            data-aos-delay="100">
-                            <p>Full access to video content in LMS</p>
-                        </div>
-                        <div class="welkom-tag" data-aos="fade-up"
-                            data-aos-delay="200">
-                            <p>Live team trainings + Discord access</p>
-                        </div>
-                    </div>
-
-                </div>
-            </section>
-
-            <!-- trader-section -->
-            <section class="trader-section" id="traderSection">
-                <div class="container">
-
-                    <div class="trader-content">
-                        <div class="trader-row">
-                            <div class="trader-row-left" data-aos="fade-right"
-                                data-aos-duration="800">
-                                <h3>Why most traders never become <span
-                                        class="span-text">profitable</span></h3>
-                                <ul class="trader-list">
-                                    <li data-aos="fade-up"
-                                        data-aos-delay="0">You learn random
-                                        strategies everywhere</li>
-                                    <li data-aos="fade-up"
-                                        data-aos-delay="80">Everyone teaches
-                                        something different</li>
-                                    <li data-aos="fade-up"
-                                        data-aos-delay="160">No structure = no
-                                        consistency</li>
-                                    <li data-aos="fade-up"
-                                        data-aos-delay="240">You keep jumping
-                                        from one strategy to another</li>
-                                </ul>
-                            </div>
-                            <div class="trader-row-right" data-aos="fade-left"
-                                data-aos-duration="800">
-                                <img src="assets/girl.png" alt="trader">
-                            </div>
-                        </div>
-
-                        <div class="trader-row">
-                            <div class="trader-row-right" data-aos="fade-right"
-                                data-aos-duration="800">
-                                <img src="assets/boy.png" alt="trader">
-                            </div>
-                            <div class="trader-row-left" data-aos="fade-left"
-                                data-aos-duration="800">
-                                <h3>This is what we do differently <span
-                                        class="span-text">profitable</span></h3>
-                                <ul class="trader-list">
-                                    <li data-aos="fade-up"
-                                        data-aos-delay="0">One complete trade
-                                        plan</li>
-                                    <li data-aos="fade-up"
-                                        data-aos-delay="80">Context first (H4),
-                                        execution second (M15)</li>
-                                    <li data-aos="fade-up"
-                                        data-aos-delay="160">Based on liquidity
-                                        and order flow</li>
-                                    <li data-aos="fade-up"
-                                        data-aos-delay="240">No exceptions, no
-                                        random entries</li>
-                                </ul>
-                            </div>
-                        </div>
-
-                    </div>
-
-                </div>
-            </section>
-
-            <!-- opening-section -->
-            <section class="opening-section" id="openingSection">
-
-                <div class="opening-img" data-aos="fade-up"
-                    data-aos-duration="900">
-                    <div class="image-container">
-                        <img class="forex" src="assets/forex.png" alt="forex">
-
-                        <div class="need">
-                            <div class="need-div">
-                                <h5>Everything you need in one place</h5>
-                                <ul class="need-list">
-                                    <li>50+ page structured plan</li>
-                                    <li>Videos explaining every concept</li>
-                                    <li>Step-by-step learning path</li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="container">
-                    <div class="opening-content">
-
-                        <div class="alone" data-aos="fade-right"
-                            data-aos-duration="800">
-                            <h3>You're <span class="span-text">not doing</span>
-                                this alone</h3>
-                            <img class="spring" src="assets/spring.svg"
-                                alt="spring">
-                        </div>
-
-                        <div data-aos="fade-left" data-aos-duration="800">
-                            <ul class="opening-list">
-                                <li data-aos="fade-up" data-aos-delay="0">2 live
-                                    team trainings per week</li>
-                                <li data-aos="fade-up" data-aos-delay="80">Daily
-                                    markups</li>
-                                <li data-aos="fade-up"
-                                    data-aos-delay="160">Mentors sharing trades
-                                    transparently</li>
-                                <li data-aos="fade-up"
-                                    data-aos-delay="240">Everyone follows the
-                                    same structure</li>
-                            </ul>
-                        </div>
-
-                    </div>
-                </div>
-
-                <div class="moving-wrap opening-wrap">
-                    <div class="moving-track">
-                        <img class="moving-img" src="assets/moving-img.png"
-                            alt="moving">
-                        <img class="moving-img" src="assets/moving-img.png"
-                            alt="moving">
-                        <img class="moving-img" src="assets/moving-img.png"
-                            alt="moving">
-                        <!-- duplicate -->
-                        <img class="moving-img" src="assets/moving-img.png"
-                            alt="moving">
-                        <img class="moving-img" src="assets/moving-img.png"
-                            alt="moving">
-                        <img class="moving-img" src="assets/moving-img.png"
-                            alt="moving">
-                    </div>
-                </div>
-            </section>
-
-            <!-- result-section -->
-            <section class="result-section" id="resultSection">
-                <div class="container">
-                    <div class="result-top">
-                        <div class="result-heading" data-aos="fade-right"
-                            data-aos-duration="800">
-                            <h2>Real results from our <span
-                                    class="span-text">students</span></h2>
-                        </div>
-                        <div class="result-dis" data-aos="fade-left"
-                            data-aos-duration="800">
-                            <p>"Over €10,000 in payouts in 2 weeks" (use real
-                                numbers) "Trade with external capital up to
-                                €100,000+"</p>
-                        </div>
-                    </div>
-
-                    <div class="result-content">
-                        <div class="result-col" data-aos="fade-up"
-                            data-aos-delay="0">
-                            <div class="col1">
-                                <img src="assets/result1.png" alt="result">
-                                <img src="assets/result2.png" alt="result">
-                            </div>
-                        </div>
-
-                        <div class="result-col" data-aos="fade-up"
-                            data-aos-delay="100">
-                            <div class="col2">
-                                <img src="assets/result3.png" alt="result">
-                            </div>
-                        </div>
-
-                        <div class="result-col" data-aos="fade-up"
-                            data-aos-delay="200">
-                            <div class="col3">
-                                <img src="assets/result4.png" alt="result">
-                            </div>
-                        </div>
-                    </div>
-                </div>   
-
-                 <div class="moving-wrap ">
-                    <div class="moving-track">
-                        <img class="moving-img" src="assets/moving-img.png"
-                            alt="moving">
-                        <img class="moving-img" src="assets/moving-img.png"
-                            alt="moving">
-                        <img class="moving-img" src="assets/moving-img.png"
-                            alt="moving">
-                        <!-- duplicate  -->
-                        <img class="moving-img" src="assets/moving-img.png"
-                            alt="moving">
-                        <img class="moving-img" src="assets/moving-img.png"
-                            alt="moving">
-                        <img class="moving-img" src="assets/moving-img.png"
-                            alt="moving">
-                    </div>
-                </div>
-            </section>
-
-            <!-- get-section -->
-            <section class="get-section" id="getSection">
-                <div class="container">
-                    <div class="get-content">
-
-                        <div class="get-left" data-aos="fade-right"
-                            data-aos-duration="800">
-                            <img src="assets/opening.png" alt="opening">
-                        </div>
-
-                        <div class="get-right" data-aos="fade-left"
-                            data-aos-duration="800">
-                            <h2>What <span class="span-text">you</span> get</h2>
-                            <div class="get-right-vector1">
-                                <img src="assets/vector1.svg" alt="vector">
-                            </div>
-                            <ul class="get-list">
-                                <li data-aos="fade-up" data-aos-delay="0">7 days
-                                    full access to LMS</li>
-                                <li data-aos="fade-up"
-                                    data-aos-delay="80">Complete trade plan
-                                    (PDF)</li>
-                                <li data-aos="fade-up"
-                                    data-aos-delay="160">Discord + live
-                                    trainings</li>
-                                <li data-aos="fade-up"
-                                    data-aos-delay="240">Daily market
-                                    analysis</li>
-                            </ul>
-                            <p>Free (limited time)</p>
-                            <a class="get-access-btn anim-radial"
-                                href="#">Activate My Access</a>
-                        </div>
-
-                    </div>
-
-                    <div class="get-bottom">
-                        <h2 data-aos="fade-up">Limited Access</h2>
-                        <div class="get-bottom-vector1" data-aos="fade-up"
-                            data-aos-delay="80">
-                            <img src="assets/vector1.svg" alt="vector">
-                        </div>
-                        <div class="get-tags">
-                            <div class="get-tag" data-aos="fade-up"
-                                data-aos-delay="0">
-                                <div>
-                                    <img src="assets/vector2.svg" alt="icon">
-                                </div>
-                                <div>
-                                    <p>Temporary access</p>
-                                </div>
-                            </div>
-                            <div class="get-tag" data-aos="fade-up"
-                                data-aos-delay="100">
-                                <div>
-                                    <img src="assets/vector2.svg" alt="icon">
-                                </div>
-                                <div>
-                                    <p>Limited spots for live guidance</p>
-                                </div>
-                            </div>
-                            <div class="get-tag" data-aos="fade-up"
-                                data-aos-delay="200">
-                                <div>
-                                    <img src="assets/vector2.svg" alt="icon">
-                                </div>
-                                <div>
-                                    <p>Registration closes when full</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </section>
-
-            <!-- qa-section -->
-            <section class="qa-section" id="qaSection">
-                <div class="container">
-                    <div class="qa-content">
-                        <div class="qa-left" data-aos="fade-right"
-                            data-aos-duration="800">
-                            <h2>Frequently Asked <span
-                                    class="span-text">Questions</span></h2>
-                        </div>
-                        <div class="qa-right" data-aos="fade-left"
-                            data-aos-duration="800">
-                            <div class="qa-items">
-                                <!-- FAQ Item 1 -->
-                                <details class="qa-item" data-aos="fade-up"
-                                    data-aos-delay="0">
-                                    <summary class="qa-question">
-                                        <span>Do I need experience?</span>
-                                        <div class="plus">
-                                            <img class="qa-icon"
-                                                src="assets/plus.svg"
-                                                alt="expand">
-                                        </div>
-                                    </summary>
-                                    <div class="qa-answer">
-                                        <p>No, you don't need any prior
-                                            experience. Our program is designed
-                                            for beginners and includes
-                                            comprehensive training to get you
-                                            started from day one.</p>
-                                    </div>
-                                </details>
-
-                                <!-- FAQ Item 2 -->
-                                <details class="qa-item" data-aos="fade-up"
-                                    data-aos-delay="100">
-                                    <summary class="qa-question">
-                                        <span>Does this work with small
-                                            accounts?</span>
-                                        <div class="plus">
-                                            <img class="qa-icon"
-                                                src="assets/plus.svg"
-                                                alt="expand">
-                                        </div>
-                                    </summary>
-                                    <div class="qa-answer">
-                                        <p>Yes, our solution is scalable and
-                                            works perfectly with small accounts.
-                                            You can start small and grow at your
-                                            own pace.</p>
-                                    </div>
-                                </details>
-
-                                <!-- FAQ Item 3 -->
-                                <details class="qa-item" data-aos="fade-up"
-                                    data-aos-delay="200">
-                                    <summary class="qa-question">
-                                        <span>How much time do I need?</span>
-                                        <div class="plus">
-                                            <img class="qa-icon"
-                                                src="assets/plus.svg"
-                                                alt="expand">
-                                        </div>
-                                    </summary>
-                                    <div class="qa-answer">
-                                        <p>Most users find they need just 30-60
-                                            minutes per week to manage their
-                                            account effectively. Start with what
-                                            works for your schedule.</p>
-                                    </div>
-                                </details>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="moving-wrap qa-wrap">
-                    <div class="moving-track">
-                        <img class="moving-img" src="assets/moving-img.png"
-                            alt="moving">
-                        <img class="moving-img" src="assets/moving-img.png"
-                            alt="moving">
-                        <img class="moving-img" src="assets/moving-img.png"
-                            alt="moving">
-                        <!-- duplicate -->
-                        <img class="moving-img" src="assets/moving-img.png"
-                            alt="moving">
-                        <img class="moving-img" src="assets/moving-img.png"
-                            alt="moving">
-                        <img class="moving-img" src="assets/moving-img.png"
-                            alt="moving">
-                    </div>
-                </div>
-            </section>
-
-            <!-- guess-section -->
-            <section class="guess-section" id="gusessSection">
-                <div class="container">
-                    <div class="guess-content">
-                        <h4 data-aos="fade-up" data-aos-duration="800">
-                            Stop guessing. <br> Start trading with a plan.
-                        </h4>
-                        <a class="guess-access-btn anim-radial" href="#">Start
-                            My 7-Day Access</a>
-                    </div>
-                </div>
-            </section>
-
+    <!-- welkom-section -->
+    <section class="welkom-section" id="welkomSection">
+      <div class="container">
+        <div class="welkom-img" data-aos="fade-up" data-aos-duration="800">
+          <img class="video-img clickable-video" src="assets/maninblack.png" />
+          <img class="pause-img clickable-video" src="assets/pause.png" />
+          <div class="video-container" id="videoContainer">
+            <iframe
+              width="100%"
+              height="100%"
+              src="https://www.youtube.com/embed/sxqjMcLG9yE?autoplay=1&controls=1&modestbranding=1&rel=0"
+              frameborder="0"
+              allow="
+                accelerometer;
+                autoplay;
+                clipboard-write;
+                encrypted-media;
+                gyroscope;
+                picture-in-picture;
+              "
+              allowfullscreen
+            >
+            </iframe>
+            <button class="close-video-btn" id="closeVideoBtn">×</button>
+          </div>
         </div>
 
-        <!-- Footer -->
-        <footer>
-            <div class="container">
-                <div class="disclaimer" id="disclaimer" data-aos="fade-up">
-                    <span class="dis">Disclaimer:</span> This training is
-                    intended solely for educational purposes. Trading involves
-                    risks and may result in the loss of capital. Results vary
-                    from person to person and depend on effort, experience, and
-                    market conditions. No guarantee of profit or income is
-                    provided. Always conduct your own research and take
-                    responsibility for your financial decisions.
-                </div>
+        <a class="free-trial-btn anim-radial" href="#"
+          >Start 7-Day Free Access</a
+        >
 
-                <div class="footer-bottom" id="footer-bottom">
-                    © 2026 De Forex Opleiding - All rights reserved.
-                </div>
+        <div class="welkom-tags">
+          <div class="welkom-tag" data-aos="fade-up" data-aos-delay="0">
+            <p>Complete trade plan (50+ pages)</p>
+          </div>
+          <div class="welkom-tag" data-aos="fade-up" data-aos-delay="100">
+            <p>Full access to video content in LMS</p>
+          </div>
+          <div class="welkom-tag" data-aos="fade-up" data-aos-delay="200">
+            <p>Live team trainings + Discord access</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- trader-section -->
+    <section class="trader-section" id="traderSection">
+      <div class="container">
+        <div class="trader-content">
+          <div class="trader-row">
+            <div
+              class="trader-row-left"
+              data-aos="fade-right"
+              data-aos-duration="800"
+            >
+              <h3>
+                Why most traders never become
+                <span class="span-text">profitable</span>
+              </h3>
+              <ul class="trader-list">
+                <li data-aos="fade-up" data-aos-delay="0">
+                  You learn random strategies everywhere
+                </li>
+                <li data-aos="fade-up" data-aos-delay="80">
+                  Everyone teaches something different
+                </li>
+                <li data-aos="fade-up" data-aos-delay="160">
+                  No structure = no consistency
+                </li>
+                <li data-aos="fade-up" data-aos-delay="240">
+                  You keep jumping from one strategy to another
+                </li>
+              </ul>
             </div>
-        </footer>
+            <div
+              class="trader-row-right"
+              data-aos="fade-left"
+              data-aos-duration="800"
+            >
+              <img src="assets/girl.png" alt="trader" />
+            </div>
+          </div>
 
-        <!-- Bootstrap JS -->
-        <script
-            src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
-            integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
-            crossorigin="anonymous"></script>
-        <!-- Lenis Smooth Scroll -->
-        <script
-            src="https://cdn.jsdelivr.net/npm/@studio-freight/lenis@latest/bundled/lenis.min.js"></script>
-        <!-- AOS JS -->
-        <script
-            src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
-        <!-- Site Script -->
-        <script src="js/script.js"></script>
-    </body>
+          <div class="trader-row">
+            <div
+              class="trader-row-right"
+              data-aos="fade-right"
+              data-aos-duration="800"
+            >
+              <img src="assets/boy.png" alt="trader" />
+            </div>
+            <div
+              class="trader-row-left"
+              data-aos="fade-left"
+              data-aos-duration="800"
+            >
+              <h3>
+                This is what we do differently
+                <span class="span-text">profitable</span>
+              </h3>
+              <ul class="trader-list">
+                <li data-aos="fade-up" data-aos-delay="0">
+                  One complete trade plan
+                </li>
+                <li data-aos="fade-up" data-aos-delay="80">
+                  Context first (H4), execution second (M15)
+                </li>
+                <li data-aos="fade-up" data-aos-delay="160">
+                  Based on liquidity and order flow
+                </li>
+                <li data-aos="fade-up" data-aos-delay="240">
+                  No exceptions, no random entries
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- opening-section -->
+    <section class="opening-section" id="openingSection">
+      <div class="opening-img" data-aos="fade-up" data-aos-duration="900">
+        <div class="image-container">
+          <img class="forex" src="assets/forex.png" alt="forex" />
+
+          <div class="need">
+            <div class="need-div">
+              <h5>Everything you need in one place</h5>
+              <ul class="need-list">
+                <li>50+ page structured plan</li>
+                <li>Videos explaining every concept</li>
+                <li>Step-by-step learning path</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="container">
+        <div class="opening-content">
+          <div class="alone" data-aos="fade-right" data-aos-duration="800">
+            <h3>You're <span class="span-text">not doing</span> this alone</h3>
+            <img class="spring" src="assets/spring.svg" alt="spring" />
+          </div>
+
+          <div data-aos="fade-left" data-aos-duration="800">
+            <ul class="opening-list">
+              <li data-aos="fade-up" data-aos-delay="0">
+                2 live team trainings per week
+              </li>
+              <li data-aos="fade-up" data-aos-delay="80">Daily markups</li>
+              <li data-aos="fade-up" data-aos-delay="160">
+                Mentors sharing trades transparently
+              </li>
+              <li data-aos="fade-up" data-aos-delay="240">
+                Everyone follows the same structure
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <div class="moving-wrap opening-wrap">
+        <div class="moving-track">
+          <img class="moving-img" src="assets/moving-img.png" alt="moving" />
+          <img class="moving-img" src="assets/moving-img.png" alt="moving" />
+          <img class="moving-img" src="assets/moving-img.png" alt="moving" />
+          <!-- duplicate -->
+          <img class="moving-img" src="assets/moving-img.png" alt="moving" />
+          <img class="moving-img" src="assets/moving-img.png" alt="moving" />
+          <img class="moving-img" src="assets/moving-img.png" alt="moving" />
+        </div>
+      </div>
+    </section>
+
+    <!-- result-section -->
+    <section class="result-section" id="resultSection">
+      <div class="container">
+        <div class="result-top">
+          <div
+            class="result-heading"
+            data-aos="fade-right"
+            data-aos-duration="800"
+          >
+            <h2>
+              Real results from our <span class="span-text">students</span>
+            </h2>
+          </div>
+          <div class="result-dis" data-aos="fade-left" data-aos-duration="800">
+            <p>
+              "Over €10,000 in payouts in 2 weeks" (use real numbers) "Trade
+              with external capital up to €100,000+"
+            </p>
+          </div>
+        </div>
+
+        <div class="result-content">
+          <div class="result-col" data-aos="fade-up" data-aos-delay="0">
+            <div class="col1">
+              <img src="assets/result1.png" alt="result" />
+              <img src="assets/result2.png" alt="result" />
+            </div>
+          </div>
+
+          <div class="result-col" data-aos="fade-up" data-aos-delay="100">
+            <div class="col2">
+              <img src="assets/result3.png" alt="result" />
+            </div>
+          </div>
+
+          <div class="result-col" data-aos="fade-up" data-aos-delay="200">
+            <div class="col3">
+              <img src="assets/result4.png" alt="result" />
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="moving-wrap">
+        <div class="moving-track">
+          <img class="moving-img" src="assets/moving-img.png" alt="moving" />
+          <img class="moving-img" src="assets/moving-img.png" alt="moving" />
+          <img class="moving-img" src="assets/moving-img.png" alt="moving" />
+          <!-- duplicate  -->
+          <img class="moving-img" src="assets/moving-img.png" alt="moving" />
+          <img class="moving-img" src="assets/moving-img.png" alt="moving" />
+          <img class="moving-img" src="assets/moving-img.png" alt="moving" />
+        </div>
+      </div>
+    </section>
+
+    <!-- get-section -->
+    <section class="get-section" id="getSection">
+      <div class="container">
+        <div class="get-content">
+          <div class="get-left" data-aos="fade-right" data-aos-duration="800">
+            <img src="assets/opening.png" alt="opening" />
+          </div>
+
+          <div class="get-right" data-aos="fade-left" data-aos-duration="800">
+            <h2>What <span class="span-text">you</span> get</h2>
+            <div class="get-right-vector1">
+              <img src="assets/vector1.svg" alt="vector" />
+            </div>
+            <ul class="get-list">
+              <li data-aos="fade-up" data-aos-delay="0">
+                7 days full access to LMS
+              </li>
+              <li data-aos="fade-up" data-aos-delay="80">
+                Complete trade plan (PDF)
+              </li>
+              <li data-aos="fade-up" data-aos-delay="160">
+                Discord + live trainings
+              </li>
+              <li data-aos="fade-up" data-aos-delay="240">
+                Daily market analysis
+              </li>
+            </ul>
+            <p>Free (limited time)</p>
+            <a class="get-access-btn anim-radial" href="#"
+              >Activate My Access</a
+            >
+          </div>
+        </div>
+
+        <div class="get-bottom">
+          <h2 data-aos="fade-up">Limited Access</h2>
+          <div
+            class="get-bottom-vector1"
+            data-aos="fade-up"
+            data-aos-delay="80"
+          >
+            <img src="assets/vector1.svg" alt="vector" />
+          </div>
+          <div class="get-tags">
+            <div class="get-tag" data-aos="fade-up" data-aos-delay="0">
+              <div>
+                <img src="assets/vector2.svg" alt="icon" />
+              </div>
+              <div>
+                <p>Temporary access</p>
+              </div>
+            </div>
+            <div class="get-tag" data-aos="fade-up" data-aos-delay="100">
+              <div>
+                <img src="assets/vector2.svg" alt="icon" />
+              </div>
+              <div>
+                <p>Limited spots for live guidance</p>
+              </div>
+            </div>
+            <div class="get-tag" data-aos="fade-up" data-aos-delay="200">
+              <div>
+                <img src="assets/vector2.svg" alt="icon" />
+              </div>
+              <div>
+                <p>Registration closes when full</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- qa-section -->
+    <section class="qa-section" id="qaSection">
+      <div class="container">
+        <div class="qa-content">
+          <div class="qa-left" data-aos="fade-right" data-aos-duration="800">
+            <h2>Frequently Asked <span class="span-text">Questions</span></h2>
+          </div>
+          <div class="qa-right" data-aos="fade-left" data-aos-duration="800">
+            <div class="qa-items">
+              <!-- FAQ Item 1 -->
+              <details class="qa-item" data-aos="fade-up" data-aos-delay="0">
+                <summary class="qa-question">
+                  <span>Do I need experience?</span>
+                  <div class="plus">
+                    <img class="qa-icon" src="assets/plus.svg" alt="expand" />
+                  </div>
+                </summary>
+                <div class="qa-answer">
+                  <p>
+                    No, you don't need any prior experience. Our program is
+                    designed for beginners and includes comprehensive training
+                    to get you started from day one.
+                  </p>
+                </div>
+              </details>
+
+              <!-- FAQ Item 2 -->
+              <details class="qa-item" data-aos="fade-up" data-aos-delay="100">
+                <summary class="qa-question">
+                  <span>Does this work with small accounts?</span>
+                  <div class="plus">
+                    <img class="qa-icon" src="assets/plus.svg" alt="expand" />
+                  </div>
+                </summary>
+                <div class="qa-answer">
+                  <p>
+                    Yes, our solution is scalable and works perfectly with small
+                    accounts. You can start small and grow at your own pace.
+                  </p>
+                </div>
+              </details>
+
+              <!-- FAQ Item 3 -->
+              <details class="qa-item" data-aos="fade-up" data-aos-delay="200">
+                <summary class="qa-question">
+                  <span>How much time do I need?</span>
+                  <div class="plus">
+                    <img class="qa-icon" src="assets/plus.svg" alt="expand" />
+                  </div>
+                </summary>
+                <div class="qa-answer">
+                  <p>
+                    Most users find they need just 30-60 minutes per week to
+                    manage their account effectively. Start with what works for
+                    your schedule.
+                  </p>
+                </div>
+              </details>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="moving-wrap qa-wrap">
+        <div class="moving-track">
+          <img class="moving-img" src="assets/moving-img.png" alt="moving" />
+          <img class="moving-img" src="assets/moving-img.png" alt="moving" />
+          <img class="moving-img" src="assets/moving-img.png" alt="moving" />
+          <!-- duplicate -->
+          <img class="moving-img" src="assets/moving-img.png" alt="moving" />
+          <img class="moving-img" src="assets/moving-img.png" alt="moving" />
+          <img class="moving-img" src="assets/moving-img.png" alt="moving" />
+        </div>
+      </div>
+    </section>
+
+    <!-- guess-section -->
+    <section class="guess-section" id="gusessSection">
+      <div class="container">
+        <div class="guess-content">
+          <h4 data-aos="fade-up" data-aos-duration="800">
+            Stop guessing. <br />
+            Start trading with a plan.
+          </h4>
+          <a class="guess-access-btn anim-radial" href="#"
+            >Start My 7-Day Access</a
+          >
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+      <div class="container">
+        <div class="disclaimer" id="disclaimer" data-aos="fade-up">
+          <span class="dis">Disclaimer:</span> This training is intended solely
+          for educational purposes. Trading involves risks and may result in the
+          loss of capital. Results vary from person to person and depend on
+          effort, experience, and market conditions. No guarantee of profit or
+          income is provided. Always conduct your own research and take
+          responsibility for your financial decisions.
+        </div>
+
+        <div class="footer-bottom" id="footer-bottom">
+          © 2026 De Forex Opleiding - All rights reserved.
+        </div>
+      </div>
+    </footer>
+
+    <!-- Bootstrap JS -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+      crossorigin="anonymous"
+    ></script>
+    <!-- Lenis Smooth Scroll -->
+    <script src="https://cdn.jsdelivr.net/npm/@studio-freight/lenis@latest/bundled/lenis.min.js"></script>
+    <!-- AOS JS -->
+    <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+    <!-- Site Script -->
+    <script src="js/script.js"></script>
+  </body>
 </html>
