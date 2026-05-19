@@ -907,7 +907,7 @@ form.contact-form {
 }
 
 .drag-heading h2 span {
-  color: var(--primary-blue);
+  color: var(--color-primary);
 }
 
 /* slider */
@@ -982,7 +982,7 @@ form.contact-form {
 }
 
 .drag-info-price span {
-  color: var(--primary-blue);
+  color: var(--color-primary);
   font-weight: 600;
 }
 
@@ -994,7 +994,7 @@ form.contact-form {
 
 /* shop now button */
 .drag-shop-btn {
-  background-color: var(--primary-blue);
+  background-color: var(--color-primary);
   color: #fff;
   border: none;
   padding: 12px 28px;
