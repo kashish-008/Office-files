@@ -9,3 +9,5 @@ Overview:
 - Training & notes: sample work, exercises, and documentation for skills development.
 
 Intent: Organize and publish these folders to GitHub as an archive and portfolio.
+
+> **Note:** This is a dynamic workspace. New demo folders are added regularly as I learn and practice. An organized archive for finished and in-progress work.
