@@ -1,0 +1,764 @@
+/* -- Profile Layout-- */
+.profile-content {
+  background: #f9f9fc;
+}
+
+.profile-layout {
+  display: flex;
+  align-items: flex-start;
+  gap: 20px;
+}
+
+/*--- Left Panel -- */
+.profile-left {
+  width: 374px;
+  min-width: 374px;
+  background: #fff;
+  border-radius: 6px;
+  box-shadow: 0px 2px 4px 0px #0000000d;
+  padding: 24px;
+  position: sticky;
+  top: 20px;
+}
+
+.profile-avatar {
+  width: 62px;
+  height: 62px;
+  border-radius: 50%;
+  overflow: hidden;
+  margin-bottom: 24px;
+}
+
+.profile-avatar img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.profile-name {
+  font-weight: 600;
+  color: #323a46;
+  margin-bottom: 30px;
+}
+
+.profile-info-block {
+  margin-bottom: 30px;
+}
+
+.info-label {
+  color: #323a46;
+  margin-bottom: 5px;
+}
+
+.social-label {
+  color: var(--grey-text);
+  font-size: 17px;
+  margin-bottom: 18px;
+}
+
+.info-value {
+  color: #687d92;
+}
+
+/* -- Social Icons -- */
+.social-icons {
+  display: flex;
+  gap: 14px;
+}
+
+.social-icons a {
+  background: #f9f9f9;
+  padding: 6px 10px;
+  border-radius: 6px;
+  color: #0a4773;
+  font-size: 16px;
+  text-decoration: none;
+  transition: color 0.2s;
+}
+
+.social-icons a:hover {
+  color: var(--green);
+}
+
+/* --- Left Panel Inputs ---*/
+.profile-textarea {
+  width: 100%;
+  border: 1px solid #e8edf1;
+  border-radius: 6px;
+  padding: 11px 16px;
+  font-weight: 400;
+  color: #1a1a1a;
+  font-family: inherit;
+  margin-bottom: 18px;
+  outline: none;
+}
+
+.profile-textarea:focus {
+  border-color: var(--green);
+}
+
+.profile-input {
+  width: 100%;
+  border: 1px solid #e8edf1;
+  border-radius: 6px;
+  padding: 11px 16px;
+  color: #1a1a1a;
+  font-family: inherit;
+  margin-bottom: 18px;
+  outline: none;
+  box-sizing: border-box;
+}
+
+.profile-input:focus {
+  border-color: var(--green);
+}
+
+/* --- Right Form -- */
+.profile-right {
+  flex: 1;
+  min-width: 0;
+}
+
+.profile-right-top {
+  margin-bottom: 24px;
+}
+
+.profile-right-top h2 {
+  color: #292b2e;
+}
+
+.profile-subtitle {
+  font-weight: 400;
+  color: #7b8189;
+  margin-top: 6px;
+}
+
+/* ---Form Sections-- */
+.form-section {
+  background: #fff;
+  box-shadow: 0px 2px 4px 0px #0000000d;
+  border-radius: 6px;
+  padding: 24px 20px;
+  margin-bottom: 24px;
+}
+
+.section-title {
+  font-weight: 600;
+  color: #5d7186;
+  margin-bottom: 24px;
+}
+
+/* ---Upload Section --- */
+.upload-div {
+  padding: 70px 0;
+  border: 2px dashed #e8edf1;
+  border-radius: 6px;
+}
+
+.upload-section {
+  text-align: center;
+  cursor: pointer;
+}
+
+.upload-div:hover {
+  border-color: var(--green);
+}
+
+.upload-icon {
+  font-size: 40px;
+  color: var(--green);
+  display: block;
+  margin-bottom: 12px;
+}
+
+.upload-text {
+  color: #5d7186;
+  margin-bottom: 16px;
+}
+
+.upload-link {
+  color: var(--green);
+  cursor: pointer;
+}
+
+.upload-hint {
+  font-weight: 400;
+  color: #687d92;
+}
+
+/* --- Form Row -- */
+.form-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 32px;
+  margin-bottom: 25px;
+}
+
+.password-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+.form-row:last-child {
+  margin-bottom: 0;
+}
+
+.form-row.four-col {
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+}
+
+.form-row-inner {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+}
+
+/* --- Form Inputs -- */
+.form-input {
+  width: 100%;
+  border: 1px solid #e8edf1;
+  border-radius: 6px;
+  padding: 10px 16px;
+  font-size: 14px;
+  color: #111;
+  font-family: inherit;
+  outline: none;
+  background: transparent;
+  box-sizing: border-box;
+}
+
+.form-input:focus {
+  border-color: var(--green);
+}
+
+.form-input::placeholder {
+  color: #687d92;
+}
+
+.form-select {
+  appearance: none;
+  cursor: pointer;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 24 24' fill='none' stroke='%239A9A9A' stroke-width='2'%3E%3Cpolyline points='6 9 12 15 18 9'%3E%3C/polyline%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 4px center;
+}
+
+.zip-input {
+  width: 100%;
+}
+
+.zip-input::placeholder {
+  color: #687d92;
+}
+
+.form-select:invalid {
+  color: #687d92;
+}
+
+.form-select option {
+  color: #000000;
+}
+
+/* -- Profession Section ---*/
+.profession-section {
+  display: flex;
+  align-items: center;
+  gap: 10px 64px;
+  flex-wrap: wrap;
+}
+
+.profession-label {
+  color: #5d7186;
+  white-space: nowrap;
+}
+
+.profession-checks {
+  display: flex;
+  gap: 10px 42px;
+  flex-wrap: wrap;
+}
+
+.profession-checks label {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 14px;
+  color: #5d7186;
+  cursor: pointer;
+}
+
+.profession-checks input[type="checkbox"] {
+  -webkit-appearance: none;
+  appearance: none;
+  background-color: #ffffff;
+  margin: 0;
+  width: 16px;
+  height: 16px;
+  cursor: pointer;
+  border: 1px solid #a4acb7;
+  border-radius: 4px;
+  display: inline-grid;
+  place-content: center;
+}
+
+.profession-checks input[type="checkbox"]:checked {
+  background-color: var(--green);
+  border-color: var(--green);
+}
+.profession-checks input[type="checkbox"]:checked::before {
+  content: "";
+  width: 8px;
+  height: 4px;
+  border-left: 2px solid white;
+  border-bottom: 2px solid white;
+  transform: rotate(-45deg) translateY(-1px);
+}
+
+/*--Bottom Bar-- */
+.form-actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 10px;
+}
+
+.btn-save {
+  background: #28a745;
+  color: #fff;
+  border: none;
+  padding: 8px 73px;
+  border-radius: 6px;
+  font-size: 16px;
+  cursor: pointer;
+  font-family: inherit;
+}
+
+.btn-save:hover {
+  background: #208637;
+}
+
+.btn-cancel {
+  background: #ef4444;
+  color: #fff;
+  border: none;
+  padding: 8px 73px;
+  border-radius: 6px;
+  font-size: 16px;
+  cursor: pointer;
+  font-family: inherit;
+}
+
+.btn-cancel:hover {
+  background: #c82333;
+}
+
+
+
+
+/* RESPONSIVE - profile.css*/
+/* --- 1100px --- */
+@media (max-width: 1100px) {
+    .profile-layout {
+        gap: 16px;
+    }
+
+    .profile-left {
+        width: 280px;
+        min-width: 280px;
+        padding: 20px 16px;
+    }
+
+    .profile-info-block {
+        margin-bottom: 20px;
+    }
+
+    .form-row {
+        gap: 20px;
+    }
+
+    .form-row.four-col {
+        grid-template-columns: 1fr 1fr;
+        gap: 16px;
+    }
+
+    .profession-section {
+        gap: 20px;
+    }
+
+    .profession-checks {
+        gap: 16px;
+    }
+}
+
+/* 860px */
+@media (max-width: 860px) {
+    .profile-layout {
+        flex-direction: column;
+        gap: 16px;
+    }
+
+    .profile-left, .profile-right{
+        width: 100%;
+        margin: auto;
+        min-width: unset;
+        position: static;
+        padding: 20px 16px;
+    }
+
+    .profile-avatar {
+        margin-bottom: 16px;
+    }
+
+    .profile-name {
+        margin-bottom: 16px;
+    }
+
+    .profile-info-block {
+        margin-bottom: 16px;
+    }
+
+    .profile-textarea {
+        margin-bottom: 12px;
+    }
+
+    .profile-input {
+        margin-bottom: 12px;
+    }
+
+    .upload-div {
+        padding: 40px 16px;
+    }
+
+    .upload-icon {
+        font-size: 32px;
+        margin-bottom: 8px;
+    }
+
+    .upload-text {
+        font-size: 14px;
+        margin-bottom: 10px;
+    }
+
+    .upload-hint {
+        font-size: 12px;
+    }
+
+    .form-section {
+        padding: 18px 16px;
+        margin-bottom: 16px;
+    }
+
+    .section-title {
+        margin-bottom: 16px;
+    }
+
+    .form-row {
+        gap: 16px;
+        margin-bottom: 16px;
+    }
+
+    .form-row.four-col {
+        grid-template-columns: 1fr 1fr;
+        gap: 14px;
+    }
+
+    .profession-section {
+        gap: 14px;
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .profession-checks {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        row-gap: 14px;
+        column-gap: 20px;
+        width: 100%;
+    }
+
+    .btn-save,
+    .btn-cancel {
+        padding: 8px 40px;
+        font-size: 14px;
+    }
+}
+
+/* --- 786px --- */
+@media (max-width: 786px) {
+
+    .profile-layout {
+        gap: 12px;
+    }
+
+    .profile-left {
+        padding: 16px 14px;
+    }
+
+    .form-row {
+        grid-template-columns: 1fr;
+        gap: 12px;
+        margin-bottom: 12px;
+    }
+
+    .form-row-inner {
+        grid-template-columns: 1fr 90px;
+        gap: 12px;
+    }
+
+    .form-row.four-col {
+        grid-template-columns: 1fr 1fr;
+        gap: 12px;
+    }
+
+    .form-section {
+        padding: 16px 14px;
+        margin-bottom: 12px;
+    }
+
+    .section-title {
+        font-size: 14px;
+        margin-bottom: 14px;
+    }
+
+    .upload-div {
+        padding: 30px 14px;
+    }
+
+    .upload-text {
+        font-size: 13px;
+    }
+
+    .upload-hint {
+        font-size: 11px;
+    }
+
+    .profile-right-top h2 {
+        font-size: 20px;
+    }
+
+    .profile-subtitle {
+        font-size: 14px;
+    }
+
+    .form-input {
+        font-size: 13px;
+        padding: 9px 12px;
+    }
+
+    .btn-save,
+    .btn-cancel {
+        padding: 8px 28px;
+        font-size: 13px;
+    }
+
+    .content {
+        padding: 14px;
+    }
+}
+
+/* -- 400px -- */
+@media (max-width: 400px) {
+    .profile-left {
+        padding: 14px 12px;
+    }
+
+    .profile-avatar {
+        width: 52px;
+        height: 52px;
+    }
+
+    .profile-name {
+        font-size: 15px;
+    }
+
+    .profile-left, .profile-right{
+        width: 100%;
+        margin: auto;
+    }
+
+    .info-label {
+        font-size: 12px;
+    }
+
+    .info-value {
+        font-size: 12px;
+    }
+
+    .social-icons a {
+        font-size: 14px;
+        padding: 5px 8px;
+    }
+
+    .profile-textarea {
+        font-size: 12px;
+        padding: 9px 12px;
+    }
+
+    .profile-input {
+        font-size: 12px;
+        padding: 9px 12px;
+    }
+
+    .form-section {
+        padding: 14px 12px;
+        margin-bottom: 10px;
+    }
+
+    .section-title {
+        font-size: 13px;
+        margin-bottom: 12px;
+    }
+
+    .form-row.four-col {
+        grid-template-columns: 1fr;
+    }
+
+    .form-row-inner {
+        grid-template-columns: 1fr 70px;
+        gap: 8px;
+    }
+
+    .profession-checks {
+        column-gap: 12px;
+        row-gap: 12px;
+    }
+
+    .profession-checks label {
+        font-size: 13px;
+    }
+
+    .upload-div {
+        padding: 24px 12px;
+    }
+
+    .upload-icon {
+        font-size: 28px;
+    }
+
+    .upload-text {
+        font-size: 10px;
+    }
+
+    .upload-hint {
+        font-size: 8px;
+    }
+
+    .profile-right-top h2 {
+        font-size: 16px;
+    }
+
+    .profile-subtitle {
+        font-size: 12px;
+    }
+
+    .form-input {
+        font-size: 12px;
+        padding: 8px 10px;
+    }
+
+    .btn-save,
+    .btn-cancel {
+        padding: 7px 20px;
+        font-size: 12px;
+    }
+
+    .form-actions {
+        gap: 8px;
+        justify-content: center;
+    }
+}
+/* --1080px to 860px --- */
+@media (min-width: 861px) and (max-width: 1080px) {
+
+    .profile-layout {
+        gap: 14px;
+    }
+
+    .profile-left {
+        width: 240px;
+        min-width: 240px;
+        padding: 18px 14px;
+    }
+
+    .profile-info-block {
+        margin-bottom: 16px;
+    }
+
+    .profile-name {
+        margin-bottom: 14px;
+    }
+
+    .social-icons {
+        gap: 8px;
+    }
+
+    .profile-textarea {
+        margin-bottom: 10px;
+    }
+
+    .profile-input {
+        margin-bottom: 10px;
+    }
+
+    .form-row {
+        grid-template-columns: 1fr;
+        gap: 12px;
+        margin-bottom: 12px;
+    }
+
+    .form-row-inner {
+        grid-template-columns: 1fr 90px;
+        gap: 10px;
+    }
+
+    .form-row.four-col {
+        grid-template-columns: 1fr 1fr;
+        gap: 12px;
+    }
+
+    .form-section {
+        padding: 16px 14px;
+        margin-bottom: 14px;
+    }
+
+    .section-title {
+        font-size: 14px;
+        margin-bottom: 14px;
+    }
+
+    .upload-div {
+        padding: 32px 14px;
+    }
+
+    .upload-text {
+        font-size: 13px;
+    }
+
+    .upload-hint {
+        font-size: 12px;
+    }
+
+    .profession-section {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 12px;
+    }
+
+    .profession-checks {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        row-gap: 12px;
+        column-gap: 16px;
+        width: 100%;
+    }
+
+    .form-input {
+        font-size: 13px;
+        padding: 9px 12px;
+    }
+
+    .btn-save,
+    .btn-cancel {
+        padding: 8px 32px;
+        font-size: 13px;
+    }
+}
