@@ -2,12 +2,8 @@
   background: #f9f9fc !important;
 }
 
-#green{
-    color: #28A745;
-}
-
-.property-search-page {
-  padding: 24px;
+#green {
+  color: #28a745;
 }
 
 .property-search-header {
@@ -35,7 +31,7 @@
 
 .property-search-layout {
   display: grid;
-  grid-template-columns: 360px 1fr;
+  grid-template-columns: minmax(240px, 360px) 1fr;
   gap: 24px;
   align-items: start;
 }
@@ -45,8 +41,8 @@
 =================================== */
 
 .property-filter-sidebar {
-  position: sticky;
-  top: 20px;
+  /* position: sticky;
+  top: 20px; */
 }
 
 .filter-card {
@@ -303,7 +299,6 @@ span.enter {
   background: #fff;
 }
 
-
 /* ===================================
    BEDROOM BUTTONS
 =================================== */
@@ -341,12 +336,8 @@ span.enter {
 .apply-btn {
   width: 100%;
   border: none;
-  border-radius: 6px;
-  background: #28a745;
-  color: #fff;
-  font-size: 16px;
   cursor: pointer;
-  padding: 10px 137px;
+  justify-content: center;
 }
 
 /* ===================================
@@ -439,8 +430,8 @@ span.enter {
 
 .property-grid {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 24px;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px 20px;
 }
 
 /* ===================================
@@ -485,7 +476,7 @@ span.enter {
   position: absolute;
   top: 16px;
   right: 16px;
-  background: #5CC184;
+  background: #5cc184;
   color: #fff;
   font-size: 13px;
   padding: 3px 6px;
@@ -511,7 +502,7 @@ span.enter {
 }
 
 .blm-badge {
-  background: #5CC184;
+  background: #5cc184;
   color: #fff;
   padding: 3px 6px;
   border-radius: 4px;
@@ -519,13 +510,13 @@ span.enter {
   font-weight: 600;
 }
 
-#black-text{
-    color: #323A46;
-    font-size: 16px;
+#black-text {
+  color: #323a46;
+  font-size: 16px;
 }
 
 .property-title-area p {
-    font-size: 12px;
+  font-size: 12px;
 }
 
 .property-body p {
@@ -569,7 +560,6 @@ span.enter {
   align-items: center;
   justify-content: space-between;
   padding: 20px 20px 0 20px;
-
 }
 
 .property-price {
@@ -584,12 +574,85 @@ span.enter {
 
 .property-footer a {
   border-radius: 10px;
-  color: #0A4773;
+  color: #0a4773;
   text-decoration: none;
   font-size: 12px;
 }
 
-.view{
-    display: flex;
-    gap: 6px;
+.view {
+  display: flex;
+  gap: 6px;
+}
+
+.pro-pagination {
+  width: 100%;
+  display: flex;
+  justify-content: end;
+  border-top: 1px solid #e8edf1;
+}
+
+.lists-page {
+  margin-top: 20px;
+}
+
+@media (max-width: 1816px) {
+  .property-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 1452px) {
+  .property-grid {
+    grid-template-columns: repeat(1, 1fr);
+    margin: auto;
+  }
+}
+
+@media (max-width: 1200px) {
+  .map-header {
+    align-items: start;
+    flex-direction: column;
+    gap: 10px 0;
+  }
+}
+
+@media (max-width: 1090px) {
+  .property-title-area {
+    flex-direction: column;
+    gap: 10px 0;
+  }
+  .property-title-area p {
+    text-align: center;
+  }
+  .property-features span {
+    gap: 0;
+    flex-direction: column;
+  }
+}
+
+@media (max-width: 870px) {
+  .property-search-layout {
+    grid-template-columns: 1fr;
+  }
+    .property-title-area {
+    flex-direction: row;
+  }
+      .property-features span {
+        gap: 8px;
+        flex-direction: row;
+    }
+}
+
+@media (max-width: 360px){
+      .property-title-area {
+    flex-direction: column;
+    gap: 10px 0;
+  }
+  .property-title-area p {
+    text-align: center;
+  }
+  .property-features span {
+    gap: 0;
+    flex-direction: column;
+  }
 }
