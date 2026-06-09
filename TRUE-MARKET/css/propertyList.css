@@ -1,5 +1,5 @@
 .property-content {
-  background: #f9f9fc !important;
+  background: #f9f9fc;
 }
 
 #green {
@@ -14,7 +14,6 @@
 }
 
 .property-search-header h1 {
-  font-size: 24px;
   font-weight: 600;
   color: #52565c;
   margin-bottom: 8px;
@@ -36,15 +35,7 @@
   align-items: start;
 }
 
-/* ===================================
-   FILTER SIDEBAR
-=================================== */
-
-.property-filter-sidebar {
-  /* position: sticky;
-  top: 20px; */
-}
-
+/* ------FILTER SIDEBAR------ */
 .filter-card {
   background: #fff;
   box-shadow: 0px 2px 4px 2px #0000000d;
@@ -65,7 +56,6 @@
 
 .filter-card-header p {
   color: #5d7186;
-  font-size: 14px;
   font-weight: 400;
 }
 
@@ -202,9 +192,7 @@ span.enter {
   border-width: 0 2px 2px 0;
   transform: rotate(45deg);
 }
-/* ===================================
-   RANGE SLIDER
-=================================== */
+/* -----RANGE SLIDER---- */
 
 .dual-range-slider {
   position: relative;
@@ -299,9 +287,7 @@ span.enter {
   background: #fff;
 }
 
-/* ===================================
-   BEDROOM BUTTONS
-=================================== */
+/* -----BEDROOM BUTTONS-----*/
 
 .bedroom-buttons {
   display: flex;
@@ -340,9 +326,7 @@ span.enter {
   justify-content: center;
 }
 
-/* ===================================
-   RIGHT CONTENT
-=================================== */
+/* ------RIGHT CONTENT------*/
 
 .property-content {
   display: flex;
@@ -350,9 +334,7 @@ span.enter {
   gap: 24px;
 }
 
-/* ===================================
-   MAP
-=================================== */
+/* ------MAP-----*/
 
 .map-section {
   overflow: hidden;
@@ -401,9 +383,7 @@ span.enter {
   border: none;
 }
 
-/* ===================================
-   VIEW TOGGLE
-=================================== */
+/* ------VIEW TOGGLE-----*/
 
 .view-toggle {
   display: flex;
@@ -424,9 +404,7 @@ span.enter {
   background: #cdd7e5;
 }
 
-/* ===================================
-   PROPERTY GRID
-=================================== */
+/* ------PROPERTY GRID-----*/
 
 .property-grid {
   display: grid;
@@ -434,9 +412,7 @@ span.enter {
   gap: 30px 20px;
 }
 
-/* ===================================
-   PROPERTY CARD
-=================================== */
+/* -----PROPERTY CARD-----*/
 
 .property-card {
   background: #fff;
@@ -634,17 +610,17 @@ span.enter {
   .property-search-layout {
     grid-template-columns: 1fr;
   }
-    .property-title-area {
+  .property-title-area {
     flex-direction: row;
   }
-      .property-features span {
-        gap: 8px;
-        flex-direction: row;
-    }
+  .property-features span {
+    gap: 8px;
+    flex-direction: row;
+  }
 }
 
-@media (max-width: 360px){
-      .property-title-area {
+@media (max-width: 360px) {
+  .property-title-area {
     flex-direction: column;
     gap: 10px 0;
   }
