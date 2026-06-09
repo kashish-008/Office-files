@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="css/global.css" />
     <link rel="stylesheet" href="css/admin.css" />
     <link rel="stylesheet" href="css/propertyList.css" />
-    <link rel="stylesheet" href="css/saved.css">
+    <link rel="stylesheet" href="css/saved.css" />
     <!-- google-fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -136,7 +136,7 @@
               <h1>Property Search Las Vegas</h1>
               <div class="breadcrumb">
                 <span>PROPERTIES</span>
-                <span class="separator">></span>
+                <span class="separator"><img src="assets/right.svg" alt=""></span>
               </div>
             </div>
 
@@ -156,6 +156,50 @@
                     <select>
                       <option>Dallas, Texas</option>
                     </select>
+                  </div>
+
+                  <div class="filter-group property-extra-fields">
+                    <div class="filter-input-grid">
+                      <div class="filter-field">
+                        <label>Min Price / Sq Ft</label>
+                        <input type="text" />
+                      </div>
+
+                      <div class="filter-field">
+                        <label>Max Price / Sq Ft</label>
+                        <input type="text" />
+                      </div>
+
+                      <div class="filter-field">
+                        <label>Min Year Built</label>
+                        <input type="text" />
+                      </div>
+
+                      <div class="filter-field">
+                        <label>Max Year Built</label>
+                        <input type="text" />
+                      </div>
+
+                      <div class="filter-field">
+                        <label># of Store</label>
+                        <input type="text" />
+                      </div>
+
+                      <div class="filter-field">
+                        <label># of Garages</label>
+                        <input type="text" />
+                      </div>
+
+                      <div class="filter-field">
+                        <label>Min Lot Size</label>
+                        <input type="text" />
+                      </div>
+
+                      <div class="filter-field">
+                        <label>Max Lot Size</label>
+                        <input type="text" />
+                      </div>
+                    </div>
                   </div>
 
                   <!-- Keyword -->
@@ -201,9 +245,9 @@
                   <div class="filter-group">
                     <label>Percentage Range</label>
 
-                    <div class="dual-range-slider">
+                    <div class="dual-range-slider slider-blue">
                       <div class="slider-track"></div>
-                      <div class="slider-range"></div>
+                      <div class="slider-range range-blue"></div>
 
                       <input
                         type="range"
