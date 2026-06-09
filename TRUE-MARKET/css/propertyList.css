@@ -292,7 +292,7 @@ span.enter {
 .bedroom-buttons {
   display: flex;
   flex-wrap: wrap;
-  gap: 10px;
+  gap: 9px;
   margin-top: 10px;
 }
 

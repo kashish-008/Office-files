@@ -813,3 +813,9 @@ button {
     display: none;
   }
 }
+
+@media (min-width: 769px) {
+  #sidebar > div.close-sidebar {
+    display: none;
+  }
+}
