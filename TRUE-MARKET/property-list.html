@@ -7,7 +7,8 @@
     <!-- css-files -->
     <link rel="stylesheet" href="css/global.css" />
     <link rel="stylesheet" href="css/admin.css" />
-    <link rel="stylesheet" href="css/propertyList.css">
+    <link rel="stylesheet" href="css/propertyList.css" />
+    <link rel="stylesheet" href="css/saved.css">
     <!-- google-fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -129,8 +130,324 @@
         </header>
 
         <!-- Content -->
-        <main class="content">
+        <main class="content property">
+          <div class="property-search-page">
+            <div class="property-search-header">
+              <h1>Property Search Las Vegas</h1>
+              <div class="breadcrumb">
+                <span>PROPERTIES</span>
+                <span class="separator">></span>
+              </div>
+            </div>
 
+            <div class="property-search-layout">
+              <!-- Filter Sidebar -->
+              <aside class="property-filter-sidebar">
+                <div class="filter-card">
+                  <div class="filter-card-header">
+                    <h3>Properties</h3>
+                    <p>Search Results 780</p>
+                  </div>
+
+                  <!-- Location -->
+                  <div class="filter-group">
+                    <label>Properties Location</label>
+
+                    <select>
+                      <option>Dallas, Texas</option>
+                    </select>
+                  </div>
+
+                  <!-- Keyword -->
+                  <div class="filter-group">
+                    <label>Keyword</label>
+
+                    <input type="text" placeholder="foreclose, view, etc..." />
+                  </div>
+
+                  <!-- Price Range -->
+                  <div class="filter-group">
+                    <label>Price Range</label>
+
+                    <div class="dual-range-slider">
+                      <div class="slider-track"></div>
+                      <div class="slider-range"></div>
+
+                      <input
+                        type="range"
+                        min="100000"
+                        max="1000000"
+                        value="400000"
+                        class="range-min"
+                      />
+
+                      <input
+                        type="range"
+                        min="100000"
+                        max="1000000"
+                        value="700000"
+                        class="range-max"
+                      />
+                    </div>
+
+                    <div class="range-values">
+                      <input type="text" value="$400,000" readonly />
+                      <span>to</span>
+                      <input type="text" value="$700,000" readonly />
+                    </div>
+                  </div>
+
+                  <!-- Percentage Range -->
+                  <div class="filter-group">
+                    <label>Percentage Range</label>
+
+                    <div class="dual-range-slider">
+                      <div class="slider-track"></div>
+                      <div class="slider-range"></div>
+
+                      <input
+                        type="range"
+                        min="1"
+                        max="10"
+                        value="5"
+                        class="range-min"
+                      />
+
+                      <input
+                        type="range"
+                        min="1"
+                        max="10"
+                        value="8"
+                        class="range-max"
+                      />
+                    </div>
+
+                    <div class="range-values">
+                      <input type="text" value="5%" readonly />
+                      <span>to</span>
+                      <input type="text" value="8%" readonly />
+                    </div>
+                  </div>
+
+                  <!-- Listing Type -->
+                  <div class="filter-group">
+                    <label>Listing Type:</label>
+
+                    <div class="checkbox-grid">
+                      <label>
+                        <input type="checkbox" />
+                        For Rent
+                      </label>
+
+                      <label>
+                        <input type="checkbox" />
+                        For Sale
+                      </label>
+                    </div>
+                  </div>
+
+                  <!-- Property Type -->
+                  <div class="filter-group">
+                    <label>Properties Type :</label>
+
+                    <div class="checkbox-grid">
+                      <label>
+                        <input type="checkbox" />
+                        All Properties
+                      </label>
+
+                      <label>
+                        <input type="checkbox" />
+                        Duplex
+                      </label>
+
+                      <label>
+                        <input type="checkbox" checked />
+                        Single Family
+                      </label>
+
+                      <label>
+                        <input type="checkbox" />
+                        Condo
+                      </label>
+
+                      <label>
+                        <input type="checkbox" />
+                        Townhouse
+                      </label>
+                    </div>
+                  </div>
+
+                  <!-- Bedrooms -->
+                  <div class="filter-group">
+                    <label>Bedrooms :</label>
+
+                    <div class="bedroom-buttons">
+                      <button>1 BR</button>
+                      <button>2 BR</button>
+                      <button class="active">3 BR</button>
+                      <button>4 & 5 BR</button>
+                    </div>
+                  </div>
+
+                  <!-- Accessibility -->
+                  <div class="filter-group">
+                    <label>Accessibility Features :</label>
+
+                    <div class="checkbox-grid">
+                      <label>
+                        <input type="checkbox" />
+                        Fireplace
+                      </label>
+
+                      <label>
+                        <input type="checkbox" />
+                        Parking
+                      </label>
+
+                      <label>
+                        <input type="checkbox" />
+                        Spa
+                      </label>
+
+                      <label>
+                        <input type="checkbox" />
+                        Pool
+                      </label>
+
+                      <label>
+                        <input type="checkbox" />
+                        Restaurant
+                      </label>
+
+                      <label>
+                        <input type="checkbox" />
+                        Fitness Club
+                      </label>
+                    </div>
+                  </div>
+
+                  <button class="apply-btn">Apply</button>
+                </div>
+              </aside>
+
+              <!-- Right Content -->
+              <div class="property-content">
+                <!-- Map -->
+                <div class="map-section">
+                  <div class="map-header">
+                    <div class="map-title">
+                      <img src="./assets/location.svg" alt="" />
+                      Results Map
+                    </div>
+
+                    <div class="map-actions">
+                      <a href="#">Draw Boundaries</a>
+
+                      <a href="#">
+                        <img src="./assets/expand.svg" alt="" />
+                      </a>
+
+                      <a href="#">
+                        <img src="./assets/fullscreen.svg" alt="" />
+                      </a>
+                    </div>
+                  </div>
+
+                  <div class="map-wrapper">
+                    <!-- <iframe
+                      src="https://maps.google.com/maps?q=Las%20Vegas&t=&z=13&ie=UTF8&iwloc=&output=embed"
+                      loading="lazy"
+                    ></iframe> -->
+                  </div>
+                </div>
+
+                <!-- View Toggle -->
+                <div class="view-toggle">
+                  <a href="#" class="active">List View</a>
+                  <a href="#">Map View</a>
+                </div>
+
+                <!-- Property Grid -->
+                <div class="property-grid">
+                  <!-- Single Card Start -->
+                  <div class="property-card">
+                    <div class="property-image">
+                      <img src="./assets/card1.jpg" alt="" />
+
+                      <a href="#" class="bookmark">
+                        <img src="./assets/bookmark.svg" alt="" />
+                      </a>
+
+                      <span class="sale-badge"> For Sale </span>
+                    </div>
+
+                    <div class="property-body">
+                      <div class="property-title-area">
+                        <div class="property-icon">
+                          <img src="./assets/home.svg" alt="" />
+                        </div>
+
+                        <span class="blm-badge"> 5% BLM </span>
+                      </div>
+
+                      <h3>2006 Troutwood DR</h3>
+
+                      <p>Las Vegas, NV 89128</p>
+
+                      <div class="property-features">
+                        <span>
+                          <img src="./assets/bed.svg" alt="" />
+                          02 bed
+                        </span>
+
+                        <span>
+                          <img src="./assets/bath.svg" alt="" />
+                          02 bath
+                        </span>
+
+                        <span>
+                          <img src="./assets/area.svg" alt="" />
+                          1370 sqft
+                        </span>
+
+                        <span>
+                          <img src="./assets/story.svg" alt="" />
+                          2 Story
+                        </span>
+
+                        <span>
+                          <img src="./assets/car.svg" alt="" />
+                          2 Car
+                        </span>
+                      </div>
+
+                      <div class="property-footer">
+                        <div class="property-price">
+                          <p>Listed Price: $430,000</p>
+                          <p>TMV: $553,114</p>
+                          <p>Est Equity $23,114</p>
+                        </div>
+
+                        <a href="#"> View Property </a>
+                      </div>
+                    </div>
+                  </div>
+                  <!-- Single Card End -->
+                </div>
+
+                <!-- Pagination -->
+                <div class="pagination">
+                  <button type="button">Previous</button>
+                  <button type="button" class="active">1</button>
+                  <button type="button">2</button>
+                  <button type="button">3</button>
+                  <button type="button">4</button>
+                  <button type="button">Next</button>
+                </div>
+              </div>
+            </div>
+          </div>
         </main>
       </div>
       <!-- /main-wrap -->
@@ -138,5 +455,6 @@
     <!-- /layout -->
 
     <script src="./js/admin.js"></script>
+    <script src="js/slider.js"></script>
   </body>
 </html>
