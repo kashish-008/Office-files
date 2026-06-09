@@ -53,8 +53,8 @@
 }
 
 .filter-btn {
-  width: 297px;
-  flex: 0 0 297px;
+  width: 250px;
+  flex: 0 0 250px;
 }
 
 .filter-btn,
@@ -184,7 +184,7 @@
 .check-col input {
   width: 14px;
   height: 14px;
-  accent-color: #2f9e44;
+  accent-color: var(--navy-blue);
   cursor: pointer;
 }
 

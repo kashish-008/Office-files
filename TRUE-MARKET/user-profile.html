@@ -1,295 +1,378 @@
 <!doctype html>
 <html lang="en">
-
-<head>
+  <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>TrueMarket - User Profile</title>
+    <title>User-Profile</title>
     <!-- css-files -->
     <link rel="stylesheet" href="css/global.css" />
     <link rel="stylesheet" href="css/admin.css" />
-    <link rel="stylesheet" href="css/manage.css" />
-    <link rel="stylesheet" href="css/profile.css">
+    <link rel="stylesheet" href="css/profile.css" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/remixicon@4.9.0/fonts/remixicon.css"
+      rel="stylesheet"
+    />
     <!-- google-fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-        href="https://fonts.googleapis.com/css2?family=Figtree:ital,wght@0,300..900;1,300..900&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Manrope:wght@200..800&display=swap"
-        rel="stylesheet" />
-    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.2.0/fonts/remixicon.css" rel="stylesheet">
-</head>
-
-<body>
+      href="https://fonts.googleapis.com/css2?family=Figtree:ital,wght@0,300..900;1,300..900&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Manrope:wght@200..800&display=swap"
+      rel="stylesheet"
+    />
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  </head>
+  <body>
     <div class="layout">
-        <!-- ══════════ SIDEBAR ══════════ -->
-        <aside class="sidebar" id="sidebar">
-            <div class="sidebar-outer">
-                <div class="logo">
-                    <a href=""> <img src="./img/mainlogo.svg" alt="" /></a>
-                </div>
+      <!-- ══════════ SIDEBAR ══════════ -->
+      <aside class="sidebar" id="sidebar">
+        <div class="close-sidebar" onclick="closeSidebar()">x</div>
+        <div class="sidebar-outer">
+          <div class="logo">
+            <a href=""> <img src="./img/mainlogo.svg" alt="" /></a>
+          </div>
 
-                <nav class="nav">
-                    <div class="nav-item active">
-                        <a href="#">
-                            <img src="./img/Dashboard.svg" alt="" />
-                            Dashboard</a>
-                    </div>
-                    <div class="nav-item">
-                        <a href="#">
-                            <img src="./img/ManageUsers.svg" alt="" />
-                            Manage Users
-                        </a>
-                    </div>
-                    <div class="nav-item">
-                        <a href="#">
-                            <img src="./img/PropertySearch.svg" alt="" />
-                            Property Search
-                        </a>
-                    </div>
-                    <div class="nav-item">
-                        <a href="#">
-                            <img src="./img/SavedProperties.svg" alt="" />
-                            Saved Properties
-                        </a>
-                    </div>
-                    <div class="nav-item">
-                        <a href="#">
-                            <img src="./img/SearchAlerts.svg" alt="" />
-                            Search/Alerts
-                        </a>
-                    </div>
-                </nav>
-
-                <div class="sidebar-bottom">
-                    <div class="nav-item">
-                        <a href="#">
-                            <img src="./img/Settings.svg" alt="" />
-                            Settings
-                        </a>
-                    </div>
-                    <div class="nav-item">
-                        <a href="#">
-                            <img src="./img/Logout.svg" alt="" />
-                            Log out
-                        </a>
-                    </div>
-                </div>
+          <nav class="nav">
+            <div class="nav-item active">
+              <a href="#">
+                <img src="./img/Dashboard.svg" alt="" />
+                Dashboard</a
+              >
             </div>
-        </aside>
+            <div class="nav-item">
+              <a href="#">
+                <img src="./img/ManageUsers.svg" alt="" />
+                Manage Users
+              </a>
+            </div>
+            <div class="nav-item">
+              <a href="#">
+                <img src="./img/PropertySearch.svg" alt="" />
+                Property Search
+              </a>
+            </div>
+            <div class="nav-item">
+              <a href="#">
+                <img src="./img/SavedProperties.svg" alt="" />
+                Saved Properties
+              </a>
+            </div>
+            <div class="nav-item">
+              <a href="#">
+                <img src="./img/SearchAlerts.svg" alt="" />
+                Search/Alerts
+              </a>
+            </div>
+          </nav>
 
-        <!-- Mobile overlay -->
-        <div class="overlay" id="overlay" onclick="closeSidebar()"></div>
-
-        <!-- ══════════ MAIN ══════════ -->
-        <div class="main-wrap">
-            <!-- Header -->
-            <header class="header">
-                <button class="hamburger" id="hamburger" onclick="toggleSidebar()" title="Toggle sidebar">
-                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
-                        <line x1="3" y1="12" x2="21" y2="12" />
-                        <line x1="3" y1="6" x2="21" y2="6" />
-                        <line x1="3" y1="18" x2="21" y2="18" />
-                    </svg>
-                </button>
-
-                <div class="search-bar">
-                    <img src="./img/search.svg" alt="" />
-                    <input type="text" placeholder="Search here..." />
-                    <a href="#"> <img src="./img/sound-module-fill.svg" alt="" /></a>
-                </div>
-
-                <div class="header-right">
-                    <button class="icon-btn" id="top-emai">
-                        <img src="./img/top-email.svg" alt="email" />
-                    </button>
-                    <button class="icon-btn" id="notifaction">
-                        <img src="./img/notifaction.svg" alt="notifatction" />
-                        <span class="badge"></span>
-                    </button>
-                    <div class="user-pill">
-                        <div class="avatar">
-                            <img src="./img/AlexThompson.png" alt="profile-photo" />
-                        </div>
-                        <div class="user-info">
-                            <div class="name f-14">Alex Thompson</div>
-                            <div class="role">Admin</div>
-                        </div>
-                    </div>
-                </div>
-            </header>
-
-            <!-- Content -->
-            <main class="content profile-content">
-                <div class="profile-layout">
-
-                    <!-- LEFT PANEL-->
-                    <aside class="profile-left">
-                        <div class="profile-avatar">
-                            <img src="./img/AlexThompson.png" alt="Alex Thompson">
-                        </div>
-                        <h3 class="profile-name f-18">Alex Thompson</h3>
-
-                        <div class="profile-info-block f-14">
-                            <p class="info-label">Email Address</p>
-                            <p class="info-value">athompson@gmail.com</p>
-                        </div>
-
-                        <div class="profile-info-block f-14">
-                            <p class="info-label">Contact Number</p>
-                            <p class="info-value">702-555-1231</p>
-                        </div>
-
-                        <div class="profile-info-block f-14">
-                            <p class="info-label">Address</p>
-                            <p class="info-value">4020 Quadrel Rd.<br>Las Vegas, NV 89128</p>
-                        </div>
-
-                        <div class="profile-info-block">
-                            <p class="info-label social-label">Social Information :</p>
-                            <div class="social-icons">
-                                <a href="#"><i class="ri-facebook-fill"></i></a>
-                                <a href="#"><i class="ri-instagram-fill"></i></a>
-                                <a href="#"><i class="ri-twitter-fill"></i></a>
-                                <a href="#"><i class="ri-whatsapp-fill"></i></a>
-                                <a href="#"><i class="ri-mail-fill"></i></a>
-                            </div>
-                        </div>
-
-                        <div class="profile-info-block">
-                            <p class="info-label social-label">My Bio</p>
-                            <textarea class="profile-textarea f-14 " placeholder="Tell us about yourself..."
-                                rows="5"></textarea>
-                            <textarea class="profile-textarea f-14 " placeholder="Add a short tagline"
-                                rows="3"></textarea>
-                            <input type="text" class="profile-input f-14 " placeholder="Years of experience">
-                            <input type="text" class="profile-input f-14 " placeholder="Areas you serve">
-                        </div>
-                    </aside>
-
-                    <!--RIGHT FORM -->
-                    <div class="profile-right">
-                        <div class="profile-right-top">
-                            <h2 class="f-24">My Profile</h2>
-                            <p class="profile-subtitle f-16">User Update</p>
-                        </div>
-
-                        <!-- Upload -->
-                        <div class="form-section upload-section" id="upload-box">
-                            <div class="upload-div" onclick="document.getElementById('file-input').click()">
-                                <input type="file" id="file-input" accept="image/*" hidden>
-                                <i class="ri-upload-cloud-2-line upload-icon"></i>
-                                <p class="upload-text f-16">
-                                    Upload profile photo or company logo here, or
-                                    <span class="upload-link"
-                                        onclick="document.getElementById('file-input').click()">click
-                                        to browse</span>
-                                </p>
-                                <p class="upload-hint f-14">900 x 900 (4:4) recommended. PNG, JPG and GIF files are allowed
-                                </p>
-                            </div>
-                        </div>
-
-
-                        <!-- Customer Information -->
-                        <div class="form-section">
-                            <h4 class="section-title f-16">Customer Information</h4>
-
-                            <div class="form-row">
-                                <input type="text" class="form-input" placeholder="First Name">
-                                <input type="text" class="form-input" placeholder="Last Name">
-                            </div>
-                            <div class="form-row">
-                                <input type="text" class="form-input" placeholder="Email">
-                                <input type="text" class="form-input" placeholder="Phone Number">
-                            </div>
-                            <div class="form-row">
-                                <input type="text" class="form-input" placeholder="Address">
-                                <div class="form-row-inner">
-                                    <select class="form-input form-select" required>
-                                        <option value="" disabled selected>Choose a state</option>
-                                        <option>Alabama</option>
-                                        <option>Alaska</option>
-                                        <option>Arizona</option>
-                                        <option>Arkansas</option>
-                                        <option>California</option>
-                                    </select>
-                                    <input type="text" class="form-input zip-input" placeholder="Zip">
-                                </div>
-                            </div>
-                        </div>
-
-                        <!-- My Profession -->
-                        <div class="form-section profession-section">
-                            <span class="profession-label f-14">My Profession</span>
-                            <div class="profession-checks">
-                                <label><input type="checkbox"> Agent</label>
-                                <label><input type="checkbox"> Brokerage</label>
-                                <label><input type="checkbox"> Flipper</label>
-                                <label><input type="checkbox"> Investor</label>
-                                <label><input type="checkbox"> Contractor</label>
-                                <label><input type="checkbox"> Other</label>
-                            </div>
-                        </div>
-
-                        <!-- Company Information -->
-                        <div class="form-section">
-                            <h4 class="section-title f-16">Company Information</h4>
-
-                            <div class="form-row">
-                                <input type="text" class="form-input" placeholder="Company">
-                                <input type="text" class="form-input" placeholder="Email">
-                            </div>
-                            <div class="form-row">
-                                <input type="text" class="form-input" placeholder="Office Number">
-                                <input type="text" class="form-input" placeholder="Website/URL">
-                            </div>
-                            <div class="form-row">
-                                <input type="text" class="form-input" placeholder="Address">
-                                <div class="form-row-inner">
-                                    <select class="form-input form-select" required>
-                                        <option value="" disabled selected>Choose a state</option>
-                                        <option>Alabama</option>
-                                        <option>Alaska</option>
-                                        <option>Arizona</option>
-                                        <option>Arkansas</option>
-                                        <option>California</option>
-                                    </select>
-                                    <input type="text" class="form-input zip-input" placeholder="Zip">
-                                </div>
-                            </div>
-                        </div>
-
-                        <!-- Social Media -->
-                        <div class="form-section">
-                            <h4 class="section-title f-16">Social Media</h4>
-                            <div class="form-row four-col">
-                                <input type="text" class="form-input" placeholder="Facebook">
-                                <input type="text" class="form-input" placeholder="Instagram">
-                                <input type="text" class="form-input" placeholder="X">
-                                <input type="text" class="form-input" placeholder="WhatsApp">
-                            </div>
-                        </div>
-
-                        <!-- Change Password -->
-                        <div class="form-section">
-                            <h4 class="section-title f-16">Change Password</h4>
-                            <div class="form-row password-row">
-                                <input type="password" class="form-input" placeholder="Current Password">
-                                <input type="password" class="form-input" placeholder="New Password">
-                            </div>
-                        </div>
-                        <!-- BOTTOM BAR  -->
-                        <div class="form-actions">
-                            <button class="btn-save">Save</button>
-                            <button class="btn-cancel">Cancel</button>
-                        </div>
-                    </div>
-                </div>
-            </main>
+          <div class="sidebar-bottom">
+            <div class="nav-item">
+              <a href="#">
+                <img src="./img/Settings.svg" alt="" />
+                Settings
+              </a>
+            </div>
+            <div class="nav-item">
+              <a href="#">
+                <img src="./img/Logout.svg" alt="" />
+                Log out
+              </a>
+            </div>
+          </div>
         </div>
-        <!-- /main-wrap -->
+      </aside>
+
+      <!-- Mobile overlay -->
+      <div class="overlay" id="overlay"></div>
+
+      <!-- ══════════ MAIN ══════════ -->
+      <div class="main-wrap">
+        <!-- Header -->
+        <header class="header">
+          <button
+            class="hamburger"
+            id="hamburger"
+            onclick="toggleSidebar()"
+            title="Toggle sidebar"
+          >
+            <svg
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2.5"
+            >
+              <line x1="3" y1="12" x2="21" y2="12" />
+              <line x1="3" y1="6" x2="21" y2="6" />
+              <line x1="3" y1="18" x2="21" y2="18" />
+            </svg>
+          </button>
+
+          <div class="search-bar">
+            <img src="./img/search.svg" alt="" />
+            <input type="text" placeholder="Search here..." />
+            <a href="#"> <img src="./img/sound-module-fill.svg" alt="" /></a>
+          </div>
+
+          <div class="header-right">
+            <button class="icon-btn" id="top-emai">
+              <img src="./img/top-email.svg" alt="email" />
+            </button>
+            <button class="icon-btn" id="notifaction">
+              <img src="./img/notifaction.svg" alt="notifatction" />
+              <span class="badge"></span>
+            </button>
+            <div class="user-pill">
+              <div class="avatar">
+                <img src="./img/AlexThompson.png" alt="profile-photo" />
+              </div>
+              <div class="user-info">
+                <div class="name f-14">Alex Thompson</div>
+                <div class="role">Admin</div>
+              </div>
+            </div>
+          </div>
+        </header>
+
+        <!-- Content -->
+        <main class="content profile-content">
+          <div class="profile-layout">
+            <!-- LEFT PANEL-->
+            <aside class="profile-left">
+              <div class="profile-avatar">
+                <img src="./img/AlexThompson.png" alt="Alex Thompson" />
+              </div>
+              <h3 class="profile-name f-18">Alex Thompson</h3>
+
+              <div class="profile-info-block f-14">
+                <p class="info-label">Email Address</p>
+                <p class="info-value">athompson@gmail.com</p>
+              </div>
+
+              <div class="profile-info-block f-14">
+                <p class="info-label">Contact Number</p>
+                <p class="info-value">702-555-1231</p>
+              </div>
+
+              <div class="profile-info-block f-14">
+                <p class="info-label">Address</p>
+                <p class="info-value">
+                  4020 Quadrel Rd.<br />Las Vegas, NV 89128
+                </p>
+              </div>
+
+              <div class="profile-info-block">
+                <p class="info-label social-label">Social Information :</p>
+                <div class="social-icons">
+                  <a href="#"><i class="ri-facebook-fill"></i></a>
+                  <a href="#"><i class="ri-instagram-fill"></i></a>
+                  <a href="#"><i class="ri-twitter-fill"></i></a>
+                  <a href="#"><i class="ri-whatsapp-fill"></i></a>
+                  <a href="#"><i class="ri-mail-fill"></i></a>
+                </div>
+              </div>
+
+              <div class="profile-info-block">
+                <p class="info-label social-label">My Bio</p>
+                <textarea
+                  class="profile-textarea f-14"
+                  placeholder="Tell us about yourself..."
+                  rows="5"
+                ></textarea>
+                <textarea
+                  class="profile-textarea f-14"
+                  placeholder="Add a short tagline"
+                  rows="3"
+                ></textarea>
+                <input
+                  type="text"
+                  class="profile-input f-14"
+                  placeholder="Years of experience"
+                />
+                <input
+                  type="text"
+                  class="profile-input f-14"
+                  placeholder="Areas you serve"
+                />
+              </div>
+            </aside>
+
+            <!--RIGHT FORM -->
+            <div class="profile-right">
+              <div class="profile-right-top">
+                <h2 class="f-24">My Profile</h2>
+                <p class="profile-subtitle f-16">User Update</p>
+              </div>
+
+              <!-- Upload -->
+              <div class="form-section upload-section" id="upload-box">
+                <div
+                  class="upload-div"
+                  onclick="document.getElementById('file-input').click()"
+                >
+                  <input type="file" id="file-input" accept="image/*" hidden />
+                  <i class="ri-upload-cloud-2-line upload-icon"></i>
+                  <p class="upload-text f-16">
+                    Upload profile photo or company logo here, or
+                    <span
+                      class="upload-link"
+                      onclick="document.getElementById('file-input').click()"
+                      >click to browse</span
+                    >
+                  </p>
+                  <p class="upload-hint f-14">
+                    900 x 900 (4:4) recommended. PNG, JPG and GIF files are
+                    allowed
+                  </p>
+                </div>
+              </div>
+
+              <!-- Customer Information -->
+              <div class="form-section">
+                <h4 class="section-title f-16">Customer Information</h4>
+
+                <div class="form-row">
+                  <input
+                    type="text"
+                    class="form-input"
+                    placeholder="First Name"
+                  />
+                  <input
+                    type="text"
+                    class="form-input"
+                    placeholder="Last Name"
+                  />
+                </div>
+                <div class="form-row">
+                  <input type="text" class="form-input" placeholder="Email" />
+                  <input
+                    type="text"
+                    class="form-input"
+                    placeholder="Phone Number"
+                  />
+                </div>
+                <div class="form-row">
+                  <input type="text" class="form-input" placeholder="Address" />
+                  <div class="form-row-inner">
+                    <select class="form-input form-select" required>
+                      <option value="" disabled selected>Choose a state</option>
+                      <option>Alabama</option>
+                      <option>Alaska</option>
+                      <option>Arizona</option>
+                      <option>Arkansas</option>
+                      <option>California</option>
+                    </select>
+                    <input
+                      type="text"
+                      class="form-input zip-input"
+                      placeholder="Zip"
+                    />
+                  </div>
+                </div>
+              </div>
+
+              <!-- My Profession -->
+              <div class="form-section profession-section">
+                <span class="profession-label f-14">My Profession</span>
+                <div class="profession-checks">
+                  <label><input type="checkbox" /> Agent</label>
+                  <label><input type="checkbox" /> Brokerage</label>
+                  <label><input type="checkbox" /> Flipper</label>
+                  <label><input type="checkbox" /> Investor</label>
+                  <label><input type="checkbox" /> Contractor</label>
+                  <label><input type="checkbox" /> Other</label>
+                </div>
+              </div>
+
+              <!-- Company Information -->
+              <div class="form-section">
+                <h4 class="section-title f-16">Company Information</h4>
+
+                <div class="form-row">
+                  <input type="text" class="form-input" placeholder="Company" />
+                  <input type="text" class="form-input" placeholder="Email" />
+                </div>
+                <div class="form-row">
+                  <input
+                    type="text"
+                    class="form-input"
+                    placeholder="Office Number"
+                  />
+                  <input
+                    type="text"
+                    class="form-input"
+                    placeholder="Website/URL"
+                  />
+                </div>
+                <div class="form-row">
+                  <input type="text" class="form-input" placeholder="Address" />
+                  <div class="form-row-inner">
+                    <select class="form-input form-select" required>
+                      <option value="" disabled selected>Choose a state</option>
+                      <option>Alabama</option>
+                      <option>Alaska</option>
+                      <option>Arizona</option>
+                      <option>Arkansas</option>
+                      <option>California</option>
+                    </select>
+                    <input
+                      type="text"
+                      class="form-input zip-input"
+                      placeholder="Zip"
+                    />
+                  </div>
+                </div>
+              </div>
+
+              <!-- Social Media -->
+              <div class="form-section">
+                <h4 class="section-title f-16">Social Media</h4>
+                <div class="form-row four-col">
+                  <input
+                    type="text"
+                    class="form-input"
+                    placeholder="Facebook"
+                  />
+                  <input
+                    type="text"
+                    class="form-input"
+                    placeholder="Instagram"
+                  />
+                  <input type="text" class="form-input" placeholder="X" />
+                  <input
+                    type="text"
+                    class="form-input"
+                    placeholder="WhatsApp"
+                  />
+                </div>
+              </div>
+
+              <!-- Change Password -->
+              <div class="form-section">
+                <h4 class="section-title f-16">Change Password</h4>
+                <div class="form-row password-row">
+                  <input
+                    type="password"
+                    class="form-input"
+                    placeholder="Current Password"
+                  />
+                  <input
+                    type="password"
+                    class="form-input"
+                    placeholder="New Password"
+                  />
+                </div>
+              </div>
+              <!-- BOTTOM BAR  -->
+              <div class="form-actions">
+                <button class="btn-save">Save</button>
+                <button class="btn-cancel">Cancel</button>
+              </div>
+            </div>
+          </div>
+        </main>
+      </div>
+      <!-- /main-wrap -->
     </div>
-</body>
 
+    <script src="./js/admin.js"></script>
+  </body>
 </html>
-
