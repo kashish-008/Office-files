@@ -246,7 +246,6 @@ td.price.price2 {
   color: #292b2e;
   font-weight: 500;
   font-family: Figtree;
-
 }
 
 .status-badge {
@@ -353,7 +352,7 @@ td.price.price2 {
   display: flex;
   align-items: center;
   gap: 0;
-  border: 1px solid #EAEDF1;
+  border: 1px solid #eaedf1;
   border-radius: 6px;
   overflow: hidden;
   max-width: 273px;
@@ -385,12 +384,12 @@ td.price.price2 {
 }
 
 .pagination button.active {
-  background: #28A745;
+  background: #28a745;
   color: #fff;
 }
 
 .pagination button.active:hover {
-  background: #28A745;
+  background: #28a745;
 }
 
 @media (max-width: 991px) {
@@ -413,7 +412,8 @@ td.price.price2 {
     align-items: stretch;
   }
 
-  .pagination, .page-size {
+  .pagination,
+  .page-size {
     justify-content: center;
     margin: auto;
   }
@@ -422,4 +422,3 @@ td.price.price2 {
     min-width: 240px;
   }
 }
-
