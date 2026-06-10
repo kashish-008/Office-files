@@ -7,7 +7,7 @@
     <!-- css-files -->
     <link rel="stylesheet" href="css/global.css" />
     <link rel="stylesheet" href="css/admin.css" />
-    <link rel="stylesheet" href="css/saved.css">
+    <link rel="stylesheet" href="css/saved.css" />
     <!-- google-fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -137,8 +137,10 @@
           <div class="property">
             <div class="saved-toolbar">
               <div class="left-saved">
-                <div class="saved-title">All Properties Saved</div>
+                <p class="saved-title">All Properties Saved</p>
+              </div>
 
+              <div class="right-saved">
                 <div class="toolbar-group">
                   <button class="filter-btn">
                     <img src="assets/filter.svg" alt="" /> Filters
@@ -150,21 +152,21 @@
                     <option>Mark as Viewed</option>
                   </select>
                 </div>
-              </div>
 
-              <div class="right-saved">
-                <select class="viewed-select">
-                  <option>Viewed: All</option>
-                  <option>Viewed</option>
-                  <option>Unviewed</option>
-                </select>
+                <div class="right-opt">
+                  <select class="viewed-select">
+                    <option>Viewed: All</option>
+                    <option>Viewed</option>
+                    <option>Unviewed</option>
+                  </select>
 
-                <button class="columns-btn">Columns</button>
+                  <button class="columns-btn">Columns</button>
 
-                <select class="perpage-num">
-                  <option>25</option>
-                  <option>50</option>
-                </select>
+                  <select class="perpage-num">
+                    <option>25</option>
+                    <option>50</option>
+                  </select>
+                </div>
               </div>
             </div>
           </div>

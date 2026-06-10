@@ -7,6 +7,8 @@
     <!-- css-files -->
     <link rel="stylesheet" href="css/global.css" />
     <link rel="stylesheet" href="css/admin.css" />
+    <link rel="stylesheet" href="css/saved.css" />
+    <link rel="stylesheet" href="css/alert.css" />
     <!-- google-fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -128,8 +130,369 @@
         </header>
 
         <!-- Content -->
-        <main class="content">
+        <main class="content alert-content">
+          <div class="saved-top">
+            <p>Saved Searches</p>
+          </div>
 
+          <div class="property">
+            <div class="saved-toolbar">
+              <div class="left-saved">
+                <p class="saved-title">Saved Searches and Email Alert Settings</p>
+              </div>
+
+              <div class="right-saved">
+                <div class="toolbar-group">
+                  <select class="bulk-btn">
+                    <option>Bulk Action</option>
+                    <option>Delete</option>
+                    <option>Mark as Viewed</option>
+                  </select>
+                </div>
+
+                <div class="right-opt">
+                  <select class="viewed-select">
+                    <option>Viewed: All</option>
+                    <option>Viewed</option>
+                    <option>Unviewed</option>
+                  </select>
+
+                  <button class="columns-btn">Columns</button>
+
+                  <select class="perpage-num">
+                    <option>25</option>
+                    <option>50</option>
+                  </select>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="table-wrap">
+            <div class="table-responsive">
+              <table class="saved-table alert-table">
+                <colgroup>
+                  <col style="width: 40px" />
+                  <col style="width: 120px" />
+                  <col style="width: 170px" />
+                  <col style="width: 150px" />
+                  <col style="width: 160px" />
+                  <col style="width: 160px" />
+                  <col style="width: 230px" />
+                  <col style="width: 150px" />
+                  <col style="width: 220px" />
+                  <col style="width: 136px" />
+                </colgroup>
+
+                <thead>
+                  <tr>
+                    <th class="check-col">
+                      <input type="checkbox" />
+                    </th>
+
+                    <th>
+                      <span class="th-label">
+                        <img src="assets/Vector1.svg" alt="" />
+                        <p>Search Now</p>
+                      </span>
+                    </th>
+
+                    <th>
+                      <span class="th-label">
+                        <img src="assets/Vector1.svg" alt="" />
+                        <p>Search Name</p>
+                      </span>
+                    </th>
+
+                    <th>
+                      <span class="th-label">
+                        <img src="assets/Vector1.svg" alt="" />
+                        <p>Search ID</p>
+                      </span>
+                    </th>
+
+                    <th>
+                      <span class="th-label">
+                        <img src="assets/Vector1.svg" alt="" />
+                        <p>Orig. Date</p>
+                      </span>
+                    </th>
+
+                    <th>
+                      <span class="th-label">
+                        <img src="assets/Vector1.svg" alt="" />
+                        <p>Expiry Date</p>
+                      </span>
+                    </th>
+
+                    <th>
+                      <span class="th-label">
+                        <img src="assets/Vector1.svg" alt="" />
+                        <p>Search Criteria</p>
+                      </span>
+                    </th>
+
+                    <th>
+                      <span class="th-label">
+                        <img src="assets/Vector1.svg" alt="" />
+                        <p>Email Alerts</p>
+                      </span>
+                    </th>
+
+                    <th>
+                      <span class="th-label">
+                        <img src="assets/Vector1.svg" alt="" />
+                        <p>Linked Email Address</p>
+                      </span>
+                    </th>
+
+                    <th>
+                      <span class="th-label">
+                        <p>Action</p>
+                      </span>
+                    </th>
+                  </tr>
+                </thead>
+
+                <tbody>
+                  <tr>
+                    <td class="check-col">
+                      <input type="checkbox" />
+                    </td>
+
+                    <td>
+                      <span class="status-badge active alert-badge"
+                        >Active</span
+                      >
+                    </td>
+
+                    <td>10%+ Under $800k</td>
+
+                    <td class="center">343</td>
+
+                    <td class="date">08-31-2025</td>
+
+                    <td class="date">08-31-2025</td>
+
+                    <td>
+                      Address: Las Vegas, NV<br />
+                      89123, USA
+                    </td>
+
+                    <td>Never</td>
+
+                    <td>
+                      Kallen@truemarket.net<br />
+                      Add
+                    </td>
+
+                    <td>
+                      <div class="action-group">
+                        <button
+                          class="action-btn delete-btn"
+                          type="button"
+                          aria-label="Delete"
+                        >
+                          <img src="assets/dlt.svg" alt="" />
+                        </button>
+                      </div>
+                    </td>
+                  </tr>
+
+                  <tr>
+                    <td class="check-col"><input type="checkbox" /></td>
+                    <td>
+                      <span class="status-badge active alert-badge"
+                        >Active</span
+                      >
+                    </td>
+                    <td>10%+ Under $800k</td>
+                    <td class="center">343</td>
+                    <td class="date">08-31-2025</td>
+                    <td class="date">08-31-2025</td>
+                    <td>
+                      Address: Las Vegas, NV<br />
+                      89123, USA
+                    </td>
+                    <td>Never</td>
+                    <td>
+                      Kallen@truemarket.net<br />
+                      Add
+                    </td>
+                    <td>
+                      <div class="action-group">
+                        <button class="action-btn delete-btn" type="button">
+                          <img src="assets/dlt.svg" alt="" />
+                        </button>
+                      </div>
+                    </td>
+                  </tr>
+
+                  <tr>
+                    <td class="check-col"><input type="checkbox" /></td>
+                    <td>
+                      <span class="status-badge active alert-badge"
+                        >Active</span
+                      >
+                    </td>
+                    <td>10%+ Under $800k</td>
+                    <td class="center">343</td>
+                    <td class="date">08-31-2025</td>
+                    <td class="date">08-31-2025</td>
+                    <td>
+                      Address: Las Vegas, NV<br />
+                      89123, USA
+                    </td>
+                    <td>Never</td>
+                    <td>
+                      Kallen@truemarket.net<br />
+                      Add
+                    </td>
+                    <td>
+                      <div class="action-group">
+                        <button class="action-btn delete-btn" type="button">
+                          <img src="assets/dlt.svg" alt="" />
+                        </button>
+                      </div>
+                    </td>
+                  </tr>
+
+                  <tr>
+                    <td class="check-col"><input type="checkbox" /></td>
+                    <td>
+                      <span class="status-badge active alert-badge"
+                        >Active</span
+                      >
+                    </td>
+                    <td>10%+ Under $800k</td>
+                    <td class="center">343</td>
+                    <td class="date">08-31-2025</td>
+                    <td class="date">08-31-2025</td>
+                    <td>
+                      Address: Las Vegas, NV<br />
+                      89123, USA
+                    </td>
+                    <td>Never</td>
+                    <td>
+                      Kallen@truemarket.net<br />
+                      Add
+                    </td>
+                    <td>
+                      <div class="action-group">
+                        <button class="action-btn delete-btn" type="button">
+                          <img src="assets/dlt.svg" alt="" />
+                        </button>
+                      </div>
+                    </td>
+                  </tr>
+
+                  <tr>
+                    <td class="check-col"><input type="checkbox" /></td>
+                    <td>
+                      <span class="status-badge active alert-badge"
+                        >Active</span
+                      >
+                    </td>
+                    <td>10%+ Under $800k</td>
+                    <td class="center">343</td>
+                    <td class="date">08-31-2025</td>
+                    <td class="date">08-31-2025</td>
+                    <td>
+                      Address: Las Vegas, NV<br />
+                      89123, USA
+                    </td>
+                    <td>Never</td>
+                    <td>
+                      Kallen@truemarket.net<br />
+                      Add
+                    </td>
+                    <td>
+                      <div class="action-group">
+                        <button class="action-btn delete-btn" type="button">
+                          <img src="assets/dlt.svg" alt="" />
+                        </button>
+                      </div>
+                    </td>
+                  </tr>
+
+                  <tr>
+                    <td class="check-col"><input type="checkbox" /></td>
+                    <td>
+                      <span class="status-badge active alert-badge"
+                        >Active</span
+                      >
+                    </td>
+                    <td>10%+ Under $800k</td>
+                    <td class="center">343</td>
+                    <td class="date">08-31-2025</td>
+                    <td class="date">08-31-2025</td>
+                    <td>
+                      Address: Las Vegas, NV<br />
+                      89123, USA
+                    </td>
+                    <td>Never</td>
+                    <td>
+                      Kallen@truemarket.net<br />
+                      Add
+                    </td>
+                    <td>
+                      <div class="action-group">
+                        <button class="action-btn delete-btn" type="button">
+                          <img src="assets/dlt.svg" alt="" />
+                        </button>
+                      </div>
+                    </td>
+                  </tr>
+
+                  <tr>
+                    <td class="check-col"><input type="checkbox" /></td>
+                    <td>
+                      <span class="status-badge active alert-badge"
+                        >Active</span
+                      >
+                    </td>
+                    <td>10%+ Under $800k</td>
+                    <td class="center">343</td>
+                    <td class="date">08-31-2025</td>
+                    <td class="date">08-31-2025</td>
+                    <td>
+                      Address: Las Vegas, NV<br />
+                      89123, USA
+                    </td>
+                    <td>Never</td>
+                    <td>
+                      Kallen@truemarket.net<br />
+                      Add
+                    </td>
+                    <td>
+                      <div class="action-group">
+                        <button class="action-btn delete-btn" type="button">
+                          <img src="assets/dlt.svg" alt="" />
+                        </button>
+                      </div>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+
+            <div class="pagination-bar">
+              <select class="page-size">
+                <option>24</option>
+                <option>25</option>
+                <option>50</option>
+              </select>
+
+              <div class="pagination">
+                <button type="button">Previous</button>
+                <button type="button" class="active">1</button>
+                <button type="button">2</button>
+                <button type="button">3</button>
+                <button type="button">4</button>
+                <button type="button">Next</button>
+              </div>
+            </div>
+          </div>
         </main>
       </div>
       <!-- /main-wrap -->

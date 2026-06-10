@@ -18,25 +18,14 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-}
-
-.left-saved {
-  display: flex;
-  align-items: center;
-  justify-content: start;
-  letter-spacing: 1px;
   gap: 12px;
-  max-width: 614px;
-  width: 100%;
 }
 
 .right-saved {
   display: flex;
   align-items: center;
-  justify-content: end;
+  justify-content: space-between;
   letter-spacing: 1px;
-  gap: 12px;
-  max-width: 506px;
   width: 100%;
 }
 
@@ -44,6 +33,7 @@
   font-size: 16px;
   font-weight: 600;
   color: #52565c;
+  white-space: nowrap;
 }
 
 .toolbar-group {
@@ -53,7 +43,7 @@
 }
 
 .filter-btn {
-  width: 250px;
+  width: 150px;
   flex: 0 0 250px;
 }
 
@@ -197,6 +187,7 @@
 .th-label p {
   font-size: 14px;
   color: #292b2e;
+  font-weight: 500;
 }
 
 thead tr th:nth-child(5),
@@ -421,4 +412,44 @@ td.price.price2 {
   .property-cell {
     min-width: 240px;
   }
+}
+
+@media (max-width: 1410px) {
+  .saved-toolbar {
+    flex-direction: column;
+  }
+  .left-saved {
+    margin-right: auto;
+  }
+}
+
+@media (max-width: 1068px) {
+  .filter-btn {
+    flex: 0;
+  }
+}
+
+@media (max-width: 930px) {
+  .right-saved {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+  }
+}
+@media (max-width: 400px) {
+  .toolbar-group {
+    align-items: start;
+    flex-direction: column;
+  }
+  .right-opt {
+    flex-direction: column;
+  }
+  .saved-title {
+    white-space: wrap;
+}
+}
+
+.right-opt {
+  display: flex;
+  gap: 10px;
 }
