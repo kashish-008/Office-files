@@ -1,0 +1,1035 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Property-Lists</title>
+    <!-- css-files -->
+    <link rel="stylesheet" href="css/global.css" />
+    <link rel="stylesheet" href="css/admin.css" />
+    <link rel="stylesheet" href="css/saved.css" />
+    <link rel="stylesheet" href="css/propertyList.css" />
+
+    <!-- google-fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Figtree:ital,wght@0,300..900;1,300..900&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Manrope:wght@200..800&display=swap"
+      rel="stylesheet"
+    />
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  </head>
+  <body>
+    <div class="layout">
+      <!-- ══════════ SIDEBAR ══════════ -->
+      <aside class="sidebar" id="sidebar">
+        <div class="close-sidebar" onclick="closeSidebar()">x</div>
+        <div class="sidebar-outer">
+          <div class="logo">
+            <a href=""> <img src="./img/mainlogo.svg" alt="" /></a>
+          </div>
+
+          <nav class="nav">
+            <div class="nav-item active">
+              <a href="#">
+                <img src="./img/Dashboard.svg" alt="" />
+                Dashboard</a
+              >
+            </div>
+            <div class="nav-item">
+              <a href="#">
+                <img src="./img/ManageUsers.svg" alt="" />
+                Manage Users
+              </a>
+            </div>
+            <div class="nav-item">
+              <a href="#">
+                <img src="./img/PropertySearch.svg" alt="" />
+                Property Search
+              </a>
+            </div>
+            <div class="nav-item">
+              <a href="#">
+                <img src="./img/SavedProperties.svg" alt="" />
+                Saved Properties
+              </a>
+            </div>
+            <div class="nav-item">
+              <a href="#">
+                <img src="./img/SearchAlerts.svg" alt="" />
+                Search/Alerts
+              </a>
+            </div>
+          </nav>
+
+          <div class="sidebar-bottom">
+            <div class="nav-item">
+              <a href="#">
+                <img src="./img/Settings.svg" alt="" />
+                Settings
+              </a>
+            </div>
+            <div class="nav-item">
+              <a href="#">
+                <img src="./img/Logout.svg" alt="" />
+                Log out
+              </a>
+            </div>
+          </div>
+        </div>
+      </aside>
+
+      <!-- Mobile overlay -->
+      <div class="overlay" id="overlay"></div>
+
+      <!-- ══════════ MAIN ══════════ -->
+      <div class="main-wrap">
+        <!-- Header -->
+        <header class="header">
+          <button
+            class="hamburger"
+            id="hamburger"
+            onclick="toggleSidebar()"
+            title="Toggle sidebar"
+          >
+            <svg
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2.5"
+            >
+              <line x1="3" y1="12" x2="21" y2="12" />
+              <line x1="3" y1="6" x2="21" y2="6" />
+              <line x1="3" y1="18" x2="21" y2="18" />
+            </svg>
+          </button>
+
+          <div class="search-bar">
+            <img src="./img/search.svg" alt="" />
+            <input type="text" placeholder="Search here..." />
+            <a href="#"> <img src="./img/sound-module-fill.svg" alt="" /></a>
+          </div>
+
+          <div class="header-right">
+            <button class="icon-btn" id="top-emai">
+              <img src="./img/top-email.svg" alt="email" />
+            </button>
+            <button class="icon-btn" id="notifaction">
+              <img src="./img/notifaction.svg" alt="notifatction" />
+              <span class="badge"></span>
+            </button>
+            <div class="user-pill">
+              <div class="avatar">
+                <img src="./img/AlexThompson.png" alt="profile-photo" />
+              </div>
+              <div class="user-info">
+                <div class="name f-14">Alex Thompson</div>
+                <div class="role">Admin</div>
+              </div>
+            </div>
+          </div>
+        </header>
+
+        <!-- Content -->
+        <main class="content property-content">
+          <div class="property-search-page">
+            <div class="property-search-header">
+              <h1 class="f-24">Property Search Las Vegas</h1>
+              <div class="breadcrumb">
+                <span>PROPERTIES</span>
+                <span class="separator"
+                  ><img src="assets/right.svg" alt=""
+                /></span>
+              </div>
+            </div>
+
+            <div class="property-search-layout">
+              <!-- Filter Sidebar -->
+              <aside class="property-filter-sidebar">
+                <div class="filter-card">
+                  <div class="filter-card-header">
+                    <h3>Properties</h3>
+                    <p class="f-14">Search Results 780</p>
+                  </div>
+
+                  <!-- Location -->
+                  <div class="filter-group">
+                    <label>Properties Location</label>
+                    <select>
+                      <option>Dallas, Texas</option>
+                    </select>
+                  </div>
+
+                  <div class="filter-group property-extra-fields">
+                    <div class="filter-input-grid">
+                      <div class="filter-field">
+                        <label>Min Price / Sq Ft</label>
+                        <input type="text" />
+                      </div>
+
+                      <div class="filter-field">
+                        <label>Max Price / Sq Ft</label>
+                        <input type="text" />
+                      </div>
+
+                      <div class="filter-field">
+                        <label>Min Year Built</label>
+                        <input type="text" />
+                      </div>
+
+                      <div class="filter-field">
+                        <label>Max Year Built</label>
+                        <input type="text" />
+                      </div>
+
+                      <div class="filter-field">
+                        <label># of Store</label>
+                        <input type="text" />
+                      </div>
+
+                      <div class="filter-field">
+                        <label># of Garages</label>
+                        <input type="text" />
+                      </div>
+
+                      <div class="filter-field">
+                        <label>Min Lot Size</label>
+                        <input type="text" />
+                      </div>
+
+                      <div class="filter-field">
+                        <label>Max Lot Size</label>
+                        <input type="text" />
+                      </div>
+                    </div>
+                  </div>
+
+                  <!-- Keyword -->
+                  <div class="filter-group">
+                    <label>Keyword</label>
+                    <input type="text" placeholder="foreclose, view, etc..." />
+                  </div>
+
+                  <!-- Price Range -->
+                  <div class="filter-group">
+                    <label>Price Range</label>
+
+                    <div class="dual-range-slider">
+                      <div class="slider-track"></div>
+                      <div class="slider-range"></div>
+
+                      <input
+                        type="range"
+                        min="100000"
+                        max="1000000"
+                        value="400000"
+                        class="range-min"
+                      />
+
+                      <input
+                        type="range"
+                        min="100000"
+                        max="1000000"
+                        value="700000"
+                        class="range-max"
+                      />
+                    </div>
+
+                    <div class="range-values">
+                      <input type="text" value="$400,000" readonly />
+                      <span>to</span>
+                      <input type="text" value="$700,000" readonly />
+                    </div>
+                  </div>
+
+                  <!-- Percentage Range -->
+                  <div class="filter-group">
+                    <label>Percentage Range</label>
+
+                    <div class="dual-range-slider slider-blue">
+                      <div class="slider-track"></div>
+                      <div class="slider-range range-blue"></div>
+
+                      <input
+                        type="range"
+                        min="1"
+                        max="10"
+                        value="5"
+                        class="range-min"
+                      />
+
+                      <input
+                        type="range"
+                        min="1"
+                        max="10"
+                        value="8"
+                        class="range-max"
+                      />
+                    </div>
+
+                    <div class="range-values">
+                      <input type="text" value="5%" readonly />
+                      <span>to</span>
+                      <input type="text" value="8%" readonly />
+                    </div>
+                  </div>
+
+                  <!-- Listing Type -->
+                  <div class="filter-group">
+                    <label>Listing Type:</label>
+                    <div class="checkbox-grid">
+                      <label>
+                        <input type="checkbox" />
+                        For Rent
+                      </label>
+
+                      <label>
+                        <input type="checkbox" />
+                        For Sale
+                      </label>
+                    </div>
+                  </div>
+
+                  <!-- Property Type -->
+                  <div class="filter-group">
+                    <label>Properties Type :</label>
+
+                    <div class="checkbox-grid">
+                      <label>
+                        <input type="checkbox" />
+                        All Properties
+                      </label>
+                      <label>
+                        <input type="checkbox" />
+                        Duplex
+                      </label>
+                      <label>
+                        <input type="checkbox" checked />
+                        Single Family
+                      </label>
+                      <label>
+                        <input type="checkbox" />
+                        Condo
+                      </label>
+                      <label>
+                        <input type="checkbox" />
+                        Townhouse
+                      </label>
+                    </div>
+                  </div>
+
+                  <!-- Bedrooms -->
+                  <div class="filter-group">
+                    <label>Bedrooms :</label>
+
+                    <div class="bedroom-buttons">
+                      <button>1 BR</button>
+                      <button>2 BR</button>
+                      <button class="active">3 BR</button>
+                      <button>4 & 5 BR</button>
+                    </div>
+                  </div>
+
+                  <!-- Accessibility -->
+                  <div class="filter-group">
+                    <label>Accessibility Features :</label>
+
+                    <div class="checkbox-grid">
+                      <label>
+                        <input type="checkbox" />
+                        Fireplace
+                      </label>
+
+                      <label>
+                        <input type="checkbox" />
+                        Parking
+                      </label>
+
+                      <label>
+                        <input type="checkbox" />
+                        Spa
+                      </label>
+
+                      <label>
+                        <input type="checkbox" />
+                        Pool
+                      </label>
+
+                      <label>
+                        <input type="checkbox" />
+                        Restaurant
+                      </label>
+
+                      <label>
+                        <input type="checkbox" />
+                        Fitness Club
+                      </label>
+                    </div>
+                  </div>
+
+                  <div class="filter-group">
+                    <div class="save-check">
+                      <label>
+                        <input type="checkbox" class="custom-border-check" />
+                        <span class="enter"
+                          >To save this search, enter a search title</span
+                        >
+                      </label>
+                    </div>
+                  </div>
+                  <div class="aply-btn">
+                    <a href="#" class="apply-btn cta cta-green cta-green:hover"
+                      >Apply</a
+                    >
+                  </div>
+                </div>
+              </aside>
+
+              <!-- Right Content -->
+              <div class="property-content">
+                <!-- Map -->
+                <div class="map-section">
+                  <div class="map-header">
+                    <div class="map-title">
+                      <img src="./assets/loc.svg" alt="" />
+                      <p>Results Map</p>
+                    </div>
+
+                    <div class="map-actions">
+                      <a href="#" class="cta cta-green cta-green:hover"
+                        >Draw Boundaries</a
+                      >
+                      <a href="#">
+                        <img src="./assets/gg_minimize.svg" alt="" />
+                      </a>
+                      <a href="#">
+                        <img src="./assets/gg_maximize.svg" alt="" />
+                      </a>
+                    </div>
+                  </div>
+
+                  <div class="map-wrapper">
+                    <iframe
+                      src="https://maps.google.com/maps?q=Brookdale%20Dog%20Park%20Las%20Vegas&t=&z=16&ie=UTF8&iwloc=&output=embed"
+                      loading="lazy"
+                    ></iframe>
+                  </div>
+                </div>
+
+                <!-- View Toggle -->
+                <div class="view-toggle">
+                  <a href="#" class="active">List View</a>
+                  <a href="#">Map View</a>
+                </div>
+
+                <!-- Property Grid -->
+                <div class="property-grid">
+                  <div class="property-card">
+                    <div class="property-image">
+                      <img src="./assets/card1.png" alt="" />
+                      <a href="#" class="bookmark">
+                        <img src="./assets/bookmark.svg" alt="" />
+                      </a>
+                      <span class="sale-badge"> For Sale </span>
+                    </div>
+
+                    <div class="property-body">
+                      <div class="property-title-area">
+                        <div class="property-icon">
+                          <img src="./assets/hut.svg" alt="" />
+                        </div>
+
+                        <span class="blm-badge"> 5% BLM </span>
+                        <p>
+                          <span id="black-text">2006 Troutwood DR</span>
+                          <br />Las Vegas, NV 89128
+                        </p>
+                      </div>
+
+                      <div class="property-features">
+                        <span>
+                          <img src="./assets/bed.svg" alt="" />
+                          <p>02 bed</p>
+                        </span>
+
+                        <span>
+                          <img src="./assets/bath.svg" alt="" />
+                          <p>02 bath</p>
+                        </span>
+
+                        <span>
+                          <img src="./assets/sqft.svg" alt="" />
+                          <p>1370 sqft</p>
+                        </span>
+
+                        <span>
+                          <img src="./assets/story.svg" alt="" />
+                          <p>2 Story</p>
+                        </span>
+
+                        <span>
+                          <img src="./assets/story.svg" alt="" />
+                          <p>2 Car</p>
+                        </span>
+                      </div>
+
+                      <div class="property-footer">
+                        <div class="property-price">
+                          <p>Listed Price: $430,000</p>
+                          <p id="green">TMV: $553,114</p>
+                          <p id="green">Est Equity $23,114</p>
+                        </div>
+
+                        <div class="view">
+                          <a href="#"> View Property </a>
+                          <img src="assets/righttt.svg" alt="" />
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="property-card">
+                    <div class="property-image">
+                      <img src="./assets/card2.jpg" alt="" />
+
+                      <a href="#" class="bookmark">
+                        <img src="./assets/bookmark.svg" alt="" />
+                      </a>
+
+                      <span class="sale-badge"> For Sale </span>
+                    </div>
+
+                    <div class="property-body">
+                      <div class="property-title-area">
+                        <div class="property-icon">
+                          <img src="./assets/hut.svg" alt="" />
+                        </div>
+
+                        <span class="blm-badge"> 5% BLM </span>
+                        <p>
+                          <span id="black-text">2006 Troutwood DR</span>
+                          <br />Las Vegas, NV 89128
+                        </p>
+                      </div>
+
+                      <div class="property-features">
+                        <span>
+                          <img src="./assets/bed.svg" alt="" />
+                          <p>02 bed</p>
+                        </span>
+
+                        <span>
+                          <img src="./assets/bath.svg" alt="" />
+                          <p>02 bath</p>
+                        </span>
+
+                        <span>
+                          <img src="./assets/sqft.svg" alt="" />
+                          <p>1370 sqft</p>
+                        </span>
+
+                        <span>
+                          <img src="./assets/story.svg" alt="" />
+                          <p>2 Story</p>
+                        </span>
+
+                        <span>
+                          <img src="./assets/story.svg" alt="" />
+                          <p>2 Car</p>
+                        </span>
+                      </div>
+
+                      <div class="property-footer">
+                        <div class="property-price">
+                          <p>Listed Price: $430,000</p>
+                          <p id="green">TMV: $553,114</p>
+                          <p id="green">Est Equity $23,114</p>
+                        </div>
+
+                        <div class="view">
+                          <a href="#"> View Property </a>
+                          <img src="assets/righttt.svg" alt="" />
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="property-card">
+                    <div class="property-image">
+                      <img src="./assets/card3.jpg" alt="" />
+
+                      <a href="#" class="bookmark">
+                        <img src="./assets/bookmark.svg" alt="" />
+                      </a>
+
+                      <span class="sale-badge"> For Sale </span>
+                    </div>
+
+                    <div class="property-body">
+                      <div class="property-title-area">
+                        <div class="property-icon">
+                          <img src="./assets/hut.svg" alt="" />
+                        </div>
+
+                        <span class="blm-badge"> 5% BLM </span>
+                        <p>
+                          <span id="black-text">2006 Troutwood DR</span>
+                          <br />Las Vegas, NV 89128
+                        </p>
+                      </div>
+
+                      <div class="property-features">
+                        <span>
+                          <img src="./assets/bed.svg" alt="" />
+                          <p>02 bed</p>
+                        </span>
+
+                        <span>
+                          <img src="./assets/bath.svg" alt="" />
+                          <p>02 bath</p>
+                        </span>
+
+                        <span>
+                          <img src="./assets/sqft.svg" alt="" />
+                          <p>1370 sqft</p>
+                        </span>
+
+                        <span>
+                          <img src="./assets/story.svg" alt="" />
+                          <p>2 Story</p>
+                        </span>
+
+                        <span>
+                          <img src="./assets/story.svg" alt="" />
+                          <p>2 Car</p>
+                        </span>
+                      </div>
+
+                      <div class="property-footer">
+                        <div class="property-price">
+                          <p>Listed Price: $430,000</p>
+                          <p id="green">TMV: $553,114</p>
+                          <p id="green">Est Equity $23,114</p>
+                        </div>
+
+                        <div class="view">
+                          <a href="#"> View Property </a>
+                          <img src="assets/righttt.svg" alt="" />
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="property-card">
+                    <div class="property-image">
+                      <img src="./assets/card4.jpg" alt="" />
+
+                      <a href="#" class="bookmark">
+                        <img src="./assets/bookmark.svg" alt="" />
+                      </a>
+
+                      <span class="sale-badge"> For Sale </span>
+                    </div>
+
+                    <div class="property-body">
+                      <div class="property-title-area">
+                        <div class="property-icon">
+                          <img src="./assets/hut.svg" alt="" />
+                        </div>
+
+                        <span class="blm-badge"> 5% BLM </span>
+                        <p>
+                          <span id="black-text">2006 Troutwood DR</span>
+                          <br />Las Vegas, NV 89128
+                        </p>
+                      </div>
+
+                      <div class="property-features">
+                        <span>
+                          <img src="./assets/bed.svg" alt="" />
+                          <p>02 bed</p>
+                        </span>
+
+                        <span>
+                          <img src="./assets/bath.svg" alt="" />
+                          <p>02 bath</p>
+                        </span>
+
+                        <span>
+                          <img src="./assets/sqft.svg" alt="" />
+                          <p>1370 sqft</p>
+                        </span>
+
+                        <span>
+                          <img src="./assets/story.svg" alt="" />
+                          <p>2 Story</p>
+                        </span>
+
+                        <span>
+                          <img src="./assets/story.svg" alt="" />
+                          <p>2 Car</p>
+                        </span>
+                      </div>
+
+                      <div class="property-footer">
+                        <div class="property-price">
+                          <p>Listed Price: $430,000</p>
+                          <p id="green">TMV: $553,114</p>
+                          <p id="green">Est Equity $23,114</p>
+                        </div>
+
+                        <div class="view">
+                          <a href="#"> View Property </a>
+                          <img src="assets/righttt.svg" alt="" />
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="property-card">
+                    <div class="property-image">
+                      <img src="./assets/card5.jpg" alt="" />
+
+                      <a href="#" class="bookmark">
+                        <img src="./assets/bookmark.svg" alt="" />
+                      </a>
+
+                      <span class="sale-badge"> For Sale </span>
+                    </div>
+
+                    <div class="property-body">
+                      <div class="property-title-area">
+                        <div class="property-icon">
+                          <img src="./assets/hut.svg" alt="" />
+                        </div>
+
+                        <span class="blm-badge"> 5% BLM </span>
+                        <p>
+                          <span id="black-text">2006 Troutwood DR</span>
+                          <br />Las Vegas, NV 89128
+                        </p>
+                      </div>
+
+                      <div class="property-features">
+                        <span>
+                          <img src="./assets/bed.svg" alt="" />
+                          <p>02 bed</p>
+                        </span>
+
+                        <span>
+                          <img src="./assets/bath.svg" alt="" />
+                          <p>02 bath</p>
+                        </span>
+
+                        <span>
+                          <img src="./assets/sqft.svg" alt="" />
+                          <p>1370 sqft</p>
+                        </span>
+
+                        <span>
+                          <img src="./assets/story.svg" alt="" />
+                          <p>2 Story</p>
+                        </span>
+
+                        <span>
+                          <img src="./assets/story.svg" alt="" />
+                          <p>2 Car</p>
+                        </span>
+                      </div>
+
+                      <div class="property-footer">
+                        <div class="property-price">
+                          <p>Listed Price: $430,000</p>
+                          <p id="green">TMV: $553,114</p>
+                          <p id="green">Est Equity $23,114</p>
+                        </div>
+
+                        <div class="view">
+                          <a href="#"> View Property </a>
+                          <img src="assets/righttt.svg" alt="" />
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="property-card">
+                    <div class="property-image">
+                      <img src="./assets/card6.jpg" alt="" />
+
+                      <a href="#" class="bookmark">
+                        <img src="./assets/bookmark.svg" alt="" />
+                      </a>
+
+                      <span class="sale-badge"> For Sale </span>
+                    </div>
+
+                    <div class="property-body">
+                      <div class="property-title-area">
+                        <div class="property-icon">
+                          <img src="./assets/hut.svg" alt="" />
+                        </div>
+
+                        <span class="blm-badge"> 5% BLM </span>
+                        <p>
+                          <span id="black-text">2006 Troutwood DR</span>
+                          <br />Las Vegas, NV 89128
+                        </p>
+                      </div>
+
+                      <div class="property-features">
+                        <span>
+                          <img src="./assets/bed.svg" alt="" />
+                          <p>02 bed</p>
+                        </span>
+
+                        <span>
+                          <img src="./assets/bath.svg" alt="" />
+                          <p>02 bath</p>
+                        </span>
+
+                        <span>
+                          <img src="./assets/sqft.svg" alt="" />
+                          <p>1370 sqft</p>
+                        </span>
+
+                        <span>
+                          <img src="./assets/story.svg" alt="" />
+                          <p>2 Story</p>
+                        </span>
+
+                        <span>
+                          <img src="./assets/story.svg" alt="" />
+                          <p>2 Car</p>
+                        </span>
+                      </div>
+
+                      <div class="property-footer">
+                        <div class="property-price">
+                          <p>Listed Price: $430,000</p>
+                          <p id="green">TMV: $553,114</p>
+                          <p id="green">Est Equity $23,114</p>
+                        </div>
+
+                        <div class="view">
+                          <a href="#"> View Property </a>
+                          <img src="assets/righttt.svg" alt="" />
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="property-card">
+                    <div class="property-image">
+                      <img src="./assets/card7.jpg" alt="" />
+
+                      <a href="#" class="bookmark">
+                        <img src="./assets/bookmark.svg" alt="" />
+                      </a>
+
+                      <span class="sale-badge"> For Sale </span>
+                    </div>
+
+                    <div class="property-body">
+                      <div class="property-title-area">
+                        <div class="property-icon">
+                          <img src="./assets/hut.svg" alt="" />
+                        </div>
+
+                        <span class="blm-badge"> 5% BLM </span>
+                        <p>
+                          <span id="black-text">2006 Troutwood DR</span>
+                          <br />Las Vegas, NV 89128
+                        </p>
+                      </div>
+
+                      <div class="property-features">
+                        <span>
+                          <img src="./assets/bed.svg" alt="" />
+                          <p>02 bed</p>
+                        </span>
+
+                        <span>
+                          <img src="./assets/bath.svg" alt="" />
+                          <p>02 bath</p>
+                        </span>
+
+                        <span>
+                          <img src="./assets/sqft.svg" alt="" />
+                          <p>1370 sqft</p>
+                        </span>
+
+                        <span>
+                          <img src="./assets/story.svg" alt="" />
+                          <p>2 Story</p>
+                        </span>
+
+                        <span>
+                          <img src="./assets/story.svg" alt="" />
+                          <p>2 Car</p>
+                        </span>
+                      </div>
+
+                      <div class="property-footer">
+                        <div class="property-price">
+                          <p>Listed Price: $430,000</p>
+                          <p id="green">TMV: $553,114</p>
+                          <p id="green">Est Equity $23,114</p>
+                        </div>
+
+                        <div class="view">
+                          <a href="#"> View Property </a>
+                          <img src="assets/righttt.svg" alt="" />
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="property-card">
+                    <div class="property-image">
+                      <img src="./assets/card8.jpg" alt="" />
+
+                      <a href="#" class="bookmark">
+                        <img src="./assets/bookmark.svg" alt="" />
+                      </a>
+
+                      <span class="sale-badge"> For Sale </span>
+                    </div>
+
+                    <div class="property-body">
+                      <div class="property-title-area">
+                        <div class="property-icon">
+                          <img src="./assets/hut.svg" alt="" />
+                        </div>
+
+                        <span class="blm-badge"> 5% BLM </span>
+                        <p>
+                          <span id="black-text">2006 Troutwood DR</span>
+                          <br />Las Vegas, NV 89128
+                        </p>
+                      </div>
+
+                      <div class="property-features">
+                        <span>
+                          <img src="./assets/bed.svg" alt="" />
+                          <p>02 bed</p>
+                        </span>
+
+                        <span>
+                          <img src="./assets/bath.svg" alt="" />
+                          <p>02 bath</p>
+                        </span>
+
+                        <span>
+                          <img src="./assets/sqft.svg" alt="" />
+                          <p>1370 sqft</p>
+                        </span>
+
+                        <span>
+                          <img src="./assets/story.svg" alt="" />
+                          <p>2 Story</p>
+                        </span>
+
+                        <span>
+                          <img src="./assets/story.svg" alt="" />
+                          <p>2 Car</p>
+                        </span>
+                      </div>
+
+                      <div class="property-footer">
+                        <div class="property-price">
+                          <p>Listed Price: $430,000</p>
+                          <p id="green">TMV: $553,114</p>
+                          <p id="green">Est Equity $23,114</p>
+                        </div>
+
+                        <div class="view">
+                          <a href="#"> View Property </a>
+                          <img src="assets/righttt.svg" alt="" />
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="property-card">
+                    <div class="property-image">
+                      <img src="./assets/card9.jpg" alt="" />
+
+                      <a href="#" class="bookmark">
+                        <img src="./assets/bookmark.svg" alt="" />
+                      </a>
+
+                      <span class="sale-badge"> For Sale </span>
+                    </div>
+
+                    <div class="property-body">
+                      <div class="property-title-area">
+                        <div class="property-icon">
+                          <img src="./assets/hut.svg" alt="" />
+                        </div>
+
+                        <span class="blm-badge"> 5% BLM </span>
+                        <p>
+                          <span id="black-text">2006 Troutwood DR</span>
+                          <br />Las Vegas, NV 89128
+                        </p>
+                      </div>
+
+                      <div class="property-features">
+                        <span>
+                          <img src="./assets/bed.svg" alt="" />
+                          <p>02 bed</p>
+                        </span>
+
+                        <span>
+                          <img src="./assets/bath.svg" alt="" />
+                          <p>02 bath</p>
+                        </span>
+
+                        <span>
+                          <img src="./assets/sqft.svg" alt="" />
+                          <p>1370 sqft</p>
+                        </span>
+
+                        <span>
+                          <img src="./assets/story.svg" alt="" />
+                          <p>2 Story</p>
+                        </span>
+
+                        <span>
+                          <img src="./assets/story.svg" alt="" />
+                          <p>2 Car</p>
+                        </span>
+                      </div>
+
+                      <div class="property-footer">
+                        <div class="property-price">
+                          <p>Listed Price: $430,000</p>
+                          <p id="green">TMV: $553,114</p>
+                          <p id="green">Est Equity $23,114</p>
+                        </div>
+
+                        <div class="view">
+                          <a href="#"> View Property </a>
+                          <img src="assets/righttt.svg" alt="" />
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Pagination -->
+                <div class="pro-pagination">
+                  <div class="pagination lists-page">
+                    <button type="button">Previous</button>
+                    <button type="button" class="active">1</button>
+                    <button type="button">2</button>
+                    <button type="button">3</button>
+                    <button type="button">4</button>
+                    <button type="button">Next</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </main>
+      </div>
+      <!-- /main-wrap -->
+    </div>
+    <!-- /layout -->
+
+    <script src="./js/admin.js"></script>
+    <script src="js/slider.js"></script>
+  </body>
+</html>
