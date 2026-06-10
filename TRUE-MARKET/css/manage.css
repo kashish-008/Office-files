@@ -1,5 +1,6 @@
 .manage-content {
   background: #f9f9fc;
+  font-family: Manrope;
 }
 
 .manage-user-top {
@@ -12,6 +13,7 @@
 
 .left-text p {
   color: #52565c;
+  font-weight: 600;
 }
 
 .new-user-btn {
@@ -162,7 +164,6 @@
 .u-email {
   font-size: 11px;
   color: var(--light-grey);
-  font-weight: 500;
 }
 
 /* ── Role Badge ── */
@@ -250,6 +251,8 @@
   align-items: center;
   border: 1px solid #EAEDF1;
   border-radius: 6px;
+  font-family: figtree;
+
 }
 
 .page-btn {
@@ -261,7 +264,7 @@
 }
 
 .page-btn:hover {
-  color: #28A745;
+ background: #f4f7fb;
 }
 
 .page-num {

@@ -39,6 +39,7 @@
   font-weight: 600;
   color: #323a46;
   margin-bottom: 30px;
+  font-family: Figtree;
 }
 
 .profile-info-block {
@@ -48,6 +49,7 @@
 .info-label {
   color: #323a46;
   margin-bottom: 5px;
+  font-family: Figtree;
 }
 
 .social-label {
@@ -58,6 +60,7 @@
 
 .info-value {
   color: #687d92;
+  font-family: Figtree;
 }
 
 /* -- Social Icons -- */
@@ -91,6 +94,7 @@
   font-family: inherit;
   margin-bottom: 18px;
   outline: none;
+  font-family: Figtree;
 }
 
 .profile-textarea:focus {
@@ -107,6 +111,7 @@
   margin-bottom: 18px;
   outline: none;
   box-sizing: border-box;
+  font-family: Figtree;
 }
 
 .profile-input:focus {
@@ -125,6 +130,7 @@
 
 .profile-right-top h2 {
   color: #292b2e;
+  font-weight: 500;
 }
 
 .profile-subtitle {
@@ -146,6 +152,7 @@
   font-weight: 600;
   color: #5d7186;
   margin-bottom: 24px;
+  font-family: Manrope;
 }
 
 /* ---Upload Section --- */
@@ -174,6 +181,7 @@
 .upload-text {
   color: #5d7186;
   margin-bottom: 16px;
+  font-family: Figtree;
 }
 
 .upload-link {
@@ -184,6 +192,7 @@
 .upload-hint {
   font-weight: 400;
   color: #687d92;
+  font-family: Figtree;
 }
 
 /* --- Form Row -- */
@@ -221,10 +230,11 @@
   padding: 10px 16px;
   font-size: 14px;
   color: #111;
-  font-family: inherit;
+  font-family: Manrope;
   outline: none;
   background: transparent;
   box-sizing: border-box;
+  font-weight: 400;
 }
 
 .form-input:focus {
@@ -278,6 +288,7 @@ textarea.profile-textarea::placeholder {
 .profession-label {
   color: #5d7186;
   white-space: nowrap;
+  font-family: Manrope;
 }
 
 .profession-checks {
@@ -293,6 +304,7 @@ textarea.profile-textarea::placeholder {
   font-size: 14px;
   color: #5d7186;
   cursor: pointer;
+  font-family: Manrope;
 }
 
 .profession-checks input[type="checkbox"] {
@@ -359,414 +371,411 @@ textarea.profile-textarea::placeholder {
   background: #c82333;
 }
 
-
-
-
 /* RESPONSIVE - profile.css*/
 /* --- 1100px --- */
 @media (max-width: 1100px) {
-    .profile-layout {
-        gap: 16px;
-    }
+  .profile-layout {
+    gap: 16px;
+  }
 
-    .profile-left {
-        width: 280px;
-        min-width: 280px;
-        padding: 20px 16px;
-    }
+  .profile-left {
+    width: 280px;
+    min-width: 280px;
+    padding: 20px 16px;
+  }
 
-    .profile-info-block {
-        margin-bottom: 20px;
-    }
+  .profile-info-block {
+    margin-bottom: 20px;
+  }
 
-    .form-row {
-        gap: 20px;
-    }
+  .form-row {
+    gap: 20px;
+  }
 
-    .form-row.four-col {
-        grid-template-columns: 1fr 1fr;
-        gap: 16px;
-    }
+  .form-row.four-col {
+    grid-template-columns: 1fr 1fr;
+    gap: 16px;
+  }
 
-    .profession-section {
-        gap: 20px;
-    }
+  .profession-section {
+    gap: 20px;
+  }
 
-    .profession-checks {
-        gap: 16px;
-    }
+  .profession-checks {
+    gap: 16px;
+  }
 }
 
 /* 860px */
 @media (max-width: 860px) {
-    .profile-layout {
-        flex-direction: column;
-        gap: 16px;
-    }
+  .profile-layout {
+    flex-direction: column;
+    gap: 16px;
+  }
 
-    .profile-left, .profile-right{
-        width: 100%;
-        margin: auto;
-        min-width: unset;
-        position: static;
-        padding: 20px 16px;
-    }
+  .profile-left,
+  .profile-right {
+    width: 100%;
+    margin: auto;
+    min-width: unset;
+    position: static;
+    padding: 20px 16px;
+  }
 
-    .profile-avatar {
-        margin-bottom: 16px;
-    }
+  .profile-avatar {
+    margin-bottom: 16px;
+  }
 
-    .profile-name {
-        margin-bottom: 16px;
-    }
+  .profile-name {
+    margin-bottom: 16px;
+  }
 
-    .profile-info-block {
-        margin-bottom: 16px;
-    }
+  .profile-info-block {
+    margin-bottom: 16px;
+  }
 
-    .profile-textarea {
-        margin-bottom: 12px;
-    }
+  .profile-textarea {
+    margin-bottom: 12px;
+  }
 
-    .profile-input {
-        margin-bottom: 12px;
-    }
+  .profile-input {
+    margin-bottom: 12px;
+  }
 
-    .upload-div {
-        padding: 40px 16px;
-    }
+  .upload-div {
+    padding: 40px 16px;
+  }
 
-    .upload-icon {
-        font-size: 32px;
-        margin-bottom: 8px;
-    }
+  .upload-icon {
+    font-size: 32px;
+    margin-bottom: 8px;
+  }
 
-    .upload-text {
-        font-size: 14px;
-        margin-bottom: 10px;
-    }
+  .upload-text {
+    font-size: 14px;
+    margin-bottom: 10px;
+  }
 
-    .upload-hint {
-        font-size: 12px;
-    }
+  .upload-hint {
+    font-size: 12px;
+  }
 
-    .form-section {
-        padding: 18px 16px;
-        margin-bottom: 16px;
-    }
+  .form-section {
+    padding: 18px 16px;
+    margin-bottom: 16px;
+  }
 
-    .section-title {
-        margin-bottom: 16px;
-    }
+  .section-title {
+    margin-bottom: 16px;
+  }
 
-    .form-row {
-        gap: 16px;
-        margin-bottom: 16px;
-    }
+  .form-row {
+    gap: 16px;
+    margin-bottom: 16px;
+  }
 
-    .form-row.four-col {
-        grid-template-columns: 1fr 1fr;
-        gap: 14px;
-    }
+  .form-row.four-col {
+    grid-template-columns: 1fr 1fr;
+    gap: 14px;
+  }
 
-    .profession-section {
-        gap: 14px;
-        flex-direction: column;
-        align-items: flex-start;
-    }
+  .profession-section {
+    gap: 14px;
+    flex-direction: column;
+    align-items: flex-start;
+  }
 
-    .profession-checks {
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-        row-gap: 14px;
-        column-gap: 20px;
-        width: 100%;
-    }
+  .profession-checks {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    row-gap: 14px;
+    column-gap: 20px;
+    width: 100%;
+  }
 
-    .btn-save,
-    .btn-cancel {
-        padding: 8px 40px;
-        font-size: 14px;
-    }
+  .btn-save,
+  .btn-cancel {
+    padding: 8px 40px;
+    font-size: 14px;
+  }
 }
 
 /* --- 786px --- */
 @media (max-width: 786px) {
+  .profile-layout {
+    gap: 12px;
+  }
 
-    .profile-layout {
-        gap: 12px;
-    }
+  .profile-left {
+    padding: 16px 14px;
+  }
 
-    .profile-left {
-        padding: 16px 14px;
-    }
+  .form-row {
+    grid-template-columns: 1fr;
+    gap: 12px;
+    margin-bottom: 12px;
+  }
 
-    .form-row {
-        grid-template-columns: 1fr;
-        gap: 12px;
-        margin-bottom: 12px;
-    }
+  .form-row-inner {
+    grid-template-columns: 1fr 90px;
+    gap: 12px;
+  }
 
-    .form-row-inner {
-        grid-template-columns: 1fr 90px;
-        gap: 12px;
-    }
+  .form-row.four-col {
+    grid-template-columns: 1fr 1fr;
+    gap: 12px;
+  }
 
-    .form-row.four-col {
-        grid-template-columns: 1fr 1fr;
-        gap: 12px;
-    }
+  .form-section {
+    padding: 16px 14px;
+    margin-bottom: 12px;
+  }
 
-    .form-section {
-        padding: 16px 14px;
-        margin-bottom: 12px;
-    }
+  .section-title {
+    font-size: 14px;
+    margin-bottom: 14px;
+  }
 
-    .section-title {
-        font-size: 14px;
-        margin-bottom: 14px;
-    }
+  .upload-div {
+    padding: 30px 14px;
+  }
 
-    .upload-div {
-        padding: 30px 14px;
-    }
+  .upload-text {
+    font-size: 13px;
+  }
 
-    .upload-text {
-        font-size: 13px;
-    }
+  .upload-hint {
+    font-size: 11px;
+  }
 
-    .upload-hint {
-        font-size: 11px;
-    }
+  .profile-right-top h2 {
+    font-size: 20px;
+  }
 
-    .profile-right-top h2 {
-        font-size: 20px;
-    }
+  .profile-subtitle {
+    font-size: 14px;
+  }
 
-    .profile-subtitle {
-        font-size: 14px;
-    }
+  .form-input {
+    font-size: 13px;
+    padding: 9px 12px;
+  }
 
-    .form-input {
-        font-size: 13px;
-        padding: 9px 12px;
-    }
+  .btn-save,
+  .btn-cancel {
+    padding: 8px 28px;
+    font-size: 13px;
+  }
 
-    .btn-save,
-    .btn-cancel {
-        padding: 8px 28px;
-        font-size: 13px;
-    }
-
-    .content {
-        padding: 14px;
-    }
+  .content {
+    padding: 14px;
+  }
 }
 
 /* -- 400px -- */
 @media (max-width: 400px) {
-    .profile-left {
-        padding: 14px 12px;
-    }
+  .profile-left {
+    padding: 14px 12px;
+  }
 
-    .profile-avatar {
-        width: 52px;
-        height: 52px;
-    }
+  .profile-avatar {
+    width: 52px;
+    height: 52px;
+  }
 
-    .profile-name {
-        font-size: 15px;
-    }
+  .profile-name {
+    font-size: 15px;
+  }
 
-    .profile-left, .profile-right{
-        width: 100%;
-        margin: auto;
-    }
+  .profile-left,
+  .profile-right {
+    width: 100%;
+    margin: auto;
+  }
 
-    .info-label {
-        font-size: 12px;
-    }
+  .info-label {
+    font-size: 12px;
+  }
 
-    .info-value {
-        font-size: 12px;
-    }
+  .info-value {
+    font-size: 12px;
+  }
 
-    .social-icons a {
-        font-size: 14px;
-        padding: 5px 8px;
-    }
+  .social-icons a {
+    font-size: 14px;
+    padding: 5px 8px;
+  }
 
-    .profile-textarea {
-        font-size: 12px;
-        padding: 9px 12px;
-    }
+  .profile-textarea {
+    font-size: 12px;
+    padding: 9px 12px;
+  }
 
-    .profile-input {
-        font-size: 12px;
-        padding: 9px 12px;
-    }
+  .profile-input {
+    font-size: 12px;
+    padding: 9px 12px;
+  }
 
-    .form-section {
-        padding: 14px 12px;
-        margin-bottom: 10px;
-    }
+  .form-section {
+    padding: 14px 12px;
+    margin-bottom: 10px;
+  }
 
-    .section-title {
-        font-size: 13px;
-        margin-bottom: 12px;
-    }
+  .section-title {
+    font-size: 13px;
+    margin-bottom: 12px;
+  }
 
-    .form-row.four-col {
-        grid-template-columns: 1fr;
-    }
+  .form-row.four-col {
+    grid-template-columns: 1fr;
+  }
 
-    .form-row-inner {
-        grid-template-columns: 1fr 70px;
-        gap: 8px;
-    }
+  .form-row-inner {
+    grid-template-columns: 1fr 70px;
+    gap: 8px;
+  }
 
-    .profession-checks {
-        column-gap: 12px;
-        row-gap: 12px;
-    }
+  .profession-checks {
+    column-gap: 12px;
+    row-gap: 12px;
+  }
 
-    .profession-checks label {
-        font-size: 13px;
-    }
+  .profession-checks label {
+    font-size: 13px;
+  }
 
-    .upload-div {
-        padding: 24px 12px;
-    }
+  .upload-div {
+    padding: 24px 12px;
+  }
 
-    .upload-icon {
-        font-size: 28px;
-    }
+  .upload-icon {
+    font-size: 28px;
+  }
 
-    .upload-text {
-        font-size: 10px;
-    }
+  .upload-text {
+    font-size: 10px;
+  }
 
-    .upload-hint {
-        font-size: 8px;
-    }
+  .upload-hint {
+    font-size: 8px;
+  }
 
-    .profile-right-top h2 {
-        font-size: 16px;
-    }
+  .profile-right-top h2 {
+    font-size: 16px;
+  }
 
-    .profile-subtitle {
-        font-size: 12px;
-    }
+  .profile-subtitle {
+    font-size: 12px;
+  }
 
-    .form-input {
-        font-size: 12px;
-        padding: 8px 10px;
-    }
+  .form-input {
+    font-size: 12px;
+    padding: 8px 10px;
+  }
 
-    .btn-save,
-    .btn-cancel {
-        padding: 7px 20px;
-        font-size: 12px;
-    }
+  .btn-save,
+  .btn-cancel {
+    padding: 7px 20px;
+    font-size: 12px;
+  }
 
-    .form-actions {
-        gap: 8px;
-        justify-content: center;
-    }
+  .form-actions {
+    gap: 8px;
+    justify-content: center;
+  }
 }
 /* --1080px to 860px --- */
 @media (min-width: 861px) and (max-width: 1080px) {
+  .profile-layout {
+    gap: 14px;
+  }
 
-    .profile-layout {
-        gap: 14px;
-    }
+  .profile-left {
+    width: 240px;
+    min-width: 240px;
+    padding: 18px 14px;
+  }
 
-    .profile-left {
-        width: 240px;
-        min-width: 240px;
-        padding: 18px 14px;
-    }
+  .profile-info-block {
+    margin-bottom: 16px;
+  }
 
-    .profile-info-block {
-        margin-bottom: 16px;
-    }
+  .profile-name {
+    margin-bottom: 14px;
+  }
 
-    .profile-name {
-        margin-bottom: 14px;
-    }
+  .social-icons {
+    gap: 8px;
+  }
 
-    .social-icons {
-        gap: 8px;
-    }
+  .profile-textarea {
+    margin-bottom: 10px;
+  }
 
-    .profile-textarea {
-        margin-bottom: 10px;
-    }
+  .profile-input {
+    margin-bottom: 10px;
+  }
 
-    .profile-input {
-        margin-bottom: 10px;
-    }
+  .form-row {
+    grid-template-columns: 1fr;
+    gap: 12px;
+    margin-bottom: 12px;
+  }
 
-    .form-row {
-        grid-template-columns: 1fr;
-        gap: 12px;
-        margin-bottom: 12px;
-    }
+  .form-row-inner {
+    grid-template-columns: 1fr 90px;
+    gap: 10px;
+  }
 
-    .form-row-inner {
-        grid-template-columns: 1fr 90px;
-        gap: 10px;
-    }
+  .form-row.four-col {
+    grid-template-columns: 1fr 1fr;
+    gap: 12px;
+  }
 
-    .form-row.four-col {
-        grid-template-columns: 1fr 1fr;
-        gap: 12px;
-    }
+  .form-section {
+    padding: 16px 14px;
+    margin-bottom: 14px;
+  }
 
-    .form-section {
-        padding: 16px 14px;
-        margin-bottom: 14px;
-    }
+  .section-title {
+    font-size: 14px;
+    margin-bottom: 14px;
+  }
 
-    .section-title {
-        font-size: 14px;
-        margin-bottom: 14px;
-    }
+  .upload-div {
+    padding: 32px 14px;
+  }
 
-    .upload-div {
-        padding: 32px 14px;
-    }
+  .upload-text {
+    font-size: 13px;
+  }
 
-    .upload-text {
-        font-size: 13px;
-    }
+  .upload-hint {
+    font-size: 12px;
+  }
 
-    .upload-hint {
-        font-size: 12px;
-    }
+  .profession-section {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 12px;
+  }
 
-    .profession-section {
-        flex-direction: column;
-        align-items: flex-start;
-        gap: 12px;
-    }
+  .profession-checks {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    row-gap: 12px;
+    column-gap: 16px;
+    width: 100%;
+  }
 
-    .profession-checks {
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-        row-gap: 12px;
-        column-gap: 16px;
-        width: 100%;
-    }
+  .form-input {
+    font-size: 13px;
+    padding: 9px 12px;
+  }
 
-    .form-input {
-        font-size: 13px;
-        padding: 9px 12px;
-    }
-
-    .btn-save,
-    .btn-cancel {
-        padding: 8px 32px;
-        font-size: 13px;
-    }
+  .btn-save,
+  .btn-cancel {
+    padding: 8px 32px;
+    font-size: 13px;
+  }
 }
