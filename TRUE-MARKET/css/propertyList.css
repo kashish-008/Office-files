@@ -632,3 +632,19 @@ span.enter {
     flex-direction: column;
   }
 }
+
+.map-card {
+    display: grid;
+    grid-template-columns: 1fr minmax(240px, 360px);
+}
+
+.property-grid.property-grid2 {
+    grid-template-columns: 1fr;
+}
+
+@media (max-width: 1570px){
+  .map-card {
+    display: grid;
+    grid-template-columns: 1fr;
+}
+}
