@@ -235,6 +235,14 @@
   color: #687d92;
 }
 
+textarea.profile-textarea::placeholder {
+  color: #687d92;
+}
+
+.profile-input::placeholder {
+  color: #687d92;
+}
+
 .form-select {
   appearance: none;
   cursor: pointer;
