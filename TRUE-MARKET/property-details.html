@@ -549,32 +549,37 @@
                 <p class="saved-title">10 Comparable Properties</p>
               </div>
 
-              <div class="center-saved">
-                <button class="filter-btn">
-                  <img src="assets/filter.svg" alt="" /> Filters
-                </button>
-                <span class="comp-label">Comp Focus</span>
-                <div class="comp-slider-wrap">
-                  <input
-                    type="range"
-                    class="comp-slider"
-                    min="0"
-                    max="100"
-                    value="80"
-                  />
-                </div>
-              </div>
-
               <div class="right-saved">
+                <div class="toolbar-group">
+                  <button class="filter-btn">
+                    <img src="assets/filter.svg" alt="" /> Filters
+                  </button>
+
+                  <span class="comp-label">Comp Focus</span>
+                  <div class="comp-slider-wrap">
+                    <input
+                      type="range"
+                      class="comp-slider"
+                      min="0"
+                      max="100"
+                      value="80"
+                    />
+                  </div>
+                </div>
+
                 <div class="right-opt">
                   <select class="viewed-select">
                     <option>Sales Status</option>
-                    <option>Active</option>
-                    <option>Sold</option>
-                    <option>History</option>
+                    <option>Viewed</option>
+                    <option>Unviewed</option>
                   </select>
 
-                  <span class="columns-btn">Columns 25</span>
+                  <button class="columns-btn">Columns</button>
+
+                  <select class="perpage-num">
+                    <option>25</option>
+                    <option>50</option>
+                  </select>
                 </div>
               </div>
             </div>

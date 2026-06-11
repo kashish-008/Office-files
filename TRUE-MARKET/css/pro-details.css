@@ -644,7 +644,7 @@ aside.details-sidebar .side-card:nth-child(3) h4 {
 }
 
 td.price.price2 {
-  color: #292B2E !important;
+  color: #292b2e !important;
 }
 
 .thumb.thumb2 {
@@ -652,7 +652,7 @@ td.price.price2 {
   height: 72px;
 }
 
-.saved-table tbody td{
+.saved-table tbody td {
   text-align: center !important;
 }
 
@@ -660,9 +660,45 @@ td.price.price2 {
   text-align: center !important;
 }
 
-thead tr th:nth-child(2){
+thead tr th:nth-child(2) {
   text-align: left !important;
 }
+span.comp-label {
+    color: #52565C;
+    font-size: 14px;
+    letter-spacing: 0px;
+}
+
+.comp-slider {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 100%;
+  height: 6px;
+  background: #C2C2C2; 
+  border-radius: 3px;
+  outline: none;
+}
+
+.comp-slider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  background: #00a651; 
+  cursor: pointer;
+}
+
+
+.comp-slider::-moz-range-thumb {
+  width: 16px;
+  height: 16px;
+  border: none;
+  border-radius: 50%;
+  background: #00a651; 
+  cursor: pointer;
+}
+
 /* ===== Responsive ===== */
 
 @media (max-width: 1199px) {
@@ -701,3 +737,4 @@ thead tr th:nth-child(2){
     grid-template-columns: 1fr;
   }
 }
+

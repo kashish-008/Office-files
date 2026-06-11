@@ -25,6 +25,7 @@ document.querySelectorAll(".dual-range-slider").forEach((slider) => {
   updateSlider();
 });
 
+// ----------------------
 
 const slider = document.getElementById("confidenceSlider");
 const valueText = document.getElementById("confidenceValue");
@@ -52,4 +53,17 @@ updateConfidence(slider.value);
 slider.addEventListener("input", function () {
   updateConfidence(this.value);
 });
+
+// ---------------------
+
+// Changed selector from .comp-slider to .corp-slider
+const slider = document.querySelector('.corp-slider');
+
+function updateSliderBackground() {
+  const percentage = ((slider.value - slider.min) / (slider.max - slider.min)) * 100;
+  slider.style.background = `linear-gradient(to right, #00a651 ${percentage}%, #C2C2C2 ${percentage}%)`;
+}
+
+slider.addEventListener('input', updateSliderBackground);
+updateSliderBackground();
 
