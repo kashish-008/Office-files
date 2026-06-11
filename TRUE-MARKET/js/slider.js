@@ -52,3 +52,4 @@ updateConfidence(slider.value);
 slider.addEventListener("input", function () {
   updateConfidence(this.value);
 });
+

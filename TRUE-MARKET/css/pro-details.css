@@ -222,7 +222,7 @@
   gap: 8px;
   color: #292b2e;
   font-size: 14px;
-  font-family: 'Manrope', sans-serif;
+  font-family: "Manrope", sans-serif;
 }
 
 .switch {
@@ -264,9 +264,8 @@
   transition: 0.2s;
 }
 
-
 .switch input:checked + .slider {
-  background-color: #00a651; 
+  background-color: #00a651;
   border-color: #00a651;
 }
 
@@ -644,6 +643,26 @@ aside.details-sidebar .side-card:nth-child(3) h4 {
   margin: 0;
 }
 
+td.price.price2 {
+  color: #292B2E !important;
+}
+
+.thumb.thumb2 {
+  width: 72px;
+  height: 72px;
+}
+
+.saved-table tbody td{
+  text-align: center !important;
+}
+
+.saved-table thead th {
+  text-align: center !important;
+}
+
+thead tr th:nth-child(2){
+  text-align: left !important;
+}
 /* ===== Responsive ===== */
 
 @media (max-width: 1199px) {
