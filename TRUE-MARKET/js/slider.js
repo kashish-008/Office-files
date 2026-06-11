@@ -24,3 +24,31 @@ document.querySelectorAll(".dual-range-slider").forEach((slider) => {
   slider.addEventListener("input", updateSlider);
   updateSlider();
 });
+
+
+const slider = document.getElementById("confidenceSlider");
+const valueText = document.getElementById("confidenceValue");
+const progressCircle = document.querySelector(".circle-progress");
+const rangeFill = document.getElementById("rangeFill");
+
+const radius = 20;
+const circumference = 2 * Math.PI * radius;
+
+progressCircle.style.strokeDasharray = circumference;
+
+function updateConfidence(value) {
+  valueText.textContent = value + "%";
+
+  const offset =
+    circumference - (value / 100) * circumference;
+
+  progressCircle.style.strokeDashoffset = offset;
+
+  rangeFill.style.width = value + "%";
+}
+
+updateConfidence(slider.value);
+
+slider.addEventListener("input", function () {
+  updateConfidence(this.value);
+});

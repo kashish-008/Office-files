@@ -76,7 +76,9 @@
 }
 
 .viewed-select {
+  flex: 0 1 313px;
   max-width: 313px;
+  min-width: 0;
   width: 100%;
   appearance: none;
 }
@@ -446,10 +448,14 @@ td.price.price2 {
   }
   .saved-title {
     white-space: wrap;
-}
+  }
 }
 
 .right-opt {
   display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  flex: 1 1 auto;
+  min-width: 0;
   gap: 10px;
 }
