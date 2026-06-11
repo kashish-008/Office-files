@@ -225,7 +225,6 @@
   font-family: 'Manrope', sans-serif;
 }
 
-/* 1. Toggle Switch Container */
 .switch {
   position: relative;
   display: inline-block;
@@ -234,14 +233,12 @@
   margin-left: 4px;
 }
 
-/* 2. Hide Native Checkbox */
 .switch input {
   opacity: 0;
   width: 0;
   height: 0;
 }
 
-/* 3. The Toggle Track */
 .slider {
   position: absolute;
   cursor: pointer;
@@ -255,7 +252,6 @@
   transition: 0.2s;
 }
 
-/* 4. The Sliding Circle */
 .slider::before {
   position: absolute;
   content: "";
@@ -268,9 +264,9 @@
   transition: 0.2s;
 }
 
-/* 5. Checked States (Optional Color Change) */
+
 .switch input:checked + .slider {
-  background-color: #00a651; /* Turns green when active, match with your button */
+  background-color: #00a651; 
   border-color: #00a651;
 }
 
