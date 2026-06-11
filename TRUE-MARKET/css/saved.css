@@ -426,8 +426,9 @@ td.price.price2 {
 }
 
 @media (max-width: 1068px) {
-  .filter-btn {
+  .filter-btn, .viewed-select {
     flex: 0;
+    justify-content: center;
   }
 }
 

@@ -27,7 +27,7 @@ document.querySelectorAll(".dual-range-slider").forEach((slider) => {
 
 // ----------------------
 
-const slider = document.getElementById("confidenceSlider");
+const confidenceSlider = document.getElementById("confidenceSlider");
 const valueText = document.getElementById("confidenceValue");
 const progressCircle = document.querySelector(".circle-progress");
 const rangeFill = document.getElementById("rangeFill");
@@ -48,22 +48,25 @@ function updateConfidence(value) {
   rangeFill.style.width = value + "%";
 }
 
-updateConfidence(slider.value);
+updateConfidence(confidenceSlider.value);
 
-slider.addEventListener("input", function () {
+confidenceSlider.addEventListener("input", function () {
   updateConfidence(this.value);
 });
 
 // ---------------------
 
-// Changed selector from .comp-slider to .corp-slider
-const slider = document.querySelector('.corp-slider');
+const compSlider = document.querySelector('.comp-slider');
 
 function updateSliderBackground() {
-  const percentage = ((slider.value - slider.min) / (slider.max - slider.min)) * 100;
-  slider.style.background = `linear-gradient(to right, #00a651 ${percentage}%, #C2C2C2 ${percentage}%)`;
+  if (!compSlider) return;
+
+  const percentage = ((compSlider.value - compSlider.min) / (compSlider.max - compSlider.min)) * 100;
+  compSlider.style.background = `linear-gradient(to right, #00a651 ${percentage}%, #C2C2C2 ${percentage}%)`;
 }
 
-slider.addEventListener('input', updateSliderBackground);
-updateSliderBackground();
+if (compSlider) {
+  compSlider.addEventListener('input', updateSliderBackground);
+  updateSliderBackground();
+}
 
