@@ -159,7 +159,7 @@
   height: 37px;
   border: 1px solid #e8edf1;
   border-radius: 6px;
-  padding: 0 40px 0 16px; 
+  padding: 0 40px 0 16px;
   cursor: pointer;
   box-sizing: border-box;
   outline: none;
@@ -524,12 +524,12 @@ aside.details-sidebar .side-card:nth-child(3) h4 {
   height: 100%;
   background: #28a745;
   border-radius: 20px;
-  position: relative; 
+  position: relative;
 }
 
 .range-thumb {
   position: absolute;
-  right: -6px;      
+  right: -6px;
   top: 50%;
   transform: translateY(-50%);
   width: 20px;
@@ -761,5 +761,16 @@ span.comp-label {
   .map-card iframe {
     height: 300px;
   }
+  .value-row span,
+  .value-row strong {
+    font-size: 15px;
+  }
+  .market-item p {
+    padding: 2px 0;
+    font-size: 15px;
+  }
+  .market-item img {
+    width: 60px;
+    height: 60px;
+  }
 }
-
