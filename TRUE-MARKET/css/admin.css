@@ -822,19 +822,16 @@ button {
 
 /* -----dropdown-css---- */
 
-/* Container context setup */
 .user-dropdown-container {
   position: relative;
   display: inline-block;
   font-family: sans-serif;
 }
 
-/* Hide the technical checkbox indicator completely */
 .dropdown-checkbox {
   display: none;
 }
 
-/* Trigger panel layout alignment */
 .user-info-trigger {
   display: flex;
   align-items: baseline;
@@ -842,20 +839,17 @@ button {
   cursor: pointer;
   user-select: none;
   position: relative;
-  z-index: 1002; /* Sits cleanly above the click backdrop */
+  z-index: 1002; 
 }
 
-/* Base structural rules for rotating your arrow icon */
 .dropdown-arrow {
   transition: transform 0.2s ease;
 }
 
-/* ACTION: When checked, rotate the arrow 180 degrees smoothly */
 .dropdown-checkbox:checked + .user-info-trigger .dropdown-arrow {
   transform: rotate(180deg);
 }
 
-/* Structural base for hidden options menu layout */
 .dropdown-menu {
   display: none;
   position: absolute;
@@ -867,15 +861,13 @@ button {
   box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
   border-radius: 6px;
   overflow: hidden;
-  z-index: 1003; /* Sits on the very top layer */
+  z-index: 1003; 
 }
 
-/* ACTION: When checked, instantly display the menu links box */
 .dropdown-checkbox:checked ~ .dropdown-menu {
   display: block;
 }
 
-/* Full screen outside-click interceptor overlay overlay */
 .dropdown-overlay {
   display: none;
   position: fixed;
@@ -883,17 +875,15 @@ button {
   left: 0;
   width: 100vw;
   height: 100vh;
-  z-index: 1001; /* Layer drops behind trigger but covers page body */
+  z-index: 1001; 
   background: transparent;
   cursor: default;
 }
 
-/* ACTION: Show backdrop interceptor layer only when dropdown opens */
 .dropdown-checkbox:checked ~ .dropdown-overlay {
   display: block;
 }
 
-/* Presentation links padding and interactions */
 .dropdown-item {
   display: block;
   padding: 10px 14px;
