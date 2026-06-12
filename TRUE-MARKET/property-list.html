@@ -124,9 +124,30 @@
               <div class="avatar">
                 <img src="./img/AlexThompson.png" alt="profile-photo" />
               </div>
-              <div class="user-info">
-                <div class="name f-14">Alex Thompson</div>
-                <div class="role">Admin</div>
+              <div class="user-dropdown-container">
+                <input
+                  type="checkbox"
+                  id="dropdown-toggle"
+                  class="dropdown-checkbox"
+                />
+
+                <label for="dropdown-toggle" class="user-info-trigger">
+                  <div class="user-info">
+                    <div class="name f-14">Alex Thompson</div>
+                    <div class="role">Admin</div>
+                  </div>
+
+                  <img src="assets/downn.svg" class="dropdown-arrow" />
+                </label>
+
+                <div class="dropdown-menu">
+                  <a href="user-profile.html" class="dropdown-item"
+                    >User Profile</a
+                  >
+                  <a href="#" class="dropdown-item logout-btn">Logout</a>
+                </div>
+
+                <label for="dropdown-toggle" class="dropdown-overlay"></label>
               </div>
             </div>
           </div>
