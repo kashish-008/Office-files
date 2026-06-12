@@ -32,27 +32,25 @@ const valueText = document.getElementById("confidenceValue");
 const progressCircle = document.querySelector(".circle-progress");
 const rangeFill = document.getElementById("rangeFill");
 
-const radius = 20;
-const circumference = 2 * Math.PI * radius;
+if (confidenceSlider && valueText && progressCircle && rangeFill) {
+  const radius = 20;
+  const circumference = 2 * Math.PI * radius;
 
-progressCircle.style.strokeDasharray = circumference;
+  progressCircle.style.strokeDasharray = circumference;
 
-function updateConfidence(value) {
-  valueText.textContent = value + "%";
+  function updateConfidence(value) {
+    valueText.textContent = value + "%";
+    const offset = circumference - (value / 100) * circumference;
+    progressCircle.style.strokeDashoffset = offset;
+    rangeFill.style.width = value + "%";
+  }
 
-  const offset =
-    circumference - (value / 100) * circumference;
+  updateConfidence(confidenceSlider.value);
 
-  progressCircle.style.strokeDashoffset = offset;
-
-  rangeFill.style.width = value + "%";
+  confidenceSlider.addEventListener("input", function () {
+    updateConfidence(this.value);
+  });
 }
-
-updateConfidence(confidenceSlider.value);
-
-confidenceSlider.addEventListener("input", function () {
-  updateConfidence(this.value);
-});
 
 // ---------------------
 
@@ -70,3 +68,13 @@ if (compSlider) {
   updateSliderBackground();
 }
 
+// ---------------------
+
+// Make horizontal table scrollable by drag
+const el = document.querySelector(".table-responsive");
+let down = false, x, left;
+
+el.addEventListener("mousedown", e => { down = true; x = e.pageX - el.offsetLeft; left = el.scrollLeft; });
+el.addEventListener("mouseleave", () => down = false);
+el.addEventListener("mouseup", () => down = false);
+el.addEventListener("mousemove", e => { if (!down) return; e.preventDefault(); el.scrollLeft = left - (e.pageX - el.offsetLeft - x) * 1.5; });

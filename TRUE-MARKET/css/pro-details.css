@@ -159,30 +159,23 @@
   height: 37px;
   border: 1px solid #e8edf1;
   border-radius: 6px;
-  padding: 0 40px 0 16px; /* Right padding leaves space for arrow */
+  padding: 0 40px 0 16px; 
   cursor: pointer;
   box-sizing: border-box;
   outline: none;
-
-  /* Font styles applied directly to select */
   font-size: 14px;
   color: #687d92;
   font-weight: 400;
   font-family: "Manrope", sans-serif;
-
-  /* Hides browser default arrow */
   appearance: none;
   -webkit-appearance: none;
   -moz-appearance: none;
-
-  /* Embeds your arrow SVG path */
   background-color: #ffffff;
   background-image: url("../assets/down-arrow.svg");
   background-repeat: no-repeat;
   background-position: calc(100% - 16px) center;
 }
 
-/* Optional styling for inside dropdown */
 .detail-accordion option {
   color: #2d3748;
   background-color: #ffffff;
@@ -527,6 +520,26 @@ aside.details-sidebar .side-card:nth-child(3) h4 {
   cursor: pointer;
 }
 
+.range-fill {
+  height: 100%;
+  background: #28a745;
+  border-radius: 20px;
+  position: relative; 
+}
+
+.range-thumb {
+  position: absolute;
+  right: -6px;      
+  top: 50%;
+  transform: translateY(-50%);
+  width: 20px;
+  height: 20px;
+  background: #28a745;
+  border: 2px solid #fff;
+  border-radius: 50%;
+  pointer-events: none;
+}
+
 /* Days on Market */
 
 .days-market {
@@ -749,3 +762,4 @@ span.comp-label {
     height: 300px;
   }
 }
+

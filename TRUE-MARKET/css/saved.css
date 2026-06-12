@@ -102,17 +102,6 @@
   margin: 0 4px;
 }
 
-/* For mobile responsiveness */
-@media (max-width: 700px) {
-  .saved-toolbar {
-    flex-direction: column;
-    align-items: stretch;
-  }
-  .toolbar-group {
-    justify-content: flex-start;
-  }
-}
-
 .table-wrap {
   width: 100%;
   background: #fff;
@@ -452,6 +441,17 @@ td.price.price2 {
   }
 }
 
+/* For mobile responsiveness */
+@media (max-width: 700px) {
+  .saved-toolbar {
+    flex-direction: column;
+    align-items: stretch;
+  }
+  .toolbar-group {
+    justify-content: flex-start;
+  }
+}
+
 .right-opt {
   display: flex;
   align-items: center;
@@ -459,4 +459,40 @@ td.price.price2 {
   flex: 1 1 auto;
   min-width: 0;
   gap: 10px;
+}
+
+/* horizontal scroll */
+.saved-table,
+.saved-table * {
+  user-select: none; 
+  -webkit-user-select: none; 
+  -moz-user-select: none; 
+  -ms-user-select: none; 
+}
+
+.table-responsive.dragging {
+  cursor: grabbing;
+}
+
+.table-responsive {
+  cursor: grab;
+  overflow-x: auto;
+  scroll-behavior: smooth;
+}
+
+.table-responsive:active {
+  cursor: grabbing;
+}
+
+.saved-table,
+.saved-table * {
+  user-select: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+}
+
+.table-responsive {
+  overflow-x: auto;
+  cursor: default; 
 }
