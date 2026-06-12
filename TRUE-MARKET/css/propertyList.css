@@ -560,6 +560,7 @@ span.enter {
   align-items: center;
   justify-content: space-between;
   padding: 20px 20px 0 20px;
+  background: #fcfcfd;
 }
 
 .property-price {
@@ -579,6 +580,7 @@ span.enter {
   text-decoration: none;
   font-size: 12px;
   font-family: Manrope;
+  line-height: 1;
 }
 
 .view {
@@ -656,6 +658,12 @@ span.enter {
   .property-features span {
     gap: 0;
     flex-direction: column;
+  }
+  .abc {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
   }
 }
 
