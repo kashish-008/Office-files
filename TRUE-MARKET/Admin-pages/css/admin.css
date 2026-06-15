@@ -908,3 +908,8 @@ button {
   border-top: 1px solid #f8fafc;
   padding-top: 30px;
 }
+
+.activity-text.f-20 {
+  font-weight: 600;
+  color: #001c3a;
+}
