@@ -903,3 +903,8 @@ button {
   color: #dc3545;
   border-top: 1px solid #eeeeee;
 }
+
+.sidebar-bottom {
+  border-top: 1px solid #f8fafc;
+  padding-top: 30px;
+}
