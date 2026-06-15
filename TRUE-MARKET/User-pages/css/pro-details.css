@@ -15,6 +15,7 @@
   flex-wrap: wrap;
   gap: 16px;
   margin-bottom: 26px;
+  font-weight: 400;
 }
 
 .meta-detail {
@@ -61,7 +62,7 @@
 .propertySwiper .swiper-slide img {
   width: 100%;
   height: 500px;
-  object-fit: cover;
+  /* object-fit: cover; */
   display: block;
 }
 
@@ -128,7 +129,7 @@
   padding: 5px 11px;
   border: 1px solid #e1e7ef;
   border-radius: 6px;
-  font-size: 14px;
+  font-size: 11px;
   font-weight: 400;
   color: #52565c;
 }
@@ -144,6 +145,7 @@
   font-size: 14px;
   font-weight: 400;
   color: #7b8189;
+  line-height: 1.8;
 }
 
 /* ===== Accordions ===== */
@@ -215,7 +217,7 @@
   align-items: center;
   gap: 8px;
   color: #292b2e;
-  font-size: 14px;
+  font-size: 12px;
   font-family: "Manrope", sans-serif;
 }
 
@@ -277,7 +279,7 @@
 
 .map-card iframe {
   width: 100%;
-  height: 600px;
+  height: 734px;
   border: 0;
 }
 
@@ -318,7 +320,7 @@ aside.details-sidebar .side-card:nth-child(3) h4 {
 
 .side-card-head h4 {
   margin: 0;
-  font-size: 16px;
+  font-size: 20px;
   font-weight: 500;
   color: #292b2e;
 }
@@ -400,6 +402,38 @@ aside.details-sidebar .side-card:nth-child(3) h4 {
   font-weight: 400;
 }
 
+.note textarea {
+  color: #333333;
+  font-size: 16px;
+  border: 1px solid #e8edf1;
+  border-radius: 6px;
+  font-weight: 400;
+  font-family: inter, "Arial Narrow Bold", sans-serif;
+  padding: 16px;
+  width: 100%;
+  min-height: 100px;
+  box-sizing: border-box;
+  box-shadow: 0px 1px 2px 0px #0000000d;
+  resize: vertical;
+}
+
+.note textarea::placeholder {
+  color: #687d92;
+  font-size: 16px;
+  opacity: 1;
+}
+
+.note textarea:focus {
+  outline: none;
+  border-color: #cbd5e1;
+}
+
+.soon {
+  max-width: 380px;
+  height: 287px;
+  margin: auto;
+}
+
 .analysis-btn {
   width: 100%;
   height: 42px;
@@ -411,6 +445,12 @@ aside.details-sidebar .side-card:nth-child(3) h4 {
   cursor: pointer;
   font-family: Manrope;
   font-weight: 400;
+}
+
+.analyzer-btn {
+  margin-top: 25px;
+  width: 100%;
+  justify-content: center;
 }
 
 /* ===== Analysis ===== */
@@ -446,6 +486,7 @@ aside.details-sidebar .side-card:nth-child(3) h4 {
 .analysis-box strong {
   font-size: 20px;
   font-weight: 600;
+  color: #292B2E;
 }
 
 .confidence-wrap {
@@ -662,8 +703,8 @@ td.price.price2 {
 }
 
 .thumb.thumb2 {
-  width: 72px;
-  height: 72px;
+  width: 52px;
+  height: 52px;
 }
 
 .saved-table tbody td {
@@ -775,7 +816,12 @@ span.comp-label {
   }
 }
 
-.swiper-button-next:after, .swiper-button-prev:after {
+.swiper-button-next:after,
+.swiper-button-prev:after {
   font-weight: 900;
   font-size: 16px !important;
+}
+
+main.content.pro-details-content .saved-table tbody td {
+    padding: 19px 16px;
 }
