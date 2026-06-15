@@ -812,3 +812,8 @@ span.comp-label {
     height: 60px;
   }
 }
+
+.swiper-button-next:after, .swiper-button-prev:after {
+  font-weight: 900;
+  font-size: 16px !important;
+}
