@@ -324,7 +324,7 @@ td.price.price2 {
   border: 1px solid #e2e6ec;
   border-radius: 6px;
   background: #fff;
-  color: #6d7685;
+  color: #687d92;
   outline: none;
   max-width: 62px;
   width: 100%;
@@ -349,7 +349,7 @@ td.price.price2 {
   padding: 0 10px;
   border: 0;
   background: #fff;
-  color: #657083;
+  color: #424e5a;
   cursor: pointer;
   border-right: 1px solid #e2e6ec;
   transition:
@@ -415,7 +415,8 @@ td.price.price2 {
 }
 
 @media (max-width: 1068px) {
-  .filter-btn, .viewed-select {
+  .filter-btn,
+  .viewed-select {
     flex: 0;
     justify-content: center;
   }
@@ -464,10 +465,10 @@ td.price.price2 {
 /* horizontal scroll */
 .saved-table,
 .saved-table * {
-  user-select: none; 
-  -webkit-user-select: none; 
-  -moz-user-select: none; 
-  -ms-user-select: none; 
+  user-select: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
 }
 
 .table-responsive.dragging {
@@ -494,5 +495,5 @@ td.price.price2 {
 
 .table-responsive {
   overflow-x: auto;
-  cursor: default; 
+  cursor: default;
 }

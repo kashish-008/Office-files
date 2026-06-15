@@ -303,7 +303,7 @@ span.enter {
 
 .bedroom-buttons button {
   height: 42px;
-  padding: 9px 17px;
+  padding: 9px 15px;
   border: 1px solid #0a4773;
   background: #fff;
   border-radius: 6px;
@@ -394,7 +394,7 @@ span.enter {
 
 .map-card {
   display: grid;
-  grid-template-columns: 1fr minmax(240px, 360px);
+  grid-template-columns: 1fr minmax(240px, 371px);
   gap: 24px;
 }
 
@@ -446,13 +446,13 @@ span.enter {
 
 .property-image {
   position: relative;
-  height: 230px;
+  height: 246px;
 }
 
 .property-image img {
   width: 100%;
   height: 100%;
-  object-fit: cover;
+  /* object-fit: cover; */
 }
 
 .bookmark {
@@ -518,7 +518,7 @@ span.enter {
 }
 
 .property-body p {
-  color: #6b7280;
+  color: #687d92;
   font-family: Figtree;
 }
 
@@ -572,6 +572,7 @@ span.enter {
   font-size: 12px;
   font-weight: 700;
   font-family: Manrope;
+  color: #323a46;
 }
 
 .property-footer a {
@@ -690,8 +691,36 @@ span.enter {
   }
 }
 
+@media (max-width: 1364px){
+    .abc {
+    padding: 5px 18px;
+  }
+}
 .abc {
   display: flex;
+  flex-wrap: wrap;
   align-items: center;
-  gap: 30px;
+  gap: 5px 30px;
+}
+
+.br-filter {
+  display: flex;
+  background: #ebeff5;
+  border-radius: 4px;
+  padding: 1px 6px;
+  font-size: 12px;
+  font-weight: 600;
+  gap: 4px;
+  font-family: Manrope;
+  color: #7b8189;
+}
+.br-filter img {
+  padding-top: 1.8px;
+}
+
+.range-values span {
+    color: #687D92;
+    font-size: 14px;
+    font-family: 'Figtree';
+    font-weight: 600;
 }

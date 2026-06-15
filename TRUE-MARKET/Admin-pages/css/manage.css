@@ -22,6 +22,7 @@
 
 .right-button {
   flex-shrink: 0;
+  padding: 8px 18px;
 }
 
 .manage-user-cards {
@@ -50,6 +51,7 @@
   color: var(--light-grey);
   font-weight: 700;
   letter-spacing: 1px;
+  font-size: 10px;
 }
 
 .manage-user-card p {
@@ -249,22 +251,21 @@
 .pagination {
   display: flex;
   align-items: center;
-  border: 1px solid #EAEDF1;
+  border: 1px solid #eaedf1;
   border-radius: 6px;
   font-family: figtree;
-
 }
 
 .page-btn {
   font-size: 14px;
-  color: #424E5A;
+  color: #424e5a;
   text-decoration: none;
   padding: 7px 12px;
   font-weight: 400;
 }
 
 .page-btn:hover {
- background: #f4f7fb;
+  background: #f4f7fb;
 }
 
 .page-num {
@@ -274,18 +275,18 @@
   align-items: center;
   justify-content: center;
   font-size: 14px;
-  color: #424E5A;
+  color: #424e5a;
   text-decoration: none;
   font-weight: 400;
 }
 
 .page-num:hover {
-  border-color: #28A745;
-  color: #28A745;
+  border-color: #28a745;
+  color: #28a745;
 }
 
 .page-num.active {
-  background: #28A745;
+  background: #28a745;
   color: #fff;
 }
 
@@ -314,7 +315,7 @@
   }
 
   .pagination {
-   margin: auto;
+    margin: auto;
   }
 
   .page-btn {
@@ -330,7 +331,7 @@
 }
 
 @media (max-width: 1100px) {
-  .manage-user-cards{
+  .manage-user-cards {
     grid-template-columns: repeat(2, 1fr);
   }
 }
@@ -356,7 +357,7 @@
 }
 
 @media (max-width: 480px) {
-   .manage-user-cards{
+  .manage-user-cards {
     grid-template-columns: 1fr;
   }
   .manage-user-top {
@@ -380,5 +381,3 @@
     font-size: 14px;
   }
 }
-
-
