@@ -134,9 +134,10 @@
 }
 
 .profile-subtitle {
-  font-weight: 400;
-  color: #7b8189;
+  color: #5d7186;
   margin-top: 6px;
+  font-size: 15px;
+  font-family: Manrope;
 }
 
 /* ---Form Sections-- */
@@ -781,5 +782,5 @@ textarea.profile-textarea::placeholder {
 }
 
 .profile-left .profile-info-block:nth-of-type(6) p {
-    font-size: 16px;
+  font-size: 16px;
 }

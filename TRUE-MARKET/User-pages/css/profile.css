@@ -134,9 +134,10 @@
 }
 
 .profile-subtitle {
-  font-weight: 400;
-  color: #7b8189;
+  color: #5D7186;
   margin-top: 6px;
+  font-size: 15px;
+  font-family: Manrope;
 }
 
 /* ---Form Sections-- */

@@ -316,6 +316,8 @@ aside.details-sidebar .side-card:nth-child(3) h4 {
   padding: 16px 20px;
   border: 1px solid#EBEFF5;
   color: #292b2e;
+  display: flex;
+  justify-content: space-between;
 }
 
 .side-card-head h4 {
@@ -351,9 +353,10 @@ aside.details-sidebar .side-card:nth-child(3) h4 {
 }
 
 .market-tag {
-  margin: 0 20px 20px;
+  margin: 0 25px 20px;
   background: #28a745;
   color: #fff;
+  max-width: 450px;
   width: 100%;
   text-align: center;
   padding: 8px;
@@ -380,11 +383,13 @@ aside.details-sidebar .side-card:nth-child(3) h4 {
 
 .market-item h5 {
   font-family: Manrope;
-  font-weight: 500;
+  font-weight: 600;
+  font-size: 16px;
+  color: #292B2E;
 }
 
 .market-item p {
-  color: #667085;
+  color: #52565C;
   padding: 8px 0;
   font-weight: 400;
 }
@@ -445,6 +450,7 @@ aside.details-sidebar .side-card:nth-child(3) h4 {
   cursor: pointer;
   font-family: Manrope;
   font-weight: 400;
+  font-size: 15px;
 }
 
 .analyzer-btn {
@@ -486,7 +492,7 @@ aside.details-sidebar .side-card:nth-child(3) h4 {
 .analysis-box strong {
   font-size: 20px;
   font-weight: 600;
-  color: #292B2E;
+  color: #292b2e;
 }
 
 .confidence-wrap {
@@ -755,10 +761,10 @@ span.comp-label {
 
 /* ===== Responsive ===== */
 
-@media (max-width: 1360px){
+@media (max-width: 1360px) {
   .map-card iframe {
     height: 534px;
-}
+  }
 }
 
 @media (max-width: 1199px) {
@@ -829,13 +835,14 @@ span.comp-label {
 }
 
 main.content.pro-details-content .saved-table tbody td {
-    padding: 19px 16px;
+  padding: 19px 16px;
 }
 
 main.content.pro-details-content .address p {
-    font-weight: 400;
+  font-weight: 400;
 }
 
 button.draw {
-    background: #28A745;
+  background: #28a745;
+  color: #fff;
 }
