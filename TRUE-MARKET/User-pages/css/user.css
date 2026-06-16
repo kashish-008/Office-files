@@ -4,7 +4,7 @@
 
 .user-content .saved-top,
 .user-content .recent-search {
-  max-width: 1217px;
+  max-width: 1257px;
   margin: auto;
 }
 
@@ -54,7 +54,7 @@
 
 .user-content .recent-search-top h3 {
   font-weight: 600;
-  font-style: 24px;
+  font-size: 24px;
   color: #292b2e;
 }
 
