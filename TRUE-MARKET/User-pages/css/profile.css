@@ -56,6 +56,7 @@
   color: var(--grey-text);
   font-size: 17px;
   margin-bottom: 18px;
+  font-family: Manrope;
 }
 
 .info-value {
@@ -134,7 +135,7 @@
 }
 
 .profile-subtitle {
-  color: #5D7186;
+  color: #5d7186;
   margin-top: 6px;
   font-size: 15px;
   font-family: Manrope;
@@ -194,6 +195,7 @@
   font-weight: 400;
   color: #687d92;
   font-family: Figtree;
+  font-size: 13px;
 }
 
 /* --- Form Row -- */
@@ -782,5 +784,6 @@ textarea.profile-textarea::placeholder {
 }
 
 .profile-left .profile-info-block:nth-of-type(6) p {
-    font-size: 16px;
+  font-size: 16px;
+  font-weight: 600;
 }
