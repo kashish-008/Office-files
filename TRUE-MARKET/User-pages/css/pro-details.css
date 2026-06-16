@@ -835,3 +835,7 @@ main.content.pro-details-content .saved-table tbody td {
 main.content.pro-details-content .address p {
     font-weight: 400;
 }
+
+button.draw {
+    background: #28A745;
+}
