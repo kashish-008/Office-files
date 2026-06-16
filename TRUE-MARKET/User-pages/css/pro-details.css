@@ -26,7 +26,7 @@
 }
 
 .meta-detail p {
-  font-size: 14px;
+  font-size: 16px;
   font-weight: 400;
   color: #292b2e;
 }
@@ -218,7 +218,7 @@
   gap: 8px;
   color: #292b2e;
   font-size: 12px;
-  font-family: "Manrope", sans-serif;
+  font-weight: 400;
 }
 
 .switch {
@@ -755,6 +755,12 @@ span.comp-label {
 
 /* ===== Responsive ===== */
 
+@media (max-width: 1360px){
+  .map-card iframe {
+    height: 534px;
+}
+}
+
 @media (max-width: 1199px) {
   .pro-details-grid {
     grid-template-columns: 1fr;
@@ -824,4 +830,8 @@ span.comp-label {
 
 main.content.pro-details-content .saved-table tbody td {
     padding: 19px 16px;
+}
+
+main.content.pro-details-content .address p {
+    font-weight: 400;
 }

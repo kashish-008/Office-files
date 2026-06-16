@@ -216,7 +216,7 @@ td.price.price2 {
 
 .address {
   display: flex;
-  flex-direction: column;
+  flex-direction: column;            
   gap: 3px;
   color: #3f4654;
   line-height: 1.35;

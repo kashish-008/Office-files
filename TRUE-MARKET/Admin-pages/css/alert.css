@@ -72,7 +72,7 @@ table.saved-table.alert-table tr th span {
   margin: 0;
   font-size: 24px;
   font-weight: 600;
-  color: #292B2E;
+  color: #292b2e;
 }
 
 .recent-search .property-grid {
@@ -83,6 +83,12 @@ table.saved-table.alert-table tr th span {
 
 .recent-search .property-card {
   width: 100%;
+}
+
+@media (max-width: 1400px) {
+  main.content.alert-content .abc {
+    gap: 5px 2px;
+  }
 }
 
 @media (max-width: 1200px) {
@@ -144,4 +150,3 @@ table.saved-table.alert-table tr th span {
   transform: translateY(-50%);
   pointer-events: none;
 }
-
