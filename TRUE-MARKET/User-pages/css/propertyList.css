@@ -724,3 +724,7 @@ span.enter {
     font-family: 'Figtree';
     font-weight: 600;
 }
+
+.filter-group input::placeholder {
+  color: #687D92; 
+} 

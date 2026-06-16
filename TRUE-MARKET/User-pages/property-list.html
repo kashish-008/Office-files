@@ -151,12 +151,19 @@
         <main class="content property-content">
           <div class="property-search-page">
             <div class="property-search-header">
-              <h1 class="f-24">Property Search Las Vegas</h1>
+              <h1 class="f-24">Property Search</h1>
               <div class="breadcrumb">
-                <span>PROPERTIES</span>
+                <span>SEARCH FILTERS</span>
                 <span class="separator"
                   ><img src="assets/right.svg" alt=""
                 /></span>
+                <div class="br-filter">
+                  <div>
+                    <p>$4000 - $7000</p>
+                  </div>
+
+                  <div><img src="assets/close-circle-line.svg" alt="" /></div>
+                </div>
               </div>
             </div>
 
@@ -172,7 +179,10 @@
                   <!-- Location -->
                   <div class="filter-group">
                     <label class="f-14">Properties Location</label>
-                    <select>
+                    <select class="bulk-btn">
+                      <option disabled selected hidden>
+                        Address or City or State or Zip
+                      </option>
                       <option>Dallas, Texas</option>
                       <option>San Jose, California</option>
                       <option>Jacksonville, Florida</option>
@@ -299,45 +309,25 @@
                   <!-- Listing Type -->
                   <div class="filter-group">
                     <label>Listing Type:</label>
-                    <div class="checkbox-grid">
-                      <label>
-                        <input type="checkbox" />
-                        For Rent
-                      </label>
-
-                      <label>
-                        <input type="checkbox" />
-                        For Sale
-                      </label>
-                    </div>
+                    <select class="bulk-btn">
+                      <option>All</option>
+                      <option>For Sale</option>
+                      <option>For Rent</option>
+                    </select>
                   </div>
 
                   <!-- Property Type -->
                   <div class="filter-group">
                     <label>Properties Type :</label>
 
-                    <div class="checkbox-grid">
-                      <label>
-                        <input type="checkbox" />
-                        All Properties
-                      </label>
-                      <label>
-                        <input type="checkbox" />
-                        Duplex
-                      </label>
-                      <label>
-                        <input type="checkbox" checked />
-                        Single Family
-                      </label>
-                      <label>
-                        <input type="checkbox" />
-                        Condo
-                      </label>
-                      <label>
-                        <input type="checkbox" />
-                        Townhouse
-                      </label>
-                    </div>
+                    <select class="bulk-btn">
+                      <option>All Properties</option>
+                      <option>Duplex</option>
+                      <option>Single Family</option>
+                      <option>Single Family</option>
+                      <option>Condo</option>
+                      <option>Townhouse</option>
+                    </select>
                   </div>
 
                   <!-- Bedrooms -->
@@ -349,6 +339,19 @@
                       <button>2 BR</button>
                       <button class="active">3 BR</button>
                       <button>4 & 5 BR</button>
+                    </div>
+                  </div>
+
+                  <!-- Bathrooms -->
+                  <div class="filter-group">
+                    <label>Bathroom :</label>
+
+                    <div class="bedroom-buttons">
+                      <button>1 B</button>
+                      <button>2 B</button>
+                      <button class="active">3 B</button>
+                      <button>4 B</button>
+                      <button>5 B+</button>
                     </div>
                   </div>
 

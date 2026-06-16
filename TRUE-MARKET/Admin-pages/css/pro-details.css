@@ -383,11 +383,11 @@ aside.details-sidebar .side-card:nth-child(3) h4 {
   font-family: Manrope;
   font-weight: 600;
   font-size: 16px;
-  color: #292B2E;
+  color: #292b2e;
 }
 
 .market-item p {
-  color: #52565C;
+  color: #52565c;
   padding: 8px 0;
   font-weight: 400;
 }
@@ -432,9 +432,9 @@ aside.details-sidebar .side-card:nth-child(3) h4 {
   border-color: #cbd5e1;
 }
 
-.soon {
-  max-width: 500px;
-  height: 498px;
+.soon img {
+ display: block;
+ width: 100%;
   /* margin-top: 24px; */
 }
 
@@ -802,6 +802,9 @@ span.comp-label {
   }
 }
 @media (max-width: 400px) {
+  .property-description p {
+    line-height: 1.5;
+  }
   .right-opt {
     align-items: start !important;
   }
@@ -843,4 +846,9 @@ main.content.pro-details-content .address p {
 button.draw {
   background: #28a745;
   color: #fff;
+}
+
+.details-sidebar .side-card:nth-of-type(2) {
+    box-shadow: none;
+    background: none;
 }
