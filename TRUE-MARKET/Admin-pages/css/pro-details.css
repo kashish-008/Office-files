@@ -279,7 +279,7 @@
 
 .map-card iframe {
   width: 100%;
-  height: 734px;
+  height: 730px;
   border: 0;
 }
 
@@ -351,10 +351,9 @@ aside.details-sidebar .side-card:nth-child(3) h4 {
 }
 
 .market-tag {
-  margin: 0 24px 20px;
+  margin-top: 30px;
   background: #28a745;
   color: #fff;
-  max-width: 450px;
   width: 100%;
   text-align: center;
   padding: 8px;
@@ -851,4 +850,8 @@ button.draw {
 .details-sidebar .side-card:nth-of-type(2) {
     box-shadow: none;
     background: none;
+}
+
+.blank-div{
+
 }
