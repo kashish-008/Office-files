@@ -1,0 +1,65 @@
+.span-text {
+  background: linear-gradient(90deg, #169c86 0%, #57c3d3 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  color: transparent;
+}
+
+#feature-box {
+  display: flex;
+}
+
+.srve_offr .feature-box.feature-expertise p {
+  margin-bottom: 33px;
+}
+
+.read-more-btn {
+  font-size: 16px;
+  background-color: #ff9933;
+  border-radius: 7px;
+  color: #fff;
+  border: 1px solid #ff9933;
+  padding: 9px 23px;
+  width: fit-content;
+  margin-top: auto;
+  transition: all 0.3s ease-in-out;
+}
+
+.read-more-btn:hover {
+  background-color: #fff;
+  border: 1px solid #ff9933;
+}
+
+.imag_otesec {
+  background-color: #57c3d31a;
+  padding: 140px 0 !important;
+}
+
+.custm_otrworkbox .section-header h2{
+    text-align: start;
+    padding-left: 50px;
+    margin-bottom: 90px;
+}
+
+#imaging {
+  align-items: start !important;
+}
+
+.imaging-right{
+    display: flex;
+    flex-direction: column;
+    align-items: end;
+}
+
+.circle {
+  border-radius: 50%;
+  width: 128px;
+  height: 128px;
+  border: 1px solid #169c8630;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 77px;
+  margin-right: 150px;
+}

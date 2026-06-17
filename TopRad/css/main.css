@@ -1,0 +1,2564 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Kelly+Slab&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");@import url("https://fonts.googleapis.com/css2?family=Figtree:ital,wght@0,300..900;1,300..900&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Kelly+Slab&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");* {
+    box-sizing: border-box
+}
+
+html {
+    scroll-behavior: smooth
+}
+
+body {
+    font-family: "Inter",sans-serif;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 1.5
+}
+
+.container {
+    max-width: 1470px !important;
+    padding: 0 30px !important
+}
+
+a {
+    text-decoration: none;
+    display: inline-block;
+    color: #000
+}
+
+a:hover {
+    color: inherit
+}
+
+a:focus {
+    color: inherit
+}
+
+ul,ol {
+    padding: 0;
+    margin: 0
+}
+
+li {
+    list-style: none
+}
+
+p {
+    margin: 0;
+    color: #000
+}
+
+span {
+    display: inline-block
+}
+
+img {
+    max-width: 100%
+}
+
+button:focus,input:focus {
+    outline: unset;
+    box-shadow: unset
+}
+
+.dark h1,.dark h2,.dark h3,.dark h4,.dark h5,.dark h6,.dark p,.dark span,.dark i {
+    color: #fff
+}
+
+h1,h2,h3,h4,h5,h6 {
+    color: #293125
+}
+
+h1 {
+    font-weight: 800 !important;
+    font-size: 80px !important;
+    line-height: 90px !important
+}
+
+.h1-77 {
+    font-size: 77px
+}
+
+h2 {
+    font-weight: 700 !important;
+    font-size: 60px !important;
+    line-height: 70px !important
+}
+
+h3 {
+    font-size: 34px
+}
+
+.h5-28 {
+    font-size: 28px
+}
+
+h5 {
+    font-size: 30px;
+    font-weight: 600
+}
+
+.h6-24 {
+    font-size: 24px;
+    font-weight: 600
+}
+
+h6 {
+    font-size: 20px;
+    font-weight: 500
+}
+
+.light-bg {
+    background-color: #7c80710d
+}
+
+.cta {
+    font-size: 18px !important;
+    font-weight: 500 !important;
+    border-radius: 7px;
+    padding: 18px 36px !important;
+    text-transform: capitalize;
+    background-color: #f93;
+    border: 1px solid transparent;
+    display: flex;
+    position: relative;
+    color: #fff;
+    overflow: hidden;
+    align-items: center;
+    justify-content: center;
+    line-height: normal
+}
+
+.cta-transprnt {
+    background-color: transparent;
+    border-color: #fff;
+    padding: 18px 36px;
+    text-transform: capitalize
+}
+
+.cta-drk-green {
+    background-color: #293125
+}
+
+.cta:before,.cta:after {
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    transform: translateX(-100px) skewX(-15deg);
+    content: ""
+}
+
+.cta:before {
+    width: 60px;
+    background: rgb(255 255 255/14%);
+    filter: blur(30px);
+    opacity: .5
+}
+
+.cta:after {
+    width: 30px;
+    left: 30px;
+    background: rgba(255,255,255,.2);
+    filter: blur(5px)
+}
+
+.cta:hover {
+    background-color: #293125;
+    border-color: #293125;
+    color: #fff
+}
+
+.cta:hover:before {
+    opacity: 1
+}
+
+.cta:hover:before,.cta:hover:after {
+    transform: translateX(300px) skewX(-15deg);
+    transition: all .9s ease
+}
+
+.radius-30 {
+    border-radius: 30px
+}
+
+.list-after li {
+    position: relative;
+    padding-left: 25px;
+    font-size: 16px;
+    font-weight: 300;
+    padding-bottom: 10px
+}
+
+.list-after li:after {
+    position: absolute;
+    content: "";
+    background-image: url(//toprad.us/wp-content/themes/toprad/theme-template/assets/css/../images/list-after-img.svg);
+    height: 18px;
+    width: 18px;
+    background-size: contain;
+    background-repeat: no-repeat;
+    left: 0;
+    top: 5px
+}
+
+.hdng-top {
+    position: relative
+}
+
+.hdng-top:after {
+    position: absolute;
+    content: "";
+    background-color: #293125;
+    height: 1px;
+    width: 40px;
+    left: 0;
+    top: -26px
+}
+
+.g-12 {
+    gap: 12px
+}
+
+.p-100 {
+    padding: 100px 0
+}
+
+.p-120 {
+    padding: 120px 0
+}
+
+.p-140 {
+    padding: 140px 0
+}
+
+.p-180 {
+    padding: 180px 0
+}
+
+.m-15 {
+    margin: 15px 0
+}
+
+.mb-15 {
+    margin-bottom: 15px
+}
+
+.mb-30 {
+    margin-bottom: 30px
+}
+
+.mb-50 {
+    margin-bottom: 50px
+}
+
+.mt-40 {
+    margin-top: 40px
+}
+
+.badge {
+    background-color: #7c80711f;
+    border-radius: 4px;
+    font-size: 14px;
+    font-weight: 500;
+    color: #293125;
+    padding: 5px 13px
+}
+
+.section-after {
+    position: relative
+}
+
+.nav-link {
+    color: #000;
+    padding: 0 !important;
+    position: relative;
+    font-family: "Inter";
+    font-weight: 400 !important;
+    font-size: 18px;
+    line-height: 100%;
+    text-align: center
+}
+
+.nav-link:after {
+    position: absolute;
+    content: "";
+    background: #2daaa6;
+    width: 60%;
+    top: 100%;
+    left: 0;
+    height: 2px;
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform .3s ease-in-out;
+    opacity: 1
+}
+
+.nav-link:hover:after {
+    transform: scaleX(1)
+}
+
+.navbar-brand {
+    width: 100%;
+    max-width: 224px;
+    padding: 0 !important
+}
+
+.nav-link:hover {
+    color: #31adac
+}
+
+.bnnr-cntnt {
+    max-width: 1300px;
+    margin: auto;
+    text-align: center
+}
+
+.main_header .navbar-nav {
+    margin: auto;
+    width: calc(67% - 310px);
+    justify-content: space-between
+}
+
+.main_header #navbarSupportedContent {
+    justify-content: space-between !important
+}
+
+.main-bnnr {
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    padding-top: 250px;
+    position: relative;
+    overflow: hidden
+}
+
+.banner-btm-contact {
+    position: absolute;
+    bottom: 40px;
+    z-index: 999;
+    right: 60px
+}
+
+.mail-icon {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    z-index: 2
+}
+
+.text-circle {
+    position: absolute;
+    width: 100px;
+    height: 100px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    z-index: 1;
+    animation: rotateCircle 10s linear infinite
+}
+
+.text-circle text {
+    fill: #fff;
+    letter-spacing: 7px;
+    text-transform: uppercase;
+    font-weight: 500;
+    font-size: 22px
+}
+
+@keyframes rotateCircle {
+    from {
+        transform: translate(-50%,-50%) rotate(0deg)
+    }
+
+    to {
+        transform: translate(-50%,-50%) rotate(360deg)
+    }
+}
+
+.slide-rgt {
+    overflow: hidden
+}
+
+.slde-img img {
+    margin: auto;
+    display: block;
+    filter: grayscale(1)
+}
+
+.slide-rgt .slick-track {
+    display: flex;
+    align-items: center
+}
+
+.slde-lft p {
+    width: 250px;
+    border-right: 1px solid #7c807126;
+    font-weight: 600;
+    font-size: 24px;
+    line-height: 34px
+}
+
+.logo-slide-wrp {
+    padding-bottom: 30px;
+    border-bottom: 1px solid #7c807126
+}
+
+.ask-rgt {
+    background-color: #293125;
+    border-radius: 30px;
+    padding: 50px 60px
+}
+
+.ask-logo {
+    text-align: right
+}
+
+.ask-comma {
+    display: inline-block
+}
+
+.ask-rgt-txt {
+    font-size: 26px;
+    font-style: italic;
+    font-weight: 500
+}
+
+.nme-desig .posi {
+    font-size: 14px;
+    font-weight: 300
+}
+
+.nme-desig .name {
+    position: relative;
+    font-size: 22px
+}
+
+.nme-desig .name:after {
+    content: "";
+    position: absolute;
+    width: 35px;
+    height: 1px;
+    background-color: #7c8071;
+    left: -45px;
+    top: 50%
+}
+
+.nme-desig {
+    padding-left: 45px
+}
+
+.ask-lft p,.ask-lft li {
+    font-weight: 300
+}
+
+.ask-lst h6 {
+    margin: 15px 0
+}
+
+.ask-lft {
+    padding-right: 60px
+}
+
+.invst-pricing {
+    border: 1px solid #7c807140;
+    padding: 25px;
+    border-radius: 13px
+}
+
+.investor-sec {
+    background-color: #7c80710d
+}
+
+.invst-txt {
+    font-size: 16px;
+    margin: 15px 0
+}
+
+.price-val {
+    font-size: 22px;
+    font-weight: 700;
+    color: #7c8071
+}
+
+.seprator {
+    font-size: 19px;
+    color: #e8e8e8;
+    font-weight: 300
+}
+
+.who-bx {
+    border: 1px solid #7c807133;
+    padding: 45px 50px;
+    border-radius: 25px;
+    height: 100%;
+    position: relative
+}
+
+.sec-hd {
+    max-width: 1000px;
+    margin: auto;
+    margin-bottom: 50px
+}
+
+.who-bx:after {
+    position: absolute;
+    content: "";
+    height: 60px;
+    width: 60px;
+    background-image: url(//toprad.us/wp-content/themes/toprad/theme-template/assets/css/../images/who-after.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    top: 40px;
+    right: 40px
+}
+
+.operator-slider .slick-list.draggable {
+    overflow: visible
+}
+
+.operator-slider .slick-track {
+    display: flex
+}
+
+.operator-sec {
+    background-color: #57c3d31a
+}
+
+.operator-sec .sec-inner {
+    overflow: hidden
+}
+
+.oprate-crd {
+    background-color: #fff;
+    border-radius: 20px;
+    overflow: hidden;
+    height: auto;
+    margin: 0 15px
+}
+
+.oprate-inner {
+    padding: 30px;
+    display: flex !important;
+    flex-direction: column;
+    height: 70%
+}
+
+.oprate-img {
+    height: 100%
+}
+
+.oprate-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover
+}
+
+.profile {
+    margin-top: auto
+}
+
+.oprate-txt {
+    margin-bottom: 25px;
+    font-size: 16px;
+    font-weight: 300;
+    line-height: 1.8
+}
+
+.oprate-crd h6 {
+    margin: 20px 0;
+    margin-bottom: 10px
+}
+
+.review-txt {
+    font-size: 18px;
+    font-weight: 300
+}
+
+.star-div img {
+    margin: auto;
+    margin-bottom: 10px
+}
+
+.rvew-slider-wrp .slick-arrow {
+    border: .6px solid #000;
+    border-radius: 100%;
+    height: 60px;
+    width: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    z-index: 1;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: #fff;
+    cursor: pointer
+}
+
+.next-arrow {
+    right: 0
+}
+
+.slide-innr {
+    max-width: 930px;
+    margin: auto
+}
+
+.review-name {
+    color: #7c8071
+}
+
+.scale-fst-sec .scale-cntnt {
+    background-color: #000;
+    border-radius: 35px
+}
+
+.scale-txt span {
+    color: #7c8071;
+    font-weight: 600
+}
+
+.who-bst-sec {
+    background-color: #7c80710d
+}
+
+.exist-hd {
+    justify-content: space-between
+}
+
+.existd-lft p {
+    font-weight: 300
+}
+
+.how-wrks-sec {
+    position: relative
+}
+
+.how-wrks-sec:after {
+    position: absolute;
+    content: "";
+    height: 100%;
+    width: 100%;
+    background-image: url(//toprad.us/wp-content/themes/toprad/theme-template/assets/css/../images/dotted-img.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    top: 50%;
+    transform: translateY(-50%);
+    pointer-events: none;
+    z-index: -1;
+    left: 0;
+    right: 0
+}
+
+.wrk-img {
+    height: 200px;
+    width: 200px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0px 32px 44px 0px #29312514;
+    border-radius: 100%;
+    background-color: #fff;
+    margin: auto;
+    position: relative
+}
+
+.wrk-txt {
+    font-weight: 500;
+    margin-top: 20px
+}
+
+.num-val {
+    position: absolute;
+    background-color: #293125;
+    height: 36px;
+    width: 36px;
+    border-radius: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    top: 30px;
+    right: 0
+}
+
+.drg-innr-wrp .slick-list.draggable {
+    overflow: visible;
+    padding: 0 18vw !important
+}
+
+.drg-innr-wrp .slick-slide {
+    transform: scale(.9);
+    transition: all .4s ease-in-out
+}
+
+.drg-innr-wrp .slick-slide,.drg-innr-wrp .slick-slide[aria-hidden=true]:not(.slick-cloned)~.slick-cloned[aria-hidden=true] {
+    transform: scale(.9,.9);
+    transition: all .4s ease-in-out
+}
+
+.drg-innr-wrp .slick-center,.drg-innr-wrp .slick-slide[aria-hidden=true]:not([tabindex="-1"])+.slick-cloned[aria-hidden=true] {
+    transform: scale(1)
+}
+
+.drg-innr-wrp .slick-current.slick-active {
+    transform: scale(1)
+}
+
+.drag-slider-sec {
+    overflow-x: hidden
+}
+
+.drag-me-btn p {
+    color: #fff;
+    font-size: 16px
+}
+
+.drag-cursor {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100px;
+    width: 100px;
+    border-radius: 50%;
+    background-color: #7c8071;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    pointer-events: none;
+    z-index: 9999;
+    transform: translate(-50%,-50%);
+    transition: opacity .2s ease;
+    opacity: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center
+}
+
+.drag-cursor.active {
+    opacity: 1
+}
+
+.drag-me-btn {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center
+}
+
+.drag-slider-sec .slick-active.slick-center .drag-me-btn p {
+    opacity: 1;
+    z-index: 1
+}
+
+.drg-slide {
+    position: relative
+}
+
+.must-meet-sec {
+    background-color: #000
+}
+
+.meet-img {
+    height: 60px;
+    width: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #7c8071;
+    border-radius: 100%
+}
+
+.meet-cntnt {
+    font-size: 16px;
+    font-weight: 300
+}
+
+.meet-innr {
+    border: 1px solid #ffffff1a;
+    border-radius: 15px;
+    padding: 30px;
+    height: 100%
+}
+
+.meet-row>div {
+    margin-bottom: 30px
+}
+
+.meet-btm-p {
+    font-weight: 300;
+    font-size: 16px
+}
+
+.meet-btm span {
+    display: block;
+    padding-top: 10px
+}
+
+.curted-hd {
+    justify-content: space-between
+}
+
+.right-txt {
+    max-width: 520px;
+    font-weight: 300
+}
+
+.hd-txt {
+    font-size: 16px;
+    font-weight: 300;
+    padding-bottom: 15px;
+    margin-bottom: 15px;
+    border-bottom: 1px solid #7c807140
+}
+
+.curatd-lst.list-after li {
+    font-size: 13px
+}
+
+.curatd-lst.list-after li:after {
+    background-image: url(//toprad.us/wp-content/themes/toprad/theme-template/assets/css/../images/green-tick.png);
+    top: 2px
+}
+
+.price-value-wrp span {
+    font-size: 28px;
+    font-weight: 700;
+    color: #293125
+}
+
+.note-txt {
+    font-size: 12px;
+    font-style: italic;
+    color: #454545;
+    margin-bottom: 30px
+}
+
+.note-txt span {
+    color: #7c8071
+}
+
+.curated-crd .badge {
+    padding: 12px;
+    width: fit-content
+}
+
+.curated-crd {
+    background-color: #fff;
+    padding: 40px;
+    border: 1px solid #7c807140;
+    border-radius: 25px;
+    height: 100%;
+    display: flex;
+    flex-direction: column
+}
+
+.curate-btn {
+    margin-top: auto
+}
+
+.faq-rgt .accordion-button {
+    font-size: 24px;
+    font-weight: 500;
+    padding: 30px 40px;
+    opacity: 1
+}
+
+.faq-rgt .accordion-body {
+    padding: 30px 40px;
+    padding-top: 0
+}
+
+.faq-rgt .accordion-button:not(.collapsed) {
+    box-shadow: unset;
+    background-color: transparent;
+    color: #000
+}
+
+.faq-rgt .accordion-button:focus {
+    box-shadow: unset
+}
+
+.faq-rgt .accordion-button:after,.faq-rgt .accordion-button:not(.collapsed):after {
+    background-image: url(//toprad.us/wp-content/themes/toprad/theme-template/assets/css/../images/faq-arrw.png)
+}
+
+.faq-rgt .accordion-item {
+    border-bottom: 1px solid #ffffff1a !important;
+    border-radius: 0 !important;
+    margin-bottom: 25px;
+    background-color: #000 !important
+}
+
+.faq-rgt .accordion-button {
+    border-radius: 10px !important
+}
+
+.lft-txt-faq {
+    font-weight: 300;
+    font-size: 22px
+}
+
+.lft-txt-faq a {
+    font-weight: 500
+}
+
+.real-innr {
+    max-width: 900px;
+    margin: auto
+}
+
+.real-innr p {
+    font-size: 22px;
+    margin-bottom: 30px;
+    font-weight: 500
+}
+
+.main-footer {
+    background-color: #000;
+    position: relative;
+    padding: 50px 0
+}
+
+.social-lst {
+    justify-content: center
+}
+
+.social-lst li a {
+    border: .8px solid #313131;
+    height: 70px;
+    width: 70px;
+    border-radius: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center
+}
+
+.social-lst li a:hover {
+    background-color: #ffffff6b
+}
+
+.real-growth-wrp {
+    position: relative;
+    z-index: 1;
+    background-repeat: no-repeat;
+    background-position: center right;
+    background-size: cover
+}
+
+.copy-right {
+    font-size: 18px
+}
+
+.asking-sec .hdng-top:after {
+    width: 69px;
+    top: -15px
+}
+
+.grwth-btns .cta:hover {
+    background-color: #fff;
+    color: #000
+}
+
+.grwth-btns .cta:after,.grwth-btns .cta:before {
+    background-color: rgba(42,50,38,.295)
+}
+
+.phn-img {
+    margin-right: 6px
+}
+
+.video-btn {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%)
+}
+
+.drg-innr-wrp .slick-current.slick-active .video-btn {
+    display: none
+}
+
+.btn-innr {
+    position: relative;
+    display: inline-block
+}
+
+.btn-innr:before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 90px;
+    height: 90px;
+    background: #fff;
+    border-radius: 50%;
+    transform: translate(-50%,-50%);
+    animation: pulse-white 1.5s infinite;
+    z-index: -1
+}
+
+@keyframes pulse-white {
+    0% {
+        transform: translate(-50%,-50%) scale(1);
+        opacity: .7
+    }
+
+    70% {
+        transform: translate(-50%,-50%) scale(1.5);
+        opacity: 0
+    }
+
+    100% {
+        transform: translate(-50%,-50%) scale(1);
+        opacity: 0
+    }
+}
+
+.phn-mob {
+    display: none
+}
+
+.drg-innr-crd,.drg-innr-crd img {
+    width: 100%
+}
+
+.bnnr-cntnt p {
+    max-width: 980px;
+    margin: auto;
+    font-size: 22px;
+    text-align: center;
+    margin-top: 10px
+}
+
+.bnnr-btns {
+    margin-top: 40px;
+    justify-content: center
+}
+
+header nav.navbar {
+    padding: 25px 0
+}
+
+.slide_headr .insid_cont {
+    background: linear-gradient(to right,#52c0dd,#25a69a);
+    color: #fff;
+    padding: 10px 0;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: normal;
+    text-align: center;
+    position: relative
+}
+
+.slide_headr .slick-announcement {
+    max-width: 1060px;
+    margin: auto
+}
+
+.slide_headr .slick-announcement .slick-slide {
+    display: flex !important;
+    justify-content: center;
+    align-items: center
+}
+
+.slide_headr .slick-prev,.slide_headr .slick-next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 2;
+    background: 0 0;
+    border: none;
+    color: #fff;
+    font-size: 20px;
+    cursor: pointer;
+    padding: 0 10px
+}
+
+.slide_headr .slick-prev {
+    left: 25%
+}
+
+.slide_headr .slick-next {
+    right: 25%
+}
+
+.slide_headr .slick-prev:before,.slide_headr .slick-next:before {
+    display: none
+}
+
+.feature-box.feature-expertise {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    gap: 10px
+}
+
+.faq-sec .faq-row h6 {
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 27px;
+    text-align: center;
+    color: #169c86;
+    margin: 0
+}
+
+.faq-sec .faq-row h2 {
+    color: #fff;
+    margin-bottom: 48px
+}
+
+.outer_accord .accordion {
+    font-family: sans-serif;
+    color: #fff;
+    background: #000;
+    padding: 20px;
+    max-width: 700px;
+    margin: auto
+}
+
+.outer_accord .accordion-item {
+    border-bottom: 1px solid #ffffff1a;
+    padding: 15px 0
+}
+
+.outer_accord .accordion-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer
+}
+
+.outer_accord .accordion-header h3 {
+    margin: 0;
+    font-size: 28px;
+    color: #fff;
+    font-weight: 500;
+    line-height: 32px
+}
+
+.outer_accord .accordion-header .icon {
+    font-weight: 500;
+    font-size: 28px;
+    transition: transform .3s ease;
+    color: #57c3d3
+}
+
+.outer_accord .accordion-content {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height .4s ease;
+    font-size: 14px;
+    color: #aaa;
+    padding-top: 0;
+    opacity: 0
+}
+
+.outer_accord .accordion-item.active .accordion-content {
+    max-height: 200px;
+    opacity: 1;
+    padding-top: 10px
+}
+
+.outer_accord .accordion-item.active .icon {
+    content: "-"
+}
+
+.outer_accord .accordion-content ul {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-bottom: 10px;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 27px
+}
+
+.tail_solt {
+    position: relative;
+    z-index: 1
+}
+
+.tail_solt .tail_box {
+    padding: 340px 84px 84px;
+    border-radius: 35px
+}
+
+.tail_solt .tail_box .solt_pra {
+    font-weight: 500;
+    font-size: 42px;
+    line-height: 52px;
+    color: #fff;
+    max-width: 610px;
+    width: 100%
+}
+
+.tail_solt:after {
+    content: "";
+    position: absolute;
+    background-color: #000;
+    top: 0;
+    width: 100%;
+    height: 50%;
+    z-index: -1
+}
+
+.tail_solt:before {
+    content: "";
+    position: absolute;
+    background-color: #fff;
+    bottom: 0;
+    width: 100%;
+    height: 50%;
+    z-index: -1
+}
+
+.how-work .inside_srve {
+    margin-top: 20px
+}
+
+.main-green .evergreen h4 {
+    font-weight: 600;
+    font-size: 28px;
+    line-height: 38px;
+    max-width: 320px;
+    width: 100%;
+    margin-top: 30px;
+    color: #000
+}
+
+.main-green {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%
+}
+
+.main-green .evergreen img {
+    width: 100%
+}
+
+.main-green .evergreen-content p {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 26px;
+    color: #6b727c;
+    max-width: 420px;
+    width: 100%
+}
+
+.operator-sec .sec-inner .sec-hd h2 {
+    color: #000
+}
+
+.oprate-inner .profile .pro-info h5 {
+    font-family: "Figtree";
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 24px
+}
+
+.oprate-inner .profile .pro-info .stars .name {
+    font-family: "Figtree";
+    font-weight: 500;
+    font-size: 12px;
+    color: #169c86;
+    line-height: 100%
+}
+
+.oprate-inner .oprate-txt {
+    font-family: "Figtree";
+    max-width: 333px;
+    width: 100%;
+    font-size: 20px;
+    font-weight: 300
+}
+
+.existed-sec .con-f3 .build-2 h2 {
+    font-size: 80px !important;
+    line-height: 90px !important;
+    max-width: 670px;
+    width: 100%
+}
+
+.existed-sec .con-f3 .row-img {
+    text-align: center
+}
+
+.existed-sec .con-f3 .row-img img {
+    max-width: 128px;
+    max-height: 128px;
+    width: 100%;
+    height: 100%
+}
+
+.existed-4 .existd-lft p {
+    font-weight: 500;
+    font-size: 22px;
+    line-height: 34px;
+    max-width: 480px;
+    margin: auto;
+    width: 100%
+}
+
+.existed-sec .con-f3 .build-2 h2 span {
+    background: linear-gradient(to right,#1ea290,#4ec3d1);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    color: transparent;
+    display: block
+}
+
+.existed-sec {
+    position: relative;
+    overflow: hidden;
+    z-index: 2
+}
+
+.existed-sec:after {
+    content: "";
+    position: absolute;
+    bottom: 7%;
+    left: 0;
+    width: 780px;
+    height: 140px;
+    background-image: url("https://toprad.us/wp-content/uploads/2025/07/TopRad-1-1.svg");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    opacity: 1;
+    animation: moveBackground 20s linear infinite;
+    z-index: -1
+}
+
+.real-growth-sec {
+    position: relative;
+    z-index: 1
+}
+
+.real-growth-sec:after {
+    position: absolute;
+    content: "";
+    background-color: #000;
+    bottom: 0;
+    height: 50%;
+    width: 100%;
+    z-index: -1
+}
+
+.real-growth-wrp .real-innr {
+    max-width: 850px;
+    margin: auto
+}
+
+.quklink_otr {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    max-width: 340px
+}
+
+.otr_qucksln {
+    max-width: 300px;
+    width: 100%
+}
+
+.list-unstyled li {
+    line-height: 46px
+}
+
+.footer_logotr p {
+    color: #fff;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 28px;
+    max-width: 390px;
+    width: 100%;
+    padding-top: 20px
+}
+
+.copy_foot {
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 100%;
+    text-align: center;
+    padding-top: 100px
+}
+
+.innver-banner {
+    padding: 190px 0;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover
+}
+
+.innver-banner h2 {
+    max-width: 900px;
+    width: 100%;
+    margin: auto;
+    color: #fff
+}
+
+.innver-banner {
+    padding: 190px 0
+}
+
+.innver-banner .container {
+    padding: 0 !important;
+    max-width: 918px !important;
+    width: 100%;
+    margin: auto
+}
+
+.innver-banner .container h2 {
+    color: #fff
+}
+
+.top_pra {
+    padding: 100px 0 0
+}
+
+.top_pra .container {
+    border-bottom: 1px solid #00000014;
+    padding-bottom: 100px !important
+}
+
+.top_pra .cont_ty {
+    max-width: 980px;
+    width: 100%;
+    margin: auto;
+    font-size: 26px;
+    color: #394149
+}
+
+.srve_offr .feature-box.feature-expertise p {
+    font-weight: 400;
+    font-size: 16px;
+    color: #6b727c
+}
+
+.srve_offr .feature-box.feature-expertise ul li {
+    font-weight: 400;
+    font-size: 16px;
+    color: #6b727c
+}
+
+.srve_offr .feature-box.feature-expertise h4 {
+    font-weight: 600;
+    font-size: 26px;
+    line-height: 34px
+}
+
+.why-toprad-section.otr_tp_why:after {
+    top: 6%
+}
+
+.insid_cont .slick-track {
+    display: flex !important
+}
+
+.insid_cont .slick-list.draggable {
+    flex-direction: row !important;
+    width: 100% !important
+}
+
+.insid_cont .slick-announcement {
+    display: flex !important;
+    flex-direction: row !important;
+    width: 100% !important;
+    max-width: 100% !important
+}
+
+.main-green .evergreen img {
+    transition: transform .4s ease;
+    display: block;
+    width: 100%;
+    height: auto
+}
+
+.main-green:hover .evergreen img {
+    transform: scale(1.1)
+}
+
+.evergreen .ever_boximg {
+    overflow: hidden;
+    border-radius: 15px
+}
+
+.srve_offr .feature-box.feature-expertise {
+    display: block
+}
+
+.srve_offr .feature-box.feature-expertise ul li {
+    font-size: 14px;
+    font-weight: 300;
+    position: relative
+}
+
+.srve_offr .feature-box.feature-expertise ul li:after {
+    content: "";
+    position: absolute;
+    background-image: url("https://toprad.us/wp-content/uploads/2025/07/Vector-1-1.svg");
+    width: 16px;
+    height: 15px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    left: -23px;
+    top: 5px
+}
+
+.srve_offr .feature-box.feature-expertise ul {
+    margin-top: 10px;
+    max-width: 335px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    padding-left: 25px
+}
+
+.imag_otesec {
+    background-position: right;
+    background-repeat: no-repeat;
+    padding: 100px 0;
+    background-size: cover;
+    position: relative;
+    z-index: 1;
+    overflow: hidden
+}
+
+.imag_otesec:after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    top: 8%;
+    width: 780px;
+    height: 140px;
+    background-image: url(https://toprad.us/wp-content/uploads/2025/07/TopRad-1.svg);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    opacity: 1;
+    animation: moveBackground 20s linear infinite;
+    z-index: -1
+}
+
+.imageg_boxot img {
+    width: 100%
+}
+
+.imageg_rgtbox {
+    padding-left: 70px
+}
+
+.imageg_rgtbox ul li {
+    font-size: 18px;
+    font-weight: 600;
+    list-style-type: disc
+}
+
+.imageg_rgtbox ul li::marker {
+    color: #21b4aa !important
+}
+
+.imageg_rgtbox ul {
+    padding-left: 10px
+}
+
+.cstmwrk_sec {
+    padding: 100px 0;
+    position: relative;
+    z-index: 1;
+    overflow: hidden
+}
+
+.rgt_imgcstm {
+    text-align: center
+}
+
+.lefttp_hd .fw-bold span {
+    display: block
+}
+
+.lefttp_hd {
+    max-width: 640px;
+    width: 100%
+}
+
+.lefttp_hd h2 {
+    font-size: 80px !important;
+    line-height: 90px !important
+}
+
+.rgt_imgcstm img {
+    max-width: 128px;
+    width: 100%;
+    max-height: 128px;
+    height: 100%
+}
+
+.custm_otrworkbox .para_cstm {
+    font-weight: 500;
+    font-size: 22px;
+    line-height: 34px;
+    max-width: 480px;
+    width: 100%;
+    margin: auto
+}
+
+.custm_otrworkbox {
+    padding-right: 40px
+}
+
+.custm_otrworkbox ul {
+    max-width: 520px;
+    margin: auto;
+    margin-top: 24px;
+    padding-left: 23px
+}
+
+.custm_otrworkbox ul li {
+    position: relative;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 24px
+}
+
+.custm_otrworkbox ul li:after {
+    content: "";
+    position: absolute;
+    background-image: url("https://toprad.us/wp-content/uploads/2025/07/Vector-1-1.svg");
+    width: 16px;
+    height: 15px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    left: -24px;
+    top: 5px
+}
+
+.privacy-policy .inside_otr_prvy {
+    padding: 100px 0;
+    border-top: 1px solid #00000014
+}
+
+.partner-policy h1 {
+    font-weight: 700 !important;
+    font-size: 60px !important;
+    color: #000;
+    line-height: 70px !important
+}
+
+.effective-date {
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 100%;
+    margin: 20px 0
+}
+
+.effective-date span {
+    color: #57c3d3
+}
+
+.hdt_para {
+    font-weight: 400;
+    font-size: 22px;
+    line-height: 32px;
+    color: #394149
+}
+
+.main-content h3 {
+    font-weight: 700 !important;
+    font-size: 36px !important;
+    line-height: 100% !important;
+    margin-top: 36px;
+    margin-bottom: 20px;
+    color: #000
+}
+
+.prsnl-info {
+    margin-top: 20px
+}
+
+.prsnl-info h4 {
+    font-weight: 600;
+    font-size: 22px;
+    line-height: 100%
+}
+
+.main-content ul {
+    display: flex;
+    flex-direction: column;
+    padding-left: 50px;
+    gap: 8px;
+    margin: 20px 0
+}
+
+.main-content ul li {
+    position: relative;
+    font-weight: 400;
+    font-size: 18px;
+    color: #6b727c
+}
+
+.main-content ul li:after {
+    content: "";
+    position: absolute;
+    background-image: url("https://toprad.us/wp-content/uploads/2025/07/Vector-1-1.svg");
+    width: 16px;
+    height: 15px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    left: -24px;
+    top: 5px
+}
+
+.main-content {
+    max-width: 1200px;
+    width: 100%
+}
+
+.main-content h4 {
+    color: #000
+}
+
+.pry_ulhd {
+    padding: 0 !important
+}
+
+.pry_ulhd li {
+    position: static !important;
+    font-weight: 400 !important;
+    font-size: 20px !important;
+    line-height: 32px !important
+}
+
+.pry_ulhd .hding_pry {
+    color: #169c86;
+    font-weight: 600 !important
+}
+
+.pry_ulhd li span {
+    color: #000;
+    font-weight: 600 !important
+}
+
+.term_ins {
+    padding: 100px 0;
+    border-top: 1px solid #00000014
+}
+
+.terms-title h1 {
+    font-weight: 700 !important;
+    font-size: 60px !important;
+    line-height: 70px !important
+}
+
+.terms-title p {
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 100%;
+    color: #6b727c
+}
+
+.terms-title p strong {
+    color: #57c3d3
+}
+
+.terms-intro p {
+    font-weight: 400;
+    font-size: 22px;
+    line-height: 32px;
+    color: #394149;
+    margin-top: 24px
+}
+
+.terms-block {
+    margin-top: 32px
+}
+
+.terms-block h3 {
+    font-weight: 700 !important;
+    font-size: 36px !important;
+    line-height: 100% !important;
+    margin-bottom: 8px !important
+}
+
+.terms-block p {
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 30px;
+    color: #6b727c
+}
+
+.term_ins .container {
+    max-width: 1280px !important;
+    width: 100%
+}
+
+.contact_boxin {
+    margin-top: 40px
+}
+
+.contact_boxin h5 {
+    font-size: 36px !important
+}
+
+.hd_contpra {
+    color: #394149;
+    margin-bottom: 10px
+}
+
+.cont_para {
+    margin-top: 6px;
+    font-size: 18px !important;
+    font-weight: 400 !important
+}
+
+.cont_para strong {
+    font-weight: 500 !important
+}
+
+.contact_boxin p a {
+    font-weight: 600
+}
+
+.otr_cntrm {
+    display: flex;
+    align-items: center;
+    gap: 18px;
+    margin-bottom: 20px
+}
+
+.otr_cntrm .imgtrmcm img {
+    width: 66px;
+    height: 70px
+}
+
+.otrprivy_prt {
+    display: flex;
+    align-items: center;
+    gap: 20px
+}
+
+section.timeline-wrapper {
+    padding: 100px 0
+}
+
+section.timeline-wrapper .container {
+    max-width: 1390px;
+    margin: auto
+}
+
+.timeline-content {
+    border: 1px solid #0000000F;
+    box-shadow: 20px 15px 30px 0px #00000012;
+    padding: 35px;
+    padding-right: 77px;
+    border-radius: 15px
+}
+
+.timeline-block .row:after {
+    content: "";
+    position: absolute;
+    height: 100%;
+    width: 1px;
+    left: 50%;
+    border-right: 1px dashed #0000001A
+}
+
+.timeline-block {
+    position: relative
+}
+
+.timeline-circle {
+    background: #169c86;
+    height: 60px;
+    width: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    color: #fff;
+    font-family: Inter;
+    font-weight: 600;
+    font-size: 26px;
+    left: 48%;
+    position: absolute;
+    top: 130px
+}
+
+.timeline-block.left .timeline-content {
+    margin-right: 120px
+}
+
+.timeline-block.right .timeline-content {
+    margin-left: 120px
+}
+
+.timeline-content h3 {
+    font-weight: 600;
+    font-size: 26px
+}
+
+.timeline-content p {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 24px;
+    color: #6b727c
+}
+
+.timeline-content ul li {
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 24px;
+    color: #6b727c
+}
+
+.timeline-content ul li {
+    position: relative;
+    list-style: none;
+    margin-bottom: 8px
+}
+
+.timeline-content ul li:after {
+    content: "";
+    position: absolute;
+    background-image: url("https://toprad.us/wp-content/uploads/2025/07/Vector-8.png");
+    width: 14px;
+    height: 13px;
+    left: -26px;
+    top: 7px
+}
+
+.timeline-content ul {
+    padding-left: 26px
+}
+
+.timeline-content h4 {
+    font-weight: 600;
+    font-style: Italic;
+    font-size: 16px;
+    line-height: 24px;
+    color: #169c86
+}
+
+.timeline-block.left .timeline-content:after {
+    content: "";
+    position: absolute;
+    background-image: url("https://toprad.us/wp-content/uploads/2025/07/Polygon-1-1.png");
+    width: 50px;
+    height: 46px;
+    right: -48px;
+    top: 135px
+}
+
+.timeline-block.left .timeline-content {
+    position: relative
+}
+
+.timeline-block.right .timeline-content:after {
+    content: "";
+    position: absolute;
+    background-image: url("https://toprad.us/wp-content/uploads/2025/07/Polygon-1.png");
+    width: 50px;
+    height: 46px;
+    left: -50px;
+    top: 135px;
+    rotate: 180deg
+}
+
+.timeline-block.right .timeline-content {
+    position: relative
+}
+
+.contact-icon {
+    background: rgba(87,195,211,.1);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+    margin-right: 15px
+}
+
+.contact-icon i {
+    margin: 0 !important
+}
+
+section.contact-frm {
+    padding: 100px 0
+}
+
+section.contact-frm h2 {
+    color: #000
+}
+
+section.contact-frm p {
+    color: #6b727c;
+    margin-bottom: 30px
+}
+
+.contact-data {
+    font-size: 22px;
+    line-height: 36px;
+    color: #6b727c
+}
+
+.contact-data a {
+    color: #6b727c
+}
+
+.contact-data strong {
+    color: #000;
+    font-weight: 600
+}
+
+section.contact-frm .form-control {
+    border: 1px solid #0000000F;
+    padding: 18px;
+    border-radius: 5px;
+    font-weight: 300;
+    font-size: 18px;
+    line-height: 100%
+}
+
+section.contact-frm .form-control:focus {
+    box-shadow: unset;
+    border-color: #000
+}
+
+section.contact-frm h5 {
+    margin-bottom: 25px !important;
+    font-weight: 700;
+    color: #000;
+    font-size: 34px
+}
+
+section.contact-frm button.btn.btn-warning.px-4 {
+    background: #f93;
+    padding: 18px 52px !important;
+    color: #fff;
+    border-radius: 7px;
+    border: 1px solid #f93;
+    font-family: Inter;
+    font-weight: 500;
+    font-style: Medium;
+    font-size: 18px;
+    line-height: 100%;
+    margin-top: 20px
+}
+
+section.contact-frm button.btn.btn-warning.px-4:hover {
+    background-color: #fff;
+    color: #f93
+}
+
+form.wpcf7-form.init span {
+    width: 100%
+}
+
+.network-text {
+    background: linear-gradient(180deg,#169c86 0%,#57c3d3 100%);
+    height: 100%;
+    padding: 70px;
+    border-radius: 35px 0 0 35px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center
+}
+
+section.network-section .col-lg-6 {
+    padding: 0
+}
+
+.network-image {
+    height: 100%
+}
+
+.network-image img {
+    height: 100%;
+    object-fit: cover;
+    border-radius: 0 35px 35px 0
+}
+
+.network-text * {
+    color: #fff
+}
+
+.network-text ul li {
+    position: relative;
+    padding-left: 20px;
+    margin-bottom: 10px
+}
+
+.network-text ul li:after {
+    content: "";
+    position: absolute;
+    background-image: url("https://toprad.us/wp-content/uploads/2025/07/Vector-7.png");
+    height: 15px;
+    width: 15px;
+    left: 0;
+    top: 9px
+}
+
+.network-text ul {
+    width: 100%;
+    padding-top: 10px
+}
+
+.network-text h2 {
+    max-width: 550px;
+    margin-right: auto;
+    margin-bottom: 10px
+}
+
+section.why-toprad-section {
+    padding-top: 20px
+}
+
+.why-toprad-section h2 {
+    color: #000;
+}
+
+section.why-toprad-section.otr_tp_why {
+    padding-top: 100px
+}
+
+.imageg_rgtbox h2 {
+    max-width: 525px
+}
+
+.imageg_rgtbox p {
+    max-width: 511px
+}
+
+.imageg_rgtbox .text-primary {
+    color: #57c3d3 !important
+}
+
+.img-duc img {
+    width: 100%
+}
+
+.top-red-section {
+    padding: 130px 0 !important;
+    padding-bottom: 30px !important
+}
+
+.top-red-section p {
+    font-size: 22px;
+    max-width: 559px;
+    color: #394149 !important
+}
+
+.top-red-section h2 {
+    color: #000;
+    margin-bottom: 22px
+}
+
+.Transparent-section {
+    position: relative;
+    overflow: visible
+}
+
+.Transparent-section:before {
+    content: "";
+    position: absolute;
+    background: #57C3D31A;
+    width: 100%;
+    height: 1200px;
+    top: 0;
+    z-index: 0
+}
+
+.Transparent-section:after {
+    animation: none !important;
+    opacity: 1 !important;
+    right: 0;
+    z-index: 99
+}
+
+section.imag_otesec .imageg_rgtbox ul li {
+    list-style: none;
+    position: relative
+}
+
+section.imag_otesec .imageg_rgtbox ul li:after {
+    content: "";
+    position: absolute;
+    background-image: url("https://toprad.us/wp-content/uploads/2025/07/Vector-1-1.svg");
+    width: 16px;
+    height: 15px;
+    left: -23px;
+    top: 14px
+}
+
+section.imag_otesec.sdfsd .imageg_rgtbox {
+    padding: 0;
+    max-width: 626px
+}
+
+.imag_otesec h2 {
+    color: #000
+}
+
+section.network-section {
+    position: relative;
+    z-index: 9
+}
+
+.Transparent-section .container {
+    position: relative;
+    z-index: 9
+}
+
+.about-sectiss .rgt-img img {
+    width: 100%
+}
+
+.about-sectiss .existd-lft p {
+    max-width: 100%;
+    color: #394149;
+    font-weight: 400
+}
+
+.about-sectiss .existd-lft {
+    padding-left: 60px;
+    max-width: 630px
+}
+
+.about-sectiss .existd-lft img {
+    position: absolute;
+    top: -40px;
+    right: 0
+}
+
+.existed-4.about-sectiss .container {
+    position: relative
+}
+
+.about-sectiss .existd-lft h2 {
+    color: #000
+}
+
+.existed-sec {
+    padding-bottom: 0 !important
+}
+
+.existed-sec .existed-row {
+    border-bottom: 1px solid #00000014;
+    padding-bottom: 130px
+}
+
+section.network-section.about-network {
+    padding-bottom: 140px
+}
+
+.why-toprad-section {
+    padding: 100px 0;
+    background-color: #fff;
+    position: relative;
+    overflow: hidden;
+    z-index: 2;
+    min-height: 300px
+}
+
+.why-toprad-section>* {
+    position: relative;
+    z-index: 1
+}
+
+.why-toprad-section:after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 780px;
+    height: 140px;
+    background-image: url("https://toprad.us/wp-content/uploads/2025/07/TopRad-1.svg");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    opacity: 1;
+    animation: moveBackground 20s linear infinite;
+    z-index: -1
+}
+
+.cstmwrk_sec .section-header {
+    text-align: center;
+    margin-bottom: 50px
+}
+
+.about_wrap_inner p {
+    font-size: 18px !important;
+    text-align: left
+}
+
+.about_wrap_inner {
+    margin: 20px 0
+}
+
+.about_top_pra .cont_ty ul {
+    max-width: 870px;
+    padding-left: 40px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding-top: 6px
+}
+
+.about_top_pra .cont_ty ul li {
+    position: relative;
+    font-size: 16px;
+    font-weight: 400;
+    text-align: justify;
+    line-height: 1.5
+}
+
+.about_top_pra .cont_ty ul li:after {
+    content: "";
+    position: absolute;
+    background-image: url("https://toprad.us/wp-content/uploads/2025/07/Vector-1-1.svg");
+    width: 16px;
+    height: 15px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    left: -24px;
+    top: 6px
+}
+
+.about_top_pra .cont_ty p {
+    font-size: 20px;
+    line-height: 1.6 !important
+}
+
+.custm_otrworkbox ul li.mb-2 {
+    line-height: 1.8
+}
+
+@keyframes moveBackground {
+    0% {
+        transform: translateX(-100%)
+    }
+
+    100% {
+        transform: translateX(calc(100vw))
+    }
+}
+
+.why-toprad-section .section-header {
+    text-align: center;
+    margin-bottom: 50px
+}
+
+.section-subtitle {
+    font-size: 22px;
+    color: #000;
+    line-height: 32px
+}
+
+.toprad-features-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(380px, 1fr));
+    gap: 30px
+}
+
+.feature-box {
+    background-color: #fff;
+    border-radius: 12px;
+    padding: 40px;
+    text-align: left;
+    transition: transform .3s ease,box-shadow .3s ease;
+    border: 1px solid #0000000f
+}
+
+.feature-box:hover {
+    box-shadow: 0 6px 25px rgba(0,0,0,.1);
+    box-shadow: 40px 54px 72px 0px #0000001A
+}
+
+.feature-icon {
+    font-size: 40px;
+    color: #3b82f6;
+    margin-bottom: 20px
+}
+
+.feature-title {
+    font-size: 26px;
+    font-weight: 600;
+    margin-bottom: 8px;
+    color: #222;
+    max-width: 280px;
+    width: 100%
+}
+
+.feature-description {
+    font-size: 16px;
+    color: #6b727c;
+    font-weight: 400;
+    line-height: 28px;
+    max-width: 344px;
+    width: 100%
+}
+
+.about_top_pra .about-otr {
+    margin-top: 30px
+}
+
+.about_top_pra .about-otr h4 {
+    font-size: 26px;
+    font-weight: 600;
+    line-height: 1.6
+}
+
+.about_top_pra p {
+    font-size: 18px !important;
+    font-weight: 400;
+    color: #394149
+}
+
+@media (max-width: 768px) {
+    .section-title {
+        font-size:28px
+    }
+
+    .section-subtitle {
+        font-size: 16px
+    }
+
+    .feature-box {
+        padding: 20px
+    }
+
+    .feature-title {
+        font-size: 18px
+    }
+
+    .feature-description {
+        font-size: 15px
+    }
+}
+
+.main-footer.dark {
+    background-color: #000;
+    padding: 80px 0 40px;
+    color: #fff
+}
+
+.main-footer .footer-heading {
+    font-weight: 600;
+    font-size: 22px;
+    padding-bottom: 8px;
+    margin-bottom: 12px
+}
+
+.footer-link {
+    color: #fff;
+    text-decoration: none;
+    display: block;
+    margin-bottom: 8px;
+    font-size: 16px;
+    font-weight: 400
+}
+
+.footer-link:hover {
+    color: #57c2d9
+}
+
+.social-icon-link {
+    color: #fff;
+    font-size: 18px;
+    text-decoration: none;
+    border: 1px solid #555;
+    border-radius: 50%;
+    transition: all .3s ease;
+    width: 44px;
+    height: 44px;
+    display: flex;
+    align-items: center;
+    justify-content: center
+}
+
+.social-icon-link:hover {
+    color: #000 !important;
+    border-color: #55cbdd;
+    background-color: #55cbdd
+}
+
+footer.main-footer.dark .container {
+    padding-top: 250px
+}
+
+.tooprad-ttil {
+    font-weight: 600;
+    font-size: 26px;
+    line-height: 36px
+}
+
+section.real-growth-sec.dark .container {
+    border-radius: 50px
+}
+
+section.faq-sec.p-120 {
+    background-color: #000
+}
+
+section.how-work h2 {
+    color: #000
+}
+
+.contact-frm form p .wpcf7-spinner {
+    margin: 0 !important
+}
+
+header.main_header .insid_cont .slick-announcement {
+    max-width: 1920px!important
+}
+
+header.main_header .insid_cont .slick-announcement button.slick-prev {
+    left: 30px
+}
+
+header.main_header .insid_cont .slick-announcement button.slick-next {
+    right: 30px
+}
+
+header.main_header nav.navbar {
+    max-width: 1920px;
+    margin: auto
+}
+
+header.main_header .container-fluid {
+    padding: 0 30px !important
+}
+
+.main-green {
+    justify-content: normal;
+    margin-bottom: 30px
+}
+
+.imageg_rgtbox ul li b {
+    color: #57c3d3 !important
+}
+
+.contact-frm form .wpcf7-not-valid-tip {
+    font-size: 13px;
+    padding-left: 8px
+}
+
+.contact-frm .wpcf7 form .wpcf7-response-output {
+    font-size: 16px !important;
+    border: 2px solid #ffb900;
+    padding: 4px 14px
+}
