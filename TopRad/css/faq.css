@@ -1,0 +1,101 @@
+.faq .real-growth-wrp .real-innr {
+  max-width: 750px !important;
+}
+
+.faq-top {
+  padding-top: 120px;
+}
+
+.faq-top p {
+  color: #394149;
+  font-size: 26px;
+}
+
+.faq-layout {
+  display: flex;
+  gap: 60px;
+  align-items: flex-start;
+  padding-top: 100px;
+  padding-bottom: 60px;
+}
+
+/* Remove old top padding from .faq since layout handles it */
+.faq {
+  padding-top: 0;
+}
+
+.faq-toc {
+  width: 380px;
+  flex-shrink: 0;
+  position: sticky;
+  top: 100px;
+  background: #169c8605;
+  border: 1px solid #169c8626;
+  border-radius: 15px;
+  padding: 30px;
+}
+
+.toc-title {
+  font-size: 22px;
+  font-weight: 700;
+  color: #169c86;
+  margin-bottom: 30px;
+}
+
+.toc-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.toc-link {
+  display: block;
+  padding: 16px 22px;
+  font-size: 16px;
+  color: #6b727c;
+  text-decoration: none;
+  border-radius: 8px;
+  transition:
+    background 0.2s,
+    color 0.2s;
+  font-weight: 500;
+}
+
+.toc-link:hover {
+  background: #57c3d30a;
+  color: #169c86;
+}
+
+.toc-link.active {
+  background: linear-gradient(180deg, #169c86 0%, #57c3d3 100%);
+  color: #fff;
+}
+
+/* FAQ Content */
+.faq-content {
+  flex: 1;
+}
+
+/* Category heading */
+.faq-cat-title {
+  font-size: 28px;
+  font-weight: 700;
+  color: #ff9933;
+  margin: 60px 0 30px 30px;
+}
+
+.faq-category {
+  margin-bottom: 40px;
+}
+
+.faq-cat-title {
+  color: #000;
+  transition: color 0.2s ease;
+}
+
+.faq-cat-title.active {
+  color: #ff9933;
+}
