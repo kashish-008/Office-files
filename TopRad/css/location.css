@@ -42,7 +42,7 @@ section.imag_otesec.location-otesec::after {
 }
 
 section.imag_otesec.location-otesec .list-unstyled li {
-  line-height: 29px;
+  line-height: 1.5;
   font-weight: 400;
   margin-top: 15px;
 }

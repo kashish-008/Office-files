@@ -81,40 +81,6 @@
   font-size: 16px;
 }
 
-@media (min-width: 1025px) {
-  .focus-card:nth-child(4) {
-    grid-column-start: 2;
-    grid-column-end: 4;
-  }
-
-  .focus-card:nth-child(5) {
-    grid-column-start: 4;
-    grid-column-end: 6;
-  }
-}
-
-@media (max-width: 1024px) and (min-width: 769px) {
-  .focus-cards {
-    grid-template-columns: repeat(4, 1fr);
-  }
-  .focus-card {
-    grid-column: span 2;
-  }
-  .focus-card:nth-child(5) {
-    grid-column-start: 2;
-    grid-column-end: 4;
-  }
-}
-
-@media (max-width: 768px) {
-  .focus-cards {
-    grid-template-columns: 1fr;
-  }
-  .focus-card {
-    grid-column: span 1;
-  }
-}
-
 .advanced {
   padding: 130px 0;
   margin: auto;
@@ -155,6 +121,7 @@
   padding: 30px;
   border-radius: 20px;
   display: flex;
+  flex-wrap: wrap;
   gap: 26px;
   max-width: 750px;
   transition: all 0.3s ease-in-out;
@@ -355,6 +322,9 @@ faq-question::-webkit-details-marker {
 .advanced-l h1 {
   color: #fff;
 }
+section#ct-expert.imag_otesec::after {
+    display:none;
+}
 
 @media (max-width: 991px) {
   #ct-expert .across .fw-bold,
@@ -372,7 +342,9 @@ faq-question::-webkit-details-marker {
   .advanced-real,
   .focus,
   .faq.location-faq,
-  .faq-top {
+  .faq-top,
+  .imag_otesec,
+  .clinical {
     padding: 50px 0 !important;
   }
   .advanced-card,
@@ -396,7 +368,48 @@ faq-question::-webkit-details-marker {
     width: 22px;
     height: 22px;
   }
-  section.real-growth-sec.dark.high .cta {
+  section.real-growth-sec.dark.high .cta,
+  section#location-hero .cta {
     padding: 14px 18px !important;
+  }
+  .faq{
+    padding-top: 0;
+  }
+  .clinical .container{
+    padding-bottom: 20px !important;
+  }
+}
+
+@media (min-width: 1025px) {
+  .focus-card:nth-child(4) {
+    grid-column-start: 2;
+    grid-column-end: 4;
+  }
+
+  .focus-card:nth-child(5) {
+    grid-column-start: 4;
+    grid-column-end: 6;
+  }
+}
+
+@media (max-width: 1024px) and (min-width: 769px) {
+  .focus-cards {
+    grid-template-columns: repeat(4, 1fr);
+  }
+  .focus-card {
+    grid-column: span 2;
+  }
+  .focus-card:nth-child(5) {
+    grid-column-start: 2;
+    grid-column-end: 4;
+  }
+}
+
+@media (max-width: 768px) {
+  .focus-cards {
+    grid-template-columns: 1fr;
+  }
+  .focus-card {
+    grid-column: span 1;
   }
 }

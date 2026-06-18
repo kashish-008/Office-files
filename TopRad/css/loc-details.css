@@ -73,6 +73,12 @@ section.imag_otesec.location-otesec.loc-d-otesec .imageg_rgtbox ul li:after {
   top: 6px;
 }
 
+section.imag_otesec.loc-d-night:after{
+    display: none;
+}
+section.imag_otesec.loc-d-night:after{
+    display: none;
+}
 @media screen and (max-width: 575px) {
   #location-hero .bnnr-cntnt p {
     font-size: 15px;
