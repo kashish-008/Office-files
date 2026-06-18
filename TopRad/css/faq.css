@@ -13,7 +13,7 @@
 
 .faq-layout {
   display: flex;
-  gap: 60px;
+  gap: 10px 60px;
   align-items: flex-start;
   padding-top: 100px;
   padding-bottom: 60px;
@@ -26,7 +26,6 @@
 
 .faq-toc {
   width: 380px;
-  flex-shrink: 0;
   position: sticky;
   top: 100px;
   background: #169c8605;
@@ -98,4 +97,21 @@
 
 .faq-cat-title.active {
   color: #ff9933;
+}
+
+@media (max-width: 778px) {
+  .faq-layout {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  .faq-toc {
+    position: static;
+  }
+  .toc-link {
+    padding: 9px 15px;
+  }
+  section.real-growth-sec.dark.high.faq,
+  .faq-layout {
+    padding-top: 0 !important;
+  }
 }

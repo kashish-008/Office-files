@@ -364,11 +364,15 @@ faq-question::-webkit-details-marker {
 }
 
 @media screen and (max-width: 767px) {
+  p {
+    font-size: 18px !important;
+    line-height: 1.4 !important;
+  }
   .advanced,
   .advanced-real,
   .focus,
-  .faq,
-  .faq.location-faq {
+  .faq.location-faq,
+  .faq-top {
     padding: 50px 0 !important;
   }
   .advanced-card,
@@ -388,11 +392,11 @@ faq-question::-webkit-details-marker {
     font-size: 16px;
     line-height: 1.4;
   }
-  .faq-icon{
+  .faq-icon {
     width: 22px;
     height: 22px;
   }
-  section.real-growth-sec.dark.high .cta{
+  section.real-growth-sec.dark.high .cta {
     padding: 14px 18px !important;
   }
 }

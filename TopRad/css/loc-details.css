@@ -84,15 +84,6 @@ section.imag_otesec.location-otesec.loc-d-otesec .imageg_rgtbox ul li:after {
 }
 
 @media screen and (max-width: 767px) {
-  .loc-details .text-muted,
-  section.imag_otesec.location-otesec .imageg_rgtbox p,
-  .advanced-l p,
-  p.loc-d-p,
-  #location-toprad .section-subtitle,section.imag_otesec.location-otesec.loc-d-otesec .loc-d-p {
-    font-size: 18px;
-    line-height: 1.4;
-  }
-
   section.imag_otesec.location-otesec .list-unstyled li {
     line-height: 20px;
     font-size: 16px;
