@@ -1,0 +1,55 @@
+#location-hero {
+  padding: 90px 0;
+}
+
+#location-hero .bnnr-cntnt {
+  max-width: 1335px;
+}
+
+#location-hero .bnnr-cntnt p {
+  max-width: 828px;
+  font-size: 26px;
+}
+
+#location-toprad .section-header {
+  max-width: 1114px;
+  margin: auto;
+}
+
+#location-toprad .section-subtitle {
+  max-width: 1196px;
+  margin: auto;
+  color: #394149;
+  font-size: 26px;
+  line-height: 36px;
+  margin-bottom: 40px;
+}
+
+section.why-toprad-section.location-toprad:after {
+  content: "";
+  opacity: 0;
+}
+
+.faq.location-faq {
+  padding-bottom: 120px;
+}
+
+section.imag_otesec.location-otesec::after {
+  content: "";
+  opacity: 0;
+}
+
+section.imag_otesec.location-otesec .list-unstyled li {
+  line-height: 29px;
+  font-weight: 400;
+  margin-top: 15px;
+}
+
+section.imag_otesec.location-otesec .imageg_rgtbox p {
+  font-size: 22px;
+}
+
+.loc-map {
+  margin: auto;
+  width: fit-content;
+}

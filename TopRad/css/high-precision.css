@@ -359,3 +359,7 @@ faq-question::-webkit-details-marker {
     max-width: 100%;
   }
 }
+
+.faq-question p{
+  max-width: 750px;
+}
