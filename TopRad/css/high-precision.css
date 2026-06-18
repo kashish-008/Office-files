@@ -26,14 +26,12 @@
   color: #394149;
 }
 
-#ct-expert{
-    padding: 120px 0 !important;
-}
-
 .ct-expert .ct-expert-content {
-  display: flex;
+  display: grid;
   gap: 90px;
+  grid-template-columns: 1fr 1fr;
   align-items: center;
+  flex-wrap: wrap;
 }
 
 .focus {
@@ -349,4 +347,15 @@ faq-question::-webkit-details-marker {
 .high #view {
   color: #fff;
   border: 1px solid #ffffff;
+}
+
+#ct-expert .across .fw-bold{
+  max-width: 440px;
+}
+
+@media (max-width: 991px){
+  #ct-expert .across .fw-bold, #ct-expert .across .text-muted
+  {
+    max-width: 100%;
+  }
 }
