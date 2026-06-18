@@ -28,6 +28,7 @@
 section.why-toprad-section.location-toprad:after {
   content: "";
   opacity: 0;
+  display: none;
 }
 
 .faq.location-faq {
@@ -37,6 +38,7 @@ section.why-toprad-section.location-toprad:after {
 section.imag_otesec.location-otesec::after {
   content: "";
   opacity: 0;
+  display: none;
 }
 
 section.imag_otesec.location-otesec .list-unstyled li {
@@ -52,4 +54,11 @@ section.imag_otesec.location-otesec .imageg_rgtbox p {
 .loc-map {
   margin: auto;
   width: fit-content;
+}
+
+
+@media screen and (max-width: 767px){
+    section#location-toprad {
+    margin: 0 !important;
+}
 }

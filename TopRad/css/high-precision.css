@@ -59,7 +59,7 @@
   border: 1px solid #57c3d340;
   background: transparent;
   border-radius: 20px;
-  padding: 50px;
+  padding: 45px;
   text-align: center;
   grid-column: span 2;
   transition: all 0.3s ease-in-out;
@@ -123,7 +123,7 @@
 .advanced-content {
   display: flex;
   flex-wrap: wrap;
-  gap: 90px;
+  gap: 40px 90px;
   justify-content: center;
   align-items: flex-start;
 }
@@ -183,7 +183,6 @@
 
 .advanced-dark {
   background-color: #000;
-  padding: 80px 0 40px;
   color: #000;
 }
 
@@ -201,10 +200,6 @@
   height: 50%;
   width: 100%;
   z-index: -1;
-}
-
-.advanced-real-img {
-  padding: 350px;
 }
 
 .clinical {
@@ -334,14 +329,14 @@ faq-question::-webkit-details-marker {
   }
 }
 
-.high .real-growth-wrp .real-innr{
-    max-width: 870px;
+.high .real-growth-wrp .real-innr {
+  max-width: 870px;
 }
 
-.high .real-growth-wrp .real-innr h2{
-    max-width: 800px;
-    margin: auto;
-    margin-bottom: 20px;
+.high .real-growth-wrp .real-innr h2 {
+  max-width: 800px;
+  margin: auto;
+  margin-bottom: 20px;
 }
 
 .high #view {
@@ -349,17 +344,55 @@ faq-question::-webkit-details-marker {
   border: 1px solid #ffffff;
 }
 
-#ct-expert .across .fw-bold{
-  max-width: 440px;
+#ct-expert .across .fw-bold {
+  max-width: 490px;
 }
 
-@media (max-width: 991px){
-  #ct-expert .across .fw-bold, #ct-expert .across .text-muted
-  {
+.faq-question p {
+  max-width: 750px;
+}
+
+.advanced-l h1 {
+  color: #fff;
+}
+
+@media (max-width: 991px) {
+  #ct-expert .across .fw-bold,
+  #ct-expert .across .text-muted {
     max-width: 100%;
   }
 }
 
-.faq-question p{
-  max-width: 750px;
+@media screen and (max-width: 767px) {
+  .advanced,
+  .advanced-real,
+  .focus,
+  .faq,
+  .faq.location-faq {
+    padding: 50px 0 !important;
+  }
+  .advanced-card,
+  .focus-card,
+  .feature-box,
+  .faq-item {
+    padding: 20px !important;
+  }
+  .section-title {
+    font-size: 28px !important;
+  }
+  .feature-description {
+    line-height: 1.4 !important;
+  }
+
+  .faq-question p {
+    font-size: 16px;
+    line-height: 1.4;
+  }
+  .faq-icon{
+    width: 22px;
+    height: 22px;
+  }
+  section.real-growth-sec.dark.high .cta{
+    padding: 14px 18px !important;
+  }
 }

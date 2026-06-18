@@ -1,0 +1,104 @@
+.loc-details {
+  padding: 120px 0;
+}
+
+.loc-details .fw-bold {
+  font-size: 26px;
+  max-width: 522px;
+  color: #000;
+}
+
+.loc-details .text-muted {
+  font-size: 22px;
+  color: #394149;
+  max-width: 655px;
+}
+
+p.loc-d-p {
+  max-width: 597px !important;
+}
+
+.loc-d-night .fw-bold {
+  max-width: 691px;
+}
+
+section.focus.loc-d-focus .section-title {
+  max-width: 817px;
+  color: #000;
+  margin: auto;
+}
+
+section.focus.loc-d-focus .section-subtitle {
+  max-width: 1100px;
+  color: #394149;
+  margin: auto;
+  margin-bottom: 32px;
+}
+
+section.focus.loc-d-focus .focus-card h4 {
+  font-weight: 600;
+  margin: 22px 0 10px 0;
+}
+
+section.imag_otesec.location-otesec.loc-d-otesec {
+  color: #fff;
+}
+
+section.imag_otesec.location-otesec.loc-d-otesec .fw-bold {
+  color: #fff;
+  max-width: 616px;
+}
+
+section.imag_otesec.location-otesec.loc-d-otesec .loc-d-p {
+  color: #fff;
+  font-size: 22px;
+}
+
+section.imag_otesec.location-otesec.loc-d-otesec b {
+  color: #fff !important;
+}
+
+section.imag_otesec.location-otesec.loc-d-otesec .imageg_rgtbox ul li {
+  list-style: none;
+  position: relative;
+}
+
+section.imag_otesec.location-otesec.loc-d-otesec .imageg_rgtbox ul li:after {
+  content: "";
+  position: absolute;
+  background-image: url("../assets/white-tick.svg");
+  width: 16px;
+  height: 15px;
+  left: -23px;
+  top: 6px;
+}
+
+@media screen and (max-width: 575px) {
+  #location-hero .bnnr-cntnt p {
+    font-size: 15px;
+  }
+
+  .loc-details {
+    padding: 50px 0;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .loc-details .text-muted,
+  section.imag_otesec.location-otesec .imageg_rgtbox p,
+  .advanced-l p,
+  p.loc-d-p,
+  #location-toprad .section-subtitle,section.imag_otesec.location-otesec.loc-d-otesec .loc-d-p {
+    font-size: 18px;
+    line-height: 1.4;
+  }
+
+  section.imag_otesec.location-otesec .list-unstyled li {
+    line-height: 20px;
+    font-size: 16px;
+  }
+
+  p.loc-d-p {
+    margin-bottom: 10px;
+  }
+}
