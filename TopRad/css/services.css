@@ -66,4 +66,10 @@
 
 #service-p{
   max-width: 480px;
+  font-weight: 500;
+  font-size: 22px;
+}
+
+section.why-toprad-section.otr_tp_why.service-tp .srve_offr .feature-box.feature-expertise h4{
+  color: #000;
 }
