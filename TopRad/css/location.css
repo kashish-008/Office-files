@@ -71,3 +71,13 @@ section.imag_otesec.location-otesec .imageg_rgtbox p {
 section#location-toprad .tooprad-ttil {
   color: #000;
 }
+
+section.imag_otesec.location-otesec .imageg_rgtbox ul li:after {
+  content: "";
+  position: absolute;
+  background-image: url(https://toprad.us/wp-content/uploads/2025/07/Vector-1-1.svg);
+  width: 16px;
+  height: 15px;
+  left: -23px;
+  top: 5px;
+}

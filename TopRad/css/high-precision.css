@@ -354,7 +354,7 @@ section#ct-expert.imag_otesec::after {
   .faq-top,
   .imag_otesec,
   .clinical,
-  section.real-growth-sec.dark.high {
+  section.real-growth-sec.dark.high.hp {
     padding: 50px 0 !important;
   }
   .advanced-card,
@@ -432,6 +432,6 @@ section#ct-expert.imag_otesec::after {
   color: #fff !important;
 }
 
-section.real-growth-sec.dark.high {
+section.real-growth-sec.dark.high.hp {
   padding-top: 100px;
 }
