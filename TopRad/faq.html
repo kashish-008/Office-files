@@ -34,7 +34,7 @@
         <div class="row justify-content-center">
           <div class="cont_ty col-lg-10 col-xl-8 text-center">
             <p>
-              Everything you need to know about TopRad’s clinical protocols,
+              Everything you need to know about TopRad's clinical protocols,
               technical infrastructure, and state-specific compliance.
             </p>
           </div>
@@ -108,8 +108,8 @@
                 </summary>
                 <div class="faq-answer">
                   <p>
-                    Routine studies are completed within 2–4 hours, STAT within
-                    30–60 minutes, and critical findings are communicated
+                    Routine studies are completed within 2-4 hours, STAT within
+                    30-60 minutes, and critical findings are communicated
                     immediately upon identification.
                   </p>
                 </div>
@@ -162,7 +162,7 @@
                 </div>
               </details>
 
-              <details class="faq-item">
+              <details class="faq-item">5-7
                 <summary class="faq-question">
                  <p>Do you integrate with my existing PACS and EMR?</p> 
                   <span class="faq-icon"></span>
@@ -307,7 +307,7 @@
                 </summary>
                 <div class="faq-answer">
                   <p>
-                    Most facilities are fully onboarded within 5–7 business
+                    Most facilities are fully onboarded within 5-7 business
                     days. Our team manages the entire setup including PACS
                     integration and workflow configuration.
                   </p>
@@ -501,14 +501,12 @@
 
         tocLinks.forEach(function (link) {
           link.addEventListener("click", function () {
-            // TOC active highlight
             tocLinks.forEach(function (l) {
               l.classList.remove("active");
             });
             this.classList.add("active");
 
-            // Category title color
-            var target = this.getAttribute("href"); // e.g. "#clinical-qa"
+            var target = this.getAttribute("href"); 
             catTitles.forEach(function (title) {
               var parent = title.closest(".faq-category");
               if ("#" + parent.getAttribute("id") === target) {
@@ -520,7 +518,6 @@
           });
         });
 
-        // Set first one active on load to match TOC default
         if (catTitles.length > 0) {
           catTitles[0].classList.add("active");
         }
