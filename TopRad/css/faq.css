@@ -15,11 +15,10 @@
   display: flex;
   gap: 10px 60px;
   align-items: flex-start;
-  padding-top: 100px;
+  padding-top: 80px;
   padding-bottom: 20px;
 }
 
-/* Remove old top padding from .faq since layout handles it */
 .faq {
   padding-top: 0;
 }
@@ -73,12 +72,10 @@
   color: #fff;
 }
 
-/* FAQ Content */
 .faq-content {
   flex: 1;
 }
 
-/* Category heading */
 .faq-cat-title {
   font-size: 28px;
   font-weight: 700;
@@ -134,4 +131,8 @@
   opacity: 1;
   animation: moveBackground 20s linear infinite;
   z-index: -1;
+}
+
+section#faq-hero {
+    padding: 240px 0 !important;
 }

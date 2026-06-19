@@ -19,6 +19,7 @@
 #ct-quote {
   color: #000000 !important;
   border: 1px solid #57c3d3;
+  padding: 18px 26px !important;
 }
 
 #ct-quote:hover {
@@ -37,7 +38,7 @@
 }
 
 .focus {
-  padding: 120px 0;
+  padding: 117px 0 133px 0;
 }
 
 .focus .section-title {
@@ -89,7 +90,7 @@
 }
 
 .advanced {
-  padding: 130px 0;
+  padding: 130px 0 120px 0;
   margin: auto;
 }
 
@@ -151,7 +152,7 @@
 .advanced-card p {
   color: #6b727c;
   font-size: 16px;
-  font-weight: 600;
+  /* font-weight: 600; */
   max-width: 550px;
 }
 
@@ -177,12 +178,12 @@
 }
 
 .clinical {
-  padding-top: 120px;
+  padding-top: 126px;
 }
 
 .clinical .container {
   border-bottom: 1px solid #00000014;
-  padding-bottom: 120px !important;
+  padding-bottom: 130px !important;
 }
 
 .clinical .imageg_rgtbox ul li:after {
@@ -226,7 +227,6 @@
 }
 
 .faq-item {
-  background: #57c3d30a;
   border: 1px solid #57c3d333;
   border-radius: 15px;
   margin: auto;
@@ -280,6 +280,10 @@ faq-question::-webkit-details-marker {
   border-bottom: 2px solid #ffffff;
   transform: translate(-50%, -50%) rotate(45deg);
   transition: transform 0.3s ease;
+}
+
+.faq-item[open]{
+  background: #57C3D30A;
 }
 
 .faq-item[open] .faq-icon {
@@ -427,6 +431,7 @@ section#ct-expert.imag_otesec::after {
 .imageg_rgtbox.across .text-muted {
   font-size: 22px;
   max-width: 614px;
+  color: #394149 !important;
 }
 
 .advanced h2 {
@@ -435,4 +440,36 @@ section#ct-expert.imag_otesec::after {
 
 section.real-growth-sec.dark.high.hp {
   padding-top: 100px;
+}
+
+section.main-bnnr.dark.ct-bnnr {
+    padding: 205px 0 !important;
+}
+
+.bnnr-btns.d-flex.g-12 .cta-h {
+    padding: 18px 29px !important;
+    text-transform: unset;
+}
+
+.imageg_boxot.high {
+    max-width: 666px;
+}
+
+section#ct-expert {
+    padding-bottom: 147px;
+}
+
+.real-growth-wrp.advanced-real-img {
+    max-width: 1440px;
+}
+section.clinical .imageg_boxot {
+    max-width: 649px;
+}
+
+section.real-growth-sec.dark.high.hp .cta {
+    padding: 18px 34px !important;
+}
+
+section.real-growth-sec.dark.high.hp a#ct-quote\ view{
+    padding: 18px 49px !important;
 }
