@@ -11,7 +11,7 @@
 }
 
 .ct-bnnr .bnnr-cntnt {
-  max-width: 920px;
+  max-width: 1080px;
 }
 
 #ct-quote {
@@ -40,6 +40,7 @@
 
 .focus .section-title {
   text-align: center;
+  color: #000;
 }
 
 .focus .section-subtitle {
@@ -73,7 +74,11 @@
 
 .focus-card h4 {
   font-weight: 600;
-  margin: 22px 0 4px 0;
+  padding: 22px 0 8px 0;
+  margin: auto;
+  font-size: 26px;
+  color: #000;
+  max-width: 272px;
 }
 
 .focus-card p {
@@ -200,6 +205,7 @@
 .clinical .list-unstyled li {
   line-height: 28px;
   font-weight: 500;
+  margin-bottom: 18px;
 }
 
 .clinical .imageg_rgtbox h2 {
@@ -323,7 +329,7 @@ faq-question::-webkit-details-marker {
   color: #fff;
 }
 section#ct-expert.imag_otesec::after {
-    display:none;
+  display: none;
 }
 
 @media (max-width: 991px) {
@@ -344,7 +350,8 @@ section#ct-expert.imag_otesec::after {
   .faq.location-faq,
   .faq-top,
   .imag_otesec,
-  .clinical {
+  .clinical,
+  section.real-growth-sec.dark.high {
     padding: 50px 0 !important;
   }
   .advanced-card,
@@ -361,8 +368,7 @@ section#ct-expert.imag_otesec::after {
   }
 
   .faq-question p {
-    font-size: 16px;
-    line-height: 1.4;
+    max-width: 222px;
   }
   .faq-icon {
     width: 22px;
@@ -372,10 +378,10 @@ section#ct-expert.imag_otesec::after {
   section#location-hero .cta {
     padding: 14px 18px !important;
   }
-  .faq{
+  .faq {
     padding-top: 0;
   }
-  .clinical .container{
+  .clinical .container {
     padding-bottom: 20px !important;
   }
 }
@@ -412,4 +418,17 @@ section#ct-expert.imag_otesec::after {
   .focus-card {
     grid-column: span 1;
   }
+}
+
+.imageg_rgtbox.across .text-muted {
+  font-size: 22px;
+  max-width: 614px;
+}
+
+.advanced h2 {
+  color: #fff !important;
+}
+
+section.real-growth-sec.dark.high {
+  padding-top: 100px;
 }
