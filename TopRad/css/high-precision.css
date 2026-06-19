@@ -313,6 +313,7 @@ faq-question::-webkit-details-marker {
   margin: auto;
   margin-bottom: 20px;
   color: #fff;
+  font-weight: 800 !important;
 }
 
 .high #view {
