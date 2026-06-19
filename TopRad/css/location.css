@@ -7,7 +7,7 @@
 }
 
 #location-hero .bnnr-cntnt p {
-  max-width: 828px;
+  max-width: 854px;
   font-size: 26px;
 }
 
@@ -56,9 +56,18 @@ section.imag_otesec.location-otesec .imageg_rgtbox p {
   width: fit-content;
 }
 
-
-@media screen and (max-width: 767px){
-    section#location-toprad {
+@media screen and (max-width: 767px) {
+  section#location-toprad {
     margin: 0 !important;
+  }
 }
+
+.main-bnnr .bnnr-cntnt h2 {
+  max-width: 999px;
+  margin: auto;
+  font-weight: 800 !important;
+}
+
+section#location-toprad .tooprad-ttil {
+  color: #000;
 }

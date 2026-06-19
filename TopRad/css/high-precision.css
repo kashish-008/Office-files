@@ -10,8 +10,10 @@
   padding: 205px 0;
 }
 
-.ct-bnnr .bnnr-cntnt {
-  max-width: 1080px;
+.ct-bnnr .bnnr-cntnt h2 {
+  max-width: 919px;
+  margin: auto;
+  font-weight: 800 !important;
 }
 
 #ct-quote {
@@ -310,6 +312,7 @@ faq-question::-webkit-details-marker {
   max-width: 800px;
   margin: auto;
   margin-bottom: 20px;
+  color: #fff;
 }
 
 .high #view {
