@@ -93,6 +93,18 @@ section.imag_otesec.loc-d-night:after {
   .loc-details {
     padding: 50px 0;
   }
+
+  .address{
+    padding: 20px !important;
+  }
+
+  .address h3{
+    font-size: 26px !important;
+  }
+
+  .address p{
+    font-size: 16px !important;
+  }
 }
 
 @media screen and (max-width: 767px) {
@@ -116,6 +128,28 @@ section.imag_otesec.loc-d-night.ld-2 .imageg_rgtbox {
 }
 
 section.imag_otesec.loc-d-night.ld-2 p.loc-d-p {
-    max-width: 655px !important;
-    color: #394149;
+  max-width: 655px !important;
+  color: #394149;
+}
+
+.address {
+  padding: 52px;
+  text-align: center;
+  border-radius: 20px;
+  border: 1px solid #57c3d3;
+  background: #57c3d31a;
+  max-width: 1358px;
+  margin: 60px 20px 0 20px;
+}
+
+.address h3{
+  font-size: 36px;
+  color: #57C3D3;
+  font-weight: 700;
+  margin-bottom: 13px;
+}
+
+.address p{
+  font-size: 22px;
+  color: #394149;
 }
