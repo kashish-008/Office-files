@@ -677,7 +677,7 @@ header .container-fluid {
   font-size: 60px;
 }
 
-.story-right p{
+.story-inner-p{
     margin: 11px 0 43px 0;
 }
 
@@ -839,13 +839,13 @@ header .container-fluid {
 footer {
   position: relative;
   overflow: hidden;
+  padding-top: 110px;
 }
 
 .footer-top {
   display: grid;
   grid-template-columns: 2fr 1fr 1fr 1fr;
   gap: 40px;
-  padding-bottom: 80px;
 }
 
 .footer-tagline {
@@ -880,7 +880,7 @@ footer {
 }
 
 .footer-bg-text {
-  padding-bottom: 70px;
+  padding: 80px 0;
 }
 
 .footer-bg-text {
