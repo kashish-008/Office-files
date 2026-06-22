@@ -6,7 +6,6 @@
 
 
 /* ------footer------ */
-/* ===== FOOTER RESPONSIVE ===== */
 @media only screen and (max-width: 991px) {
     .footer-top {
         grid-template-columns: 1fr 1fr;

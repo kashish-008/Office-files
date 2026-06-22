@@ -624,8 +624,13 @@ header .container-fluid {
 } */
 
 
-
-
+/* -----start-here----- */
+.start-here{
+    background: linear-gradient(270deg, #FDAB4D 0%, #F76729 100%);
+    padding: 155px 0;
+    margin: 60px;
+    border-radius: 30px;
+}
 
 
 /* -----Footer----- */
