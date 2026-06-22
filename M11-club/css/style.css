@@ -623,15 +623,73 @@ header .container-fluid {
     background-position: center;
 } */
 
-
 /* -----start-here----- */
-.start-here{
-    background: linear-gradient(270deg, #FDAB4D 0%, #F76729 100%);
-    padding: 155px 0;
-    margin: 60px;
-    border-radius: 30px;
+.start-here-sec {
+  padding: 60px;
 }
 
+.start-here {
+  background: linear-gradient(270deg, #fdab4d 0%, #f76729 100%);
+  border-radius: 30px;
+  padding: 138px 0;
+  position: relative;
+}
+
+.start-here-content{
+    display: flex;
+}
+
+.start-here-txt {
+  max-width: 707px;
+  position: relative;
+  z-index: 1;
+}
+
+.start-here-sub {
+  font-size: 55px;
+  font-weight: 800;
+  color: #fff;
+  text-transform: uppercase;
+}
+
+.start-here-hd {
+  font-size: 107px;
+  text-transform: uppercase;
+}
+
+.start-here-para {
+  font-size: var(--size-22);
+  color: #fff;
+  margin-bottom: 52px;
+}
+
+.start-here-btn {
+  background: #fff;
+  color: #070707;
+  box-shadow: none;
+  border-radius: 8px;
+  padding: 25px 60px;
+}
+
+.start-here-btn::before {
+  background: linear-gradient(
+    270deg,
+    rgba(255, 255, 255, 0.4) 0%,
+    rgba(255, 255, 255, 0.4) 100%
+  );
+}
+
+.start-here-img {
+  position: absolute;
+  bottom: 0;
+  right: 20px;
+}
+
+.start-here-img img {
+  width: 100%;
+  display: block;
+  object-fit: contain;
+}
 
 /* -----Footer----- */
 footer {
@@ -680,6 +738,21 @@ footer {
 .footer-bg-text {
   padding-bottom: 70px;
 }
+
+.footer-bg-text {
+  display: inline-block;
+  animation: slideLeftRight 4s ease-in-out infinite alternate;
+}
+
+@keyframes slideLeftRight {
+  0%, 100% {
+    transform: translateX(0);
+  }
+  50% {
+    transform: translateX(180px); 
+  }
+}
+
 
 .footer-bottom-inner {
   display: flex;
