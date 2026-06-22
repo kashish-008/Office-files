@@ -113,7 +113,7 @@
   }
 }
 
-.faq-q{
+.faq-q {
   position: relative;
 }
 
@@ -134,5 +134,14 @@
 }
 
 section#faq-hero {
-    padding: 240px 0 !important;
+  padding: 240px 0 !important;
+}
+
+section.real-growth-sec.dark.high.faq .cta {
+  padding: 18px 48px !important;
+}
+
+section.real-growth-sec.dark.high.faq a#ct-quote\ view{
+  padding: 18px 33px !important;
+
 }

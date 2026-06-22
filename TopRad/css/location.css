@@ -81,3 +81,12 @@ section.imag_otesec.location-otesec .imageg_rgtbox ul li:after {
   left: -23px;
   top: 5px;
 }
+
+section#location-hero .cta{
+  padding: 18px 42px !important;
+}
+
+section#location-hero a.cta.cta-transprnt{
+  padding: 18px 30px !important;
+
+}
