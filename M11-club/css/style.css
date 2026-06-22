@@ -1163,9 +1163,94 @@ h6 {
 }
 
 /* kashish css */
+/* -----smoke section----- */
+.smoke {
+  padding: 135px 0;
+}
 
+.smoke-top {
+  text-align: center;
+}
 
+.smoke-top h2 {
+  margin: 19px 0 7px 0;
+}
 
+p.smoke-inner-p {
+  max-width: 652px;
+  margin: auto;
+}
+
+.smoke-content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 45px;
+  margin-top: 45px;
+}
+
+.smoke-l {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  width: 100%;
+  max-width: 705px;
+}
+
+.smoke-card {
+  padding: 33px 30px;
+  border: 1px solid #ffffff24;
+  border-radius: 15px;
+  position: relative;
+  overflow: hidden;
+  transition: transform 0.4s ease;
+}
+
+.smoke-card::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  padding: 1px;
+  border-radius: inherit;
+  background: linear-gradient(
+    94.13deg,
+    rgba(255, 255, 255, 0.15) 0%,
+    rgba(0, 0, 0, 0.15) 99.22%
+  );
+  -webkit-mask:
+    linear-gradient(#fff 0 0) content-box,
+    linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+  pointer-events: none;
+  transition: all 0.4s ease;
+}
+
+.smoke-card:hover {
+  transform: translateY(-8px);
+  background: #fdab4d0f;
+}
+
+.smoke-card:hover::before {
+  background: linear-gradient(270deg, #f767293d 0%, #fdab4d3d 100%);
+}
+.smoke-card-heading {
+  font-size: 27px;
+  font-weight: 500;
+  color: #ffffff;
+  margin: 0;
+}
+
+.smoke-summary {
+  font-size: 18px;
+  margin: 0;
+  margin-left: 30px;
+  max-width: 563px;
+}
+
+.star-smoke {
+  width: 28px;
+}
 /* -----story----- */
 .story {
   background: linear-gradient(180deg, #1c1919 0%, #000000 100%);
