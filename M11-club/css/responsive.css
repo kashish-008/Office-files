@@ -4,7 +4,40 @@
     }
 }
 
+/* -----faq responsive----- */
+@media only screen and (max-width: 991px) {
+    .faq-hd h2 {
+        font-size: 50px;
+    }
 
+    .faq-glow {
+        width: 400px;
+    }
+}
+
+@media only screen and (max-width: 767px) {
+    .faq {
+        padding: 80px 0 40px 0;
+    }
+
+    .faq-hd h2 {
+        font-size: 38px;
+    }
+
+    .faq-question {
+        font-size: 16px;
+    }
+}
+
+@media only screen and (max-width: 575px) {
+    .faq-hd h2 {
+        font-size: 30px;
+    }
+
+    .faq-item {
+        padding: 18px 18px;
+    }
+}
 
 /* -----start-here responsive----- */
 @media only screen and (max-width: 1199px) {
