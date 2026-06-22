@@ -4,6 +4,92 @@
     }
 }
 
+/* -----story responsive----- */
+@media only screen and (max-width: 1199px) {
+    .story-content {
+        gap: 40px;
+    }
+
+    .story-left img {
+        width: 380px;
+    }
+
+    .story-right h2 {
+        font-size: 48px;
+    }
+}
+
+@media only screen and (max-width: 991px) {
+    .story {
+        padding-top: 100px;
+    }
+
+    .story-content {
+        gap: 30px;
+    }
+
+    .story-left img {
+        width: 300px;
+    }
+
+    .story-right h2 {
+        font-size: 40px;
+    }
+}
+
+@media only screen and (max-width: 767px) {
+    .story {
+        padding-top: 80px;
+    }
+
+    .story-content {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 30px;
+    }
+
+    .story-left {
+        width: 100%;
+        text-align: center;
+    }
+
+    .story-left img {
+        width: 100%;
+        max-width: 400px;
+    }
+
+    .story-right {
+        max-width: 100%;
+    }
+
+    .story-right h2 {
+        font-size: 36px;
+    }
+
+    .story .container {
+        padding-bottom: 80px;
+    }
+}
+
+@media only screen and (max-width: 575px) {
+    .story {
+        padding-top: 60px;
+    }
+
+    .story-right h2 {
+        font-size: 28px;
+    }
+
+    .story-right p {
+        font-size: 16px;
+        margin: 10px 0 30px 0;
+    }
+
+    .story .container {
+        padding-bottom: 60px;
+    }
+}
+
 /* -----faq responsive----- */
 @media only screen and (max-width: 991px) {
     .faq-hd h2 {

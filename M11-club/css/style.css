@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap");
 
 * {
   box-sizing: border-box;
@@ -70,12 +70,17 @@ h6 {
   font-size: 14px;
 }
 
-.size-55{
-    font-size: 55px;
+.size-55 {
+  font-size: 55px;
 }
 
-.size-107{
-    font-size: 107px;
+.size-107 {
+  font-size: 107px;
+}
+
+.orange-txt {
+  color: #f76729;
+  font-size: var(--size-22);
 }
 
 .pt-100 {
@@ -511,7 +516,8 @@ header .container-fluid {
   position: relative;
 }
 
-.giveaway-sec .abs_bg, .faq .abs_bg {
+.giveaway-sec .abs_bg,
+.faq .abs_bg {
   position: absolute;
   top: 10px;
   left: 0;
@@ -519,7 +525,8 @@ header .container-fluid {
   z-index: -1;
 }
 
-.giveaway-sec .abs_bg img, .faq .abs_bg  {
+.giveaway-sec .abs_bg img,
+.faq .abs_bg {
   animation: leftRight 3s ease-in-out infinite alternate;
 }
 
@@ -633,6 +640,47 @@ header .container-fluid {
     background-position: center;
 } */
 
+/* -----story----- */
+.story {
+  background: linear-gradient(180deg, #1c1919 0%, #000000 100%);
+  padding-top: 150px;
+}
+
+.story .container {
+  border-bottom: 1px solid;
+  border-image-source: linear-gradient(
+    90deg,
+    rgba(255, 255, 255, 0) 0%,
+    #fdab4d 50%,
+    rgba(255, 255, 255, 0) 100%
+  );
+  border-image-slice: 1;
+  padding-bottom: 130px;
+}
+
+.story-content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 70px;
+}
+
+.story-right {
+  max-width: 602px;
+}
+
+.story-right .orange-txt {
+  margin-bottom: 19px;
+}
+
+.story-right h2 {
+  font-size: 60px;
+}
+
+.story-right p{
+    margin: 11px 0 43px 0;
+}
+
 /* -----faq----- */
 .faq {
   padding: 118px 0 49px 0;
@@ -655,8 +703,8 @@ header .container-fluid {
   object-fit: contain;
 }
 
-.faq .abs_bg{
-    top: 95px !important;
+.faq .abs_bg {
+  top: 95px !important;
 }
 
 .faq .container {
@@ -670,9 +718,7 @@ header .container-fluid {
 }
 
 .faq-sub {
-  font-size: var(--size-22);
   margin-bottom: 12px;
-  color: var(--orange-text);
 }
 
 .italic {
@@ -780,7 +826,7 @@ header .container-fluid {
 .start-here-img {
   position: absolute;
   bottom: 0;
-  right: 20px;
+  right: 0;
 }
 
 .start-here-img img {
