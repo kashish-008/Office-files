@@ -1163,11 +1163,8 @@ h6 {
 }
 
 /* kashish css */
-/* -----smoke section----- */
-.smoke {
-  padding: 135px 0;
-}
 
+/* -----smoke section----- */
 .smoke-top {
   text-align: center;
 }
@@ -1251,6 +1248,36 @@ p.smoke-inner-p {
 .star-smoke {
   width: 28px;
 }
+
+.smoke-bottom {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 30px;
+  margin-top: 30px;
+}
+
+.smoke-bottom-card {
+  border-radius: 15px;
+  border: 1px solid #ffffff24;
+  display: flex;
+  gap: 22px;
+  padding: 27px 28px;
+  width: 100%;
+  max-width: 460px;
+}
+
+.smoke-bottom-card .orange-txt h4 {
+  font-size: 25px;
+  font-weight: 500;
+  margin-bottom: 4px;
+}
+
+.smoke-bottom-card .orange-txt p {
+  font-size: 14px;
+  margin: 0;
+}
+
 /* -----story----- */
 .story {
   background: linear-gradient(180deg, #1c1919 0%, #000000 100%);
@@ -1496,18 +1523,6 @@ footer {
 
 .footer-bg-text {
   display: inline-block;
-  animation: slideLeftRight 4s ease-in-out infinite alternate;
-}
-
-@keyframes slideLeftRight {
-  0%,
-  100% {
-    transform: translateX(0);
-  }
-
-  50% {
-    transform: translateX(180px);
-  }
 }
 
 .footer-bottom-inner {
