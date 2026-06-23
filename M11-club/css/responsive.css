@@ -559,3 +559,52 @@
     font-size: 16px;
   }
 }
+
+
+/* -----------about responsive------------ */
+@media (max-width: 991.98px) {
+  .started-m11-sec {
+    padding: 60px 0;
+    text-align: center;
+  }
+  .started-m11-sec .body-text {
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .hand-glow-img {
+    display: none;
+  }
+}
+
+@media (max-width: 575.98px) {
+  .started-m11-sec h2 {
+    font-size: 40px;
+  }
+  .started-m11-sec h3 {
+    font-size: 28px;
+  }
+  .started-m11-sec .body-text,
+  .started-m11-sec .orange-txt h6 {
+    font-size: 16px;
+  }
+
+  .started-m11-sec .orange-txt h6 {
+    margin-bottom: 20px;
+  }
+  .started-m11-sec a.join-btn.cta,
+  .build-by-sec a.join-btn.cta {
+    margin-top: 5px;
+    font-size: 16px;
+    padding: 15px 40px;
+  }
+  .build-by-sec-coin {
+   
+    width: 15%;
+  }
+  section.story.build-by-sec .size-107 span {
+    font-size: 50px;
+  }
+  section.story.build-by-sec .size-55 h2 {
+    font-size: 30px;
+  }
+}

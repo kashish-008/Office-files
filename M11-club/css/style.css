@@ -1643,3 +1643,114 @@ footer {
   max-width: 630px;
   object-fit: contain;
 }
+
+/* -----ABOUT-US PAGE----- */
+
+/* ----build-by-section--- */
+section.story.build-by-sec {
+  padding-top: 0;
+  position: relative;
+  overflow: hidden;
+  background: #000;
+}
+
+.build-by-sec-coin {
+  position: absolute;
+  top: 16%;
+}
+
+section.story.build-by-sec::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 35%;
+  transform: translate(-50%, -50%);
+  width: 700px;
+  height: 700px;
+  background: url("../img/gloww2.svg") no-repeat center / contain;
+  pointer-events: none;
+  z-index: 0;
+}
+
+section.story.build-by-sec::after {
+  content: "";
+  position: absolute;
+  top: 60%;
+  right: 0;
+  transform: translateY(-50%);
+  width: 307px;
+  height: 700px;
+  background: url("../img/gloww.svg") no-repeat center / contain;
+  pointer-events: none;
+  z-index: 0;
+}
+
+.build-by-sec .container {
+  position: relative;
+  z-index: 1;
+}
+
+section.story.build-by-sec .container {
+  border-bottom: none;
+}
+
+.build-by-sec a.join-btn.cta {
+  margin-top: 50px;
+  display: inline-flex;
+  padding: 23.5px 98px;
+}
+
+.build-by-sec .m11-right-bottom {
+  margin: 0;
+}
+
+.build-by-sec .story-content {
+  margin-top: 35px;
+}
+
+/* -----started m11 section----- */
+.started-m11-sec {
+  background: linear-gradient(
+    180deg,
+    rgba(28, 25, 25, 0.56) 0%,
+    rgba(0, 0, 0, 0.56) 100%
+  );
+  position: relative;
+  overflow: hidden;
+}
+
+.started-m11-sec .orange-txt {
+  text-align: center;
+}
+
+.started-m11-sec .orange-txt h6 {
+  font-weight: 400;
+  text-transform: unset;
+  margin-bottom: 45px;
+  font-size: var(--size-18);
+}
+.hand-glow-img {
+  position: absolute;
+  top: -100px;
+  left: 0;
+  opacity: 0.6;
+  pointer-events: none;
+  z-index: 0;
+  object-fit: contain;
+}
+
+.started-m11-sec .container {
+  position: relative;
+  z-index: 1;
+}
+
+.started-m11-sec .body-text {
+  max-width: 540px;
+  margin-bottom: 35px;
+}
+.started-m11-sec a.join-btn.cta {
+  margin-top: 40px;
+  display: inline-flex;
+  padding: 23.5px 98px;
+}
+
