@@ -1546,5 +1546,93 @@ footer {
   font-size: var(--size-20);
 }
 
-
 /* ------CONTACT-US-PAGE------- */
+.contact-us {
+  padding: 100px 0;
+  background: url(../img/contact-glow.svg) center / contain no-repeat;
+}
+
+.contact-content {
+  display: flex;
+  align-items: center;
+  gap: 90px;
+}
+
+.contact-left {
+  max-width: 675px;
+  width: 100%;
+}
+
+.contact-left .orange-txt p {
+  margin: 0;
+  margin-top: 100px;
+}
+
+.contact-left h2 {
+  margin: 7px 0;
+  font-size: 60px;
+}
+
+.contact-para {
+  font-size: var(--size-22);
+  font-weight: 400;
+}
+
+.contact-form {
+  margin-top: 38px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  width: 100%;
+  max-width: 567px;
+}
+
+.form-field input,
+.form-field textarea {
+  width: 100%;
+  background: #ffffff0a;
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  border-radius: 8px;
+  backdrop-filter: blur(5px);
+  padding: 20px 23px;
+  font-size: var(--size-18);
+  color: #fff;
+  outline: none;
+  transition: border 0.3s ease;
+}
+
+.form-field input:focus,
+.form-field textarea:focus {
+  border-color: rgba(253, 171, 77, 0.5);
+}
+
+.form-field input::placeholder,
+.form-field textarea::placeholder {
+  font-size: 15px;
+  font-weight: 400;
+  color: var(--body-text);
+}
+
+.form-field textarea {
+  min-height: 120px;
+  resize: vertical;
+}
+
+.contact-btn {
+  width: 100%;
+  margin-top: 6px;
+  border: 1px solid #fdab4d;
+  border-radius: 5px;
+}
+.contact-right {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.contact-right img {
+  width: 100%;
+  max-width: 630px;
+  object-fit: contain;
+}
