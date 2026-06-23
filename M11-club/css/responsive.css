@@ -4,6 +4,133 @@
   }
 }
 
+/* ------smoke responsive------ */
+@media only screen and (max-width: 1199px) {
+    .smoke-l {
+        max-width: 550px;
+    }
+
+    .smoke-card-heading {
+        font-size: 22px;
+    }
+
+    .smoke-summary {
+        font-size: 16px;
+    }
+
+    .smoke-r img {
+        width: 420px;
+    }
+}
+
+@media only screen and (max-width: 991px) {
+    .smoke {
+        padding: 100px 0;
+    }
+
+    .smoke-content {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .smoke-l {
+        max-width: 100%;
+        gap: 20px;
+    }
+
+    .smoke-r img {
+        width: 100%;
+        max-width: 500px;
+        display: block;
+        margin: 0 auto;
+    }
+
+    .smoke-bottom {
+        gap: 20px;
+    }
+
+    .smoke-bottom-card {
+        max-width: 100%;
+    }
+}
+
+@media only screen and (max-width: 767px) {
+    .smoke {
+        padding: 80px 0;
+    }
+
+    .smoke-top h2 {
+        font-size: 40px;
+    }
+
+    .smoke-inner-p {
+        font-size: 16px;
+    }
+
+    .smoke-bottom {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .smoke-bottom-card {
+        max-width: 100%;
+    }
+
+    .smoke-card {
+        padding: 24px 20px;
+    }
+
+    .smoke-card-heading {
+        font-size: 20px;
+    }
+
+    .smoke-summary {
+        font-size: 15px;
+        margin-left: 20px;
+    }
+}
+
+@media only screen and (max-width: 575px) {
+    .smoke {
+        padding: 50px 0;
+    }
+
+    .smoke-top h2 {
+        font-size: 28px;
+    }
+
+    .smoke-card {
+        padding: 18px 16px;
+    }
+
+    .smoke-card-heading {
+        font-size: 18px;
+    }
+
+    .smoke-summary {
+        font-size: 14px;
+        margin-left: 0;
+        margin-top: 8px;
+    }
+
+    .star-smoke {
+        width: 22px;
+    }
+
+    .smoke-bottom-card {
+        padding: 20px 18px;
+        gap: 14px;
+    }
+
+    .smoke-bottom-card .orange-txt h4 {
+        font-size: 18px;
+    }
+
+    .smoke-bottom-card .orange-txt p {
+        font-size: 13px;
+    }
+}
+
 /* -----story responsive----- */
 @media only screen and (max-width: 1199px) {
   .story-content {
@@ -130,7 +257,7 @@
     font-size: 16px;
   }
 
-  .faq .abs_bg img {
+  .faq .m11-right-bottom img, section.smoke .m11-right-bottom img {
     width: 90%;
   }
 }
@@ -152,7 +279,7 @@
     width: 70%;
   }
 
-  .faq .abs_bg img {
+  .faq .m11-right-bottom img, section.smoke .m11-right-bottom img {
     width: 90%;
   }
 }
