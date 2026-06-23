@@ -5,9 +5,24 @@
 }
 
 /* ------smoke responsive------ */
+
+@media only screen and (max-width: 1399px) {
+  .smoke-card {
+    padding: 15px 30px;
+  }
+
+  .smoke-r img {
+    width: 574px;
+  }
+}
 @media only screen and (max-width: 1199px) {
   .smoke-l {
     max-width: 550px;
+    gap: 20px;
+  }
+
+  .smoke-card {
+    padding: 15px 16px;
   }
 
   .smoke-card-heading {
@@ -19,7 +34,7 @@
   }
 
   .smoke-r img {
-    width: 420px;
+    width: 463px;
   }
 }
 
@@ -87,6 +102,9 @@
   .smoke-summary {
     font-size: 15px;
     margin-left: 20px;
+  }
+  .smoke-glow {
+    width: 380px;
   }
 }
 
@@ -465,6 +483,11 @@
     gap: 40px;
   }
 
+  .contact-left {
+    max-width: 476px;
+    width: 100%;
+  }
+
   .contact-right img {
     max-width: 420px;
   }
@@ -472,9 +495,14 @@
 
 @media only screen and (max-width: 991px) {
   .contact-content {
+    flex-direction: column;
     gap: 30px;
   }
 
+  .contact-form {
+    margin: auto;
+    margin-top: 38px;
+  }
   .contact-left {
     max-width: 100%;
   }
@@ -527,7 +555,7 @@
     font-size: 14px;
   }
 
-  .contact-para{
+  .contact-para {
     font-size: 16px;
   }
 }

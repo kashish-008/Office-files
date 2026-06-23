@@ -1165,6 +1165,11 @@ h6 {
 /* kashish css */
 
 /* -----smoke section----- */
+.smoke {
+  position: relative;
+  overflow: hidden;
+}
+
 .smoke-top {
   text-align: center;
 }
@@ -1196,41 +1201,30 @@ p.smoke-inner-p {
 
 .smoke-card {
   padding: 33px 30px;
-  border: 1px solid #ffffff24;
   border-radius: 15px;
   position: relative;
-  overflow: hidden;
   transition: transform 0.4s ease;
-}
-
-.smoke-card::before {
-  content: "";
-  position: absolute;
-  inset: 0;
-  padding: 1px;
-  border-radius: inherit;
-  background: linear-gradient(
-    94.13deg,
-    rgba(255, 255, 255, 0.15) 0%,
-    rgba(0, 0, 0, 0.15) 99.22%
-  );
-  -webkit-mask:
-    linear-gradient(#fff 0 0) content-box,
-    linear-gradient(#fff 0 0);
-  -webkit-mask-composite: xor;
-  mask-composite: exclude;
-  pointer-events: none;
-  transition: all 0.4s ease;
+  box-shadow: 0 0 0 1px #ffffff24;
 }
 
 .smoke-card:hover {
   transform: translateY(-8px);
-  background: #fdab4d0f;
+  box-shadow: none;
 }
 
 .smoke-card:hover::before {
-  background: linear-gradient(270deg, #f767293d 0%, #fdab4d3d 100%);
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: 15px;
+  padding: 1px;
+  background: linear-gradient(90deg, #fdab4d 0%, #f76729 100%);
+  -webkit-mask:
+    linear-gradient(#fff 0 0) content-box,
+    linear-gradient(#fff 0 0);
+  mask-composite: exclude;
 }
+
 .smoke-card-heading {
   font-size: 27px;
   font-weight: 500;
@@ -1276,6 +1270,19 @@ p.smoke-inner-p {
 .smoke-bottom-card .orange-txt p {
   font-size: 14px;
   margin: 0;
+}
+
+.smoke-glow {
+  position: absolute;
+  top: -100px;
+  right: 0;
+  pointer-events: none;
+  z-index: 0;
+}
+
+.smoke .container {
+  position: relative;
+  z-index: 1;
 }
 
 /* -----story----- */
