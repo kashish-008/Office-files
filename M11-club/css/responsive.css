@@ -1849,6 +1849,12 @@
 
 
 /* -----------about responsive------------ */
+@media only screen and (max-width: 1199px){
+  .build-by-sec-coin{
+    width: 14%;
+  }
+}
+
 @media (max-width: 991.98px) {
   .started-m11-sec {
     padding: 60px 0;
@@ -1860,6 +1866,9 @@
   }
   .hand-glow-img {
     display: none;
+  }
+  .build-by-sec-coin{
+    width: 10%;
   }
 }
 
