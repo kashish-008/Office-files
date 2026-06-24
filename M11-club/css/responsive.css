@@ -1919,7 +1919,7 @@
     font-size: 30px;
   }
   .save-more-sec {
-    padding-top: 50px;
+    padding-top: 80px;
   }
   .spend-less-sec::after {
     top: 18%;
@@ -1929,7 +1929,7 @@
   .discount-saving-sec .big-star {
     gap: 5px;
     align-items: center;
-    margin:0;
+    margin: 0;
   }
 }
 
@@ -1937,6 +1937,9 @@
 @media only screen and (max-width: 991px) {
   .spend-less-sec h2 {
     font-size: 40px;
+  }
+  .save-more-content h1 {
+    font-size: 66px;
   }
 }
 
@@ -1947,6 +1950,14 @@
 
   .spend-counter {
     font-size: var(--size-18);
+  }
+
+  .save-more-content h1 {
+    font-size: 55px;
+  }
+  a.cta.view-all-btn {
+    padding: 15px 29px;
+    white-space: nowrap;
   }
 }
 
