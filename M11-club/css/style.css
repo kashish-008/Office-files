@@ -2104,6 +2104,7 @@ section.story.build-by-sec .container {
   background-repeat: no-repeat;
 } */
 
+/* ----Explore Categories---- */
 .exp-cat-sec {
   padding-top: 90px;
   background: #000;
@@ -2123,6 +2124,7 @@ section.story.build-by-sec .container {
 .exp-grid-wrap {
   margin-top: 50px;
   width: 100%;
+  overflow: visible;
 }
 
 .exp-grid {
@@ -2145,6 +2147,7 @@ section.story.build-by-sec .container {
     rgba(255, 255, 255, 0) 100%
   );
   border-image-slice: 1;
+  overflow: visible;
 }
 
 .grid-line {
@@ -2155,14 +2158,14 @@ section.story.build-by-sec .container {
 
 .grid-h-top,
 .grid-h-bottom {
-  left: 0;
-  right: 0;
+  left: -40px;
+  right: -40px;
   height: 1px;
   background: linear-gradient(
     90deg,
-    rgba(255, 255, 255, 0) 0%,
+    rgb(91 66 43 / 62%) 0%,
     #fdab4d 50%,
-    rgba(255, 255, 255, 0) 100%
+    rgb(91 66 43 / 62%) 0%
   );
 }
 
@@ -2180,14 +2183,14 @@ section.story.build-by-sec .container {
 .grid-v-4,
 .grid-v-5,
 .grid-v-6 {
-  top: 0;
-  bottom: 0;
+  top: -30px;
+  bottom: -30px;
   width: 1px;
   background: linear-gradient(
     180deg,
-    rgba(255, 255, 255, 0) 0%,
+    #fdab4d6e 100%,
     #fdab4d 50%,
-    rgba(255, 255, 255, 0) 100%
+    #fdab4d6e 100%
   );
 }
 
