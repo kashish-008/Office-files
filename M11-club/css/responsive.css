@@ -2050,18 +2050,32 @@
   }
 }
 
+@media only screen and (max-width: 575px) {
+  .exp-grid {
+    height: 100px;
+  }
+  .exp-cat-icon img {
+    width: 70%;
+    height: 70%;
+  }
+  .exp-cat-item {
+    min-height: 100px;
+    gap: 10px;
+  }
+}
+
 /* -----giveaway detail responsive----- */
 
 @media only screen and (max-width: 1499px) {
   .giveaway-det-products-grid {
     grid-template-columns: repeat(2, 1fr);
   }
-  .give-hero-right, .give-hero-left{
+  .give-hero-right,
+  .give-hero-left {
     width: 533px;
   }
 }
 @media only screen and (max-width: 1199px) {
-  
   .give-hero-left {
     width: 500px;
   }
@@ -2107,7 +2121,7 @@
     align-items: start;
     flex-direction: column;
     gap: 20px;
-}
+  }
   .giveawy-cntnt {
     padding: 20px;
   }

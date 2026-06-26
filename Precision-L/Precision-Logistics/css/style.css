@@ -683,31 +683,6 @@ a.cta-btn.dark-cta:hover {
   margin-top: 40px;
 }
 
-.naics-section h2 {
-  text-align: center;
-}
-
-.naics-wrapper {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-  padding: 100px 0;
-  gap: 70px;
-}
-
-.naics-section p {
-  max-width: 224px;
-  color: #747474;
-  font-size: 20px;
-}
-
-.naics-box h3 {
-  color: #01386d;
-  font-weight: 400;
-  font-size: 36px;
-  margin-bottom: 12px;
-}
 
 /* vibe sec */
 .viibe-sec {
@@ -771,6 +746,32 @@ a.cta-btn.dark-cta:hover {
 .vibe-row .vibe-col:last-child {
   width: 130px !important;
   flex: unset;
+}
+
+.naics-section h2 {
+  text-align: center;
+}
+
+.naics-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 100px 0;
+  gap: 70px;
+}
+
+.naics-section p {
+  max-width: 224px;
+  color: #747474;
+  font-size: 20px;
+}
+
+.naics-box h3 {
+  color: #01386d;
+  font-weight: 400;
+  font-size: 36px;
+  margin-bottom: 12px;
 }
 
 .bllue-box {

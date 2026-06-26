@@ -142,10 +142,10 @@
         <p>Save more on the things you buy every day.</p>
 
         <div class="exp-grid-wrap">
-          <div class="exp-grid">
+          <div class="exp-grid" id="expGrid">
+            <!-- grid lines -->
             <span class="grid-line grid-h-top"></span>
             <span class="grid-line grid-h-bottom"></span>
-
             <span class="grid-line grid-v-1"></span>
             <span class="grid-line grid-v-2"></span>
             <span class="grid-line grid-v-3"></span>
@@ -153,72 +153,55 @@
             <span class="grid-line grid-v-5"></span>
             <span class="grid-line grid-v-6"></span>
 
-            <span class="grid-plus p1"
-              ><img src="img/orangeplus.svg" alt=""
-            /></span>
-            <span class="grid-plus p2"
-              ><img src="img/orangeplus.svg" alt=""
-            /></span>
-            <span class="grid-plus p3"
-              ><img src="img/orangeplus.svg" alt=""
-            /></span>
-            <span class="grid-plus p4"
-              ><img src="img/orangeplus.svg" alt=""
-            /></span>
-            <span class="grid-plus p5"
-              ><img src="img/orangeplus.svg" alt=""
-            /></span>
-            <span class="grid-plus p6"
-              ><img src="img/orangeplus.svg" alt=""
-            /></span>
-            <span class="grid-plus p7"
-              ><img src="img/orangeplus.svg" alt=""
-            /></span>
-            <span class="grid-plus p8"
-              ><img src="img/orangeplus.svg" alt=""
-            /></span>
-            <span class="grid-plus p9"
-              ><img src="img/orangeplus.svg" alt=""
-            /></span>
-            <span class="grid-plus p10"
-              ><img src="img/orangeplus.svg" alt=""
-            /></span>
-            <span class="grid-plus p11"
-              ><img src="img/orangeplus.svg" alt=""
-            /></span>
-            <span class="grid-plus p12"
-              ><img src="img/orangeplus.svg" alt=""
-            /></span>
-
+            <!-- Fuel -->
             <div class="exp-cat-item">
+              <div class="exp-cat-item__border">
+                <span></span><span></span><span></span><span></span>
+              </div>
               <div class="exp-cat-icon">
                 <img src="img/fuel.png" alt="Fuel" />
               </div>
               <p>Fuel</p>
             </div>
 
+            <!-- Groceries -->
             <div class="exp-cat-item">
+              <div class="exp-cat-item__border">
+                <span></span><span></span><span></span><span></span>
+              </div>
               <div class="exp-cat-icon">
                 <img src="img/Groceries.png" alt="Groceries" />
               </div>
               <p>Groceries</p>
             </div>
 
+            <!-- Pharmacy -->
             <div class="exp-cat-item">
+              <div class="exp-cat-item__border">
+                <span></span><span></span><span></span><span></span>
+              </div>
               <div class="exp-cat-icon">
                 <img src="img/Pharmacy.png" alt="Pharmacy" />
               </div>
               <p>Pharmacy</p>
             </div>
 
+            <!-- Retail -->
             <div class="exp-cat-item">
+              <div class="exp-cat-item__border">
+                <span></span><span></span><span></span><span></span>
+              </div>
               <div class="exp-cat-icon">
                 <img src="img/Retail.png" alt="Retail" />
               </div>
               <p>Retail</p>
             </div>
 
+            <!-- Dining -->
             <div class="exp-cat-item">
+              <div class="exp-cat-item__border">
+                <span></span><span></span><span></span><span></span>
+              </div>
               <div class="exp-cat-icon">
                 <img src="img/Dining.png" alt="Dining" />
               </div>
@@ -234,7 +217,9 @@
       <img src="img/handd.svg" alt="Hand Glow" class="hand-glow-img" />
       <div class="container">
         <div class="featured-cat-hd">
-          <h2 data-aos="fade-up" data-aos-duration="900">Featured Categories</h2>
+          <h2 data-aos="fade-up" data-aos-duration="900">
+            Featured Categories
+          </h2>
           <a href="#" class="cta view-all-btn">View All</a>
         </div>
 
@@ -624,24 +609,29 @@
 
     <script>
       (function () {
-        var totalCards = $(".spend-less-slider .feat-card").length;
-        var slidesToShow = 3;
-        var totalGroups = Math.ceil(totalCards / slidesToShow);
+        const $slider = $(".spend-less-slider");
+        const slidesToShow = 3;
+        const totalGroups = Math.ceil(
+          $slider.find(".feat-card").length / slidesToShow,
+        );
 
-        function updateFooter(currentIndex) {
-          var group = Math.floor(currentIndex / slidesToShow) + 1;
-          if (group > totalGroups) group = totalGroups;
+        const updateFooter = (index) => {
+          const group = Math.min(
+            Math.floor(index / slidesToShow) + 1,
+            totalGroups,
+          );
+          const $counter = $(".spend-counter");
+          $counter.find(".current-slide").text(group);
+          $counter.find(".total-slides").text(totalGroups);
+          $(".spend-progress-fill").css(
+            "width",
+            (group / totalGroups) * 100 + "%",
+          );
+        };
 
-          $(".spend-counter .current-slide").text(group);
-          $(".spend-counter .total-slides").text(totalGroups);
-
-          var percent = (group / totalGroups) * 100;
-          $(".spend-progress-fill").css("width", percent + "%");
-        }
-
-        $(".spend-less-slider").slick({
-          slidesToShow: 3,
-          slidesToScroll: 3,
+        $slider.slick({
+          slidesToShow: slidesToShow,
+          slidesToScroll: slidesToShow,
           infinite: false,
           arrows: false,
           dots: false,
@@ -649,43 +639,51 @@
           responsive: [
             {
               breakpoint: 991,
-              settings: {
-                slidesToShow: 2,
-                slidesToScroll: 2,
-              },
+              settings: { slidesToShow: 2, slidesToScroll: 2 },
             },
             {
               breakpoint: 575,
-              settings: {
-                slidesToShow: 1,
-                slidesToScroll: 1,
-              },
+              settings: { slidesToShow: 1, slidesToScroll: 1 },
             },
           ],
         });
 
-        $(".spend-counter .total-slides").text(totalGroups);
-
-        $(".spend-prev").on("click", function () {
-          $(".spend-less-slider").slick("slickPrev");
-          $(".spend-prev").addClass("active");
-          $(".spend-next").removeClass("active");
+        $(".spend-prev, .spend-next").on("click", function () {
+          const isPrev = $(this).hasClass("spend-prev");
+          $slider.slick(isPrev ? "slickPrev" : "slickNext");
+          $(this).addClass("active").siblings().removeClass("active");
         });
 
-        $(".spend-next").on("click", function () {
-          $(".spend-less-slider").slick("slickNext");
-          $(".spend-next").addClass("active");
-          $(".spend-prev").removeClass("active");
-        });
-
-        $(".spend-less-slider").on(
-          "afterChange",
-          function (e, slick, currentSlide) {
-            updateFooter(currentSlide);
-          },
+        $slider.on("afterChange", (e, slick, currentSlide) =>
+          updateFooter(currentSlide),
         );
-
         updateFooter(0);
+      })();
+    </script>
+
+    <script>
+      (function () {
+        const grid = document.getElementById("expGrid");
+        // positions: p1 to p12
+        const positions = [
+          "p1",
+          "p2",
+          "p3",
+          "p4",
+          "p5",
+          "p6",
+          "p7",
+          "p8",
+          "p9",
+          "p10",
+          "p11",
+          "p12",
+        ];
+        positions.forEach((cls) => {
+          const el = document.createElement("span");
+          el.className = `grid-plus ${cls}`;
+          grid.append(el);
+        });
       })();
     </script>
   </body>
