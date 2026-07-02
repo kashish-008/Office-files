@@ -4952,6 +4952,26 @@ h6 {
   padding-bottom: 140px;
   background-repeat: no-repeat;
   background-color: #000;
+  position: relative;
+  overflow: hidden;
+  z-index: 1;
+}
+.launching-soon::before {
+  content: "";
+  position: absolute;
+  background: url(../img/r-hand.svg) no-repeat center / contain;
+  max-width: 416px;
+  width: 40vw;
+  aspect-ratio: 416 / 399;
+  top: 50px;
+  right: 0;
+  pointer-events: none;
+  z-index: -1;
+}
+
+.m11-top-right.coming-m11-top-right img {
+  top: auto;
+  bottom: 40px;
 }
 .launching-soon-content {
   text-align: center;
@@ -4974,13 +4994,15 @@ h6 {
   height: 68px;
   background: #ffffff0d;
   backdrop-filter: blur(5px);
-  padding: 23px;
+  padding: 20px;
   display: flex;
   transition: all 0.3s ease;
+  border: 1px solid transparent;
 }
 
 .coming-social-media a:hover {
   background: #ffffff10;
+  border: 1px solid rgba(253, 171, 77, 0.4);
 }
 .coming-social-media.gradient-brdr1::after {
   border-radius: 50% !important;
@@ -4988,4 +5010,78 @@ h6 {
 .coming-footer-bottom-inner {
   flex-direction: column;
   gap: 20px;
+}
+
+/* Coming Soon Input & Button */
+.coming-input-wrap {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  max-width: 820px;
+  margin: 60px auto 0;
+  gap: 0;
+  position: relative;
+  border-radius: 12px;
+  background: #ffffff08;
+  backdrop-filter: blur(5px);
+  padding: 10px;
+}
+
+.coming-input {
+  flex: 1;
+  background: transparent;
+  border: none;
+  outline: none;
+  padding: 18px 28px;
+  font-size: var(--size-18);
+  font-weight: 400;
+  color: #fff;
+}
+
+.coming-input::placeholder {
+  color: rgba(255, 255, 255, 0.5);
+  font-weight: 400;
+}
+
+.coming-submit-btn {
+  padding: 19px 42px;
+  border: none;
+  border-radius: 7px;
+}
+
+/* Responsive */
+@media (max-width: 576px) {
+  .launching-soon {
+    padding: 100px 0 50px 0;
+  }
+  .bigg-txt {
+    font-size: 44px;
+  }
+  .coming-input-wrap {
+    background: transparent;
+    border: none;
+    backdrop-filter: none;
+    padding: 0;
+    gap: 12px;
+  }
+  .coming-input-wrap {
+    margin-top: 20px;
+  }
+
+  .m11-top-right.coming-m11-top-right img {
+    bottom: 0px;
+  }
+  .coming-input {
+    width: 100%;
+    padding: 16px 24px;
+  }
+
+  .coming-submit-btn {
+    padding: 16px 24px;
+  }
+  .coming-social-media a {
+    width: 50px;
+    height: 50px;
+    padding: 15px;
+  }
 }
