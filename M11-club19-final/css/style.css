@@ -5012,7 +5012,6 @@ h6 {
   gap: 20px;
 }
 
-/* Coming Soon Input & Button */
 .coming-input-wrap {
   display: flex;
   align-items: center;
@@ -5085,3 +5084,5 @@ h6 {
     padding: 15px;
   }
 }
+
+/* ===========coming-soon page css end===== */
