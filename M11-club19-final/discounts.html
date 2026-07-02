@@ -1,0 +1,603 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Discount-page</title>
+
+    <!-- Font Awesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+    />
+
+    <!-- Bootstrap CSS -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+      crossorigin="anonymous"
+    />
+
+    <!-- slick -->
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"
+    />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css"
+    />
+
+    <!-- aos -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css"
+      rel="stylesheet"
+    />
+
+    <!-- custom links -->
+    <link rel="stylesheet" href="css/style.css?yhguyg" />
+    <link rel="stylesheet" href="css/responsive.css?yhguyg" />
+  </head>
+
+  <body>
+   
+   <!-- header -->
+    <header class="nav_hdr">
+        <div class="container">
+            <nav class="navbar navbar-expand-lg">
+                <a class="navbar-brand" href="index.html"><img src="img/logo.png" alt=""></a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                    aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="bar bar-1"></span>
+                    <span class="bar bar-2"></span>
+                    <span class="bar bar-3"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav">
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                                data-bs-toggle="dropdown" aria-expanded="false">
+                                Explore
+                            </a>
+                            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                <li><a class="dropdown-item" href="become-a-partner.html">Become a partner</a></li>
+                                <li><a class="dropdown-item" href="about-us.html">About</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="discounts.html">Discounts</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="giveaways.html">Giveaways</a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link active" href="contact.html">Contact Us</a>
+                        </li>
+                    </ul>
+
+                    <div class="form-mob-btn">
+                        <a href="#" class="hdr-cta">Join Now +</a>
+                    </div>
+                </div>
+                <div class="header-cta">
+                    <a href="#" class="hdr-cta">Join Now +</a>
+                </div>
+        </div>
+        </nav>
+        </div>
+    </header>
+
+    <!-- Save-more-section -->
+    <section
+      class="save-more-sec sec-aftr-hdr pos-rev pb-140 ovr-hdn"
+      style="background-image: url(&quot;img/dis-bg.png&quot;)"
+    >
+      <div class="container">
+        <div
+          class="save-more-bg"
+          style="
+            background: url(&quot;img/Discounts-hero.png&quot;) no-repeat center;
+            background-size: cover;
+          "
+        >
+          <div
+            class="save-more-content aos-init aos-animate"
+            data-aos="fade-up"
+            data-aos-duration="900"
+          >
+            <h1>Save More with <br /><span class="grad-txt">M11 CLUB</span></h1>
+            <p>
+              From shopping and dining to travel, entertainment, and lifestyle,
+              enjoy premium offers available only to M11 CLUB members.
+            </p>
+            <div class="discounts-cta">
+              <a href="#" class="cta cta-white">Explore Discounts</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+   <!-- Explore Categories -->
+    <section class="exp-cat-sec pb-140">
+      <div class="container">
+        <h2>Explore Our Savings <span class="grad-txt">Categories</span></h2>
+        <p>Save more on the things you buy every day.</p>
+
+        <div class="exp-grid-wrap">
+          <div class="exp-grid" id="expGrid">
+            <!-- grid lines -->
+            <span class="grid-line grid-h-top"></span>
+            <span class="grid-line grid-h-bottom"></span>
+
+            <span class="grid-line grid-v-1"></span>
+            <span class="grid-line grid-v-2"></span>
+            <span class="grid-line grid-v-3"></span>
+            <span class="grid-line grid-v-4"></span>
+            <span class="grid-line grid-v-5"></span>
+            <span class="grid-line grid-v-6"></span>
+
+            <!-- plus icons from js-->
+
+            <!-- Fuel -->
+            <div class="exp-cat-item">
+              <div class="exp-cat-item__border">
+                <span></span><span></span><span></span><span></span>
+              </div>
+              <div class="exp-cat-icon">
+                <img src="img/fuel.png" alt="Fuel" />
+              </div>
+              <p>Fuel</p>
+            </div>
+
+            <!-- Groceries -->
+            <div class="exp-cat-item">
+              <div class="exp-cat-item__border">
+                <span></span><span></span><span></span><span></span>
+              </div>
+              <div class="exp-cat-icon">
+                <img src="img/Groceries.png" alt="Groceries" />
+              </div>
+              <p>Groceries</p>
+            </div>
+
+            <!-- Pharmacy -->
+            <div class="exp-cat-item">
+              <div class="exp-cat-item__border">
+                <span></span><span></span><span></span><span></span>
+              </div>
+              <div class="exp-cat-icon">
+                <img src="img/Pharmacy.png" alt="Pharmacy" />
+              </div>
+              <p>Pharmacy</p>
+            </div>
+
+            <!-- Retail -->
+            <div class="exp-cat-item">
+              <div class="exp-cat-item__border">
+                <span></span><span></span><span></span><span></span>
+              </div>
+              <div class="exp-cat-icon">
+                <img src="img/Retail.png" alt="Retail" />
+              </div>
+              <p>Retail</p>
+            </div>
+
+            <!-- Dining -->
+            <div class="exp-cat-item">
+              <div class="exp-cat-item__border">
+                <span></span><span></span><span></span><span></span>
+              </div>
+              <div class="exp-cat-icon">
+                <img src="img/Dining.png" alt="Dining" />
+              </div>
+              <p>Dining</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Featured Categories -->
+    <section class="featured-cat-sec pt-100 ovr-hdn">
+      <img src="img/handd.svg" alt="Hand Glow" class="hand-glow-img" />
+      <div class="container">
+        <div class="featured-cat-hd">
+          <h2 data-aos="fade-up" data-aos-duration="900">
+            Featured Categories
+          </h2>
+          <a href="#" class="cta view-all-btn">View All</a>
+        </div>
+
+        <div class="featured-cat-grid">
+          <div class="feat-card">
+            <div class="feat-card-img">
+              <img src="img/lululemon-2.png" alt="Lululemon" />
+            </div>
+            <div class="feat-card-txt">
+              <p class="feat-brand-name">Lululemon</p>
+              <h3 class="feat-discount">25% Discount</h3>
+              <p class="feat-category">• Automotive</p>
+            </div>
+          </div>
+
+          <div class="feat-card">
+            <div class="feat-card-img">
+              <img src="img/zxu-2.png" alt="ZXU" />
+            </div>
+            <div class="feat-card-txt">
+              <p class="feat-brand-name">ZXU Human Performance</p>
+              <h3 class="feat-discount">12% Discount</h3>
+              <p class="feat-category">• Automotive</p>
+            </div>
+          </div>
+
+          <div class="feat-card">
+            <div class="feat-card-img">
+              <img src="img/woolworth-2.png" alt="Woolworths" />
+            </div>
+            <div class="feat-card-txt">
+              <p class="feat-brand-name">Woolworths</p>
+              <h3 class="feat-discount">18% Discount</h3>
+              <p class="feat-category">• Automotive</p>
+            </div>
+          </div>
+
+          <div class="feat-card">
+            <div class="feat-card-img">
+              <img src="img/asics-2.png" alt="Asics" />
+            </div>
+            <div class="feat-card-txt">
+              <p class="feat-brand-name">Asics</p>
+              <h3 class="feat-discount">20% Discount</h3>
+              <p class="feat-category">• Automotive</p>
+            </div>
+          </div>
+
+          <div class="feat-card">
+            <div class="feat-card-img">
+              <img src="img/chemist-2.png" alt="Chemist Warehouse" />
+            </div>
+            <div class="feat-card-txt">
+              <p class="feat-brand-name">ZXU Human Performance</p>
+              <h3 class="feat-discount">25% Discount</h3>
+              <p class="feat-category">• Automotive</p>
+            </div>
+          </div>
+
+          <div class="feat-card">
+            <div class="feat-card-img">
+              <img src="img/coles.png" alt="Coles" />
+            </div>
+            <div class="feat-card-txt">
+              <p class="feat-brand-name">Coles</p>
+              <h3 class="feat-discount">21% Discount</h3>
+              <p class="feat-category">• Automotive</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="m11-right-bottom">
+        <img src="img/m11text.png" alt="" />
+      </div>
+    </section>
+
+    <!-- reward-section -->
+    <section class="save-more-sec discount-saving-sec ovr-hdn">
+      <div class="container">
+        <div
+          class="save-more-bg"
+          style="
+            background: url(&quot;img/reward2.png&quot;) no-repeat center;
+            background-size: cover;
+          "
+        >
+          <div
+            class="save-more-content aos-init aos-animate"
+            data-aos="fade-up"
+            data-aos-duration="900"
+          >
+            <div class="join-hd">
+              <h2>
+                More Rewards. <br />
+                <span style="color: black">Exclusive Savings</span>
+              </h2>
+              <div class="big-star">
+                <div class="big-star-img"><img src="img/big-star.svg" /></div>
+                <div>
+                  <p>$40+</p>
+                </div>
+                <div class="big-star-img"><img src="img/big-star.svg" /></div>
+              </div>
+            </div>
+
+            <div class="savings-cta">
+              <a href="#" class="cta cta-white">Explore Offers</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- spend-less section -->
+    <section
+      class="spend-less-sec pt-120 ovr-hdn"
+      style="background-image: url(&quot;img/faq-bg.png&quot;)"
+    >
+      <div class="container">
+        <h2 data-aos="fade-up" data-aos-duration="900">
+          Selected options to help <span class="grad-txt">you spend less</span>
+        </h2>
+
+        <div class="spend-slider-wrap">
+          <div class="spend-less-slider">
+            <div class="feat-card">
+              <div class="feat-card-img">
+                <img src="img/myer-2.png" alt="Myer" />
+              </div>
+              <p class="feat-brand-name">Myer</p>
+              <h3 class="feat-discount">15% Discount</h3>
+              <p class="feat-category">• Automotive</p>
+            </div>
+
+            <div class="feat-card">
+              <div class="feat-card-img">
+                <img src="img/thegoodguy.png" alt="The Good Guys" />
+              </div>
+              <p class="feat-brand-name">The Good Guys</p>
+              <h3 class="feat-discount">20% Discount</h3>
+              <p class="feat-category">• Automotive</p>
+            </div>
+
+            <div class="feat-card">
+              <div class="feat-card-img">
+                <img src="img/under-2.png" alt="Under Armour" />
+              </div>
+              <p class="feat-brand-name">Under Armour</p>
+              <h3 class="feat-discount">18% Discount</h3>
+              <p class="feat-category">• Automotive</p>
+            </div>
+
+            <div class="feat-card">
+              <div class="feat-card-img">
+                <img src="img/coles.png" alt="Brand 4" />
+              </div>
+              <p class="feat-brand-name">Brand Name</p>
+              <h3 class="feat-discount">22% Discount</h3>
+              <p class="feat-category">• Automotive</p>
+            </div>
+
+            <div class="feat-card">
+              <div class="feat-card-img">
+                <img src="img/zxu-2.png" alt="Brand 5" />
+              </div>
+              <p class="feat-brand-name">Brand Name</p>
+              <h3 class="feat-discount">17% Discount</h3>
+              <p class="feat-category">• Automotive</p>
+            </div>
+
+            <div class="feat-card">
+              <div class="feat-card-img">
+                <img src="img/chemist-2.png" alt="Brand 6" />
+              </div>
+              <p class="feat-brand-name">Brand Name</p>
+              <h3 class="feat-discount">14% Discount</h3>
+              <p class="feat-category">• Automotive</p>
+            </div>
+
+            <div class="feat-card">
+              <div class="feat-card-img">
+                <img src="img/woolworth-2.png" alt="Brand 7" />
+              </div>
+              <p class="feat-brand-name">Brand Name</p>
+              <h3 class="feat-discount">19% Discount</h3>
+              <p class="feat-category">• Automotive</p>
+            </div>
+
+            <div class="feat-card">
+              <div class="feat-card-img">
+                <img src="img/asics-2.png" alt="Brand 8" />
+              </div>
+              <p class="feat-brand-name">Brand Name</p>
+              <h3 class="feat-discount">21% Discount</h3>
+              <p class="feat-category">• Automotive</p>
+            </div>
+
+            <div class="feat-card">
+              <div class="feat-card-img">
+                <img src="img/lululemon-2.png" alt="Brand 9" />
+              </div>
+              <p class="feat-brand-name">Brand Name</p>
+              <h3 class="feat-discount">16% Discount</h3>
+              <p class="feat-category">• Automotive</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="spend-progress-bar">
+          <div class="spend-progress-fill"></div>
+        </div>
+        <!-- counter + arrows -->
+        <div class="spend-slider-footer">
+          <div class="spend-counter">
+            <span class="current-slide">1</span>
+            <span class="sep">/</span>
+            <span class="total-slides">3</span>
+          </div>
+
+          <div class="spend-arrows">
+            <button class="spend-prev">
+              <svg
+                width="13"
+                height="10"
+                viewBox="0 0 13 10"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  opacity="0.2"
+                  d="M12.2265 4.69495C7.5489 4.69495 6.89408 4.69495 2.24038 4.69495C2.23242 4.71816 2.22447 4.74138 2.22447 4.7646C2.33584 4.81877 2.44721 4.87294 2.55858 4.93485C4.07004 5.73197 4.89736 6.99342 5.20761 8.60313C5.22352 8.66505 5.15193 8.74243 5.12011 8.81982C5.04851 8.77339 4.93714 8.7347 4.91327 8.66505C4.78599 8.30131 4.72235 7.91436 4.57121 7.56611C3.88707 5.97188 2.66995 5.02772 0.911884 4.74138C0.800513 4.7259 0.720963 4.57886 0.609593 4.48599C1.23009 4.28478 1.77898 4.16869 2.26424 3.94426C3.68024 3.28645 4.49961 2.15656 4.83372 0.678412C4.8735 0.492676 4.84963 0.206335 5.21556 0.330159C4.92918 2.15656 4.27687 3.03106 2.16878 4.37765C2.39152 4.37765 2.54267 4.37765 2.69382 4.37765C7.07705 4.37765 7.46936 4.37765 11.8605 4.38539C12.0276 4.38539 12.2981 4.28478 12.2265 4.69495Z"
+                  fill="white"
+                  stroke="white"
+                  stroke-width="0.6"
+                />
+              </svg>
+            </button>
+            <button class="spend-next">
+              <svg
+                width="13"
+                height="10"
+                viewBox="0 0 13 10"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  opacity="0.2"
+                  d="M0.311615 4.5741C4.98919 4.5741 5.64401 4.5741 10.2977 4.5741C10.3057 4.55088 10.3136 4.52766 10.3136 4.50445C10.2022 4.45027 10.0909 4.3961 9.97951 4.33419C8.46805 3.53707 7.64072 2.27562 7.33048 0.66591C7.31457 0.603998 7.38616 0.526608 7.41798 0.449218C7.48958 0.495652 7.60095 0.534347 7.62481 0.603998C7.75209 0.96773 7.81573 1.35468 7.96688 1.70293C8.65101 3.29717 9.86814 4.24132 11.6262 4.52766C11.7376 4.54314 11.8171 4.69018 11.9285 4.78305C11.308 4.98426 10.7591 5.10035 10.2738 5.32478C8.85785 5.98259 8.03848 7.11249 7.70436 8.59063C7.66459 8.77637 7.68845 9.06271 7.32252 8.93889C7.6089 7.11248 8.26122 6.23798 10.3693 4.8914C10.1466 4.8914 9.99542 4.8914 9.84427 4.8914C5.46104 4.8914 5.06873 4.8914 0.677546 4.88366C0.51049 4.88366 0.24002 4.98426 0.311615 4.5741Z"
+                  fill="white"
+                  stroke="white"
+                  stroke-width="0.6"
+                />
+              </svg>
+            </button>
+          </div>
+        </div>
+      </div>
+      <div class="m11-right-bottom">
+        <img src="img/m11text.png" alt="" />
+      </div>
+    </section>
+
+    <!-- start here section -->
+    <section class="start-here-sec">
+      <div class="container-fluid">
+        <div class="start-here">
+          <div class="container">
+            <div class="start-here-content">
+              <div
+                class="start-here-txt"
+                data-aos="fade-up"
+                data-aos-duration="900"
+              >
+                <div>
+                  <h2 class="size-55 size-107">
+                    Join the M11<br />
+                    <span>Community.</span>
+                  </h2>
+                </div>
+
+                <p class="start-here-para">
+                  Access thousands of savings opportunities, exclusive member
+                  benefits, and real value every day.
+                </p>
+
+                <div class="savings-cta">
+                  <a href="#" class="cta cta-white">Join The Club +</a>
+                </div>
+              </div>
+              <div
+                class="start-here-img hover-move"
+                data-aos="zoom-in"
+                data-aos-duration="1000"
+              >
+                <img src="img/boyss.png" alt="" />
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- footer -->
+    <footer class="foot-sec ovr-hdn pos-rev">
+        <div class="container">
+            <div class="footer-top" data-aos="fade-up" data-aos-duration="900">
+                <!-- Logo & Tagline -->
+                <div class="footer-brand">
+                    <div class="footer-logo">
+                      <a  href="index.html"> <img src="img/footer-logo.svg" alt="M11 Club Logo" /></a> 
+                    </div>
+                    <p class="footer-tagline">
+                        Australia's lifestyle rewards club. Putting money<br />
+                        back in everyday Aussies' pockets.
+                    </p>
+                </div>
+
+                <!-- Club Links -->
+                <div class="footer-col">
+                    <h6 class="footer-col-hd">Club</h6>
+                    <ul class="footer-links">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="about-us.html">About Us</a></li>
+                        <li><a href="discounts.html">Discounts</a></li>
+                        <li><a href="giveaways.html">Giveaways</a></li>
+                    </ul>
+                </div>
+
+                <!-- Legal Links -->
+                <div class="footer-col">
+                    <h6 class="footer-col-hd">Legal</h6>
+                    <ul class="footer-links">
+                        <li><a href="competition(T&S).html">Competition T&Cs</a></li>
+                        <li><a href="#">Membership Terms</a></li>
+                        <li><a href="#">Privacy Policy</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+
+                <!-- Follow Links -->
+                <div class="footer-col">
+                    <h6 class="footer-col-hd">Follow</h6>
+                    <ul class="footer-links">
+                        <li><a href="#">Instagram</a></li>
+                        <li><a href="#">TikTok</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="footer-bg-text">
+                <img src="img/m11 Club.png" alt="" />
+            </div>
+        </div>
+
+        <!-- Bottom Bar -->
+        <div class="footer-bottom">
+            <div class="container">
+                <div class="footer-bottom-inner">
+                    <p>&copy; 2026 M11 Club Pty Ltd. All rights reserved.</p>
+                    <p>
+                        Trade promotion conducted under permit where required. 18+. T&Cs
+                        apply.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- jQuery -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+    <!-- Bootstrap -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Slick -->
+    <script src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+
+    <!-- AOS -->
+    <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+
+    <!-- Custom -->
+    <script src="js/script.js?nocache=fcvvfv "></script>
+
+    <script>
+      $(function () {
+        AOS.init();
+      });
+    </script>
+  </body>
+</html>
