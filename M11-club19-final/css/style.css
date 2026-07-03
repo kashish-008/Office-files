@@ -4467,6 +4467,7 @@ h6 {
 
 .option-summary::-webkit-details-marker,
 .option-accordion summary::-webkit-details-marker {
+  
   display: none;
 }
 
