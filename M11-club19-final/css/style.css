@@ -4467,7 +4467,6 @@ h6 {
 
 .option-summary::-webkit-details-marker,
 .option-accordion summary::-webkit-details-marker {
-  
   display: none;
 }
 
@@ -5088,16 +5087,44 @@ h6 {
 
 /* ===========coming-soon page css end===== */
 
-
 /* ===========welcome-back page css start===== */
 
-.welcome-back-sec .launching-soon-content p{
+.welcome-back-sec .launching-soon-content p {
   max-width: 770px;
   margin: auto;
 }
 
-.welcome-back-sec .coming-input-wrap{
+.welcome-back-sec .coming-input-wrap {
   margin-top: 30px;
 }
 
+.welcome-back-sec .otp {
+  font-size: var(--size-18);
+  display: flex;
+  justify-content: space-between;
+  margin: auto;
+  margin-top: 30px;
+  margin-bottom: 30px;
+  max-width: 810px;
+}
+
+.welcome-back-sec .resend-otp span {
+  background-image: var(--gradient-text);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.welcome-back-sec .coming-submit-btn.cta.get-otp-btn {
+  width: 100%;
+  max-width: 810px;
+  padding: 28px 0;
+  font-size: 20px;
+  box-shadow:
+    0 0 0 1px #fdab4d,
+    0 0 0 2px #f76729;
+}
+
+.coming-input-wrap {
+  height: 85px;
+}
 /* ===========welcome-back page css end===== */
