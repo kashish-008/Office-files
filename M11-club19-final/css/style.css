@@ -5092,6 +5092,7 @@ h6 {
 .welcome-back-sec .launching-soon-content p {
   max-width: 770px;
   margin: auto;
+  font-size: 24px;
 }
 
 .welcome-back-sec .coming-input-wrap {
@@ -5118,6 +5119,7 @@ h6 {
   width: 100%;
   max-width: 810px;
   padding: 28px 0;
+  margin-bottom: 37px;
   font-size: 20px;
   /* box-shadow:
     0 0 0 1px #fdab4d,
@@ -5125,7 +5127,11 @@ h6 {
 }
 
 .coming-footer .main-gift {
-  width: 50px !important;
+  width: 68px !important;
+}
+
+.back-p{
+  font-size: 18px !important;
 }
 
 @media (max-width: 576px) {
