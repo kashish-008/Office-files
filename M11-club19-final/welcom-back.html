@@ -56,19 +56,18 @@
 
     <!-- hero-section -->
     <section
-      class="launching-soon pos-rev ovr-hdn"
+      class="launching-soon pos-rev ovr-hdn welcome-back-sec"
       style="background-image: url(img/coming-bg.png)"
     >
       <div class="container">
         <div class="launching-soon-content">
           <h1 data-aos="fade-up" data-aos-duration="1000">
-            M11 CLUB is
-            <span class="bigg-txt grad-txt">launching Soon</span>
+            <span class="bigg-txt grad-txt">Welcome Back</span>
           </h1>
 
           <p data-aos="fade-up" data-aos-duration="1000">
-            Something exciting is on its way. Stay tuned for exclusive
-            giveaways, amazing prizes, and your chance to win big.
+            Sign in to access your M11 Club dashboard, manage your account, and
+            enjoy a seamless gaming experience.
           </p>
 
           <div
@@ -77,12 +76,26 @@
             data-aos-duration="900"
           >
             <input
-              type="email"
+              type="tel"
               class="coming-input"
-              placeholder="Enter your email address"
+              placeholder="Mobile number"
+              onkeypress="return event.charCode >= 48 && event.charCode <= 57;"
             />
-            <a class="coming-submit-btn cta">Sign Up</a>
           </div>
+
+           <div
+            class="coming-input-wrap gradient-brdr1"
+            data-aos="zoom-in"
+            data-aos-duration="900"
+          >
+            <input
+              type="tel"
+              class="coming-input"
+              placeholder="Enter OTP"
+              onkeypress="return event.charCode >= 48 && event.charCode <= 57;"
+            />
+          </div>
+          <a class="coming-submit-btn cta">Sign Up</a>
         </div>
       </div>
       <div class="m11-top-right coming-m11-top-right">
