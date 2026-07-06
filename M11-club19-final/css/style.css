@@ -5123,4 +5123,14 @@ h6 {
     0 0 0 1px #fdab4d,
     0 0 0 2px #f76729; */
 }
+
+.coming-footer .main-gift {
+  width: 50px !important;
+}
+
+@media (max-width: 576px) {
+  .welcome-back-sec .coming-submit-btn.cta.get-otp-btn{
+    padding: 10px;
+  }
+}
 /* ===========welcome-back page css end===== */
