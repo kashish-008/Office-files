@@ -5119,12 +5119,8 @@ h6 {
   max-width: 810px;
   padding: 28px 0;
   font-size: 20px;
-  box-shadow:
+  /* box-shadow:
     0 0 0 1px #fdab4d,
-    0 0 0 2px #f76729;
-}
-
-.coming-input-wrap {
-  height: 85px;
+    0 0 0 2px #f76729; */
 }
 /* ===========welcome-back page css end===== */
