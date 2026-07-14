@@ -1544,30 +1544,12 @@
 
     /* discount 2nd section  */
     .exp-grid {
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: center;
-        padding: 20px 0;
         height: auto;
-        background: transparent;
-    }
-
-    .exp-cat-item:nth-of-type(4),
-    .exp-cat-item:nth-of-type(5) {
-        border-top: none;
+        /* padding: 20px 0; */
     }
 
     .exp-cat-item {
-        flex: 0 0 calc(33.333% - 10px);
         min-height: 140px;
-        padding: 0;
-        margin: 0;
-        border: 1px solid transparent;
-        border-image-source: linear-gradient(90deg,
-                #fdab4db6 30%,
-                #fdab4d 50%,
-                #fdab4db6 30%);
-        border-image-slice: 1;
     }
 
     /* hide grid lines and plus icons */

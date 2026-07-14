@@ -212,30 +212,52 @@ window.addEventListener("scroll", function () {
   }
 });
 
-// discount 2nd sec 
+//--- discount 2nd sec (explore section)------
 
-(function () {
-  const grid = document.getElementById("expGrid");
-  // positions: p1 to p12
-  const positions = [
-    "p1",
-    "p2",
-    "p3",
-    "p4",
-    "p5",
-    "p6",
-    "p7",
-    "p8",
-    "p9",
-    "p10",
-    "p11",
-    "p12",
-  ];
-  positions.forEach((cls) => {
-    const el = document.createElement("span");
-    el.className = `grid-plus ${cls}`;
-    grid.append(el);
+document.addEventListener("DOMContentLoaded", function () {
+  const catItems = document.querySelectorAll(".exp-cat-item");
+  catItems.forEach((item, idx) => {
+    const tr = document.createElement("span");
+    tr.className = "grid-plus plus-tr";
+    const br = document.createElement("span");
+    br.className = "grid-plus plus-br";
+    item.appendChild(tr);
+    item.appendChild(br);
+
+    if (idx === 0) {
+      const tl = document.createElement("span");
+      tl.className = "grid-plus plus-tl";
+      const bl = document.createElement("span");
+      bl.className = "grid-plus plus-bl";
+      item.appendChild(tl);
+      item.appendChild(bl);
+    }
   });
-})();
+
+  // Initialize Swiper for categories
+  if (document.querySelector(".exp-grid")) {
+    new Swiper(".exp-grid", {
+      slidesPerView: 1.5,
+      spaceBetween: 0,
+      grabCursor: true,
+      scrollbar: {
+        el: ".swiper-scrollbar",
+        draggable: true,
+        dragSize: 100,
+      },
+      breakpoints: {
+        576: {
+          slidesPerView: 2.2,
+        },
+        768: {
+          slidesPerView: 3.5,
+        },
+        1024: {
+          slidesPerView: 5,
+        }
+      }
+    });
+  }
+});
 
 

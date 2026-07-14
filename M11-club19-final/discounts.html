@@ -31,6 +31,12 @@
       href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css"
     />
 
+    <!-- Swiper CSS -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
+
     <!-- aos -->
     <link
       href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css"
@@ -130,118 +136,113 @@
         <p>Save more on the things you buy every day.</p>
 
         <div class="exp-grid-wrap">
-          <div class="exp-grid" id="expGrid">
-            <!-- grid lines -->
+          <div class="swiper exp-grid" id="expGrid">
+            <!-- horizontal grid lines -->
             <span class="grid-line grid-h-top"></span>
             <span class="grid-line grid-h-bottom"></span>
 
-            <span class="grid-line grid-v-1"></span>
-            <span class="grid-line grid-v-2"></span>
-            <span class="grid-line grid-v-3"></span>
-            <span class="grid-line grid-v-4"></span>
-            <span class="grid-line grid-v-5"></span>
-            <span class="grid-line grid-v-6"></span>
-
-            <!-- plus icons from js-->
-
-            <!-- Fuel -->
-            <div class="exp-cat-item">
-              <div class="exp-cat-item__border">
-                <span></span><span></span><span></span><span></span>
+            <div class="swiper-wrapper">
+              <!-- Fuel -->
+              <div class="swiper-slide exp-cat-item">
+                <div class="exp-cat-item__border">
+                  <span></span><span></span><span></span><span></span>
+                </div>
+                <div class="exp-cat-icon">
+                  <img src="img/fuel.png" alt="Fuel" />
+                </div>
+                <p>Fuel</p>
               </div>
-              <div class="exp-cat-icon">
-                <img src="img/fuel.png" alt="Fuel" />
+
+              <!-- Groceries -->
+              <div class="swiper-slide exp-cat-item">
+                <div class="exp-cat-item__border">
+                  <span></span><span></span><span></span><span></span>
+                </div>
+                <div class="exp-cat-icon">
+                  <img src="img/Groceries.png" alt="Groceries" />
+                </div>
+                <p>Groceries</p>
               </div>
-              <p>Fuel</p>
+
+              <!-- Pharmacy -->
+              <div class="swiper-slide exp-cat-item">
+                <div class="exp-cat-item__border">
+                  <span></span><span></span><span></span><span></span>
+                </div>
+                <div class="exp-cat-icon">
+                  <img src="img/Pharmacy.png" alt="Pharmacy" />
+                </div>
+                <p>Pharmacy</p>
+              </div>
+
+              <!-- Retail -->
+              <div class="swiper-slide exp-cat-item">
+                <div class="exp-cat-item__border">
+                  <span></span><span></span><span></span><span></span>
+                </div>
+                <div class="exp-cat-icon">
+                  <img src="img/Retail.png" alt="Retail" />
+                </div>
+                <p>Retail</p>
+              </div>
+
+              <!-- Dining -->
+              <div class="swiper-slide exp-cat-item">
+                <div class="exp-cat-item__border">
+                  <span></span><span></span><span></span><span></span>
+                </div>
+                <div class="exp-cat-icon">
+                  <img src="img/Dining.png" alt="Dining" />
+                </div>
+                <p>Dining</p>
+              </div>
+
+               <!-- Dining -->
+              <div class="swiper-slide exp-cat-item">
+                <div class="exp-cat-item__border">
+                  <span></span><span></span><span></span><span></span>
+                </div>
+                <div class="exp-cat-icon">
+                  <img src="img/Dining.png" alt="Dining" />
+                </div>
+                <p>Dining</p>
+              </div>
+
+               <!-- Dining -->
+              <div class="swiper-slide exp-cat-item">
+                <div class="exp-cat-item__border">
+                  <span></span><span></span><span></span><span></span>
+                </div>
+                <div class="exp-cat-icon">
+                  <img src="img/Dining.png" alt="Dining" />
+                </div>
+                <p>Dining</p>
+              </div>
+
+               <!-- Dining -->
+              <div class="swiper-slide exp-cat-item">
+                <div class="exp-cat-item__border">
+                  <span></span><span></span><span></span><span></span>
+                </div>
+                <div class="exp-cat-icon">
+                  <img src="img/Dining.png" alt="Dining" />
+                </div>
+                <p>Dining</p>
+              </div>
+
+               <!-- Dining -->
+              <div class="swiper-slide exp-cat-item">
+                <div class="exp-cat-item__border">
+                  <span></span><span></span><span></span><span></span>
+                </div>
+                <div class="exp-cat-icon">
+                  <img src="img/Dining.png" alt="Dining" />
+                </div>
+                <p>Dining</p>
+              </div>
             </div>
-
-            <!-- Groceries -->
-            <div class="exp-cat-item">
-              <div class="exp-cat-item__border">
-                <span></span><span></span><span></span><span></span>
-              </div>
-              <div class="exp-cat-icon">
-                <img src="img/Groceries.png" alt="Groceries" />
-              </div>
-              <p>Groceries</p>
-            </div>
-
-            <!-- Pharmacy -->
-            <div class="exp-cat-item">
-              <div class="exp-cat-item__border">
-                <span></span><span></span><span></span><span></span>
-              </div>
-              <div class="exp-cat-icon">
-                <img src="img/Pharmacy.png" alt="Pharmacy" />
-              </div>
-              <p>Pharmacy</p>
-            </div>
-
-            <!-- Retail -->
-            <div class="exp-cat-item">
-              <div class="exp-cat-item__border">
-                <span></span><span></span><span></span><span></span>
-              </div>
-              <div class="exp-cat-icon">
-                <img src="img/Retail.png" alt="Retail" />
-              </div>
-              <p>Retail</p>
-            </div>
-
-            <!-- Dining -->
-            <div class="exp-cat-item">
-              <div class="exp-cat-item__border">
-                <span></span><span></span><span></span><span></span>
-              </div>
-              <div class="exp-cat-icon">
-                <img src="img/Dining.png" alt="Dining" />
-              </div>
-              <p>Dining</p>
-            </div>
-
-             <!-- Dining -->
-            <div class="exp-cat-item">
-              <div class="exp-cat-item__border">
-                <span></span><span></span><span></span><span></span>
-              </div>
-              <div class="exp-cat-icon">
-                <img src="img/Dining.png" alt="Dining" />
-              </div>
-              <p>Dining</p>
-            </div>
-
-             <!-- Dining -->
-            <div class="exp-cat-item">
-              <div class="exp-cat-item__border">
-                <span></span><span></span><span></span><span></span>
-              </div>
-              <div class="exp-cat-icon">
-                <img src="img/Dining.png" alt="Dining" />
-              </div>
-              <p>Dining</p>
-            </div>
-
-             <!-- Dining -->
-            <div class="exp-cat-item">
-              <div class="exp-cat-item__border">
-                <span></span><span></span><span></span><span></span>
-              </div>
-              <div class="exp-cat-icon">
-                <img src="img/Dining.png" alt="Dining" />
-              </div>
-              <p>Dining</p>
-            </div>
-
-             <!-- Dining -->
-            <div class="exp-cat-item">
-              <div class="exp-cat-item__border">
-                <span></span><span></span><span></span><span></span>
-              </div>
-              <div class="exp-cat-icon">
-                <img src="img/Dining.png" alt="Dining" />
-              </div>
-              <p>Dining</p>
-            </div>
+            <!-- scrollbar -->
+            <div class="swiper-scrollbar"></div>
           </div>
         </div>
       </div>
@@ -634,6 +635,9 @@
 
     <!-- AOS -->
     <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+
+    <!-- Swiper JS -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
 
     <!-- Custom -->
     <script src="js/script.js?nocache=fcvvfv "></script>
