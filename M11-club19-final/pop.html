@@ -1,347 +1,267 @@
 <!doctype html>
 <html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>pop</title>
+
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" />
+
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous" />
+
+  <!-- custom links -->
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="css/responsive.css" />
+</head>
+
+<body>
+  <!doctype html>
+  <html lang="en">
+
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>pop</title>
 
     <!-- Font Awesome -->
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
-    />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" />
 
     <!-- Bootstrap CSS -->
-    <link
-      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
-      rel="stylesheet"
-      integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
-      crossorigin="anonymous"
-    />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+      integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous" />
 
-    <!-- custom links -->
-    <link rel="stylesheet" href="css/style.css" />
-    <link rel="stylesheet" href="css/responsive.css" />
+    <style>
+      body {
+        background: black;
+      }
+
+      .partner-modal-overlay {
+        position: fixed;
+        inset: 0;
+        background: rgba(0, 0, 0, 0.7);
+        backdrop-filter: blur(5px);
+        display: none;
+        align-items: center;
+        justify-content: center;
+        z-index: 1050;
+        padding: 16px;
+      }
+
+      .partner-modal-overlay.active {
+        display: flex;
+      }
+
+      .partner-modal {
+        background: #161616;
+        border: 1px solid rgba(255, 255, 255, 0.08);
+        border-radius: 16px;
+        width: 100%;
+        max-width: 400px;
+        position: relative;
+        padding: 32px 24px 24px;
+        text-align: center;
+        animation: partnerModalIn 0.2s ease;
+      }
+
+      @keyframes partnerModalIn {
+        from {
+          opacity: 0;
+          transform: scale(0.96);
+        }
+
+        to {
+          opacity: 1;
+          transform: scale(1);
+        }
+      }
+
+      .partner-modal-blur-content {
+        filter: blur(0px);
+        opacity: 0.55;
+        pointer-events: none;
+        user-select: none;
+      }
+
+      .partner-modal-close {
+        position: absolute;
+        top: 14px;
+        right: 14px;
+        background: transparent;
+        border: none;
+        color: #999;
+        font-size: 18px;
+        cursor: pointer;
+        line-height: 1;
+        padding: 4px;
+      }
+
+      .partner-modal-close:hover {
+        color: #fff;
+      }
+
+      .partner-modal-icon-wrap {
+        display: flex;
+        justify-content: center;
+        margin-bottom: 16px;
+      }
+
+      .partner-modal-icon {
+        max-width: 300px;
+        width: 100%;
+        height: 128px;
+        border-radius: 8px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        overflow: hidden;
+      }
+
+      .partner-modal-icon img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+
+      .partner-modal-eyebrow {
+        font-size: 12px;
+        letter-spacing: 0.06em;
+        text-transform: uppercase;
+        color: #888;
+        margin: 0 0 6px;
+      }
+
+      .partner-modal-title {
+        font-size: 20px;
+        font-weight: 700;
+        margin: 0 0 24px;
+        color: #fff;
+      }
+
+      .partner-modal-icon-row {
+        display: flex;
+        justify-content: center;
+        margin-bottom: 24px;
+      }
+
+      .partner-modal-lock {
+        width: 64px;
+        height: 64px;
+        border-radius: 50%;
+        background: #232323;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: #fff;
+        font-size: 22px;
+      }
+
+      .partner-modal-actions {
+        display: flex;
+        gap: 12px;
+        margin-top: 8px;
+      }
+
+      .partner-modal-actions button,
+      .partner-modal-actions a {
+        flex: 1;
+        padding: 11px 16px;
+        border-radius: 8px;
+        font-size: 14px;
+        text-decoration: none;
+      }
+
+      i.fa-solid.fa-lock {
+        color: #f76729;
+      }
+    </style>
   </head>
 
   <body>
-    <!doctype html>
-    <html lang="en">
-      <head>
-        <meta charset="UTF-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>pop</title>
-
-        <!-- Font Awesome -->
-        <link
-          rel="stylesheet"
-          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
-        />
-
-        <!-- Bootstrap CSS -->
-        <link
-          href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
-          rel="stylesheet"
-          integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
-          crossorigin="anonymous"
-        />
-
-        <style>
-          body {
-            background: black;
-          }
-          .partner-modal-overlay {
-            position: fixed;
-            inset: 0;
-            background: rgba(0, 0, 0, 0.7);
-            backdrop-filter: blur(5px);
-            display: none;
-            align-items: center;
-            justify-content: center;
-            z-index: 1050;
-            padding: 16px;
-          }
-          .partner-modal-overlay.active {
-            display: flex;
-          }
-
-          .partner-modal {
-            background: #161616;
-            border: 1px solid rgba(255, 255, 255, 0.08);
-            border-radius: 16px;
-            width: 100%;
-            max-width: 400px;
-            position: relative;
-            padding: 32px 24px 24px;
-            text-align: center;
-            animation: partnerModalIn 0.2s ease;
-          }
-
-          @keyframes partnerModalIn {
-            from {
-              opacity: 0;
-              transform: scale(0.96);
-            }
-            to {
-              opacity: 1;
-              transform: scale(1);
-            }
-          }
-
-          .partner-modal-blur-content {
-            filter: blur(6px);
-            opacity: 0.55;
-            pointer-events: none;
-            user-select: none;
-          }
-
-          .partner-modal-close {
-            position: absolute;
-            top: 14px;
-            right: 14px;
-            background: transparent;
-            border: none;
-            color: #999;
-            font-size: 18px;
-            cursor: pointer;
-            line-height: 1;
-            padding: 4px;
-          }
-          .partner-modal-close:hover {
-            color: #fff;
-          }
-
-          .partner-modal-icon-wrap {
-            display: flex;
-            justify-content: center;
-            margin-bottom: 16px;
-          }
-          .partner-modal-icon {
-            width: 96px;
-            height: 96px;
-            border-radius: 50%;
-            background: linear-gradient(145deg, #2a2a2a, #1a1a1a);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            overflow: hidden;
-            border: 1px solid rgba(255, 255, 255, 0.06);
-          }
-          .partner-modal-icon img {
-            width: 60%;
-            height: 60%;
-            object-fit: contain;
-          }
-
-          .partner-modal-eyebrow {
-            font-size: 12px;
-            letter-spacing: 0.06em;
-            text-transform: uppercase;
-            color: #888;
-            margin: 0 0 6px;
-          }
-          .partner-modal-title {
-            font-size: 20px;
-            font-weight: 700;
-            margin: 0 0 24px;
-            color: #fff;
-          }
-
-          .partner-modal-icon-row {
-            display: flex;
-            justify-content: center;
-            margin-bottom: 24px;
-          }
-          .partner-modal-lock {
-            width: 64px;
-            height: 64px;
-            border-radius: 50%;
-            background: #232323;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: #fff;
-            font-size: 22px;
-          }
-
-          .partner-modal-actions {
-            display: flex;
-            gap: 12px;
-            margin-top: 8px;
-          }
-          .partner-modal-actions button,
-          .partner-modal-actions a {
-            flex: 1;
-            padding: 11px 16px;
-            border-radius: 8px;
-            font-size: 14px;
-            text-decoration: none;
-          }
-          i.fa-solid.fa-lock {
-            color: #f76729;
-          }
-        </style>
-      </head>
-
-      <body>
-        <div class="container">
-          <div class="featured-cat-grid">
-            <div class="feat-card" data-brand="Jayride">
-              <a href="#" onclick="return false;">
-                <div class="feat-card-img">
-                  <img
-                    src="https://s3-ap-southeast-2.amazonaws.com/myrewards-media/webroot/files/product_image/1050576.png"
-                    alt="Jayride"
-                  />
-                </div>
-                <div class="feat-card-txt">
-                  <p class="feat-brand-name">Jayride</p>
-                  <h3 class="feat-discount">8% Discount</h3>
-                  <p class="feat-category">• Automotive</p>
-                </div>
-              </a>
+    <div class="container">
+      <div class="featured-cat-grid">
+        <div class="feat-card" data-brand="Jayride">
+          <a href="#" onclick="return false;">
+            <div class="feat-card-img">
+              <img src="https://s3-ap-southeast-2.amazonaws.com/myrewards-media/webroot/files/product_image/1050576.png"
+                alt="Jayride" />
             </div>
-
-            <div class="feat-card" data-brand="Jeep Preferred Partner Program">
-              <a href="#" onclick="return false;">
-                <div class="feat-card-img">
-                  <img
-                    src="https://s3-ap-southeast-2.amazonaws.com/myrewards-media/webroot/files/product_image/1067584.jpg"
-                    alt="Jeep Preferred Partner Program"
-                  />
-                </div>
-                <div class="feat-card-txt">
-                  <p class="feat-brand-name">Jeep Preferred Partner Program</p>
-                  <h3 class="feat-discount">
-                    Exclusive Discounts across the entire Jeep&reg; range
-                  </h3>
-                  <p class="feat-category">• Automotive</p>
-                </div>
-              </a>
+            <div class="feat-card-txt">
+              <p class="feat-brand-name">Jayride</p>
+              <h3 class="feat-discount">8% Discount</h3>
+              <p class="feat-category">• Automotive</p>
             </div>
+          </a>
+        </div>
 
-            <div class="feat-card" data-brand="MAX ORMAN TOYOTA">
-              <a href="#" onclick="return false;">
-                <div class="feat-card-img">
-                  <img
-                    src="https://s3-ap-southeast-2.amazonaws.com/myrewards-media/webroot/files/product_image/800577.png"
-                    alt="MAX ORMAN TOYOTA"
-                  />
-                </div>
-                <div class="feat-card-txt">
-                  <p class="feat-brand-name">MAX ORMAN TOYOTA</p>
-                  <h3 class="feat-discount">10% Discount</h3>
-                  <p class="feat-category">• Automotive</p>
-                </div>
-              </a>
+        <div class="feat-card" data-brand="Jeep Preferred Partner Program">
+          <a href="#" onclick="return false;">
+            <div class="feat-card-img">
+              <img src="https://s3-ap-southeast-2.amazonaws.com/myrewards-media/webroot/files/product_image/1067584.jpg"
+                alt="Jeep Preferred Partner Program" />
             </div>
+            <div class="feat-card-txt">
+              <p class="feat-brand-name">Jeep Preferred Partner Program</p>
+              <h3 class="feat-discount">
+                Exclusive Discounts across the entire Jeep&reg; range
+              </h3>
+              <p class="feat-category">• Automotive</p>
+            </div>
+          </a>
+        </div>
+
+        <div class="feat-card" data-brand="MAX ORMAN TOYOTA">
+          <a href="#" onclick="return false;">
+            <div class="feat-card-img">
+              <img src="https://s3-ap-southeast-2.amazonaws.com/myrewards-media/webroot/files/product_image/800577.png"
+                alt="MAX ORMAN TOYOTA" />
+            </div>
+            <div class="feat-card-txt">
+              <p class="feat-brand-name">MAX ORMAN TOYOTA</p>
+              <h3 class="feat-discount">10% Discount</h3>
+              <p class="feat-category">• Automotive</p>
+            </div>
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <!-- POP -->
+    <div class="partner-modal-overlay" id="partnerModalOverlay">
+      <div class="partner-modal">
+        <button type="button" class="partner-modal-close" id="partnerModalClose" aria-label="Close">
+          <i class="fa-solid fa-xmark"></i>
+        </button>
+
+        <div class="partner-modal-blur-content">
+          <div class="partner-modal-icon-wrap">
+            <div class="partner-modal-icon">
+              <img src="https://s3-ap-southeast-2.amazonaws.com/myrewards-media/webroot/files/product_image/1050576.png"
+                alt="partner" />
+            </div>
+          </div>
+
+          <p class="partner-modal-eyebrow">Affiliate Partner</p>
+          <h3 class="partner-modal-title">Jayride</h3>
+        </div>
+
+        <div class="partner-modal-icon-row">
+          <div class="partner-modal-lock">
+            <i class="fa-solid fa-lock"></i>
           </div>
         </div>
 
-        <!-- POP -->
-        <div class="partner-modal-overlay" id="partnerModalOverlay">
-          <div class="partner-modal">
-            <button
-              type="button"
-              class="partner-modal-close"
-              id="partnerModalClose"
-              aria-label="Close"
-            >
-              <i class="fa-solid fa-xmark"></i>
-            </button>
-
-            <div class="partner-modal-blur-content">
-              <div class="partner-modal-icon-wrap">
-                <div class="partner-modal-icon">
-                  <img
-                    src="https://s3-ap-southeast-2.amazonaws.com/myrewards-media/webroot/files/product_image/1050576.png"
-                    alt="partner"
-                  />
-                </div>
-              </div>
-
-              <p class="partner-modal-eyebrow">Affiliate Partner</p>
-              <h3 class="partner-modal-title">Jayride</h3>
-            </div>
-
-            <div class="partner-modal-icon-row">
-              <div class="partner-modal-lock">
-                <i class="fa-solid fa-lock"></i>
-              </div>
-            </div>
-
-            <div class="partner-modal-actions">
-              <button
-                type="button"
-                class="partner-modal-back hdr-cta"
-                id="partnerModalBack"
-              >
-                Back
-              </button>
-              <a href="/auth/login" class="partner-modal-login cta"
-                >Login to Unlock</a
-              >
-            </div>
-          </div>
+        <div class="partner-modal-actions">
+          <button type="button" class="partner-modal-back hdr-cta" id="partnerModalBack">
+            Back
+          </button>
+          <a href="/auth/login" class="partner-modal-login cta">Login to Unlock</a>
         </div>
-
-        <!-- jQuery -->
-        <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-
-        <!-- Bootstrap -->
-        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
-
-        <script>
-          // ===================================
-          // AFFILIATE PARTNER POPUP LOGIC
-          // ===================================
-          const partnerModalOverlay = document.getElementById(
-            "partnerModalOverlay",
-          );
-          const partnerModalClose =
-            document.getElementById("partnerModalClose");
-          const partnerModalBack = document.getElementById("partnerModalBack");
-          const featCards = document.querySelectorAll(".feat-card");
-
-          function openPartnerModal() {
-            partnerModalOverlay.classList.add("active");
-            document.body.style.overflow = "hidden";
-          }
-
-          function closePartnerModal() {
-            partnerModalOverlay.classList.remove("active");
-            document.body.style.overflow = "";
-          }
-
-          featCards.forEach(function (card) {
-            card.addEventListener("click", function (e) {
-              e.preventDefault();
-              openPartnerModal();
-            });
-          });
-
-          partnerModalClose.addEventListener("click", closePartnerModal);
-          partnerModalBack.addEventListener("click", closePartnerModal);
-
-          // close when clicking outside the modal box
-          partnerModalOverlay.addEventListener("click", function (e) {
-            if (e.target === partnerModalOverlay) {
-              closePartnerModal();
-            }
-          });
-
-          // close on Escape key
-          document.addEventListener("keydown", function (e) {
-            if (
-              e.key === "Escape" &&
-              partnerModalOverlay.classList.contains("active")
-            ) {
-              closePartnerModal();
-            }
-          });
-        </script>
-      </body>
-    </html>
+      </div>
+    </div>
 
     <!-- jQuery -->
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
@@ -349,7 +269,67 @@
     <!-- Bootstrap -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
 
-    <!-- Custom -->
-    <script src="js/script.js?nocache=fcvvfv "></script>
+    <script>
+      // ===================================
+      // AFFILIATE PARTNER POPUP LOGIC
+      // ===================================
+      const partnerModalOverlay = document.getElementById(
+        "partnerModalOverlay",
+      );
+      const partnerModalClose =
+        document.getElementById("partnerModalClose");
+      const partnerModalBack = document.getElementById("partnerModalBack");
+      const featCards = document.querySelectorAll(".feat-card");
+
+      function openPartnerModal() {
+        partnerModalOverlay.classList.add("active");
+        document.body.style.overflow = "hidden";
+      }
+
+      function closePartnerModal() {
+        partnerModalOverlay.classList.remove("active");
+        document.body.style.overflow = "";
+      }
+
+      featCards.forEach(function (card) {
+        card.addEventListener("click", function (e) {
+          e.preventDefault();
+          openPartnerModal();
+        });
+      });
+
+      partnerModalClose.addEventListener("click", closePartnerModal);
+      partnerModalBack.addEventListener("click", closePartnerModal);
+
+      // close when clicking outside the modal box
+      partnerModalOverlay.addEventListener("click", function (e) {
+        if (e.target === partnerModalOverlay) {
+          closePartnerModal();
+        }
+      });
+
+      // close on Escape key
+      document.addEventListener("keydown", function (e) {
+        if (
+          e.key === "Escape" &&
+          partnerModalOverlay.classList.contains("active")
+        ) {
+          closePartnerModal();
+        }
+      });
+    </script>
   </body>
+
+  </html>
+
+  <!-- jQuery -->
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+  <!-- Bootstrap -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
+
+  <!-- Custom -->
+  <script src="js/script.js?nocache=fcvvfv "></script>
+</body>
+
 </html>
