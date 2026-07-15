@@ -96,7 +96,6 @@ jQuery(document).ready(function ($) {
     observer.observe(this);
   });
 
-
   // winner-slider
   var $slider = $(".winner_sldr");
 
@@ -136,9 +135,6 @@ jQuery(document).ready(function ($) {
     ],
   });
 
-
-
-  
   var totalCards = $(".spend-less-slider .feat-card").length;
   var slidesToShow = 3;
   var totalGroups = Math.ceil(totalCards / slidesToShow);
@@ -200,9 +196,6 @@ jQuery(document).ready(function ($) {
   updateFooter(0);
 });
 
-
-
-
 window.addEventListener("scroll", function () {
   const header = document.querySelector(".nav_hdr");
   if (window.scrollY > 50) {
@@ -237,8 +230,8 @@ document.addEventListener("DOMContentLoaded", function () {
   // Initialize Swiper for categories
   if (document.querySelector(".exp-grid")) {
     new Swiper(".exp-grid", {
-      slidesPerView: 1.5,
-      spaceBetween: 0,
+      slidesPerView: 5,
+      spaceBetween: 20,
       grabCursor: true,
       scrollbar: {
         el: ".swiper-scrollbar",
@@ -254,10 +247,8 @@ document.addEventListener("DOMContentLoaded", function () {
         },
         1024: {
           slidesPerView: 5,
-        }
-      }
+        },
+      },
     });
   }
 });
-
-
