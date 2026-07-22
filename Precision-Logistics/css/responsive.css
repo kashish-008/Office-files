@@ -1,0 +1,1373 @@
+@media (min-width: 1200px) {
+  .back-img img {
+    padding-right: 40px;
+  }
+}
+
+@media screen and (min-width: 1600px) {
+
+  .container,
+  .blue-in {
+    max-width: 1470px;
+    margin-inline: auto;
+  }
+
+  .container-fluid {
+    padding: 0 60px;
+  }
+
+  .blue-in {
+    padding: 40px 0;
+  }
+
+  .navbar-brand img {
+    width: 70%;
+  }
+
+  /* 6 april  */
+  .cont-address-sec li h3 {
+    font-size: 25px;
+  }
+
+  .cont-address-sec li h2 {
+    font-size: 63px;
+  }
+}
+
+@media (max-width: 1400px) {
+  .our-top {
+    padding-top: 100px;
+    max-width: 430px;
+  }
+
+  .our-top h3 {
+    font-size: 120px;
+  }
+}
+
+@media (max-width: 1599px) {
+  .blue-in {
+    padding: 40px 0;
+    max-width: 1170px;
+    margin-inline: auto;
+  }
+
+  .container-fluid {
+    padding: 0 30px;
+  }
+
+  body {
+    font-size: 16px;
+  }
+
+  h1 {
+    font-size: 56px;
+  }
+
+  h2 {
+    font-size: 42px;
+  }
+
+  h3 {
+    font-size: 22px;
+  }
+
+  .hero-section {
+    padding: 170px 0 60px;
+  }
+
+  .navbar-brand img {
+    width: 100px;
+  }
+
+  .logistics-box {
+    gap: 10px;
+  }
+
+  .logistics-group {
+    padding-top: 80px;
+  }
+
+  .logistics-group p {
+    font-size: 25px;
+  }
+
+  .cta-btn,
+  .blur-cta {
+    padding: 19px 24px;
+    font-size: 15px;
+  }
+
+  .logistics-box h6 {
+    font-size: 33px;
+  }
+
+  .service-box p {
+    font-size: 18px;
+  }
+
+  .services-wrapper {
+    padding: 90px 70px;
+  }
+
+  .primes-content ul li,
+  .capabilities-txt p,
+  .core-box p,
+  .info-card p,
+  .core-box li {
+    font-size: 17px;
+  }
+
+  .built-list p,
+  .streamline-content p {
+    font-size: 20px;
+  }
+
+  .footer-cont p {
+    font-size: 16px;
+  }
+
+  .p_140 {
+    padding: 110px 0px;
+  }
+
+  .logistics-section .content p {
+    font-size: 30px;
+    line-height: 1.2;
+  }
+
+  .badge-img img {
+    width: 100px;
+    max-width: 150px;
+    bottom: -180px;
+    right: 0;
+  }
+
+  .info-card img {
+    min-width: 140px;
+  }
+
+  .info-card {
+    align-items: start;
+    gap: 20px;
+    padding: 25px;
+  }
+
+  .vibe-inner h3 {
+    margin-bottom: 10px;
+  }
+
+  .footer-title {
+    font-size: 23px;
+  }
+
+  .contact-footer {
+    padding-right: 40px;
+  }
+
+  .scroll-indicator {
+    right: 0;
+    bottom: -230px;
+  }
+
+  .service-icon img {
+    width: 70px;
+  }
+
+  .service-box h6 {
+    font-size: 27px;
+  }
+
+  .inner-bnnr .hero-content {
+    max-width: 400px;
+  }
+
+  .hero-section.inner-bnnr {
+    padding-top: 190px;
+  }
+
+  .inner-bnnr .logistics-group p {
+    max-width: 723px;
+  }
+
+  .blue-tp h6 {
+    margin: 0;
+  }
+
+  .our-top h2 {
+    font-size: 30px;
+  }
+
+  .logs-inne.capa-inn .blue h1 {
+    font-size: 90px;
+  }
+
+  .logs-inne.capa-inn .blue {
+    max-width: 900px;
+  }
+
+  .animate-hdng-wrap {
+    max-width: 900px;
+  }
+
+  .back-row p {
+    font-size: 18px;
+  }
+
+  .naics-section p {
+    font-size: 16px;
+  }
+
+  /* 6-april  */
+
+  .privcay-term-sec ul li,
+  .privcay-term-sec p {
+    font-size: 18px;
+  }
+
+  .hero-section.privacy-term-bnr {
+    padding: 180px 0 80px;
+  }
+
+  .privcay-term-sec .inr-cnt-wrp {
+    max-width: 1157px;
+  }
+
+  .contact-form-sec .contact-box {
+    padding: 110px 110px 140px;
+  }
+
+  .contact-form-sec .form-head p {
+    font-size: 19px;
+  }
+
+  .contact-form-sec input,
+  .contact-form-sec textarea {
+    padding: 30px;
+    font-size: 20px;
+  }
+
+  .cont-address-sec li h3 {
+    min-width: 410px;
+  }
+
+  .vibe-row.mid .vibe-col {
+    padding: 30px 0;
+  }
+
+  /* service-detail  */
+  .service-dtl-bnr .logistics-group p {
+    max-width: 649px;
+  }
+
+  .yur-glob-ship-sec h2 {
+    max-width: 660px;
+  }
+
+  .yur-glob-ship-sec .lft-cnt p {
+    font-size: 17px;
+    max-width: 560px;
+  }
+
+  .custm-comp-sec p {
+    font-size: 20px;
+    max-width: 800px;
+  }
+
+  .why-choose-sec .head h2 {
+    max-width: 210px;
+    margin-bottom: 0;
+  }
+
+  .why-choose-sec .head p {
+    max-width: 600px;
+    font-size: 20px;
+  }
+}
+
+/* 6-april  */
+@media (max-width: 1399px) {
+  .contact-form-sec .form-head p {
+    font-size: 18px;
+  }
+
+  /* service-detail  */
+  .why-choose-slider p {
+    font-size: 22px;
+    max-width: 245px;
+  }
+}
+
+@media (max-width: 1199px) {
+  .container-fluid {
+    padding: 0 15px;
+  }
+
+  h1 {
+    font-size: 46px;
+  }
+
+  h2 {
+    font-size: 35px;
+  }
+
+  h4 {
+    font-size: 30px;
+  }
+
+  h5 {
+    font-size: 28px;
+  }
+
+  .cta-btn,
+  .blur-cta {
+    padding: 18px 22px;
+    font-size: 13px;
+  }
+
+  .service-icon img {
+    width: 70px;
+  }
+
+  .service-box h6 {
+    font-size: 23px;
+  }
+
+  .p-100 {
+    padding: 80px 0;
+  }
+
+  .p_140 {
+    padding: 80px 0px;
+  }
+
+  .core-box {
+    padding: 30px;
+  }
+
+  .logs-inne {
+    padding-bottom: 40px;
+  }
+
+  .badge-img img {
+    bottom: -120px;
+  }
+
+  .naics-section p {
+    font-size: 16px;
+  }
+
+  .vibe-row.mid .vibe-col {
+    padding: 40px 0;
+  }
+
+  .footer-logo img {
+    width: 160px;
+  }
+
+  footer,
+  .footer a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 14px;
+  }
+
+  .footer-title {
+    font-size: 19px;
+  }
+
+  .scroll-indicator {
+    right: 70px;
+    bottom: -260px;
+  }
+
+  .logistics-group {
+    max-width: 790px;
+  }
+
+  .inner-bnnr .logistics-group {
+    margin: auto;
+  }
+
+  .pt-140,
+  .pt-130 {
+    padding-top: 100px;
+  }
+
+  .pb-140 {
+    padding-bottom: 100px;
+  }
+
+  .back-row p {
+    font-size: 17px;
+  }
+
+  .blue-in {
+    padding: 40px 40px;
+  }
+
+  .bb-rgt,
+  .bb-lft {
+    padding-block: 50px;
+  }
+
+  .bb-rgt {
+    padding-left: 70px;
+  }
+
+  .bb-lft {
+    padding-right: 70px;
+  }
+
+  .bb-lft p,
+  .list-bx,
+  .bb-rgt-inn p {
+    font-size: 16px;
+  }
+
+  .animated-scroll-sec h2 {
+    font-size: 26px;
+  }
+
+  .border-40 {
+    border-radius: 20px;
+  }
+
+  .back-row {
+    gap: 30px;
+  }
+
+  .border-30,
+  .our-crd {
+    border-radius: 20px;
+  }
+
+  .our-top h3 {
+    font-size: 80px;
+  }
+
+  .our-top {
+    max-width: 360px;
+  }
+
+  .primes-content ul li,
+  .capabilities-txt p,
+  .core-box p,
+  .info-card p,
+  .core-box li {
+    font-size: 16px;
+  }
+
+  .im-sec-cap .back-row {
+    gap: 0;
+  }
+
+  .capa-sec .marquee-content img {
+    width: 500px;
+    margin-right: 40px;
+  }
+
+  /* 6-april  */
+  .hero-section.privacy-term-bnr {
+    padding: 170px 0 60px;
+  }
+
+  .cont-address-sec li h3 {
+    min-width: 310px;
+  }
+
+  .contact-form-sec .contact-form {
+    margin-top: 30px;
+    padding: 20px;
+  }
+
+  .cont-address-sec {
+    padding-top: 100px;
+  }
+
+  .contact-form-sec .contact-box {
+    padding: 60px;
+  }
+
+  .pb-130,
+  .pb-120 {
+    padding-bottom: 100px;
+  }
+
+  /* service-detail-page  */
+  .why-choose-sec .slider-progress {
+    margin: 45px auto 0;
+
+  }
+
+  .yur-glob-ship-sec .lft-cnt p {
+    font-size: 16px;
+  }
+
+  .yur-glob-ship-sec .upr-head {
+    padding-left: 0;
+  }
+
+  .why-choose-sec {
+    padding: 100px 0 90px;
+  }
+  .why-choose-slider .crd {
+    padding: 25px 20px;   
+}
+
+}
+
+@media (max-width: 991px) {
+  .hero-row {
+    gap: 31px;
+  }
+
+  .bar {
+    width: 30px;
+    height: 2px;
+    background-color: #fff;
+    margin-bottom: 7px !important;
+
+    display: block;
+  }
+
+  .navbar-toggler {
+    width: 32px;
+    height: 32px;
+    padding: 0;
+    margin: 0;
+    border: 0;
+  }
+
+  .navbar-toggler:focus {
+    text-decoration: none;
+    outline: 0;
+    box-shadow: none !important;
+  }
+
+  .navbar-toggler[aria-expanded="true"] .bar.bar1 {
+    transform: rotate(45deg);
+  }
+
+  .navbar-toggler[aria-expanded="true"] .bar {
+    margin: -9px;
+    transition: all 0.3s ease-in-out;
+  }
+
+  .navbar-toggler[aria-expanded="true"] .bar.bar3 {
+    transform: rotate(-45deg);
+  }
+
+  .navbar-toggler[aria-expanded="true"] .bar.bar2 {
+    display: none;
+  }
+
+  .navbar-nav .nav-link {
+    width: fit-content;
+  }
+
+  .hero-content p {
+    font-size: 12px;
+  }
+
+  .navbar-collapse {
+    background-color: #587086;
+    padding: 50px;
+  }
+
+  .navbar-nav {
+    gap: 20px;
+    margin-right: 0;
+    margin-bottom: 40px !important;
+  }
+
+  .navbar-collapse {
+    background-color: #587086;
+    padding: 50px;
+    position: absolute;
+    left: -40px;
+    right: -40px;
+    top: 100%;
+  }
+
+  .logistics-box {
+    max-width: 100%;
+    text-align: center;
+  }
+
+  .scroll-indicator {
+    right: 20px;
+  }
+
+  .logistics-group p {
+    font-size: 21px;
+  }
+
+  .logistics-group {
+    max-width: 600px;
+  }
+
+  .services-wrapper {
+    border-radius: 30px;
+    margin-left: 20px;
+    margin-right: 20px;
+    padding: 60px 30px;
+  }
+
+  .service-box p {
+    font-size: 16px;
+  }
+
+  .service-icon img {
+    width: 50px;
+  }
+
+  .primes-row {
+    gap: 30px;
+  }
+
+  .capabilities-row {
+    gap: 30px;
+  }
+
+  .badge-img img {
+    bottom: -90px;
+    max-width: 110px;
+  }
+
+  .built-list {
+    position: static;
+  }
+
+  .info-card:last-child {
+    margin-bottom: 0;
+  }
+
+  .streamline-content {
+    padding: 60px;
+  }
+
+  .vibe-row .vibe-col:first-child,
+  .vibe-row .vibe-col:last-child {
+    width: 20px !important;
+  }
+
+  .vibe-col {
+    padding: 40px 0;
+  }
+
+  .blue-mid {
+    flex-direction: column;
+  }
+
+  .bb-rgt {
+    padding-left: 0;
+  }
+
+  .blue-mid>div {
+    width: 100%;
+  }
+
+  .bb-lft {
+    padding-right: 0;
+    border: 0;
+    padding-bottom: 0;
+  }
+
+  .our-srvc-innr {
+    gap: 10px;
+  }
+
+  .our-top h3 {
+    font-size: 70px;
+  }
+
+  .our-top h2 {
+    font-size: 20px;
+  }
+
+  .our-top {
+    padding-top: 80px;
+    gap: 10px;
+  }
+
+  .our-top {
+    max-width: 270px;
+  }
+
+  .our-srvc-sec {
+    padding: 25px 0 !important;
+  }
+
+  .plus-icon.cta-btn {
+    padding: 0;
+    height: 46px;
+    width: 46px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .plus-icon.cta-btn img {
+    width: 13px;
+  }
+
+  .im-sec-cap .back-row {
+    gap: 30px;
+  }
+
+  .p-100 {
+    padding: 60px 0;
+  }
+
+
+  .pb-130,
+  .pb-120,
+  .pb-140 {
+    padding-bottom: 80px;
+  }
+
+  .logs-inne.capa-inn .blue h1 {
+    font-size: 70px;
+  }
+
+  .logs-inne.capa-inn .blue {
+    max-width: 600px;
+  }
+
+  .capa-img {
+    top: 90px;
+  }
+
+  .cards-innr {
+    background-color: transparent;
+  }
+
+  .cred-row {
+    gap: 20px;
+  }
+
+  .cont-address-sec li h3 {
+    min-width: 130px;
+  }
+
+  .cont-address-sec li {
+    align-items: center;
+  }
+
+  .cont-address-sec h2 {
+    font-size: 29px;
+  }
+
+  .contact-form-sec input,
+  .contact-form-sec textarea {
+    padding: 20px;
+    font-size: 15px;
+  }
+
+  .contact-form-sec .contact-box {
+    padding: 30px;
+  }
+
+  .contact-form-sec .form-head p {
+    font-size: 15px;
+  }
+
+  /* servce-details page  */
+  .yur-glob-ship-sec .upr-head {
+    flex-wrap: wrap;
+    margin-bottom: 30px;
+  }
+
+  .yur-glob-ship-sec .compass-side {
+    height: 120px;
+    width: 120px;
+  }
+
+  .yur-glob-ship-sec .compass-side img {
+    max-width: 80px
+  }
+
+  .yur-glob-ship-sec .lft-cnt p {
+    max-width: 100%;
+  }
+
+  .yur-glob-ship-sec .rgt-img {
+    margin-top: 30px;
+  }
+
+  .yur-glob-ship-sec .rgt-img img {
+    width: 100%;
+  }
+
+  .why-choose-sec {
+    padding: 80px 0;
+  }
+
+  .why-choose-sec .head {
+    flex-wrap: wrap;
+  }
+
+  .why-choose-sec .head h2 {
+    max-width: 100%;
+  }
+
+  .why-choose-sec .head p {
+    max-width: 100%;
+  }
+
+  .why-choose-slider p {
+    font-size: 20px;
+  }
+}
+
+@media (max-width: 767px) {
+  h6 {
+    font-size: 19px;
+  }
+
+  h5 {
+    font-size: 26px;
+  }
+
+  .naics-box h3 {
+    font-size: 26px;
+  }
+
+  .vibe-row.mid .vibe-col {
+    padding: 20px 0;
+  }
+
+  .naics-section p {
+    font-size: 12px;
+  }
+
+  .hero-button {
+    padding-top: 20px;
+  }
+
+  .logistics-group {
+    max-width: 460px;
+  }
+
+  .pt-140 {
+    padding-top: 70px;
+  }
+
+  .pb-130,
+  .pb-120,
+  .pb-140 {
+    padding-bottom: 70px;
+  }
+
+  .marquee-content img {
+    margin-right: 20px;
+    width: 770px;
+  }
+
+  .hero-section {
+    background-attachment: unset;
+  }
+
+  .logs-inne.capa-inn .blue h1 {
+    font-size: 50px;
+  }
+
+  .logs-inne.capa-inn .blue {
+    max-width: 500px;
+  }
+
+  .our-srvc-innr {
+    flex-direction: column;
+  }
+
+  .our-srvc-innr {
+    flex-direction: column;
+  }
+
+  .our-crd {
+    position: static;
+    transform: unset;
+  }
+
+  .our-cntnt {
+    height: unset !important;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+  }
+
+  .our-srvc-innr>div {
+    width: 100%;
+  }
+
+  .our-sr-rgt {
+    height: auto !important;
+  }
+
+  /* 6-april  */
+
+  .privcay-term-sec ul li,
+  .privcay-term-sec p {
+    font-size: 16px;
+  }
+
+  .hero-section.privacy-term-bnr {
+    padding: 170px 0 50px;
+  }
+
+  .cont-address-sec h2 {
+    font-size: 21px;
+  }
+
+  .cont-address-sec li:last-child {
+    margin: 0;
+  }
+
+  .form-head h2 {
+    font-size: 29px;
+  }
+
+  .cont-address-sec li {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 3px;
+    padding: 20px 0;
+    margin-bottom: 0;
+  }
+
+  /* service-detail page  */
+  .custm-comp-sec p {
+    font-size: 18px;
+    margin-top: 15px;
+  }
+
+  .why-choose-sec .head p {
+    font-size: 18px;
+  }
+
+  .why-choose-sec .why-choose-slider {
+    margin-top: 30px;
+  }
+
+  .why-choose-slider p {
+    font-size: 18px;
+  }
+
+  .why-choose-sec {
+    padding: 70px 0;
+  }
+
+  .why-choose-sec .head {
+    gap: 15px;
+  }
+
+}
+
+@media (max-width: 575px) {
+  body {
+    font-size: 15px;
+  }
+
+  h1 {
+    font-size: 30px;
+  }
+
+  h2 {
+    font-size: 24px;
+  }
+
+  h5 {
+    font-size: 22px;
+  }
+
+  h6 {
+    font-size: 16px;
+  }
+
+  .blue-tp {
+    flex-direction: column;
+    text-align: center;
+    gap: 20px;
+  }
+
+  .p_140 {
+    padding: 60px 0px;
+  }
+
+  .blue-in {
+    padding: 20px;
+  }
+
+  h4 {
+    font-size: 22px;
+  }
+
+  .list-bx li {
+    padding-bottom: 10px;
+    align-items: start;
+    gap: 10px;
+  }
+
+  .primes-content ul li,
+  .capabilities-txt p,
+  .core-box p,
+  .info-card p,
+  .built-list p,
+  .streamline-content p,
+  .core-box li {
+    font-size: 16px;
+  }
+
+  .primes-content ul li {
+    align-items: start;
+    margin-bottom: 9px;
+  }
+
+  .primes-content ul li img {
+    margin-top: 6px;
+    width: 17px;
+  }
+
+  .hero-button {
+    flex-direction: column;
+    align-items: start;
+  }
+
+  .hero-button a {
+    width: 100%;
+    text-align: center;
+  }
+
+  .logistics-group p {
+    font-size: 18px;
+  }
+
+  .hero-content p {
+    font-size: 9px;
+    padding: 10px 18px;
+  }
+
+  .hero-section {
+    padding: 140px 0 60px;
+  }
+
+  .navbar-brand img {
+    width: 80px;
+  }
+
+  .bar {
+    width: 25px;
+    height: 1px;
+    margin-bottom: 5px !important;
+  }
+
+  .navbar-toggler[aria-expanded="true"] .bar {
+    margin: -6px;
+  }
+
+  .logistics-box {
+    padding: 15px;
+  }
+
+  .logistics-box h6 {
+    font-size: 23px;
+  }
+
+  .slide-num {
+    margin-bottom: 0;
+  }
+
+  .logistics-group p {
+    font-size: 14px;
+    text-align: left;
+  }
+
+  .services-wrapper {
+    margin-top: 44px;
+  }
+
+  .scroll-indicator .text {
+    font-size: 13px;
+  }
+
+  .scroll-indicator {
+    bottom: -198px;
+  }
+
+  .logistics-group {
+    max-width: 268px;
+    padding-top: 50px;
+  }
+
+  .services-wrapper {
+    border-radius: 10px;
+    margin-left: 15px;
+    margin-right: 15px;
+    padding: 40px 20px;
+  }
+
+  .services-wrapper .row {
+    gap: 30px;
+  }
+
+  .service-box p {
+    font-size: 14px;
+  }
+
+  .service-box h6 {
+    font-size: 21px;
+  }
+
+  .core-box h3 {
+    font-size: 32px;
+    margin-bottom: 9px;
+  }
+
+  .core-box h6 {
+    font-size: 22px;
+  }
+
+  .logistics-section .overlay-img {
+    margin: 0px 15px;
+  }
+
+  .logs-inne {
+    border-radius: 15px;
+  }
+
+  .logistics-section .content p {
+    font-size: 20px;
+  }
+
+  .badge-img img {
+    bottom: -75px;
+    max-width: 70px;
+  }
+
+  .built-list h6 {
+    font-size: 20px;
+  }
+
+  .primes-content ul {
+    margin-top: 10px;
+  }
+
+  .info-card {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .info-card {
+    margin-bottom: 20px;
+  }
+
+  .streamline-content {
+    padding: 40px;
+  }
+
+  .naics-box h3 {
+    font-size: 19px;
+    margin-bottom: 3px;
+  }
+
+  .vibe-row .vibe-col:first-child,
+  .vibe-row .vibe-col:last-child {
+    width: 10px !important;
+  }
+
+  .naics-section p {
+    font-size: 8px;
+    margin: 0;
+  }
+
+  .vibe-col {
+    padding: 10px 0;
+  }
+
+  .naics-box {
+    padding: 0 10px;
+  }
+
+  .vibe-row.top,
+  .vibe-row.bottom {
+    height: 40px;
+  }
+
+  .footer {
+    padding-top: 50px;
+  }
+
+  .footer .row {
+    gap: 30px;
+  }
+
+  .footer-logo img {
+    width: 130px;
+  }
+
+  .contact-footer b {
+    min-width: 60px;
+    width: 60px;
+  }
+
+  .footer-cont {
+    padding: 40px 0;
+    margin-top: 30px;
+  }
+
+  .footer-cont p {
+    font-size: 13px;
+  }
+
+  .footer-bottom {
+    padding: 25px 0;
+    flex-direction: column;
+    text-align: center;
+    gap: 10px;
+    font-size: 13px;
+  }
+
+  .inner-bnnr .logistics-group,
+  .inner-bnnr .logistics-group p {
+    max-width: 100%;
+  }
+
+  .animated-scroll-sec h2 {
+    font-size: 18px;
+  }
+
+  .pt-140,
+  .pt-130 {
+    padding-top: 60px;
+  }
+
+  .pb-130,
+  .pb-120,
+  .pb-140 {
+    padding-bottom: 60px;
+  }
+
+  .hero-section.inner-bnnr {
+    padding-top: 140px;
+  }
+
+  .back-row p {
+    font-size: 16px;
+  }
+
+  .logs-inne.capa-inn .blue h1 {
+    font-size: 25px;
+    padding: 0 20px;
+  }
+
+  .logs-inne {
+    height: 80vh;
+  }
+
+  .advan-crd {
+    padding: 30px;
+    margin-bottom: 20px;
+  }
+
+  .advan-list li {
+    padding-top: 10px;
+  }
+
+  .vibe-row.top .vibe-col::after,
+  .vibe-row.bottom .vibe-col::after,
+  .vibe-row.mid2 .vibe-col::after {
+    height: 15px;
+    width: 20px;
+    right: -14px;
+  }
+
+  .vibe-row.bottom .vibe-col::after {
+    top: -9px;
+  }
+
+  .our-top {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  /* 6-april  */
+
+  .p-100 {
+    padding: 50px 0;
+  }
+
+  .privcay-term-sec .mb-35 {
+    margin-bottom: 30px;
+  }
+
+  .hero-section.privacy-term-bnr {
+    padding: 135px 0 35px;
+  }
+
+  .nacis-code {
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+
+  .cont-address-sec h2 {
+    font-size: 17px;
+  }
+
+  .cont-address-sec ul {
+    padding: 0;
+  }
+
+  .cont-address-sec {
+    padding-top: 50px;
+  }
+
+  .contact-form-sec .form-head {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .contact-form-sec .contact-box {
+    padding: 20px;
+  }
+
+  .contact-form-sec .form-row,
+  .contact-form-sec form {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .contact-form-sec .contact-form {
+    padding: 0;
+  }
+
+  .contact-form-sec .contact-form button {
+    width: 171px;
+    font-size: 14px;
+    padding: 17px;
+  }
+
+  .capa-btn {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  /* service -detail page  */
+  .why-choose-sec {
+    padding: 60px 0;
+    margin-bottom: 30px;
+  }
+
+  .custm-comp-sec p {
+    font-size: 16px;
+    margin-top: 15px;
+  }
+
+  .why-choose-sec .head p {
+    font-size: 16px;
+  }
+  .service-dtl-bnr .brdcrumbs .b-item{
+    font-size: 13px;
+  }
+}

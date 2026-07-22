@@ -1,0 +1,1315 @@
+.inner-bnnr.gc-logistics-banner .hero-row .hero-content {
+    max-width: 993px;
+}
+
+.inner-bnnr.gc-logistics-banner .hero-row .gc-logistics {
+    padding-top: 43px;
+}
+
+.inner-bnnr.gc-logistics-banner .hero-row .gc-logistics p {
+    max-width: 1066px;
+    text-align: left;
+    margin-left: unset;
+}
+
+.inner-bnnr.gc-logistics-banner .hero-row .hero-button {
+    padding-top: 33px;
+}
+
+.co-hd {
+    text-align: center;
+    margin-bottom: 34px;
+}
+
+.co-content {
+    border: 1px solid #071D2F17;
+    border-radius: 20px;
+    padding: 40px 80px;
+    max-width: 1365px;
+    margin-inline: auto;
+}
+
+ul.business-info__list {
+    font-family: 'DM Sans';
+    font-weight: 400;
+    font-size: 20px;
+    text-align: right;
+    list-style-type: none;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 74px;
+}
+
+ul.business-info__list .business-info__item {
+    padding-block: 20px;
+    border-bottom: 1px solid #071D2F17;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    color: #747474;
+
+}
+
+ul.business-info__list .business-info__item .business-info__label {
+    font-weight: 500;
+    color: #071D2F;
+}
+
+/* ul.business-info__list .business-info__item:last-child {
+    grid-column-end: 3;
+    grid-column-start: 1;
+    justify-content: flex-end;
+    gap: 340px;
+} */
+.contract-section .core-box {
+    display: flex;
+    flex-direction: column;
+}
+
+.contract-section .core-box .core-img img {
+    margin-top: 0;
+}
+
+.rv-section .logs-inne.capa-inn {
+    display: block;
+    height: auto;
+}
+
+.rv-section .logs-inne.capa-inn .rv-content-cont {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    max-width: 1365px;
+    margin-inline: auto;
+}
+
+.rv-section .logs-inne.capa-inn .rv-content-cont .rv-content h2 {
+    font-size: 73px;
+}
+
+.rv-section .logs-inne.capa-inn .rv-content-cont .rv-content {
+    max-width: 460px;
+}
+
+.rv-list-item {
+    background: #FFFFFF12;
+    border: 1px solid #FFFFFF5C;
+    border-radius: 15px;
+    padding: 45px 53px;
+    max-width: 715px;
+    width: 100%;
+}
+
+.rv-list-item .advan-crd {
+    padding: 0;
+}
+
+.rv-list-item h6 {
+    font-size: 26px;
+}
+
+.rv-list-item * {
+    color: #fff !important;
+}
+
+.code-align-sec .naics-box p {
+    min-height: 60px;
+}
+
+.certify-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 50px;
+    max-width: 993px;
+    margin-inline: auto;
+}
+
+.certify-row .cards-innr {
+    background: unset;
+}
+
+.certify-row .cards-innr .advan-crd {
+    background: unset;
+    padding: 0;
+    margin: 0;
+}
+
+.certify-row .cards-innr .advan-crd .advan-list {
+    background: #FFFFFF;
+    border: 1px solid #071D2F17;
+    border-radius: 5px;
+    padding: 20px 26px;
+}
+
+.certify-row .cards-innr .advan-crd h6 {
+    font-size: 26px;
+    margin-bottom: 22px;
+    color: #071D2F;
+}
+
+.certify-row .cards-innr .advan-crd h6 img {
+    margin-right: 10px;
+}
+
+.engage-sec .capabilities-txt {
+    max-width: 100%;
+    text-align: center;
+}
+
+.contact-container {
+    max-width: 1348px;
+    margin-inline: auto;
+    align-items: center;
+}
+
+
+.contact-container .contact-hd {
+    max-width: 447px;
+    margin-bottom: 17px;
+}
+
+.contact-container .contact-tile-cont {
+    max-width: 489px;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.contact-container .contact-tile-cont .contact-tile {
+    padding: 25px 30px;
+    background: #01386D05;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 20px;
+}
+
+.contact-container .contact-tile-cont .contact-tile .tile-txt h6 {
+    font-weight: 600;
+    font-size: 24px;
+    color: #071D2F;
+    margin-bottom: 3px;
+}
+
+.contact-container .contact-tile-cont .contact-tile .tile-txt .inner-link {
+    font-weight: 400;
+    font-size: 20px;
+    color: #071D2F;
+}
+
+.contact-container .contact-img {
+    border-radius: 30px;
+    overflow: hidden;
+}
+
+.oc-section .oc-content {
+    max-width: 700px;
+    margin-inline: auto;
+}
+
+.oc-section .oc-content .oc-para.oc-section .oc-content .oc-para {
+    max-width: 580px;
+    margin-inline: auto;
+    text-align: center;
+}
+
+.oc-section .oc-content .oc-para p {
+    font-weight: 400;
+    font-size: 24px;
+    text-align: center;
+    color: #818B93;
+}
+
+.oc-section .oc-content .oc-btn {
+    margin-top: 40px;
+    text-align: center;
+}
+
+.nxt-contract .stream-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+}
+
+.oc-hd h2 {
+    text-align: center;
+}
+
+.rv-list-item .advan-crd:last-child {
+    margin-bottom: 0;
+}
+
+/* Operational Capabilities Page*/
+
+.gvrnmnt-contract .oc-content {
+    max-width: 796px;
+}
+
+.indus-sec .capabilities-row {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 30px;
+}
+
+.indus-sec .capabilities-row .core-box {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding-inline: 30px;
+    gap: 18px;
+}
+
+.indus-sec .capabilities-row .core-box p {
+    text-align: center;
+    color: #071D2F;
+}
+
+.apart-sec .logs-inne.capa-inn .rv-content-cont {
+    display: block;
+}
+
+.apart-sec .logs-inne.capa-inn .rv-content-cont .rv-content-hd {
+    margin-bottom: 37px;
+    text-align: center;
+}
+
+.apart-sec .logs-inne.capa-inn .rv-content-cont .apart-card-cont {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+}
+
+.apart-sec .logs-inne.capa-inn .rv-content-cont .apart-card {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    background: #FFFFFF12;
+    gap: 20px;
+    padding: 18px 20px;
+    border-radius: 5px;
+}
+.apart-sec .logs-inne.capa-inn .rv-content-cont .apart-card .apart-icon {
+    flex: 0 0 40px;
+}
+
+.apart-sec .logs-inne.capa-inn .rv-content-cont .apart-card .apart-para p {
+    margin-bottom: 0;
+}
+
+.scale-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.scale-content .scale-txt-cont {
+    max-width: 618px;
+    width: 100%;
+}
+
+.scale-content .scale-list-items {
+    max-width: 503px;
+    width: 100%;
+}
+
+.scale-content .scale-list-items .scale-list {
+    list-style-type: none;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    gap: 20px;
+}
+
+.scale-content .scale-list-items .scale-list li {
+    padding: 19px 20px;
+    font-size: 20px;
+    background: #01386D05;
+    border-left: 3px solid #01386D;
+    border-radius: 5px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 20px;
+}
+
+.scale-content .scale-txt-cont p {
+    font-size: 24px;
+}
+
+.scale-content .scale-txt-cont h2 {
+    max-width: 516px;
+}
+
+.core-sec h2 {
+    max-width: 352px;
+}
+
+.indus-sec .contact-hd {
+    max-width: 489px;
+}
+
+.indus-sec .overview-para p {
+    font-size: 24px;
+    color: #818B93;
+    margin-bottom: 30px;
+}
+
+.inner-bnnr.gc-logistics-banner.oc-bnnr .hero-row .gc-logistics {
+    padding-top: 0;
+}
+
+/* =================contact us css  update version ================================*/
+/*banner */
+.questionleft p {
+    margin: unset;
+    text-align: unset;
+}
+
+.inner-bnnr .questionleft {
+    padding-top: 23px;
+}
+
+/* .contactbnrnew {
+    padding-bottom: 250px;
+} */
+
+.contact-heading h2 {
+    margin: auto;
+    text-align: center;
+    padding-bottom: 34px;
+}
+
+.con-info {
+    padding: 30px 30px 19px 30px;
+    border-radius: 15px;
+    border: 1px solid #071D2F17;
+    transition: all 0.4s ease;
+    width: 100%;
+}
+
+.con-info:hover {
+    box-shadow: 50px 34px 94px 0px #01386D26;
+    border: 1px solid transparent;
+}
+
+.right-con li {
+    list-style: none;
+}
+
+.inner-con {
+    display: flex;
+    gap: 30px;
+    align-items: flex-start;
+}
+
+.left-con i {
+    width: 80px;
+    height: 80px;
+    background-color: #01386d;
+    border-radius: 50%;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 22px;
+}
+
+.right-con h3 {
+    font-size: 25px;
+    margin-bottom: 0px;
+}
+
+.right-con p {
+    max-width: 300px;
+    font-size: 18px;
+    color: #747474;
+    margin: 0px;
+}
+
+.contiinfo {
+    display: flex;
+    gap: 30px;
+}
+
+/*lower form*/
+.form-inquiry .col-lg-5,
+.form-inquiry .col-lg-7 {
+    display: flex;
+}
+
+.form-inquiry .innerpart {
+    width: 100%;
+    height: 100%;
+
+}
+
+.form-inquiry {
+    padding-top: 140px;
+}
+
+.innerpart {
+    border-radius: 20px;
+    background-repeat: no-repeat;
+    background-position: bottom right;
+    padding: 42px 50px 45px 50px;
+
+    transition: 0.4s ease;
+}
+
+.innerpart:hover {
+    box-shadow: 50px 34px 94px 0px #01386D26;
+}
+
+.innerpoints ul {
+    padding: 0;
+    margin: 0;
+}
+
+.innerpart .innerpoints:first-of-type {
+    padding-bottom: 25px;
+    margin-bottom: 25px;
+    border-bottom: 1px solid #071D2F17;
+}
+
+.innerpoints ul li {
+    list-style: none;
+    position: relative;
+    padding-left: 35px;
+    color: #818B93;
+    font-size: 20px;
+    margin-bottom: 20px;
+}
+
+.innerpoints ul li:last-child {
+    margin-bottom: 0px;
+}
+
+.innerpoints ul li::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 7px;
+    width: 20px;
+    height: 20px;
+    background-image: url("../image/bluetick.svg");
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+.headpart h3 {
+    margin-bottom: 10px;
+}
+
+.headpart p {
+    font-size: 20px;
+    color: #818B93;
+    max-width: 600px;
+    margin-bottom: 42px;
+}
+
+.innerpart .innerpoints {
+    padding-bottom: 35px;
+    margin-bottom: 35px;
+    border-bottom: 1px solid #071D2F17;
+}
+
+.innerpart .innerpoints:last-child {
+    border-bottom: none;
+    margin-bottom: 0;
+    padding-bottom: 0;
+}
+
+/*form*/
+form {
+    width: 100%;
+}
+
+.form-row {
+    display: flex;
+    gap: 20px;
+    margin-bottom: 20px;
+}
+
+.form-row.full {
+    display: block;
+}
+
+.form-row input,
+.form-row textarea {
+    width: 100%;
+    padding: 19px 20px 20px 20px;
+    border: 1px solid #071D2F17;
+    border-radius: 7px;
+    font-size: 16px;
+    outline: none;
+    transition: all 0.3s ease;
+    color: #818B93;
+}
+
+.form-row input:focus,
+.form-row textarea:focus {
+    border: 1px solid #071D2F17;
+}
+
+.form-row input::placeholder,
+.form-row textarea::placeholder {
+    color: #818B93;
+    font-size: 16px;
+}
+
+.form-btn {
+    margin-top: 30px;
+}
+
+.form-btn .cta-btn.dark-cta {
+    width: 100%;
+    border: 1px solid #071D2F17;
+    background-color: #01386D;
+    color: #FFFFFF;
+    padding: 19px 20px;
+}
+
+.form-btn .cta-btn.dark-cta:hover {
+    color: #01386D;
+}
+
+.res p {
+    font-size: 16px;
+    color: #818B93;
+    margin: 15px 0px 0px 0px;
+}
+
+.res i {
+    color: #01386D;
+    margin-right: 6px;
+}
+
+.newcta {
+    position: relative;
+    background: #ffffff;
+    padding: 15px 25px;
+    color: #071d2f;
+    font-weight: 500;
+    font-size: 16px;
+    border-radius: 7px;
+    display: inline-block;
+    overflow: hidden;
+    z-index: 1;
+}
+
+.newcta::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 0%;
+    height: 100%;
+    background-color: white;
+    transition: all 0.4s ease;
+    z-index: -1;
+}
+
+.newcta:hover::before {
+    width: 100%;
+    left: 0;
+    right: auto;
+}
+
+.newcta:hover {
+    color: #000000;
+}
+
+/*streamline */
+.stream-data h2 {
+    max-width: 722px;
+}
+
+.stream-data p {
+    max-width: 800px;
+    font-size: 24px;
+    margin: auto;
+}
+
+.streamnew {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    justify-content: center;
+}
+
+.indus-sec .contact-container .contact-img {
+    max-width: 516px;
+    border-radius: 10px;
+}
+
+@media only screen and (max-width:1499px) {
+    .rv-section .logs-inne.capa-inn .rv-content-cont {
+        max-width: 1199px;
+    }
+
+    .rv-section .logs-inne.capa-inn .rv-content-cont .rv-content h2 {
+        font-size: 64px;
+    }
+
+    .rv-section .logs-inne.capa-inn .rv-content-cont .rv-content {
+        max-width: 400px;
+    }
+
+}
+
+@media only screen and (max-width:1399px) {
+    .inner-bnnr.gc-logistics-banner .hero-row .hero-button {
+        padding-top: 26px;
+    }
+
+    .inner-bnnr.gc-logistics-banner .hero-row .gc-logistics {
+        padding-top: 30px;
+    }
+
+    ul.business-info__list {
+        column-gap: 50px;
+        font-size: 18px;
+    }
+
+    .co-content {
+        padding: 40px 60px;
+    }
+
+    ul.business-info__list .business-info__item {
+        padding-block: 18px;
+    }
+
+    .rv-list-item {
+        padding: 35px;
+        max-width: 615px;
+    }
+
+    .rv-section .logs-inne.capa-inn .rv-content-cont .rv-content h2 {
+        font-size: 54px;
+    }
+
+    .rv-section .logs-inne.capa-inn .rv-content-cont .rv-content {
+        max-width: 350px;
+    }
+
+    .rv-section .logs-inne.capa-inn .rv-content-cont {
+        max-width: 1024px;
+    }
+
+    .engage-sec .core-box {
+        padding: 30px 24px;
+    }
+
+    .engage-sec .core-box h3 {
+        font-size: 44px;
+        margin-bottom: 6px;
+    }
+
+    .contact-container .contact-tile-cont .contact-tile {
+        padding: 20px 24px;
+    }
+
+    .oc-section .oc-content .oc-btn {
+        margin-top: 28px;
+    }
+
+    .apart-sec .logs-inne.capa-inn .rv-content-cont .apart-card {
+        gap: 14px;
+        padding: 18px;
+    }
+
+    .apart-sec .logs-inne.capa-inn .rv-content-cont .apart-card-cont {
+        gap: 24px;
+    }
+
+    .scale-content .scale-txt-cont p {
+        font-size: 20px;
+    }
+
+    .scale-content {
+        gap: 50px;
+    }
+
+    .scale-content .scale-txt-cont h2 {
+        max-width: 476px;
+    }
+
+    .scale-content .scale-list-items {
+        max-width: 480px;
+        width: 100%;
+    }
+
+    .indus-sec .capabilities-row {
+        gap: 20px;
+    }
+
+    .indus-sec .capabilities-row .core-box {
+        padding-inline: 20px;
+    }
+
+    .inner-bnnr.gc-logistics-banner.oc-bnnr .hero-row .hero-content {
+        max-width: 693px;
+    }
+
+    /* *********** */
+    .con-info {
+        padding: 20px;
+    }
+
+    .inner-con {
+        gap: 15px;
+    }
+
+    .contiinfo {
+        gap: 20px;
+    }
+
+    .left-con i {
+        width: 60px;
+        height: 60px;
+        font-size: 18px;
+    }
+
+    .form-inquiry {
+        padding-top: 100px;
+    }
+
+    .right-con p {
+        font-size: 16px;
+    }
+}
+
+@media only screen and (max-width:1199px) {
+    .inner-bnnr.gc-logistics-banner .hero-row .hero-content {
+        max-width: 780px;
+    }
+
+    .inner-bnnr.gc-logistics-banner .hero-row .gc-logistics {
+        padding-top: 20px;
+        margin-left: unset;
+    }
+
+    .co-hd {
+        margin-bottom: 26px;
+    }
+
+    .co-content {
+        padding: 30px;
+    }
+
+    ul.business-info__list {
+        column-gap: 36px;
+        font-size: 16px;
+    }
+
+    ul.business-info__list .business-info__item {
+        padding-block: 16px;
+    }
+
+    .core-box h6 {
+        font-size: 20px;
+    }
+
+    .rv-list-item {
+        padding: 26px;
+        max-width: 510px;
+    }
+
+    .rv-section .logs-inne.capa-inn .rv-content-cont .rv-content h2 {
+        font-size: 48px;
+    }
+
+    .rv-section .logs-inne.capa-inn .rv-content-cont .rv-content {
+        max-width: 300px;
+    }
+
+    .rv-section .logs-inne.capa-inn .rv-content-cont {
+        max-width: 854px;
+    }
+
+    .certify-row .cards-innr .advan-crd h6 {
+        font-size: 24px;
+        margin-bottom: 18px;
+    }
+
+    .certify-row {
+        gap: 34px;
+    }
+
+    .certify-row .cards-innr .advan-crd .advan-list {
+        padding: 20px;
+    }
+
+    .engage-sec .core-box {
+        padding: 24px 20px;
+    }
+
+    .capabilities-txt {
+        padding-bottom: 36px;
+    }
+
+    .engage-sec .core-box h3 {
+        font-size: 36px;
+        margin-bottom: 3px;
+    }
+
+    .contact-container .contact-tile-cont .contact-tile .tile-txt h6 {
+        font-size: 22px;
+    }
+
+    .contact-container .contact-hd {
+        max-width: 400px;
+    }
+
+    .contact-container .contact-tile-cont {
+        gap: 22px;
+    }
+
+    .oc-section .oc-content .oc-btn {
+        margin-top: 18px;
+    }
+
+    .nxt-contract .stream-btn {
+        gap: 14px;
+        margin-top: 30px;
+    }
+
+    .core-sec h2 {
+        max-width: 300px;
+    }
+
+    .apart-sec .logs-inne.capa-inn .rv-content-cont .apart-card-cont {
+        gap: 18px;
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .scale-content .scale-list-items .scale-list li {
+        padding: 16px 20px;
+        font-size: 18px;
+        gap: 16px;
+    }
+
+    .scale-content .scale-txt-cont p {
+        font-size: 18px;
+    }
+
+    .indus-sec .capabilities-row {
+        gap: 16px;
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    .indus-sec .overview-para p {
+        font-size: 20px;
+        margin-bottom: 20px;
+    }
+
+    /* ************** */
+    .innerpart {
+        padding: 30px;
+
+    }
+
+    .innerpoints ul li {
+        font-size: 16px;
+        margin-bottom: 15px;
+    }
+
+    .headpart p {
+        font-size: 16px;
+
+        margin-bottom: 42px;
+    }
+
+    .form-inquiry {
+        padding-top: 80px;
+    }
+
+    .right-con h3 {
+        font-size: 20px;
+    }
+
+    .right-con p {
+        font-size: 16px;
+    }
+
+    .con-info {
+        padding: 20px;
+    }
+
+    .inner-con {
+        gap: 15px;
+    }
+
+    .inner-bnnr .questionleft {
+        margin: 0px;
+    }
+
+
+}
+
+@media only screen and (max-width:991px) {
+    .inner-bnnr.gc-logistics-banner .hero-row .hero-button {
+        padding-top: 20px;
+    }
+
+    .co-content {
+        padding: 20px;
+    }
+
+    ul.business-info__list {
+        column-gap: 22px;
+        grid-template-columns: 1fr;
+    }
+
+    ul.business-info__list .business-info__item:empty,
+    ul.business-info__list .business-info__item span:empty {
+        display: none;
+    }
+
+    .capabilities-txt {
+        padding-bottom: 26px;
+    }
+
+    .rv-section .logs-inne.capa-inn .rv-content-cont {
+        max-width: 554px;
+        gap: 20px;
+        flex-direction: column;
+    }
+
+    .rv-list-item h6 {
+        font-size: 23px;
+    }
+
+    .certify-row {
+        gap: 14px;
+    }
+
+    .certify-row .cards-innr .advan-crd .advan-list {
+        padding: 16px;
+    }
+
+    .engage-sec .capabilities-row {
+        column-gap: unset;
+    }
+
+    .contact-container {
+        gap: 30px;
+    }
+
+    .contact-container .contact-tile-cont {
+        max-width: 100%;
+    }
+
+    .oc-section .oc-content .oc-para p {
+        font-size: 20px;
+    }
+
+    .oc-section .oc-content {
+        max-width: 620px;
+    }
+
+    .apart-sec .logs-inne.capa-inn .rv-content-cont {
+        max-width: 654px !important;
+    }
+
+    .apart-sec .logs-inne.capa-inn .rv-content-cont .rv-content-hd {
+        margin-bottom: 26px;
+    }
+
+    .scale-content .scale-list-items .scale-list {
+        gap: 16px;
+    }
+
+    .scale-content .scale-list-items .scale-list li {
+        padding: 14px 20px;
+        font-size: 16px;
+        gap: 12px;
+    }
+
+    .scale-content {
+        gap: 30px;
+    }
+
+    .scale-content .scale-txt-cont p {
+        font-size: 16px;
+    }
+
+    .indus-sec .capabilities-row {
+        gap: 16px !important;
+
+    }
+
+    .indus-sec .overview-para p {
+        font-size: 18px;
+        color: #818B93;
+        margin-bottom: 23px;
+    }
+
+    /* *********** */
+    .innerpoints ul li {
+        font-size: 14px;
+        padding-left: 20px;
+
+    }
+
+    .headpart p {
+        font-size: 14px;
+        margin-bottom: 30px;
+    }
+
+    .innerpoints ul li::before {
+        top: 3px;
+        width: 15px;
+        height: 15px;
+    }
+
+    .res p {
+        font-size: 14px;
+        margin-top: 10px;
+    }
+
+    .contiinfo {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .contact-heading h2 {
+        padding-bottom: 20px;
+    }
+
+    .right-con h3 {
+        font-size: 18px;
+    }
+
+    .right-con p {
+        font-size: 14px;
+    }
+
+    .form-inquiry {
+        padding-top: 30px;
+    }
+
+    .innerpart {
+        padding: 20px;
+    }
+
+    .left-con i {
+        width: 40px;
+        height: 40px;
+        font-size: 14px;
+    }
+
+    .form-row {
+        flex-direction: column;
+        gap: 18px;
+    }
+
+    .innerpart .innerpoints {
+        padding-bottom: 20px;
+        margin-bottom: 20px;
+    }
+
+    .form-row input::placeholder,
+    .form-row textarea::placeholder {
+        font-size: 14px;
+    }
+
+    .streamnew {
+        margin-top: 20px;
+        flex-direction: column;
+    }
+
+    .streamnew a {
+        width: 100%;
+    }
+
+    .stream-data h2 {
+        margin-bottom: 10px;
+    }
+}
+
+@media only screen and (max-width:767px) {
+    .inner-bnnr.gc-logistics-banner .hero-row .hero-button a {
+        padding: 14px 18px;
+    }
+
+    .rv-section .logs-inne.capa-inn .rv-content-cont {
+        max-width: 480px;
+    }
+
+    .rv-section .logs-inne.capa-inn .rv-content-cont .rv-content h2 {
+        font-size: 42px;
+    }
+
+    .rv-list-item {
+        padding: 20px;
+    }
+
+    .certify-row {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+    .certify-row .cards-innr .advan-crd h6 {
+        font-size: 20px;
+        margin-bottom: 14px;
+    }
+
+    .engage-sec .core-box h3 {
+        font-size: 32px;
+    }
+
+    .engage-sec .capabilities-row {
+        row-gap: 20px;
+    }
+
+    .contact-container .contact-tile-cont .contact-tile .tile-txt h6 {
+        font-size: 18px;
+    }
+
+    .contact-container .contact-tile-cont .contact-tile .tile-txt .inner-link {
+        font-size: 16px;
+    }
+
+    .contact-container .contact-tile-cont .contact-tile {
+        padding: 20px;
+        gap: 14px;
+    }
+
+    .oc-section .oc-content .oc-para p {
+        font-size: 18px;
+    }
+
+    .apart-sec .logs-inne.capa-inn .rv-content-cont {
+        padding-inline: 20px;
+    }
+
+    .apart-sec .logs-inne.capa-inn .rv-content-cont .apart-card-cont {
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+    .apart-sec .logs-inne.capa-inn .rv-content-cont .apart-card {
+        padding: 16px;
+    }
+
+    .scale-content {
+        gap: 20px;
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .indus-sec .capabilities-row {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .indus-sec .overview-para p {
+        font-size: 16px;
+        margin-bottom: 18px;
+    }
+
+    .form-btn .cta-btn.dark-cta {
+        font-size: 14px;
+    }
+
+    .cta-btn,
+    .blur-cta {
+        padding: 16px 16px;
+    }
+}
+
+@media only screen and (max-width:575px) {
+    ul.business-info__list .business-info__item {
+        padding-block: 13px;
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .contract-section .core-box {
+        padding: 20px;
+    }
+
+    .rv-section .logs-inne.capa-inn .rv-content-cont {
+        padding-inline: 20px;
+    }
+
+    .rv-section .logs-inne.capa-inn .rv-content-cont .rv-content h2 {
+        font-size: 36px;
+    }
+
+    .rv-list-item h6 {
+        font-size: 20px;
+    }
+
+    .certify-row .cards-innr .advan-crd h6 {
+        font-size: 18px;
+        margin-bottom: 12px;
+    }
+
+    .code-align-sec .vibe-row.for-desk {
+        display: grid !important;
+        grid-template-columns: 1fr;
+        gap: 10px !important;
+        margin: 0;
+        padding: 10px;
+    }
+
+    .code-align-sec .vibe-row.top,
+    .code-align-sec .vibe-row.bottom,
+    .code-align-sec .bllue-box {
+        display: none !important;
+    }
+
+    .code-align-sec .vibe-row .vibe-col:empty,
+    .code-align-sec .vibe-row.bottom .vibe-col::after,
+    .code-align-sec .vibe-row.top .vibe-col::after {
+        display: none;
+    }
+
+    .code-align-sec .naics-box p {
+        min-height: unset;
+    }
+
+    .contact-container .contact-tile-cont .contact-tile {
+        padding: 16px;
+    }
+
+    .nxt-contract .stream-btn {
+        flex-direction: column;
+        margin-top: 20px;
+    }
+
+    .nxt-contract .stream-btn a {
+        width: 100%;
+    }
+
+    .capabilities-txt {
+        padding-bottom: 20px;
+    }
+
+    .oc-section .oc-content .oc-para p {
+        font-size: 16px;
+    }
+
+    .engage-sec .core-box {
+        padding: 20px 16px;
+    }
+
+    .code-align-sec .vibe-boxes {
+        background: #9b919126;
+    }
+
+    .indus-sec .capabilities-row {
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+    .cta-btn,
+    .blur-cta {
+        padding: 16px;
+        text-align: center;
+    }
+}
