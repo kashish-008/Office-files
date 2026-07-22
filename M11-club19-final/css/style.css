@@ -2064,14 +2064,6 @@ section.exp-cat-sec p {
   background: #fdab4d;
 }
 
-@media (max-width: 767px) {
-  .exp-cat-item::after,
-  .exp-cat-item::before,
-  .grid-plus {
-    /* display: none !important; */
-  }
-}
-
 @keyframes plusPulse {
   0%,
   100% {
