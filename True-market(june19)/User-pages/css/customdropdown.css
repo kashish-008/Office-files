@@ -1,0 +1,181 @@
+/* custom-select css */
+.custom-select.bulk-btn {
+    position: relative;
+    width: 100%;
+    cursor: unset;
+
+}
+
+.custom-select.bulk-btn li {
+    list-style: none;
+}
+
+.custom-select-options {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    width: 100%;
+    border-radius: 5.6px;
+    overflow: hidden;
+    background-color: #fff;
+    padding: 0;
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(10px);
+    transition: all 0.3s ease;
+    z-index: 99;
+}
+
+.custom-select-options.active {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+}
+
+.custom-label,
+.custom-label a {
+    width: 100%;
+    color: #687D92;
+}
+
+.custom-select-options li {
+    border-bottom: 1px solid #E8EDF1;
+}
+
+.custom-select-options li:last-child {
+    border-bottom: unset;
+}
+
+.custom-select-options li a {
+    color: #687D92;
+    font-size: 14px;
+    padding: 10px 17px;
+    width: 100%;
+}
+
+.custom-select-options li a:hover {
+    background-color: #0a4773;
+    color: #fff;
+}
+
+.custom-select-options.top {
+    top: auto;
+    bottom: 100%;
+    margin-bottom: 5px;
+}
+
+.custom-select-options.bottom {
+    top: 100%;
+    bottom: auto;
+    margin-top: 5px;
+}
+
+/* email alert page : buk action css */
+.bulk-action .custom-label a {
+    font-size: 14px;
+}
+
+.Viewed-drop .custom-label a,
+.bulk-action .custom-label a {
+    color: #52565c;
+}
+
+.custom-select.bulk-action {
+    height: 36px;
+    min-width: 174px;
+}
+
+/* viewed dropdown css */
+.Viewed-drop {
+    max-width: 333px;
+}
+
+/* perpage dropdown css */
+.custom-select.bulk-btn.per-page {
+    width: unset;
+}
+
+/* table css */
+.table-wrap.no-overflow {
+    overflow: visible;
+}
+
+.table-inner-wrap {
+    overflow: hidden;
+}
+
+/* prpoert details page  */
+/*  property description  */
+.property-descp a {
+    font-weight: 300;
+}
+
+/* user profile page  */
+
+.custom-select.bulk-btn.select-state {
+    border: 1px solid #e8edf1;
+    border-radius: 6px;
+    padding: 10px 16px;
+    font-size: 14px;
+    color: #111;
+    font-family: Manrope;
+    outline: none;
+    background: transparent;
+    box-sizing: border-box;
+    font-weight: 400;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 24 24' fill='none' stroke='%239A9A9A' stroke-width='2'%3E%3Cpolyline points='6 9 12 15 18 9'%3E%3C/polyline%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: right 15px center;
+}
+
+.custom-select.bulk-btn,
+.bulk-action .custom-label a,
+.filter-btn,
+.bulk-btn,
+.viewed-select,
+.columns-btn,
+.perpage-num {
+
+    font-family: 'Manrope';
+    font-weight: 400;
+}
+
+@media(max-width:575px) {
+
+    .custom-select.bulk-btn,
+    .bulk-action .custom-label a,
+    .filter-btn,
+    .bulk-btn,
+    .viewed-select,
+    .columns-btn,
+    .perpage-num {
+        font-size: 12px;
+
+    }
+
+    .right-opt {
+        width: 100%;
+    }
+
+    .custom-select.bulk-btn.per-page,
+    button.columns-btn {
+        width: 100%;
+    }
+
+    .toolbar-group {
+        width: 100%;
+    }
+
+    .recent-search-left {
+        flex-direction: column;
+        align-items: start;
+    }
+
+    .recent-delete-btn {
+        margin-left: auto;
+        margin-top: -52px;
+    }
+}

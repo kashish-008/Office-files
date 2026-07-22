@@ -1,0 +1,72 @@
+@font-face {
+    font-family: 'Suisse Int\'l';
+    src: url('SuisseIntl-Light.woff2') format('woff2'),
+        url('SuisseIntl-Light.woff') format('woff');
+    font-weight: 300;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Suisse Int\'l Book';
+    src: url('SuisseIntl-Book.woff2') format('woff2'),
+        url('SuisseIntl-Book.woff') format('woff');
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Suisse Int\'l';
+    src: url('SuisseIntl-Medium.woff2') format('woff2'),
+        url('SuisseIntl-Medium.woff') format('woff');
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Suisse Int\'l';
+    src: url('SuisseIntl-BoldItalic.woff2') format('woff2'),
+        url('SuisseIntl-BoldItalic.woff') format('woff');
+    font-weight: bold;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Suisse Int\'l';
+    src: url('SuisseIntl-Black.woff2') format('woff2'),
+        url('SuisseIntl-Black.woff') format('woff');
+    font-weight: 900;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Suisse Int\'l Book';
+    src: url('SuisseIntl-BookItalic.woff2') format('woff2'),
+        url('SuisseIntl-BookItalic.woff') format('woff');
+    font-weight: normal;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Suisse Int\'l';
+    src: url('SuisseIntl-BlackItalic.woff2') format('woff2'),
+        url('SuisseIntl-BlackItalic.woff') format('woff');
+    font-weight: 900;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Suisse Int\'l';
+    src: url('SuisseIntl-Bold.woff2') format('woff2'),
+        url('SuisseIntl-Bold.woff') format('woff');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+

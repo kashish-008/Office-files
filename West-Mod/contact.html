@@ -1,0 +1,473 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact page</title>
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" />
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous" />
+
+    <!-- slick -->
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
+    <link rel="stylesheet" type="text/css"
+        href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css" />
+
+    <!-- aos -->
+    <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
+
+    <!-- css links -->
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/responsive.css" />
+    <link rel="stylesheet" href="fonts/SF Pro Display/stylesheet.css">
+    <link rel="stylesheet" href="fonts/suisseint/stylesheet.css">
+    <link rel="stylesheet" href="fonts/suisse regular/stylesheet.css">
+</head>
+
+<body>
+
+    <div class="loader">
+        <div class="upper-div">
+            <img class="bnr-curvel crv-l1" src="images/Subtract.svg" alt="">
+            <img class="bnr-curvel crv-l2" src="images/Subtract-1.svg" alt="">
+        </div>
+
+        <div class="lower-div">
+            <img class="bnr-curvel  crv-l3 " src="images/stulft.svg" alt="">
+            <img class="bnr-curvel crv-l4 " src="images/sturgt.svg" alt="">
+        </div>
+    </div>
+
+
+    <header class=" inner-header">
+        <div class="container">
+            <nav class="navbar navbar-expand-lg">
+                <a class="navbar-brand" href="index.html"><img src="images/site-logo.svg" alt=""></a>
+                <button class="navbar-toggler  collapsed" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                    aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="bar bar-1"></span>
+                    <span class="bar bar-2"></span>
+                    <span class="bar bar-3"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="index.html">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="shooppool.html"> Shop Pools</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="aboutus.html">About Us </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="faq-page.html">FAQ </a>
+                        </li>
+
+                    </ul>
+                    <div class="hdr-btn">
+                        <a class="cta cta-hdr" href="contact.html">Get In Touch</a>
+                    </div>
+                </div>
+
+            </nav>
+        </div>
+
+    </header>
+
+    <!-- fixed part  -->
+    <div class="fixed-part">
+        <section class="innerhero sec-bg innerCanvasSection" id="innerheroSection" style="background-image: url(images/inner-bg.png);">
+            <div class="container">
+                <canvas id="dashedGridCanvas" class="innerhero-canvas"></canvas>
+                <div class=" innerhero-content heading-wrap hdng-span text-center">
+                    <p>Get in touch</p>
+                    <h3 class="glow-text-auto">Crafted Pools Begin with a Conversation</h3>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <!-- relative part -->
+    <div class="relative-part">
+        <div class="part2-inner">
+            <!-- contact form -->
+            <section class="contact-section pb-120" id="contactSection">
+                <svg class="vector1" width="385" height="213" viewBox="0 0 385 213" fill="none"
+                    xmlns="http://www.w3.org/2000/svg" overflow="visible">
+                    <defs>
+                        <filter id="blobBlur" x="-200%" y="-200%" width="500%" height="500%"
+                            filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+                            <fegaussianblur stdDeviation="17" />
+                        </filter>
+                        <lineargradient id="lineGrad" x1="313" y1="-35" x2="66.7091" y2="159.032"
+                            gradientUnits="userSpaceOnUse">
+                            <stop stop-color="#052424" />
+                            <stop offset="1" stop-color="#052424" stop-opacity="0" />
+                        </lineargradient>
+                    </defs>
+
+                    <!-- Grey track line -->
+                    <path
+                        d="M0 0.5H362.229C367.102 0.504985 371.832 2.14265 375.665 5.15141C379.497 8.16018 382.211 12.3665 383.372 17.0984C384.533 21.8303 384.075 26.8149 382.071 31.2559C380.067 35.6969 376.632 39.3381 372.315 41.5979L45.1011 212.5"
+                        stroke="url(#lineGrad)" stroke-opacity="0.4" stroke-width="1" stroke-dasharray="666.8 0.1" />
+
+                    <!-- Blob layer -->
+                    <path
+                        d="M0 0.5H362.229C367.102 0.504985 371.832 2.14265 375.665 5.15141C379.497 8.16018 382.211 12.3665 383.372 17.0984C384.533 21.8303 384.075 26.8149 382.071 31.2559C380.067 35.6969 376.632 39.3381 372.315 41.5979L45.1011 212.5"
+                        fill="none" stroke="#2D5390" stroke-opacity="0.35" stroke-width="32" stroke-linecap="round"
+                        stroke-dasharray="1 665.8" filter="url(#blobBlur)">
+                        <animate attributeName="stroke-dashoffset" from="666.8" to="-666.8" dur="10s"
+                            repeatCount="indefinite" calcMode="linear" />
+                    </path>
+
+                    <!-- Dot layer -->
+                    <path
+                        d="M0 0.5H362.229C367.102 0.504985 371.832 2.14265 375.665 5.15141C379.497 8.16018 382.211 12.3665 383.372 17.0984C384.533 21.8303 384.075 26.8149 382.071 31.2559C380.067 35.6969 376.632 39.3381 372.315 41.5979L45.1011 212.5"
+                        fill="none" stroke="#2D5390" stroke-opacity="0.9" stroke-width="2" stroke-linecap="round"
+                        stroke-dasharray="6 660.8">
+                        <animate attributeName="stroke-dashoffset" from="666.8" to="-666.8" dur="10s"
+                            repeatCount="indefinite" calcMode="linear" />
+                    </path>
+
+                </svg>
+                <svg class="vector3" width="552" height="286" viewBox="0 0 552 286" fill="none"
+                    xmlns="http://www.w3.org/2000/svg" overflow="visible">
+
+                    <defs>
+                        <filter id="blobBlur" x="-200%" y="-200%" width="500%" height="500%"
+                            filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+                            <fegaussianblur stdDeviation="17" />
+                        </filter>
+                        <lineargradient id="paint0_linear_20_221" x1="605.495" y1="7.76235" x2="527.39" y2="399.977"
+                            gradientUnits="userSpaceOnUse">
+                            <stop stop-color="#052424" />
+                            <stop offset="1" stop-color="#052424" stop-opacity="0" />
+                        </lineargradient>
+                    </defs>
+
+                    <!-- Grey track line -->
+                    <path
+                        d="M987.788 49.395H65.2827C48.1012 49.395 31.6235 59.828 19.4744 78.399C7.32529 96.9699 0.5 122.157 0.5 148.421V285.869"
+                        stroke="url(#paint0_linear_20_221)" stroke-opacity="0.15" stroke-width="1"
+                        stroke-dasharray="859.95 0.1" />
+
+                    <!-- Blob layer -->
+                    <path
+                        d="M987.788 49.395H65.2827C48.1012 49.395 31.6235 59.828 19.4744 78.399C7.32529 96.9699 0.5 122.157 0.5 148.421V285.869"
+                        fill="none" stroke="#2D5390" stroke-opacity="0.35" stroke-width="32" stroke-linecap="round"
+                        stroke-dasharray="1 858.95" filter="url(#blobBlur)">
+                        <animate attributeName="stroke-dashoffset" from="859.95" to="-859.95" dur="10s"
+                            repeatCount="indefinite" calcMode="linear" />
+                    </path>
+
+                    <!-- Dot layer -->
+                    <path
+                        d="M987.788 49.395H65.2827C48.1012 49.395 31.6235 59.828 19.4744 78.399C7.32529 96.9699 0.5 122.157 0.5 148.421V285.869"
+                        fill="none" stroke="#2D5390" stroke-opacity="0.9" stroke-width="2" stroke-linecap="round"
+                        stroke-dasharray="6 853.95">
+                        <animate attributeName="stroke-dashoffset" from="859.95" to="-859.95" dur="10s"
+                            repeatCount="indefinite" calcMode="linear" />
+                    </path>
+
+                </svg>
+                <div class="container">
+                    <div class="contact-section-content">
+                        <h2>Contact Us</h2>
+
+                        <div class="row contact-row">
+
+                            <div class="col-lg-6">
+                                <div class="cs-left sf-pro" >
+                                    <h3>Reach out to learn more about Terminal,
+                                        on your
+                                        terms:</h3>
+                                    <p>Share your vision with us and our team
+                                        will
+                                        guide
+                                        you through every step—from selecting
+                                        the
+                                        right
+                                        size to customizing features and
+                                        delivering
+                                        a
+                                        pool that perfectly fits your space and
+                                        lifestyle.</p>
+                                    <div class="contact-info">
+                                        <div class="info-div">
+                                            <div class="info-img">
+                                                <img src="images/loc.svg">
+                                            </div>
+                                            <div class="info-text">
+                                                <h5>Address</h5>
+                                                <p>1234 Coastal Drive, Suite 200
+                                                    San
+                                                    Diego,
+                                                    CA 92101, USA</p>
+                                            </div>
+                                        </div>
+                                        <div class="info-div">
+                                            <div class="info-img">
+                                                <img src="images/phone.svg">
+                                            </div>
+                                            <div class="info-text">
+                                                <a href="telto:+1 (619) 555-9824">
+                                                    <h5>Phone</h5>
+                                                    <p>+1 (619) 555-9824</p>
+                                                </a>
+                                            </div>
+                                        </div>
+                                        <div class="info-div">
+                                            <div class="info-img">
+                                                <img src="images/mail.svg">
+                                            </div>
+                                            <div class="info-text">
+                                                <a href="mailto:info@westmodstudio.com">
+                                                    <h5>Email</h5>
+                                                    <p>info@westmodstudio.com</p>
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+
+                            <div class="col-lg-6 ">
+                                <div class="cf-right">
+                                    <p>Tell us a bit about you:</p>
+
+                                    <form class="contact-form form-common">
+                                        <div class="form-group">
+                                            <label for="fullname">Full
+                                                Name</label>
+                                            <input type="text" id="fullname" name="fullname" required>
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="phone">Phone
+                                                Number</label>
+                                            <input type="text" id="phone" name="phone" required>
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="email">Email</label>
+                                            <input type="email" id="email" name="email" required>
+                                        </div>
+                                        <div class="form-group">
+                                            <label>Subject</label>
+                                            <input type="text" name="subject">
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="message">Message</label>
+                                            <textarea id="message" name="message" rows="4"></textarea>
+                                        </div>
+                                        <div class="form-btn">
+                                            <button type="submit" class="cta cta-blue">Submit</button>
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+     
+
+                <!-- footer -->
+            <footer class="footer pt-130 ovr-hidden pos-rev ovr-hdn dark">
+                <img class="footer-curv" src="images/Footer shape.svg" alt="">
+                <div class="container">
+                    <div class="row foot-row">
+                        <div class="col-lg-6">
+                            <div class="foot-logo">
+                                <div class="footlogo">
+                                    <a href="index.html">
+                                        <img src="images/footlogo.png" alt="">
+                                    </a>
+
+                                </div>
+                                <p>Copyright Westmod Studio © 2026 <br>
+                                    All Rights Reserved </p>
+                            </div>
+                        </div>
+                        <div class="col-lg-3">
+                            <div class="foot-col">
+                                <h6>Quick Links</h6>
+                                <ul class="footlist">
+                                    <li><a href="index.html">Home</a></li>
+                                    <li><a href="shooppool.html">Shop Pools</a></li>
+                                    <li><a href="aboutus.html">About Us</a></li>
+                                    <li><a href="faq-page.html">FAQ</a></li>
+                                    <li><a href="contact.html">Contact</a></li>
+                                </ul>
+
+                            </div>
+                        </div>
+                        <div class="col-lg-3">
+                            <div class="foot-col">
+                                <h6>Connect with our <br> experts today.</h6>
+                                <ul class="footlist">
+                                    <li><a href=""><span><i class="fa-brands fa-x-twitter"></i></span> Twitter</a></li>
+                                    <li><a href=""><span><i class="fa-brands fa-facebook-f"></i> </span> Facebook </a>
+                                    </li>
+                                    <li><a href=""><span><i class="fa-brands fa-linkedin-in"></i></span> LinkedIn</a>
+                                    </li>
+                                    <li><a href=""><span><i class="fa-brands fa-instagram"></i></span> Instagram</a>
+                                    </li>
+                                </ul>
+
+                            </div>
+                        </div>
+
+                    </div>
+
+
+                </div>
+
+                <div class="svg-move  svg-curve5">
+                    <svg width="468" height="452" viewBox="0 0 468 452" fill="none" xmlns="http://www.w3.org/2000/svg">
+
+                        <!-- BASE PATH -->
+                        <path
+                            d="M-71 0.5H410.05C421.058 0.501661 431.83 3.6916 441.062 9.68396C450.294 15.6763 457.592 24.2143 462.071 34.265C466.55 44.3157 468.02 55.4485 466.302 66.3166C464.584 77.1846 459.752 87.3222 452.391 95.5029L131.968 451.5"
+                            stroke="#052424" stroke-opacity="1" stroke-width="1" fill="none" />
+
+                        <!-- MOVING GLOW -->
+                        <path class="flow-line"
+                            d="M-71 0.5H410.05C421.058 0.501661 431.83 3.6916 441.062 9.68396C450.294 15.6763 457.592 24.2143 462.071 34.265C466.55 44.3157 468.02 55.4485 466.302 66.3166C464.584 77.1846 459.752 87.3222 452.391 95.5029L131.968 451.5"
+                            stroke="url(#flowGradient)" stroke-width="2" fill="none" />
+
+                        <defs>
+
+                            <!-- FLOW GRADIENT -->
+                            <linearGradient id="flowGradient" x1="0" y1="0" x2="468" y2="452"
+                                gradientUnits="userSpaceOnUse">
+                                <stop offset="0%" stop-color="#2D5390" stop-opacity="0" />
+                                <stop offset="50%" stop-color="#2D5390" stop-opacity="1" />
+                                <stop offset="100%" stop-color="#2D5390" stop-opacity="0" />
+                            </linearGradient>
+
+                            <!--  GLOW tuned for mixed horizontal + diagonal -->
+                            <filter id="blueGlow" x="-200%" y="-200%" width="500%" height="500%">
+
+                                <!-- core (center sharp glow) -->
+                                <feGaussianBlur stdDeviation="1.5" result="core" />
+
+                                <!-- main glow spread -->
+                                <feGaussianBlur stdDeviation="8 16" result="stretch" />
+
+                                <!-- color -->
+                                <feFlood flood-color="#2D5390" flood-opacity="1" result="color" />
+
+                                <!-- apply glow -->
+                                <feComposite in="color" in2="stretch" operator="in" result="glow1" />
+                                <feComposite in="color" in2="core" operator="in" result="glow2" />
+
+                                <!-- merge -->
+                                <feMerge>
+                                    <feMergeNode in="glow1" />
+                                    <feMergeNode in="glow2" />
+                                    <feMergeNode in="SourceGraphic" />
+                                </feMerge>
+
+                            </filter>
+
+                        </defs>
+                    </svg>
+                </div>
+                <div class="svg-move  svg-curve6">
+                    <svg width="672" height="452" viewBox="0 0 672 452" fill="none" xmlns="http://www.w3.org/2000/svg">
+
+                        <!-- BASE PATH -->
+                        <path
+                            d="M711.5 193.786L523.798 15.1961C513.886 5.76385 500.721 0.50164 487.03 0.5H53.8183C39.6774 0.5 26.1157 6.1099 16.1166 16.0956C6.11744 26.0813 0.5 39.6248 0.5 53.7468V451.5"
+                            stroke="#052424" stroke-opacity="1" stroke-width="2" fill="none" />
+
+                        <!-- MOVING GLOW -->
+                        <path class="flow-line"
+                            d="M711.5 193.786L523.798 15.1961C513.886 5.76385 500.721 0.50164 487.03 0.5H53.8183C39.6774 0.5 26.1157 6.1099 16.1166 16.0956C6.11744 26.0813 0.5 39.6248 0.5 53.7468V451.5"
+                            stroke="url(#flowGradient)" stroke-width="2" fill="none" />
+
+                        <defs>
+
+                            <!-- FLOW GRADIENT -->
+                            <linearGradient id="flowGradient" x1="0" y1="0" x2="672" y2="452"
+                                gradientUnits="userSpaceOnUse">
+                                <stop offset="0%" stop-color="#2D5390" stop-opacity="0" />
+                                <stop offset="50%" stop-color="#2D5390" stop-opacity="1" />
+                                <stop offset="100%" stop-color="#2D5390" stop-opacity="0" />
+                            </linearGradient>
+
+                            <!-- 🔵 BALANCED GLOW -->
+                            <filter id="blueGlow" x="-150%" y="-150%" width="400%" height="400%">
+
+                                <!-- sharp core -->
+                                <feGaussianBlur stdDeviation="1" result="core" />
+
+                                <!-- balanced directional glow -->
+                                <feGaussianBlur stdDeviation="5 9" result="stretch" />
+
+                                <!-- color -->
+                                <feFlood flood-color="#2D5390" flood-opacity="1" result="color" />
+
+                                <!-- apply -->
+                                <feComposite in="color" in2="stretch" operator="in" result="glow1" />
+                                <feComposite in="color" in2="core" operator="in" result="glow2" />
+
+                                <!-- merge -->
+                                <feMerge>
+                                    <feMergeNode in="glow1" />
+                                    <feMergeNode in="glow2" />
+                                    <feMergeNode in="SourceGraphic" />
+                                </feMerge>
+
+                            </filter>
+
+                        </defs>
+
+
+                    </svg>
+                </div>
+            </footer>
+        </div>
+    </div>
+
+
+    <!-- jQuery -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+    <!-- Bootstrap -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
+
+    <!-- GSAP -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.13.0/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.13.0/ScrollTrigger.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.13.0/ScrollToPlugin.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.13.0/MotionPathPlugin.min.js"></script>
+
+    <!-- Slick -->
+    <script src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+
+    <!-- AOS -->
+    <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+
+    <!-- Lenis -->
+    <script src="https://unpkg.com/@studio-freight/lenis/dist/lenis.min.js"></script>
+
+    <!-- Custom -->
+    <script src="js/script.js?nocache=fdhfgg "></script>
+    <script>
+        $(function () {
+            AOS.init();
+        });
+    </script>
+    <script>
+
+    </script>
+</body>
+
+</html>

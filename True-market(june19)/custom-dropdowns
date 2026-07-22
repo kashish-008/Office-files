@@ -1,0 +1,62 @@
+<!-- structuctures for all custom dropdowns -->
+
+<!-- properties type -->
+<div class="custom-select bulk-btn">
+    <div class="custom-label">
+        <a href="">All Properties</a>
+    </div>
+    <ul class="custom-select-options">
+        <li><a href="">All Properties</a></li>
+        <li><a href="">Duplex</a></li>
+        <li><a href="">Single Family</a></li>
+        <li><a href="">Condo</a></li>
+        <li><a href="">Townhouse</a></li>
+    </ul>
+</div>
+
+<!-- listing type -->
+<div class="custom-select bulk-btn">
+    <div class="custom-label">
+        <a href="">All</a>
+    </div>
+
+    <ul class="custom-select-options">
+        <li><a href="">All</a></li>
+        <li><a href="">For Sale</a></li>
+        <li><a href="">For Rent</a></li>
+    </ul>
+</div>
+
+<!-- Bulk Action  -->
+<div class="custom-select bulk-btn bulk-action">
+    <div class="custom-label">
+        <a href="">Bulk Action</a>
+    </div>
+    <ul class="custom-select-options">
+        <li><a href="">Bulk Action</a></li>
+        <li><a href="">Delete</a></li>
+        <li><a href="">Mark as Viewed</a></li>
+    </ul>
+</div>
+
+<!-- Viewed Dropdown -->
+<div class="custom-select bulk-btn Viewed-drop no-arrw">
+    <div class="custom-label">
+        <a href="">Viewed</a>
+    </div>
+    <ul class="custom-select-options">
+        <li><a href="">Viewed</a></li>
+        <li><a href="">Unviewed</a></li>
+    </ul>
+</div>
+
+<!-- page per num -->
+<div class="custom-select bulk-btn per-page ">
+    <div class="custom-label">
+        <a href="">25</a>
+    </div>
+    <ul class="custom-select-options">
+        <li><a href="">25</a></li>
+        <li><a href="">50</a></li>
+    </ul>
+</div>
