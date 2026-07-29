@@ -1,0 +1,313 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Slider</title>
+  </head>
+
+  <style>
+    body {
+      background: #000;
+    }
+    .marquee-wrapper {
+      overflow: hidden;
+      width: 100%;
+    }
+
+    .marquee-track {
+      display: flex;
+      width: max-content;
+      animation: marquee-scroll 25s linear infinite;
+    }
+
+    .marquee-track:hover {
+      animation-play-state: paused;
+    }
+
+    .card {
+      flex-shrink: 0;
+      width: 236px;
+      margin-right: 10px;
+      border: 1px solid #c9a227;
+      border-radius: 8px;
+      overflow: hidden;
+      background-color: #0d0a14;
+      display: flex;
+      flex-direction: column;
+      text-align: center;
+    }
+
+    .card img {
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+    }
+
+    .card-content {
+      padding: 15px;
+      padding-bottom: 0;
+    }
+
+    .card-content h3 {
+      color: #fff;
+      font-size: 24px;
+      margin: 0;
+      margin-bottom: 6px;
+    }
+
+    .card-content p {
+      color: #ccc;
+      font-size: 16px;
+      margin-bottom: 10px;
+    }
+
+    .card-time {
+      color: #ed45a0;
+      font-size: 16px;
+      font-weight: bold;
+      margin-top: auto;
+      padding-bottom: 16px;
+    }
+
+    @keyframes marquee-scroll {
+      from {
+        transform: translateX(0);
+      }
+      to {
+        transform: translateX(-50%);
+      }
+    }
+
+    @media (max-width: 1200px) {
+      .card {
+        width: 226px;
+      }
+    }
+
+    @media (max-width: 768px) {
+      .card {
+        width: 177px;
+      }
+
+      .card img {
+        height: 160px;
+      }
+
+      .card-content h3 {
+        font-size: 20px;
+      }
+
+      .card-content p {
+        font-size: 14px;
+      }
+
+      .card-time {
+        font-size: 14px;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .card {
+        width: 146px;
+        margin-right: 8px;
+      }
+
+      .card img {
+        height: 130px;
+      }
+
+      .card-content {
+        padding: 10px;
+        padding-bottom: 0;
+      }
+
+      .card-content h3 {
+        font-size: 16px;
+        margin-bottom: 4px;
+      }
+
+      .card-content p {
+        font-size: 12px;
+        margin-bottom: 6px;
+      }
+
+      .card-time {
+        font-size: 12px;
+        padding-bottom: 10px;
+      }
+    }
+  </style>
+  <body>
+    <div class="marquee-wrapper">
+      <div class="marquee-track">
+        <div class="card">
+          <img
+            src="https://static.wixstatic.com/media/1c97ba_cec2c0176c884799a271d3ceb4435f8f~mv2.png"
+            alt="Grand Ole Opry"
+          />
+          <div class="card-content">
+            <h3>Grand Ole Opry</h3>
+            <p>The most famous stage in country music.</p>
+          </div>
+          <div class="card-time">
+            <span>2 MIN AWAY</span>
+          </div>
+        </div>
+
+        <div class="card">
+          <img
+            src="https://static.wixstatic.com/media/1c97ba_d10b4179360f4dcdb1cec996d4fab0b9~mv2.png"
+            alt="Broadway Honky Tonks"
+          />
+          <div class="card-content">
+            <h3>Broadway Honky Tonks</h3>
+            <p>Live music all day and all night.</p>
+          </div>
+          <div class="card-time">
+            <span>15-20 MIN AWAY</span>
+          </div>
+        </div>
+
+        <div class="card">
+          <img
+            src="https://static.wixstatic.com/media/1c97ba_cbfc3c89a55f4998958a6dd723632bc4~mv2.png"
+            alt="Country Music Hall of Fame"
+          />
+          <div class="card-content">
+            <h3>Country Music Hall of Fame</h3>
+            <p>A must-see for every country music fan.</p>
+          </div>
+          <div class="card-time">
+            <span>15-20 MIN AWAY</span>
+          </div>
+        </div>
+
+        <div class="card">
+          <img src="img/RYMAN AUDITORIUM.png" alt="Ryman Auditorium" />
+          <div class="card-content">
+            <h3>Ryman Auditorium</h3>
+            <p>The Mother Church of Country Music.</p>
+          </div>
+          <div class="card-time">
+            <span>15-20 MIN AWAY</span>
+          </div>
+        </div>
+
+        <div class="card">
+          <img
+            src="https://static.wixstatic.com/media/1c97ba_11c0f589815346f0989e757e5b648ae6~mv2.png"
+            alt="Opry Mills"
+          />
+          <div class="card-content">
+            <h3>Opry Mills</h3>
+            <p>Shopping, dining & entertainment.</p>
+          </div>
+          <div class="card-time">
+            <span>3 MIN AWAY</span>
+          </div>
+        </div>
+
+        <div class="card">
+          <img
+            src="https://static.wixstatic.com/media/1c97ba_dcaf9e943b184b7fb39a0fae6669348c~mv2.png"
+            alt="Gaylord Opryland"
+          />
+          <div class="card-content">
+            <h3>Gaylord Opryland</h3>
+            <p>Walk through 9 acres of indoor gardens.</p>
+          </div>
+          <div class="card-time">
+            <span>3 MIN AWAY</span>
+          </div>
+        </div>
+
+        <!-- duplicate set for seamless loop -->
+
+        <div class="card">
+          <img
+            src="https://static.wixstatic.com/media/1c97ba_cec2c0176c884799a271d3ceb4435f8f~mv2.png"
+            alt="Grand Ole Opry"
+          />
+          <div class="card-content">
+            <h3>Grand Ole Opry</h3>
+            <p>The most famous stage in country music.</p>
+          </div>
+          <div class="card-time">
+            <span>2 MIN AWAY</span>
+          </div>
+        </div>
+
+        <div class="card">
+          <img
+            src="https://static.wixstatic.com/media/1c97ba_d10b4179360f4dcdb1cec996d4fab0b9~mv2.png"
+            alt="Broadway Honky Tonks"
+          />
+          <div class="card-content">
+            <h3>Broadway Honky Tonks</h3>
+            <p>Live music all day and all night.</p>
+          </div>
+          <div class="card-time">
+            <span>15-20 MIN AWAY</span>
+          </div>
+        </div>
+
+        <div class="card">
+          <img
+            src="https://static.wixstatic.com/media/1c97ba_cbfc3c89a55f4998958a6dd723632bc4~mv2.png"
+            alt="Country Music Hall of Fame"
+          />
+          <div class="card-content">
+            <h3>Country Music Hall of Fame</h3>
+            <p>A must-see for every country music fan.</p>
+          </div>
+          <div class="card-time">
+            <span>15-20 MIN AWAY</span>
+          </div>
+        </div>
+
+        <div class="card">
+          <img
+            src="https://static.wixstatic.com/media/1c97ba_6ce6fd46052641968df9324df24da863~mv2.png"
+            alt="Ryman Auditorium"
+          />
+          <div class="card-content">
+            <h3>Ryman Auditorium</h3>
+            <p>The Mother Church of Country Music.</p>
+          </div>
+          <div class="card-time">
+            <span>15-20 MIN AWAY</span>
+          </div>
+        </div>
+
+        <div class="card">
+          <img
+            src="https://static.wixstatic.com/media/1c97ba_11c0f589815346f0989e757e5b648ae6~mv2.png"
+            alt="Opry Mills"
+          />
+          <div class="card-content">
+            <h3>Opry Mills</h3>
+            <p>Shopping, dining & entertainment.</p>
+          </div>
+          <div class="card-time">
+            <span>3 MIN AWAY</span>
+          </div>
+        </div>
+
+        <div class="card">
+          <img
+            src="https://static.wixstatic.com/media/1c97ba_dcaf9e943b184b7fb39a0fae6669348c~mv2.png"
+            alt="Gaylord Opryland"
+          />
+          <div class="card-content">
+            <h3>Gaylord Opryland</h3>
+            <p>Walk through 9 acres of indoor gardens.</p>
+          </div>
+          <div class="card-time">
+            <span>3 MIN AWAY</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
