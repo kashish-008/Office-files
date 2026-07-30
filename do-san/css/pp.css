@@ -1,3 +1,11 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap");
+
+@media (min-width: 1600px) {
+  .container {
+    max-width: 1470px;
+  }
+}
+
 @font-face {
   font-family: "NeueMontreal-Bold";
   src: url("../font/NeueMontreal-Bold.otf") format("opentype");
@@ -11,7 +19,6 @@
 .pp-sec {
   color: #fff;
   padding-bottom: 100px;
-  background: #fff;
 }
 
 .pp-div1 {
@@ -130,7 +137,6 @@
 .pp-cookies {
   padding-bottom: 250px;
 }
-
 
 /* =============================== */
 @media (max-width: 767px) {
