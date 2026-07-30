@@ -41,38 +41,35 @@
           <div class="single-list-hero">
             <h1>Sunset Beach <span class="span-orange">Resort</span></h1>
             <div class="single-list-hero-slide">
-              <div class="listing-slider">
-                <div class="listing-slide">
-                  <img src="img/single-list-img1.png" alt="Resort exterior" />
-                </div>
-                <div class="listing-slide">
-                  <img
-                    src="img/single-list-img2.png"
-                    alt="Poolside umbrellas"
-                  />
-                </div>
-              </div>
+  <div class="listing-slider">
+    <div class="listing-slide active" data-index="0">
+      <img src="img/single-list-img1.png" alt="Resort exterior" />
+    </div>
+    <div class="listing-slide" data-index="1">
+      <img src="img/single-list-img2.png" alt="Poolside umbrellas" />
+    </div>
+  </div>
 
-              <div class="listing-progress-bar">
-                <div class="listing-progress-fill"></div>
-              </div>
+  <div class="listing-progress-bar">
+    <div class="listing-progress-fill"></div>
+  </div>
 
-              <div class="listing-slider-footer">
-                <div class="listing-arrows">
-                  <button class="listing-prev">
-                    <img src="img/left-arrow.svg" alt="" />
-                  </button>
-                  <button class="listing-next">
-                    <img src="img/right-arrow.svg" alt="" />
-                  </button>
-                </div>
-                <div class="listing-counter">
-                  <span class="current-slide">1</span>
-                  <span class="sep">/</span>
-                  <span class="total-slides">2</span>
-                </div>
-              </div>
-            </div>
+  <div class="listing-slider-footer">
+    <div class="listing-arrows">
+      <button class="listing-prev">
+        <img src="img/left-arrow.svg" alt="" />
+      </button>
+      <button class="listing-next">
+        <img src="img/right-arrow.svg" alt="" />
+      </button>
+    </div>
+    <div class="listing-counter">
+      <span class="current-slide">1</span>
+      <span class="sep">/</span>
+      <span class="total-slides">2</span>
+    </div>
+  </div>
+</div>
           </div>
         </div>
       </section>
@@ -471,52 +468,34 @@
         AOS.init();
 
         // Listing hero slider
-        const $listingSlider = $(".listing-slider");
+        const $slides = $(".listing-slide");
+let currentIndex = 0;
 
-        function updateListingProgress(slick, currentSlide) {
-          const currentPage = currentSlide + 1;
-          const totalSlides = slick.slideCount;
+function updateListingSlide(index) {
+  $slides.removeClass("active");
+  $slides.eq(index).addClass("active");
 
-          $(".current-slide").text(currentPage);
-          $(".total-slides").text(totalSlides);
-          $(".listing-progress-fill").css(
-            "width",
-            `${(currentPage / totalSlides) * 100}%`,
-          );
-        }
+  $(".current-slide").text(index + 1);
+  $(".total-slides").text($slides.length);
+  $(".listing-progress-fill").css(
+    "width",
+    `${((index + 1) / $slides.length) * 100}%`
+  );
 
-        $listingSlider
-          .on("init", function (event, slick) {
-            updateListingProgress(slick, 0);
-          })
-          .on("afterChange", function (event, slick, currentSlide) {
-            updateListingProgress(slick, currentSlide);
-            $listingSlider.slick("setPosition");
-          })
-          .slick({
-            slidesToShow: 1,
-            slidesToScroll: 1,
-            arrows: false,
-            dots: false,
-            infinite: false,
-            variableWidth: true,
-            responsive: [
-              {
-                breakpoint: 767,
-                settings: {
-                  variableWidth: false,
-                },
-              },
-            ],
-          });
+  currentIndex = index;
+}
 
-        $(".listing-prev").on("click", function () {
-          $listingSlider.slick("slickPrev");
-        });
+updateListingSlide(0);
 
-        $(".listing-next").on("click", function () {
-          $listingSlider.slick("slickNext");
-        });
+$(".listing-prev").on("click", function () {
+  const newIndex = currentIndex === 0 ? $slides.length - 1 : currentIndex - 1;
+  updateListingSlide(newIndex);
+});
+
+$(".listing-next").on("click", function () {
+  const newIndex = currentIndex === $slides.length - 1 ? 0 : currentIndex + 1;
+  updateListingSlide(newIndex);
+});
 
         // Review carousel
         const reviewSwiper = new Swiper(".review-slider", {
