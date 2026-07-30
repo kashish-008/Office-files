@@ -1,0 +1,110 @@
+@font-face {
+  font-family: "NeueMontreal-Bold";
+  src: url("../font/NeueMontreal-Bold.otf") format("opentype");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+.pp-sec {
+  color: #fff;
+  padding-bottom: 100px;
+  background: #fff;
+}
+
+.div1 {
+  padding-top: 186px;
+  background-size: cover;
+  background-position: top;
+  background-repeat: no-repeat;
+}
+
+.div2 {
+  background-size: 111% 100%;
+  background-position: bottom;
+  background-repeat: no-repeat;
+}
+
+.div3 p,
+.div3 ul {
+  color: #738093;
+}
+
+.div3 h4 {
+  color: #000;
+}
+
+.div3 {
+  position: relative;
+  overflow: hidden;
+}
+
+.pp-title h1 {
+  font-size: 86px;
+  font-family: "NeueMontreal-Bold", sans-serif;
+  text-align: center;
+  margin-bottom: 80px;
+}
+
+.pp-point {
+  padding-bottom: 47px;
+  max-width: 1088px;
+}
+
+.pp-point h4 {
+  font-size: 40px;
+  font-family: "NeueMontreal-Bold", sans-serif;
+  margin-bottom: 20px;
+}
+
+.pp-point p {
+  font-size: 18px;
+  margin: 0;
+}
+
+.pp-point .pp-list {
+  margin: 0;
+  margin: 15px 0;
+  font-size: 18px;
+}
+
+.pp-point .pp-list li {
+  margin-bottom: 10px;
+}
+
+.pp-contact {
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+  margin-top: 20px;
+}
+
+.pp-contact a {
+  font-size: 18px;
+  color: #000000;
+  text-decoration: none;
+}
+
+.pp-contact .pp-span {
+  color: #000000;
+  font-weight: 600;
+}
+
+.pp-contact a:first-child {
+  color: #f26d40;
+}
+
+.div3::after {
+  content: "";
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  width: 220px;
+  height: 220px;
+  background: url("../img/half-circle.png") no-repeat bottom right / contain;
+  pointer-events: none;
+}
+
+.pp-cookies{
+    padding-bottom: 250px;
+}
