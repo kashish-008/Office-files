@@ -171,7 +171,6 @@
 }
 
 @media (max-width: 767px) {
- 
   .listing-slide,
   .listing-slide.active {
     width: 100%;
@@ -1493,6 +1492,12 @@
   .related-cards {
     grid-template-columns: 1fr;
   }
+  .location-badge::before {
+    left: 170px;
+  }
+  .location-badge::after {
+    right: 170px;
+  }
 }
 
 .rate-review-sec {
@@ -1502,7 +1507,20 @@
 .related-listings-sec {
   padding-top: 0;
 }
-html,
-body {
-  overflow-x: hidden;
+
+
+.location-badge::after {
+  right: 0;
+  top: -20px;
+}
+.location-badge::before {
+  left: 0;
+  top: -20px;
+}
+.location-badge {
+  position: relative;
+}
+
+.related-listings-sec,.single-list-sec{
+  overflow: hidden;
 }
