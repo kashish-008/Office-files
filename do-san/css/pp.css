@@ -13,6 +13,11 @@
   font-style: normal;
   font-display: swap;
 }
+
+body {
+  background-color: #fff8f5;
+}
+
 .pb-20 {
   padding-bottom: 20px;
 }
