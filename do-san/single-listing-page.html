@@ -477,13 +477,35 @@
     <!-- Custom -->
     <script src="js/main.js "></script>
 
+    <style>
+      .listing-slider {
+        cursor: grab;
+        user-select: none;
+        touch-action: pan-y;
+      }
+
+      .listing-slider.dragging {
+        cursor: grabbing;
+      }
+
+      .listing-slider img {
+        -webkit-user-drag: none;
+        user-drag: none;
+      }
+    </style>
+
     <script>
       $(function () {
         AOS.init();
 
         // Listing hero slider
         const $slides = $(".listing-slide");
+        const slider = document.querySelector(".listing-slider");
         let currentIndex = 0;
+        let dragStartX = 0;
+        let isDragging = false;
+        let activePointerId = null;
+        const dragThreshold = 50;
 
         function updateListingSlide(index) {
           $slides.removeClass("active");
@@ -499,19 +521,79 @@
           currentIndex = index;
         }
 
-        updateListingSlide(0);
-
-        $(".listing-prev").on("click", function () {
-          const newIndex =
-            currentIndex === 0 ? $slides.length - 1 : currentIndex - 1;
-          updateListingSlide(newIndex);
-        });
-
-        $(".listing-next").on("click", function () {
+        function goToNextSlide() {
           const newIndex =
             currentIndex === $slides.length - 1 ? 0 : currentIndex + 1;
           updateListingSlide(newIndex);
+        }
+
+        function goToPreviousSlide() {
+          const newIndex =
+            currentIndex === 0 ? $slides.length - 1 : currentIndex - 1;
+          updateListingSlide(newIndex);
+        }
+
+        updateListingSlide(0);
+
+        $(".listing-prev").on("click", function () {
+          goToPreviousSlide();
         });
+
+        $(".listing-next").on("click", function () {
+          goToNextSlide();
+        });
+
+        if (slider) {
+          slider.addEventListener("pointerdown", function (event) {
+            if (event.pointerType === "mouse" && event.button !== 0) {
+              return;
+            }
+
+            isDragging = true;
+            dragStartX = event.clientX;
+            activePointerId = event.pointerId;
+            slider.classList.add("dragging");
+            slider.setPointerCapture(event.pointerId);
+          });
+
+          slider.addEventListener("pointerup", function (event) {
+            if (!isDragging || activePointerId !== event.pointerId) {
+              return;
+            }
+
+            const dragDistance = event.clientX - dragStartX;
+
+            if (Math.abs(dragDistance) >= dragThreshold) {
+              if (dragDistance < 0) {
+                goToNextSlide();
+              } else {
+                goToPreviousSlide();
+              }
+            }
+
+            isDragging = false;
+            activePointerId = null;
+            slider.classList.remove("dragging");
+          });
+
+          slider.addEventListener("pointercancel", function () {
+            isDragging = false;
+            activePointerId = null;
+            slider.classList.remove("dragging");
+          });
+
+          slider.addEventListener("pointerleave", function (event) {
+            if (!isDragging || activePointerId !== event.pointerId) {
+              return;
+            }
+
+            slider.classList.remove("dragging");
+          });
+
+          slider.querySelectorAll("img").forEach(function (image) {
+            image.setAttribute("draggable", "false");
+          });
+        }
 
         // Review carousel
         const reviewSwiper = new Swiper(".review-slider", {

@@ -1383,7 +1383,7 @@
 }
 
 /* ---------new------- */
-/* @media (max-width: 1299px) {
+@media (max-width: 1299px) {
   .single-list-sec {
     padding-bottom: 60px;
   }
@@ -1396,7 +1396,7 @@
   .related-listings-sec {
     padding: 40px 0;
   }
-} */
+}
 
 .single-list-sec .absolute-txt-img {
   position: absolute;
@@ -1508,7 +1508,6 @@
   padding-top: 0;
 }
 
-
 .location-badge::after {
   right: 0;
   top: -20px;
@@ -1521,6 +1520,15 @@
   position: relative;
 }
 
-.related-listings-sec,.single-list-sec{
+.related-listings-sec,
+.single-list-sec {
   overflow: hidden;
+}
+
+.location-badge {
+  max-width: 230px;
+}
+
+.single-list-sec {
+  position: relative;
 }
