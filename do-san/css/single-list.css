@@ -85,7 +85,6 @@
   font-weight: 700;
 }
 
-/* Listing hero slider - flexbox toggle (no Slick) */
 .listing-slider {
   display: flex;
   gap: 10px;
@@ -172,10 +171,7 @@
 }
 
 @media (max-width: 767px) {
-  .listing-slider {
-    flex-direction: column;
-  }
-
+ 
   .listing-slide,
   .listing-slide.active {
     width: 100%;
@@ -1487,6 +1483,15 @@
   }
   .review-user span {
     font-size: 14px;
+  }
+  .amenity-item {
+    font-size: 12px;
+  }
+  .rate-review-sec {
+    padding-top: 25px;
+  }
+  .related-cards {
+    grid-template-columns: 1fr;
   }
 }
 
