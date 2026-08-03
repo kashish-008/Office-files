@@ -1262,9 +1262,13 @@ body {
   -webkit-user-drag: none;
   user-drag: none;
 }
-
-@media (max-width: 1599px) {
   /* =============================== */
+@media (min-width: 1660px) {
+  .rate-review-sec .span-orange {
+    color: #fff ;
+  }
+}
+@media (max-width: 1599px) {
 
   .pp-point {
     max-width: 988px;
