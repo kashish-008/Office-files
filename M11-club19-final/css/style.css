@@ -5147,3 +5147,152 @@ section.exp-cat-sec p {
   }
 }
 /* ===========welcome-back page css end===== */
+
+/* =========entry-passes====== */
+
+.entry-passes {
+  margin-top: 30px;
+  border-radius: 15px;
+  border: 2px solid #fdab4d30;
+  background: #000000ba;
+  padding-bottom: 20px;
+}
+
+.entry-passes-top {
+  display: flex;
+  justify-content: center;
+  border-bottom: 1px solid #ffffff26;
+  padding: 10px 0;
+}
+
+/* desktop table */
+.entry-passes-table {
+  display: grid;
+  grid-template-columns: 1.2fr repeat(4, 1fr);
+}
+
+.entry-passes-row {
+  display: contents;
+}
+
+.entry-passes-cell {
+  padding: 20px 25px;
+  border-bottom: 1px solid #ffffff15;
+  color: #c9c9c9;
+  font-size: 15px;
+}
+
+.entry-passes-cell.label {
+  color: #ff6b1a;
+  font-weight: 600;
+  font-size: 16px;
+}
+
+.entry-passes-cell h4 {
+  color: #e8e8e8;
+  font-size: 16px;
+  margin-bottom: 8px;
+  font-weight: 500;
+}
+
+.benefits-toggle {
+  color: #ff5c1a;
+  font-size: 13px;
+  font-weight: 600;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 3px;
+}
+
+.benefits-list {
+  list-style: none;
+  padding: 0;
+  margin-top: 8px;
+  display: none;
+}
+
+.benefits-toggle.active + .benefits-list {
+  display: block;
+}
+
+.benefits-list li {
+  font-size: 13px;
+  color: #999;
+  margin-bottom: 4px;
+}
+
+.benefits-list li strong {
+  color: #fff;
+}
+
+.entry-passes-btns .entry-passes-cell {
+  border-bottom: none;
+  padding-top: 25px;
+}
+
+.join-btn {
+  display: inline-block;
+  padding: 10px 22px;
+  border-radius: 8px;
+  border: 1px solid #ff6b1a;
+  color: #ff6b1a;
+  font-size: 14px;
+  font-weight: 600;
+  text-decoration: none;
+  text-align: center;
+}
+
+.join-btn.filled {
+  background: linear-gradient(90deg, #ff9a4d, #ff5c1a);
+  color: #fff;
+  border: none;
+}
+
+/* mobile cards */
+.entry-passes-mobile {
+  display: none;
+}
+
+@media (max-width: 567px) {
+  .entry-passes-table {
+    display: none;
+  }
+
+  .entry-passes-mobile {
+    display: block;
+    padding: 15px;
+  }
+
+  .pass-card {
+    border: 1px solid #ffffff1a;
+    border-radius: 12px;
+    padding: 18px;
+    margin-bottom: 15px;
+  }
+
+  .pass-card h4 {
+    color: #e8e8e8;
+    font-size: 16px;
+    margin-bottom: 8px;
+  }
+
+  .pass-row {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 0;
+    border-bottom: 1px solid #ffffff15;
+    color: #c9c9c9;
+    font-size: 14px;
+  }
+
+  .pass-row span:first-child {
+    color: #ff6b1a;
+    font-weight: 600;
+  }
+
+  .join-btn {
+    display: block;
+    margin-top: 15px;
+  }
+}
