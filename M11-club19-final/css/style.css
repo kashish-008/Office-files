@@ -253,7 +253,8 @@ h6 {
 }
 
 /* hedaer cta */
-.hdr-cta {
+.hdr-cta,
+.entry-join-btn {
   font-size: 15px;
   font-weight: 500;
   color: #fff;
@@ -284,7 +285,8 @@ h6 {
 
 /* Shine effect */
 .hdr-cta::before,
-.cta-white::before {
+.cta-white::before,
+.entry-join-btn:before {
   content: "";
   position: absolute;
   top: 0;
@@ -302,7 +304,8 @@ h6 {
 
 /* Hover */
 .hdr-cta:hover,
-.cta-white:hover {
+.cta-white:hover,
+.entry-join-btn:hover {
   color: #fff;
   background: linear-gradient(270deg, #f76729 0%, #fdab4d 100%);
   border-color: transparent;
@@ -313,7 +316,8 @@ h6 {
 }
 
 .hdr-cta:hover::before,
-.cta-white:hover::before {
+.cta-white:hover::before,
+.entry-join-btn::before {
   left: 150%;
 }
 
@@ -477,7 +481,8 @@ h6 {
   padding-left: 100px;
 }
 
-.nav_hdr .navbar-collapse .hdr-cta {
+.nav_hdr .navbar-collapse .hdr-cta,
+.entry-join-btn {
   font-size: 15px;
   text-align: center;
   padding: 14px 20px;
@@ -487,7 +492,8 @@ h6 {
   overflow: hidden;
 }
 
-.nav_hdr .navbar-collapse .hdr-cta:hover {
+.nav_hdr .navbar-collapse .hdr-cta:hover,
+.entry-join-btn:hover {
   color: #fff;
   background: linear-gradient(90deg, #fdab4d 0%, #f76729 100%);
 }
@@ -5183,7 +5189,11 @@ section.exp-cat-sec p {
 
 .entry-passes-cell {
   border-bottom: 1px solid #ffffff26;
-  font-size: 18px;
+  border-right: 1px solid #ffffff26;
+}
+
+.entry-passes-row > .entry-passes-cell:last-child {
+  border-right: none;
 }
 
 .entry-passes-cell.label {
@@ -5196,28 +5206,9 @@ section.exp-cat-sec p {
   font-weight: 400;
 }
 
-
 .entry-passes-btns .entry-passes-cell {
   border-bottom: none;
   padding-top: 25px;
-}
-
-.join-btn {
-  display: inline-block;
-  padding: 10px 22px;
-  border-radius: 8px;
-  border: 1px solid #ff6b1a;
-  color: #ff6b1a;
-  font-size: 14px;
-  font-weight: 600;
-  text-decoration: none;
-  text-align: center;
-}
-
-.join-btn.filled {
-  background: linear-gradient(90deg, #ff9a4d, #ff5c1a);
-  color: #fff;
-  border: none;
 }
 
 /* mobile cards */
@@ -5225,7 +5216,7 @@ section.exp-cat-sec p {
   display: none;
 }
 
-@media (max-width: 567px) {
+@media (max-width: 767px) {
   .entry-passes-table {
     display: none;
   }
@@ -5243,8 +5234,7 @@ section.exp-cat-sec p {
   }
 
   .pass-card h4 {
-    color: #e8e8e8;
-    font-size: 16px;
+    font-size: 22px;
     margin-bottom: 8px;
   }
 
@@ -5253,16 +5243,14 @@ section.exp-cat-sec p {
     justify-content: space-between;
     padding: 10px 0;
     border-bottom: 1px solid #ffffff15;
-    color: #c9c9c9;
-    font-size: 14px;
+    font-size: 18px;
   }
 
   .pass-row span:first-child {
-    color: #ff6b1a;
     font-weight: 600;
   }
 
-  .join-btn {
+  .entry-join-btn {
     display: block;
     margin-top: 15px;
   }
