@@ -5169,62 +5169,33 @@ section.exp-cat-sec p {
 .entry-passes-table {
   display: grid;
   grid-template-columns: 1.2fr repeat(4, 1fr);
+  padding: 0 46px;
+}
+.entry-passes-row > .entry-passes-cell {
+  padding-top: 25px;
+  padding-bottom: 25px;
 }
 
 .entry-passes-row {
   display: contents;
+  padding: 25px 0;
 }
 
 .entry-passes-cell {
-  padding: 20px 25px;
-  border-bottom: 1px solid #ffffff15;
-  color: #c9c9c9;
-  font-size: 15px;
+  border-bottom: 1px solid #ffffff26;
+  font-size: 18px;
 }
 
 .entry-passes-cell.label {
-  color: #ff6b1a;
-  font-weight: 600;
-  font-size: 16px;
+  font-size: 24px;
 }
 
 .entry-passes-cell h4 {
-  color: #e8e8e8;
-  font-size: 16px;
-  margin-bottom: 8px;
-  font-weight: 500;
+  font-size: 18px;
+  margin-bottom: 13px;
+  font-weight: 400;
 }
 
-.benefits-toggle {
-  color: #ff5c1a;
-  font-size: 13px;
-  font-weight: 600;
-  cursor: pointer;
-  display: flex;
-  align-items: center;
-  gap: 3px;
-}
-
-.benefits-list {
-  list-style: none;
-  padding: 0;
-  margin-top: 8px;
-  display: none;
-}
-
-.benefits-toggle.active + .benefits-list {
-  display: block;
-}
-
-.benefits-list li {
-  font-size: 13px;
-  color: #999;
-  margin-bottom: 4px;
-}
-
-.benefits-list li strong {
-  color: #fff;
-}
 
 .entry-passes-btns .entry-passes-cell {
   border-bottom: none;
