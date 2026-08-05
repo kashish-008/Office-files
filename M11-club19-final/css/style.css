@@ -5251,7 +5251,7 @@ section.exp-cat-sec p {
   }
 }
 
-@media (max-width: 767px) {
+/* @media (max-width: 767px) {
   .entry-passes-table {
     display: none;
   }
@@ -5288,5 +5288,95 @@ section.exp-cat-sec p {
   .entry-join-btn {
     display: block;
     margin-top: 15px;
+  }
+} */
+
+@media (max-width: 767px) {
+  .entry-passes-table {
+    display: none;
+  }
+
+  .entry-passes-mobile {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 6px;
+    padding: 6px;
+  }
+
+  .pass-card {
+    margin: 0;
+    padding: 16px 12px;
+    border-radius: 8px;
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    background: linear-gradient(180deg, #1f1f1f, #111);
+    text-align: center;
+  }
+
+  .pass-card h4 {
+    font-size: 16px;
+    margin-bottom: 2px;
+    font-weight: 600;
+    text-align: left;
+  }
+
+  .pass-card .package-benefits {
+    margin-bottom: 0px;
+    text-align: left;
+  }
+
+  .pass-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 5px 0;
+    font-size: 13px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+  }
+
+  .pass-row:last-of-type {
+    margin-bottom: 0px;
+  }
+
+  .entry-join-btn {
+    width: 100%;
+    padding: 7px;
+    margin-top: 14px;
+    font-size: 13px;
+    text-align: center;
+  }
+  .entry-passes-top img {
+    max-width: 200px;
+  }
+  .entry-passes-top {
+    padding: 3px 0;
+  }
+  .pass-card .benefits-title {
+    font-size: 13px;
+  }
+  .pass-card .benefits-list li {
+    font-size: 11px;
+  }
+  .pass-card .benefits-list {
+    gap: 2px;
+  }
+  .pass-row span:nth-child(1) {
+    text-align: left;
+  }
+
+  .pass-row {
+    align-items: start;
+    font-size: 12px;
+  }
+  .pass-card {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .pass-row:last-of-type {
+    margin-bottom: 10px;
+  }
+
+  .entry-join-btn {
+    margin-top: auto;
   }
 }
