@@ -5161,7 +5161,6 @@ section.exp-cat-sec p {
   border-radius: 15px;
   border: 2px solid #fdab4d30;
   background: #000000ba;
-  padding-bottom: 20px;
 }
 
 .entry-passes-top {
@@ -5180,6 +5179,8 @@ section.exp-cat-sec p {
 .entry-passes-row > .entry-passes-cell {
   padding-top: 25px;
   padding-bottom: 25px;
+  padding-left: 24px;
+  padding-right: 10px;
 }
 
 .entry-passes-row {
@@ -5194,6 +5195,10 @@ section.exp-cat-sec p {
 
 .entry-passes-row > .entry-passes-cell:last-child {
   border-right: none;
+}
+
+.entry-passes-row > .entry-passes-cell:first-child {
+  padding-left: 0;
 }
 
 .entry-passes-cell.label {
@@ -5214,6 +5219,36 @@ section.exp-cat-sec p {
 /* mobile cards */
 .entry-passes-mobile {
   display: none;
+}
+
+@media (max-width: 991px) {
+  .entry-join-btn {
+    font-size: 14px;
+    text-align: center;
+    padding: 10px 13px;
+  }
+
+  .entry-passes-table {
+    padding: 0px 15px;
+  }
+  .entry-passes-cell.label {
+    font-size: 22px;
+  }
+
+  .entry-passes-cell h4 {
+    font-size: 16px;
+    margin-bottom: 5px;
+  }
+
+  .entry-passes-row > .entry-passes-cell {
+    padding-top: 20px;
+    padding-bottom: 20px;
+    padding-left: 10px;
+  }
+
+  .entry-passes-cell {
+    font-size: 16px;
+  }
 }
 
 @media (max-width: 767px) {
