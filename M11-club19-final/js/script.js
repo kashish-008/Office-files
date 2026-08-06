@@ -1,6 +1,7 @@
 jQuery(document).ready(function ($) {
   if ($(".give-timer").length) {
     const targetDate = new Date($(".give-timer").data("countdown")).getTime();
+    let timer = null;
 
     function updateTimer() {
       const now = new Date().getTime();
@@ -11,7 +12,9 @@ jQuery(document).ready(function ($) {
         $(".hours").text("00h");
         $(".mins").text("00m");
         $(".sec").text("00s");
-        clearInterval(timer);
+        if (timer) {
+          clearInterval(timer);
+        }
         return;
       }
 
@@ -29,7 +32,7 @@ jQuery(document).ready(function ($) {
     }
 
     updateTimer();
-    const timer = setInterval(updateTimer, 1000);
+    timer = setInterval(updateTimer, 1000);
   }
   if ($(".time-grid").length) {
     $(".time-grid").each(function () {
@@ -65,35 +68,46 @@ jQuery(document).ready(function ($) {
 
   $(".counter").each(function () {
     const $counter = $(this);
+    const target = parseInt($counter.attr("data-count"), 10) || 0;
 
-    const observer = new IntersectionObserver(
-      function (entries) {
-        entries.forEach(function (entry) {
-          if (entry.isIntersecting && !$counter.hasClass("counted")) {
-            $counter.addClass("counted");
+    function runCounter() {
+      if ($counter.hasClass("counted")) return;
 
-            $({ countNum: 0 }).animate(
-              { countNum: $counter.data("count") },
-              {
-                duration: 2000,
-                easing: "swing",
-                step: function () {
-                  $counter.text(Math.floor(this.countNum));
-                },
-                complete: function () {
-                  $counter.text($counter.data("count"));
-                },
-              },
-            );
+      $counter.addClass("counted");
 
-            observer.unobserve(entry.target);
-          }
-        });
-      },
-      { threshold: 0.3 },
-    );
+      $({ countNum: 0 }).animate(
+        { countNum: target },
+        {
+          duration: 2000,
+          easing: "swing",
+          step: function () {
+            $counter.text(Math.floor(this.countNum));
+          },
+          complete: function () {
+            $counter.text(target);
+          },
+        },
+      );
+    }
 
-    observer.observe(this);
+    if ("IntersectionObserver" in window) {
+      const observer = new IntersectionObserver(
+        function (entries) {
+          entries.forEach(function (entry) {
+            if (entry.isIntersecting) {
+              runCounter();
+              observer.unobserve(entry.target);
+            }
+          });
+        },
+        { threshold: 0.1 },
+      );
+
+      observer.observe(this);
+    } else {
+      // Fallback for older browsers where IntersectionObserver is not available.
+      runCounter();
+    }
   });
 
   // winner-slider

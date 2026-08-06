@@ -1253,12 +1253,11 @@ h6 {
 }
 
 @keyframes flowLeft {
-  from {
-    transform: translateX(100%);
+  0% {
+    transform: translate3d(100vw, 0, 0);
   }
-
-  to {
-    transform: translateX(-100%);
+  100% {
+    transform: translate3d(-100%, 0, 0);
   }
 }
 
@@ -1270,14 +1269,14 @@ h6 {
 }
 
 @keyframes flowRight {
-  from {
-    transform: translateX(-100%);
+  0% {
+    transform: translate3d(-100%, 0, 0);
   }
-
-  to {
-    transform: translateX(100%);
+  100% {
+    transform: translate3d(100vw, 0, 0);
   }
 }
+
 
 .footer-bottom-inner p,
 .faq-answer p {
@@ -5161,6 +5160,8 @@ section.exp-cat-sec p {
   border-radius: 15px;
   border: 2px solid #fdab4d30;
   background: #000000ba;
+  position: relative;
+    z-index: 9;
 }
 
 .entry-passes-top {
@@ -5379,4 +5380,11 @@ section.exp-cat-sec p {
   .entry-join-btn {
     margin-top: auto;
   }
+}
+
+span.counter.counted {
+  font-variant-numeric: tabular-nums;
+  display: inline-block;
+  max-width: 146px;
+  text-align: left;
 }
