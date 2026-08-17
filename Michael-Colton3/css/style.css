@@ -48,6 +48,10 @@ body {
   overflow-x: hidden;
 }
 
+body.popup-scroll-lock {
+  overflow: hidden;
+}
+
 input:focus-visible,
 textarea:focus-visible,
 select:focus {
@@ -2797,15 +2801,79 @@ input[type="number"] {
   display: flex;
 }
 
-.testimony-modal-box {
+/* .testimony-modal-box {
   background: #fff;
   border-radius: 20px;
-  padding: 44px 48px;
-  max-width: 570px;
+  padding: 46px 50px;
   width: 100%;
   max-height: 90vh;
   overflow-y: auto;
   position: relative;
+} */
+.testimony-modal-box {
+  background: #fff;
+  border-radius: 20px;
+  max-width: 918px;
+  width: 100%;
+  max-height: 90vh;
+  position: relative;
+  overflow: hidden;
+}
+
+.testimony-modal-close {
+  position: absolute;
+  top: 22px;
+  right: 26px;
+  font-size: 22px;
+  line-height: 1;
+  cursor: pointer;
+  color: #000;
+}
+
+.testimony-modal-hd h5 {
+  margin-bottom: 15px;
+}
+
+.testimony-modal-hd p {
+  max-width: 706px;
+  font-family: var(--fustat-font);
+  font-size: var(--size-22);
+  font-weight: 600;
+  color: #000;
+  margin-bottom: 40px;
+}
+
+.testimony-row {
+  display: flex;
+  gap: 20px;
+}
+
+.testimony-row .conttext {
+  flex: 1;
+}
+.testimony-modal-inner {
+  padding: 44px 48px;
+  max-height: 90vh;
+  overflow-y: auto;
+  scrollbar-width: thin;
+  scrollbar-color: var(--brown) #f0f0f0;
+}
+
+.testimony-modal-inner::-webkit-scrollbar {
+  width: 6px;
+}
+
+.testimony-modal-inner::-webkit-scrollbar-track {
+  background: #f0f0f0;
+}
+
+.testimony-modal-inner::-webkit-scrollbar-thumb {
+  background: var(--brown);
+  border-radius: 10px;
+}
+
+.testimony-modal-inner::-webkit-scrollbar-thumb:hover {
+  background: var(--dark);
 }
 
 .testimony-modal-close {
@@ -2816,26 +2884,7 @@ input[type="number"] {
   line-height: 1;
   cursor: pointer;
   color: #000;
-}
-
-.testimony-modal-hd h5 {
-  margin-bottom: 14px;
-}
-
-.testimony-modal-hd p {
-  font-family: var(--fustat-font);
-  font-size: 16px;
-  color: var(--grey);
-  margin-bottom: 30px;
-}
-
-.testimony-row {
-  display: flex;
-  gap: 20px;
-}
-
-.testimony-row .conttext {
-  flex: 1;
+  z-index: 2;
 }
 
 @media (max-width: 1599px) {
@@ -2876,4 +2925,14 @@ input[type="number"] {
     flex-wrap: wrap;
     gap: 10px;
   }
+  .testimony-modal-inner {
+    padding: 22px;
+  }
+  .testimony-modal-hd h5{
+    margin-bottom: 8px;
+  }
+  .testimony-row{
+    flex-wrap: wrap;
+  }
+
 }

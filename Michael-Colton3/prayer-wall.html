@@ -15,6 +15,10 @@
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
     />
+    <link
+      href="https://cdn.jsdelivr.net/npm/remixicon@4.9.0/fonts/remixicon.css"
+      rel="stylesheet"
+    />
     <!-- AOS CSS -->
     <!-- <link rel="stylesheet" href="https://unpkg.com/aos@2.3.4/dist/aos.css" /> -->
     <!-- Slick CSS -->
@@ -265,43 +269,49 @@
         <div class="testimony-modal-overlay" id="testimonyModal">
           <div class="testimony-modal-box">
             <button class="testimony-modal-close" id="testimonyModalClose">
-              &times;
+              <i class="ri-close-large-line"></i>
             </button>
 
-            <div class="testimony-modal-hd">
-              <h5>Share How God Answered</h5>
-              <p>
-                Has God answered your prayer? We would be honored to hear your
-                testimony and celebrate what God has done in your life. Enter
-                the email address associated with your original prayer request
-                to share your story with us.
-              </p>
+            <div class="testimony-modal-inner" data-lenis-prevent>
+              <div class="testimony-modal-hd">
+                <h5>Share How God Answered</h5>
+                <p>
+                  Has God answered your prayer? We would be honored to hear your
+                  testimony and celebrate what God has done in your life. Enter
+                  the email address associated with your original prayer request
+                  to share your story with us.
+                </p>
+              </div>
+
+              <form id="testimonyForm">
+                <div class="testimony-row">
+                  <div class="conttext">
+                    <label>Your Name</label>
+                    <input type="text" placeholder="Your Name" required />
+                  </div>
+                  <div class="conttext">
+                    <label>Email Address*</label>
+                    <input
+                      type="email"
+                      placeholder="Email Address *"
+                      required
+                    />
+                  </div>
+                </div>
+
+                <div class="conttext">
+                  <label>Your Testimony *</label>
+                  <textarea
+                    placeholder="Share how God answered this prayer..."
+                    required
+                  ></textarea>
+                </div>
+
+                <div class="subbtncnt">
+                  <button class="cta" type="submit">Submit Testimony</button>
+                </div>
+              </form>
             </div>
-
-            <form id="testimonyForm">
-              <div class="testimony-row">
-                <div class="conttext">
-                  <label>Your Name</label>
-                  <input type="text" placeholder="Your Name" required />
-                </div>
-                <div class="conttext">
-                  <label>Email Address*</label>
-                  <input type="email" placeholder="Email Address *" required />
-                </div>
-              </div>
-
-              <div class="conttext">
-                <label>Your Testimony *</label>
-                <textarea
-                  placeholder="Share how God answered this prayer..."
-                  required
-                ></textarea>
-              </div>
-
-              <div class="subbtncnt">
-                <button class="cta" type="submit">Submit Testimony</button>
-              </div>
-            </form>
           </div>
         </div>
       </div>
@@ -420,12 +430,40 @@
         const closeBtn = document.getElementById("testimonyModalClose");
         const form = document.getElementById("testimonyForm");
 
+        function setScrollLock(isLocked) {
+          document.body.classList.toggle("popup-scroll-lock", isLocked);
+
+          if (window.lenis) {
+            if (isLocked) {
+              window.lenis.stop();
+            } else {
+              window.lenis.start();
+            }
+          }
+        }
+
         openBtn.addEventListener("click", function () {
           modal.classList.add("active");
+          setScrollLock(true);
         });
 
         closeBtn.addEventListener("click", function () {
           modal.classList.remove("active");
+          setScrollLock(false);
+        });
+
+        modal.addEventListener("click", function (event) {
+          if (event.target === modal) {
+            modal.classList.remove("active");
+            setScrollLock(false);
+          }
+        });
+
+        document.addEventListener("keydown", function (event) {
+          if (event.key === "Escape" && modal.classList.contains("active")) {
+            modal.classList.remove("active");
+            setScrollLock(false);
+          }
         });
 
         form.addEventListener("submit", function (e) {
