@@ -2651,3 +2651,8 @@ input[type="number"] {
 .faq-quote {
   padding-top: 104px !important;
 }
+
+/* =====Kashish==== */
+.prayer-wall .raise-cnnt {
+    max-width: 491px;
+}
