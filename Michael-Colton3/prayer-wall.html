@@ -164,7 +164,7 @@
     </section>
 
     <section
-      class=" submit-prayer-sec pt-80 pb-140 dark sec-with-bg attach-fixed"
+      class="submit-prayer-sec pt-80 pb-140 dark sec-with-bg attach-fixed"
       style="background-image: url(img/raising-bg.png)"
     >
       <div class="container">
@@ -240,6 +240,70 @@
             <button class="cta">Submit Prayer Request</button>
           </div>
         </form>
+      </div>
+    </section>
+
+    <section class="recent-prayer-sec pt-120 pb-140">
+      <div class="container">
+        <h3>RECENT PRAYER REQUESTS</h3>
+
+        <div class="prayer-card">
+          <h6>Lisa</h6>
+          <span class="prayer-date gradient-text">June 20, 2026</span>
+          <p>
+            I'm having a difficult time right now. Please keep me in your
+            prayers.
+          </p>
+
+          <div class="prayer-card-btm">
+            <button class="cta">Prayed for this (3)</button>
+            <button class="prayer-outline-btn cta">Did God Answer?</button>
+          </div>
+        </div>
+
+        <!-- pop -->
+        <div class="testimony-modal-overlay" id="testimonyModal">
+          <div class="testimony-modal-box">
+            <button class="testimony-modal-close" id="testimonyModalClose">
+              &times;
+            </button>
+
+            <div class="testimony-modal-hd">
+              <h5>Share How God Answered</h5>
+              <p>
+                Has God answered your prayer? We would be honored to hear your
+                testimony and celebrate what God has done in your life. Enter
+                the email address associated with your original prayer request
+                to share your story with us.
+              </p>
+            </div>
+
+            <form id="testimonyForm">
+              <div class="testimony-row">
+                <div class="conttext">
+                  <label>Your Name</label>
+                  <input type="text" placeholder="Your Name" required />
+                </div>
+                <div class="conttext">
+                  <label>Email Address*</label>
+                  <input type="email" placeholder="Email Address *" required />
+                </div>
+              </div>
+
+              <div class="conttext">
+                <label>Your Testimony *</label>
+                <textarea
+                  placeholder="Share how God answered this prayer..."
+                  required
+                ></textarea>
+              </div>
+
+              <div class="subbtncnt">
+                <button class="cta" type="submit">Submit Testimony</button>
+              </div>
+            </form>
+          </div>
+        </div>
       </div>
     </section>
 
@@ -349,6 +413,26 @@
 
     <!-- Custom JS -->
     <script src="js/script.js"></script>
+    <script>
+      (function () {
+        const openBtn = document.querySelector(".prayer-outline-btn");
+        const modal = document.getElementById("testimonyModal");
+        const closeBtn = document.getElementById("testimonyModalClose");
+        const form = document.getElementById("testimonyForm");
+
+        openBtn.addEventListener("click", function () {
+          modal.classList.add("active");
+        });
+
+        closeBtn.addEventListener("click", function () {
+          modal.classList.remove("active");
+        });
+
+        form.addEventListener("submit", function (e) {
+          e.preventDefault();
+        });
+      })();
+    </script>
 
     <!-- <script>
         $(function () {
