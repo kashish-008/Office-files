@@ -1,0 +1,3209 @@
+@media (min-width: 1600px) {
+  .container {
+    max-width: 1470px;
+  }
+
+  .mt-163 {
+    margin-top: 155px;
+  }
+
+  .subbtncnt button {
+    padding: 23px 57px;
+    line-height: 1;
+  }
+}
+
+@media(min-width:1800px) and (max-width:1900px) {
+  .container-fluid {
+    padding: 0 30px;
+  }
+}
+
+@media(max-width:1800px) and (min-width:1600px) {
+  :root {
+    --size-22: 18px;
+    --size-38: 33px;
+  }
+
+  .header2 .menu-right .navbar-nav {
+    gap: 23px;
+  }
+
+  .header2 .navbar-brand img {
+    min-width: 300px;
+    width: 300px;
+  }
+
+  .mt-163 {
+    margin-top: 133px;
+  }
+}
+
+@media(max-width:1800px) {
+  .onlintgiv-head p {
+    font-size: 25px;
+    max-width: 772px;
+    line-height: 1.4;
+  }
+
+  .gftbtnsubmit {
+    margin-top: 45px;
+    margin-bottom: 45px;
+  }
+
+  .about-bnnr-img {
+    width: 770px;
+  }
+}
+
+@media (max-width: 1699px) {
+
+  :root {
+    --size-30: 28px;
+  }
+
+  .impact-bnnr-sec .raise-cnnt h5 {
+    font-size: 32px;
+  }
+
+  .pt-125 {
+    padding-top: 85px;
+  }
+
+  .onlintgiv-head p {
+    max-width: 710px;
+    font-size: 23px;
+    margin-bottom: 20px;
+  }
+
+  .gftbtnsubmit {
+    margin-top: 38px;
+    margin-bottom: 38px;
+  }
+
+  .about-bnnr-img {
+    width: 680px;
+  }
+
+  .newsletter-sec {
+    padding-block: 240px;
+  }
+
+  .authr-about-story p:not(:last-child) {
+    margin-bottom: 20px;
+  }
+}
+
+@media(max-width:1599px) and (min-width:1500px) {
+  :root {
+    --size-38: 35px;
+  }
+
+  .home-bnr .m-img {
+    left: 30px;
+  }
+
+  .under-contruction-bnr.home-bnr .m-cntnt {
+    right: 50px;
+  }
+}
+
+@media (max-width: 1599px) {
+  body {
+    font-size: 18px;
+  }
+
+  :root {
+    --size-22: 18px;
+    --size-32: 23px;
+    --size-36: 23px;
+    --size-38: 30px;
+    --size-24: 20px;
+    --size-25: 20px;
+    --size-35: 22px;
+    --size-27: 20px;
+    --size-28: 20px;
+    --size-45: 38px;
+    --size-62: 49px;
+    --size-137: 100px;
+  }
+
+  h1 {
+    font-size: 100px;
+  }
+
+  h2 {
+    font-size: 70px;
+  }
+
+  h3 {
+    font-size: 47px;
+  }
+
+  h4 {
+    font-size: 32px;
+  }
+
+  h5 {
+    font-size: 26px;
+  }
+
+  .cta {
+    padding: 14px 38px;
+    font-size: 15px;
+    padding-bottom: 12px;
+  }
+
+  .ft_90 {
+    font-size: 63px;
+  }
+
+  .site-header .menu-right .hdr-social ul li a i.fa-solid.fa-music,
+  .foot-rgt .social-list-hd li a i.fa-solid.fa-music {
+    font-size: 12px;
+    padding: 5px;
+
+  }
+
+  .menu-right .hdr-social ul li:last-child a,
+  .foot-rgt .social-list-hd li:last-child a {
+    margin-top: -3px !important;
+    display: block;
+  }
+
+
+  .site-header:not(.header2) .menu-right .hdr-social ul li:last-child a {
+    margin-top: -5px !important;
+  }
+
+  .mt-163 {
+    margin-top: 118px;
+  }
+
+
+
+  .pb-224 {
+    padding-bottom: 150px;
+  }
+
+  .pt-125 {
+    padding-top: 65px;
+  }
+
+  .pt-224 {
+    padding-top: 150px;
+  }
+
+  .home-bnr {
+    height: unset;
+  }
+
+  .header2 .menu-right .navbar-nav {
+    gap: 20px;
+  }
+
+  .site-header.header2 .nav-link {
+    font-size: calc(var(--size-22) - 3px);
+  }
+
+  .site-header .navbar-brand img {
+    width: 270px;
+  }
+
+  .header2.active .navbar-brand img {
+    min-width: 200px;
+    width: 200px;
+  }
+
+  .menu-right .hdr-social ul li a i {
+    font-size: 25px;
+  }
+
+  .site-header .menu-right .hdr-social ul li a i {
+    font-size: 22px;
+  }
+
+  .m-img img {
+    width: 530px;
+  }
+
+  .home-bnr .m-img img {
+    width: 580px;
+  }
+
+  .home-bnr .img-social {
+    gap: 20px;
+    margin-bottom: 23px;
+    margin-top: 8px;
+  }
+
+  .m-img {
+    left: -30px;
+    position: relative;
+  }
+
+  .under-foorter p {
+    font-size: 20px;
+  }
+
+  .container-fluid {
+    padding: 0 30px;
+  }
+
+  .home-bnr .img-social img {
+    width: 100px;
+  }
+
+  .under-contruction-bnr .bnr-logo {
+    margin-bottom: 18px;
+    width: 260px;
+    margin-inline: auto;
+  }
+
+  .header2 .navbar-brand img {
+    min-width: 247px;
+    width: 247px;
+  }
+
+  .raise-cnnt {
+    max-width: 477px;
+    margin-left: 20px;
+  }
+
+  .raise-row {
+    margin-top: 30px;
+  }
+
+  .rai-crd {
+    padding: 27px;
+  }
+
+  .king-row {
+    padding: 30px;
+  }
+
+  .k-img img {
+    width: 70px;
+    height: 60px;
+    object-fit: contain;
+  }
+
+  .k-crd {
+    padding-inline: 20px;
+  }
+
+  .slick-arrow {
+    height: 65px;
+    width: 65px;
+  }
+
+  .slick-arrow img {
+    width: 20px;
+  }
+
+  .testimonials-sec {
+    padding-bottom: 360px;
+  }
+
+  .text-inn h3 {
+    font-size: 40px;
+  }
+
+  .foot-lft {
+    padding-left: 0;
+    width: 65%;
+  }
+
+  .foot-rgt {
+    width: 35%;
+  }
+
+  .foot-top {
+    padding-inline: 30px;
+  }
+
+  .foot-btm {
+    padding-top: 30px;
+    padding-bottom: 30px;
+  }
+
+
+
+  .fs-list {
+    margin-top: 44px;
+    gap: 20px;
+  }
+
+  .foot-rgt .social-list-hd {
+    padding-top: 44px !important;
+  }
+
+  .foot-top {
+    padding-top: 83px;
+    padding-bottom: 65px;
+  }
+
+  .foot-rgt .social-list-hd li a i {
+    font-size: 23px;
+  }
+
+  .brdr-top {
+    height: 0.5px;
+    width: 95%;
+  }
+
+  .text-inn {
+    max-width: 800px;
+  }
+
+  /* impact */
+
+
+  .impact-para {
+    max-width: 588px;
+  }
+
+  .impact-bnnr-sec .raise-cnnt {
+    max-width: 450px;
+  }
+
+  .mission-txt .mission-para {
+    max-width: 560px;
+  }
+
+  .text-sec.impact-sec .text-inn {
+    max-width: 696px;
+  }
+
+  .hme-raising h2 {
+    padding-top: 60px;
+    padding-bottom: 50px;
+  }
+
+  .mission-txt:not(:last-child) {
+    margin-bottom: 44px;
+  }
+
+  .impact-bnnr-sec .raise-cnnt h5 {
+    font-size: 29px;
+  }
+
+  .mission-hd h3 {
+    font-size: 40px;
+  }
+
+  .cntform {
+    padding: 45px;
+  }
+
+  .conttext input,
+  .conttext textarea {
+    padding: 15px 20px;
+    font-size: 16px;
+  }
+
+  .conttext input::placeholder,
+  .conttext textarea::placeholder {
+    font-size: 16px;
+  }
+
+  .subbtncnt button {
+    padding-top: 18px;
+    font-size: 16px;
+  }
+
+  .pb-120 {
+    padding-bottom: 100px;
+  }
+
+  .cntform {
+    max-width: 800px;
+  }
+
+  .contpt-pt-pb {
+    padding: 100px 0px 100px 0px;
+  }
+
+  .cnt-head h1 {
+    padding-top: 70px;
+    padding-bottom: 70px;
+  }
+
+  .f-btm-list {
+    gap: 20px;
+  }
+
+  .all-tp-side.al-tp-cont p {
+    margin-top: 3px;
+  }
+
+  .teach-banner .teach-banner-wrapper,
+  .workship-banner .container {
+    max-width: 1000px;
+    margin-inline: auto;
+  }
+
+  .teach-play {
+    width: 80px;
+    height: 80px;
+  }
+
+  .play-icon {
+    width: 28px;
+    height: 28px;
+  }
+
+  .tech-slider-wrp .slick-arrow,
+  .libery-warrper .slick-arrow {
+    width: 60px;
+    height: 60px;
+  }
+
+  .tech-slider-wrp .slick-prev {
+    left: -8%;
+  }
+
+  .tech-slider-wrp .slick-next {
+    right: -8%;
+  }
+
+  .vid-iner-side .row> :nth-child(3) .inner-tp-con p,
+  .vid-iner-side .row> :nth-child(4) .inner-tp-con p,
+  .vid-iner-side .row> :nth-child(5) .inner-tp-con p {
+    max-width: 316px;
+  }
+
+  .social-card .image-side,
+  .social-card .image-side.video-side,
+  .x-main-con {
+    height: 205px;
+  }
+
+  .anchor-side a.cta {
+    font-size: 14px;
+  }
+
+  .teach-banner .banner-slider-wrp,
+  .workship-banner .banner-slider-wrp {
+    padding-top: 53px;
+  }
+
+  .menu-right .hdr-social ul {
+    gap: 12px;
+  }
+
+
+  /* giving css */
+  .giving-opt-elemnt.active:first-child .dropdown-form-cont {
+    padding-top: 22px;
+    margin-top: 24px;
+  }
+
+  .giving-opt-elemnt.active .dropdown-form-cont {
+    padding-top: 27px;
+    margin-top: 19px;
+  }
+
+  .giving-row {
+    margin-top: 90px;
+  }
+
+  .giving-row .raise-cnnt {
+    max-width: 501px;
+    margin-left: 40px;
+  }
+
+  .giving-opt .giving-checkbox {
+    width: 37px;
+    height: 37px;
+  }
+
+  .giving-opt-txt p {
+    max-width: 724px;
+  }
+
+  .giving-form-quote {
+    padding-top: 100px;
+  }
+
+  .giving-form-sec {
+    padding-top: 120px;
+    padding-bottom: 130px;
+  }
+
+  .giving-bnnr-sec {
+    padding-block: 120px;
+  }
+
+  .accordion-item .accordion-body {
+    max-width: 95%;
+  }
+
+  .onlintgiv-head h5 {
+    font-size: 26px;
+    margin-bottom: 4px;
+  }
+
+
+
+  .onlintgiv-head p {
+    max-width: 650px;
+    font-size: 21px;
+  }
+
+  .aftercomp p {
+    padding-top: 23px;
+  }
+
+  .amount-box h5 {
+    font-size: 30px;
+  }
+
+  .giftgroup input,
+  .othrnots textarea {
+    padding: 16px 22px;
+    font-size: 20px;
+  }
+
+  .about-bnnr-img {
+    width: 670px;
+  }
+
+  .about-bnnr {
+
+    padding-bottom: 100px;
+  }
+
+  .faq-quote {
+    padding-top: 90px !important;
+    max-width: 810px !important;
+  }
+
+  .newsletter-sec .king-innr {
+    max-width: 805px;
+  }
+
+  .bod-member {
+    padding: 28px 32px;
+  }
+
+  .bod-list {
+    gap: 24px;
+  }
+
+  .newsletter-sec {
+    padding-block: 200px;
+  }
+
+  .about-content-cont {
+    max-width: 765px;
+  }
+
+  .bod-member h6 {
+    font-size: 24px;
+  }
+
+  .about-bnnr {
+    padding-top: 60px;
+  }
+
+  .authr-about-story p {
+    font-size: 18px;
+  }
+
+  .about-quote-cont .quote h5 {
+    font-size: 19px;
+  }
+
+  .about-quote-cont .quote-info p {
+    font-size: 18px;
+    margin: 0;
+  }
+
+  .accordion-item .accordion-button {
+    font-size: calc(var(--size-30) - 4px);
+  }
+
+  .faq-sec h3 {
+    font-size: 43px;
+  }
+}
+
+@media(max-width:1499px) {
+  .impact-para {
+    max-width: 600px;
+  }
+
+  .mission-txt:not(:last-child) {
+    margin-bottom: 34px;
+  }
+
+  .mission-sec {
+    padding-top: 120px;
+    padding-bottom: 120px;
+  }
+
+  .mission-txt:not(:first-child) .mission-para {
+    max-width: 496px;
+  }
+
+  .faq-sec {
+    padding-top: 120px;
+    padding-bottom: 120px;
+  }
+
+  .giving-bnnr-sec {
+    padding-block: 100px;
+  }
+
+
+
+  .giving-opt .giving-checkbox {
+    width: 34px;
+    height: 34px;
+  }
+
+  .giving-opt-txt p {
+    line-height: 1.5;
+  }
+
+  .giving-form-quote {
+    padding-top: 80px;
+  }
+
+  .giving-form-sec {
+    padding-top: 100px;
+    padding-bottom: 100px;
+  }
+
+  .giving-opt-elemnt:not(:last-child) {
+    margin-bottom: 22px;
+  }
+
+  .onlintgiv-head h5 {
+    font-size: 23px;
+  }
+
+  .onlintgiv-head p {
+    max-width: 610px;
+    font-size: 20px;
+  }
+
+  .selctgift .row>div {
+    margin-top: 24px;
+  }
+
+  .giftgroup input,
+  .giftgroup input::placeholder,
+  .otpmsg textarea {
+    font-size: 18px;
+  }
+
+  .giftgroup {
+    margin-bottom: 24px;
+  }
+
+  .gftbtnsubmit button {
+    padding: 15px 40px;
+  }
+
+  .about-content-cont {
+    max-width: 710px;
+  }
+
+  .BOD-sec {
+    padding-top: 120px;
+    padding-bottom: 120px;
+  }
+
+  .newsletter-sec {
+    padding-block: 180px;
+  }
+
+  .authr-about-story p:not(:last-child) {
+    margin-bottom: 18px;
+  }
+
+  .faq-sec {
+    padding-top: 120px;
+    padding-bottom: 120px;
+  }
+
+  .about-quote-cont {
+    margin-bottom: 30px;
+  }
+
+  /* .faq-quote {
+        padding-top: 90px;
+    } */
+
+  .about-bnnr-img {
+    width: 645px;
+  }
+
+  .about-bnnr {
+
+    padding-bottom: 60px;
+  }
+}
+
+@media(max-width:1399px) {
+
+
+  .ft_90 {
+    font-size: 69px;
+  }
+
+  .pt-200 {
+    padding-top: 100px;
+  }
+
+  .pt-120 {
+    padding-top: 100px;
+  }
+
+  .impact-para {
+    max-width: 588px;
+  }
+
+  .impact-bnnr-sec .king-row {
+    gap: 26px;
+    padding-top: 70px;
+    padding-bottom: 60px;
+  }
+
+  .impact-bnnr-sec .king-row .k-crd {
+    padding: 30px 20px;
+  }
+
+  .impact-bnnr-sec .raise-cnnt {
+    max-width: 440px;
+  }
+
+  .mission-txt .mission-para {
+    max-width: 510px;
+  }
+
+  .mission-txt:not(:first-child) .mission-para {
+    max-width: 451px;
+  }
+
+  .mission-sec {
+    padding-top: 100px;
+    padding-bottom: 100px;
+  }
+
+  .impact-bnnr-sec .king-row {
+    padding-top: 60px;
+    padding-bottom: 50px;
+  }
+
+  .mission-txt:not(:last-child) {
+    margin-bottom: 24px;
+  }
+
+  .impact-para p {
+    line-height: 1.4;
+  }
+
+  .impact-bnnr-sec .king-row .k-crd p {
+    font-weight: 600;
+    font-size: 16px;
+  }
+
+  .cntform {
+    padding: 55px;
+  }
+
+  .x-main-con {
+    padding: 45px 30px;
+  }
+
+  .social-card .image-side,
+  .social-card .image-side.video-side,
+  .x-main-con {
+    height: 170px;
+  }
+
+  .platform-tabs button {
+    padding: 14px 30px;
+    font-size: 14px;
+  }
+
+  .play-icon img {
+    width: 73%;
+  }
+
+  .fs-list li a {
+    font-size: 16px;
+  }
+
+  .workship-banner {
+    padding-bottom: 76px;
+  }
+
+  .workship-banner .wrk-logo {
+    margin-top: 76px;
+  }
+
+  .faq-sec {
+    padding-top: 100px;
+    padding-bottom: 100px;
+  }
+
+  .faq-quote {
+    padding-top: 70px;
+  }
+
+  .giving-row {
+    margin-top: 74px;
+  }
+
+  .giving-bnnr-sec {
+    padding-block: 80px;
+  }
+
+  .giving-opt .giving-checkbox {
+    width: 30px;
+    height: 30px;
+  }
+
+  .giving-opt-elemnt .giving-checkbox::before {
+    width: 15px;
+    height: 15px;
+
+  }
+
+  .giving-opt-elemnt {
+    padding: 16px 18px;
+  }
+
+  .giving-opt-elemnt:not(:last-child) {
+    margin-bottom: 18px;
+  }
+
+  .giving-opt-txt p {
+    font-size: 18px;
+  }
+
+  .giving-form-sec {
+    padding-top: 80px;
+    padding-bottom: 80px;
+  }
+
+  .onlintgiv-head h5 {
+    font-size: 21px;
+  }
+
+  .onlintgiv-head p {
+    max-width: 550px;
+    font-size: 18px;
+  }
+
+  .donfrq {
+    margin-top: 30px;
+    margin-bottom: 12px;
+  }
+
+  .giftform h6 {
+    margin-bottom: 14px;
+  }
+
+
+  .giftgroup input,
+  .giftgroup input::placeholder,
+  .othrnots textarea {
+    font-size: 16px;
+  }
+
+  .giftgroup {
+    margin-bottom: 18px;
+  }
+
+  .giftgroup input,
+  .otpmsg textarea {
+    padding: 14px 16px;
+  }
+
+  .textbank,
+  .paymntmthd p,
+  .aftercomp p {
+    font-size: 20px;
+    line-height: 1.3;
+  }
+
+  .paymentoption {
+    padding: 16px;
+  }
+
+  .customradio {
+    width: 29px;
+    height: 29px;
+  }
+
+  .otpmsg textarea {
+    padding: 18px;
+  }
+
+  .gftbtnsubmit button {
+    padding: 15px 36px;
+  }
+
+  .gftbtnsubmit button {
+    font-size: 16px;
+
+  }
+
+  .gftbtnsubmit {
+    margin-top: 30px;
+    margin-bottom: 30px;
+  }
+
+  .about-bnnr-img {
+    width: 620px;
+  }
+
+  .about-content-cont {
+    max-width: 590px;
+  }
+
+  .about-bnnr {
+
+    padding-bottom: 60px;
+  }
+
+  .faq-sec {
+    padding-top: 100px;
+    padding-bottom: 100px;
+  }
+
+  .faq-quote {
+    padding-top: 70px !important;
+  }
+
+  .BOD-sec {
+    padding-top: 100px;
+    padding-bottom: 100px;
+  }
+
+  .bod-member {
+    padding: 26px;
+  }
+
+  .newsletter-sec {
+    padding-block: 140px;
+  }
+
+  .newsletter-sec .king-innr .r-btn {
+    margin-top: 30px;
+  }
+
+
+  .about-quote-cont {
+    margin-bottom: 20px;
+  }
+
+  .header2 .navbar-brand img {
+    min-width: 217px;
+    width: 217px;
+  }
+
+  .header2 .navbar {
+    padding-bottom: 0;
+  }
+
+  .site-header {
+    padding-block: 16px;
+  }
+
+  .about-quote-cont .quote h5 {
+    font-size: 20px;
+  }
+
+  .bod-member p {
+    font-size: 20px;
+  }
+
+  .bod-member h6 {
+    font-size: 23px;
+  }
+}
+
+@media (max-width: 1300px) {
+  :root {
+    --size-137: 100px;
+    --size-38: 27px;
+  }
+
+  .under-contruction-bnr .bnr-logo img {
+    width: 310px;
+  }
+
+  .fs-list {
+    flex-wrap: wrap;
+  }
+
+  .menu-right .navbar-nav {
+    gap: 50px;
+  }
+
+  .m-img img {
+    width: 530px;
+  }
+
+  .m-img {
+    left: 0;
+  }
+
+  .site-header.header2 .nav-link {
+    font-size: calc(var(--size-22) - 5px);
+  }
+
+  .site-header .menu-right .hdr-social ul li a i.fa-solid.fa-music {
+    font-size: 9px;
+  }
+}
+
+@media(max-width:1220px) and (min-width:1200px) {
+  .header2 .menu-right .navbar-nav {
+    gap: 13px;
+  }
+
+  .header2 .container-fluid {
+    padding: 0 20px;
+  }
+}
+
+@media (max-width: 1199px) {
+  :root {
+    --size-137: 90px;
+    --size-27: 16px;
+    --size-32: 20px;
+    --size-25: 17px;
+    --size-45: 32px;
+    --size-35: 20px;
+    --size-22: 16px;
+    --size-23: 16px;
+    --size-38: 23px;
+    --size-30: 18px;
+    --size-28: 18px;
+
+  }
+
+  h2 {
+    font-size: 60px;
+  }
+
+  .text-inn h3 {
+    font-size: 35px;
+  }
+
+  h4 {
+    font-size: 29px;
+  }
+
+  .pt-90 {
+    padding-top: 60px;
+  }
+
+  .pb-224 {
+    padding-bottom: 100px;
+  }
+
+  .pt-224 {
+    padding-top: 100px;
+  }
+
+  h1 {
+    font-size: 80px;
+  }
+
+  h3 {
+    font-size: 38px;
+  }
+
+  .mt-163 {
+    margin-top: 84px;
+  }
+
+  .container-fluid {
+    padding: 0 15px;
+  }
+
+  .header2 .menu-right .navbar-nav {
+    gap: 15px;
+  }
+
+  .under-contruction-bnr .m-cntnt {
+    padding-top: 50px;
+    padding-bottom: 50px;
+
+    max-width: 500px;
+  }
+
+  .menu-right .hdr-social ul li a i {
+    font-size: 19px;
+  }
+
+  .under-contruction-bnr .bnr-logo img {
+    width: 280px;
+  }
+
+  .m-img img {
+    width: 450px;
+  }
+
+  .under-foorter p {
+    padding-block: 40px;
+  }
+
+  .site-header .navbar-brand img {
+    width: 210px;
+  }
+
+  .header2 .navbar-brand img {
+    min-width: 127px;
+    width: 127px;
+  }
+
+  .menu-right .hdr-social ul {
+    gap: 13px;
+  }
+
+  .site-header .menu-right .hdr-social ul li a i {
+    font-size: 18px;
+  }
+
+  .header2.active .navbar-brand img {
+    min-width: 110px;
+    width: 110px;
+  }
+
+  .home-bnr .m-img img {
+    width: 480px;
+  }
+
+  .home-bnr .img-social img {
+    width: 94px;
+  }
+
+  .home-bnr .m-cntnt {
+    right: 40px;
+  }
+
+  .under-contruction-bnr.home-bnr .bnr-logo img {
+    width: 260px;
+  }
+
+  .rai-crd {
+    padding: 20px;
+  }
+
+  .pb-120 {
+    padding-bottom: 80px;
+  }
+
+  .k-img img {
+    width: 60px;
+    height: 50px;
+  }
+
+  .test-slide p,
+  .test-slide span {
+    max-width: 510px;
+  }
+
+  .fs-list {
+    flex-wrap: wrap;
+
+  }
+
+  .foot-rgt .social-list-hd {
+    padding-top: 40px !important;
+  }
+
+  .fs-list {
+
+    gap: 2px 10px;
+  }
+
+  .fs-list li a {
+    font-size: 13px;
+  }
+
+  /* impact */
+
+  .impact-para {
+    max-width: 500px;
+  }
+
+  .impact-bnnr-sec .raise-cnnt h5 {
+    font-size: 26px;
+  }
+
+  .impact-bnnr-sec .king-row {
+    gap: 18px;
+  }
+
+  .impact-bnnr-sec .king-row .k-crd {
+    padding: 24px 18px;
+  }
+
+  .mission-txt:not(:first-child) .mission-para {
+    max-width: 402px;
+  }
+
+  .mission-txt .mission-para p:not(:last-child) {
+    margin-bottom: 22px;
+  }
+
+  .impact-bnnr-sec .raise-cnnt {
+    max-width: 385px;
+    margin-left: 30px;
+  }
+
+
+  .mission-sec {
+    padding-top: 80px;
+    padding-bottom: 80px;
+  }
+
+  .pb-140 {
+    padding-bottom: 70px;
+  }
+
+  .mission-hd h3 {
+    font-size: 33px;
+  }
+
+  .foo-img img {
+    width: 290px;
+  }
+
+  .hme-raising h2 {
+    padding-top: 40px;
+    padding-bottom: 35px;
+  }
+
+  .teach-play {
+    width: 70px;
+    height: 70px;
+  }
+
+  .play-icon img {
+    width: 70%;
+  }
+
+  .teach-banner .teach-banner-wrapper,
+  .workship-banner .container {
+    max-width: 80%;
+    margin-inline: auto;
+  }
+
+  .teach-banner .banner-slider-wrp,
+  .workship-banner .banner-slider-wrp {
+    padding-top: 34px;
+  }
+
+  .pt-200 {
+    padding-top: 80px;
+  }
+
+  .ft_90 {
+    font-size: 63px;
+  }
+
+  .tech-slider-wrp .slick-arrow,
+  .libery-warrper .slick-arrow {
+    width: 50px;
+    height: 50px;
+  }
+
+  .all-card {
+    padding: 15px;
+    border-radius: 15px;
+  }
+
+  .image-side {
+    border-radius: 12px;
+  }
+
+  .content-side {
+    padding: 0 5px 5px;
+  }
+
+  .x-main-con {
+    padding: 30px;
+  }
+
+  .v-wrap-top {
+    padding-top: 66px;
+    padding-bottom: 68px;
+  }
+
+  .social-grid {
+    gap: 15px;
+  }
+
+  .anchor-side a.cta {
+    padding: 12px 28px;
+  }
+
+  .inner-tp-con p {
+
+    font-size: 16px;
+
+  }
+
+  .social-iner img {
+    width: 17px;
+  }
+
+  .video-sec-wrapper h3 {
+    padding-left: 15px;
+  }
+
+  .workship-banner {
+    padding-bottom: 60px;
+  }
+
+  .workship-banner .wrk-logo {
+    margin-top: 60px;
+  }
+
+  /* giving */
+
+  .faq-sec {
+    padding-top: 80px;
+    padding-bottom: 80px;
+  }
+
+  .faq-quote {
+    padding-top: 50px;
+  }
+
+  .giving-row .raise-cnnt {
+    max-width: 360px;
+    margin-left: 24px;
+
+  }
+
+  .giving-opt {
+    gap: 12px;
+  }
+
+  .giving-opt-elemnt:not(:last-child) {
+    margin-bottom: 14px;
+  }
+
+  .giving-opt .giving-checkbox {
+    width: 26px;
+    height: 26px;
+  }
+
+  .giving-opt-txt p {
+    font-size: 16px;
+    line-height: 1.4;
+  }
+
+  .giving-opt-txt p {
+    max-width: 524px;
+  }
+
+  .giving-form-quote {
+    padding-top: 70px;
+  }
+
+  .giving-form-sec {
+    padding-top: 60px;
+    padding-bottom: 60px;
+  }
+
+  .innerpaycontent {
+    padding-inline: 20px;
+  }
+
+
+  .onlintgiv-head h5 {
+    font-size: 20px;
+  }
+
+  .onlintgiv-head p {
+    max-width: 490px;
+    font-size: 16px;
+    margin-bottom: 14px;
+  }
+
+  .amount-box {
+    padding: 24px 26px;
+    border-radius: 14px;
+  }
+
+  .selctgift .row {
+    margin-block: unset;
+  }
+
+  .selctgift .row>div {
+    margin-top: 16px;
+    padding-inline: 8px;
+  }
+
+  .amount-box h5 {
+    font-size: 23px;
+  }
+
+  .btnsgiv button {
+    padding: 14px;
+  }
+
+  .donreq p {
+    font-size: 18px;
+  }
+
+  .giftgroup,
+  .giftgroup::before,
+  .paymentoption,
+  .paymentoption::before,
+  .textarea-wrap,
+  .textarea-wrap::before,
+  .btnsgiv,
+  .btnsgiv::before {
+    border-radius: 12px;
+  }
+
+  .textbank,
+  .paymntmthd p,
+  .aftercomp p {
+    font-size: 18px;
+  }
+
+  .customradio {
+    width: 26px;
+    height: 26px;
+  }
+
+
+  .about-bnnr-img {
+    width: 480px;
+  }
+
+  .about-content-cont {
+    max-width: 530px;
+  }
+
+  .about-bnnr {
+
+    padding-bottom: 60px;
+  }
+
+  .about-quote-cont {
+    margin-bottom: 16px;
+  }
+
+  .authr-about-story p:not(:last-child) {
+    margin-bottom: 12px;
+  }
+
+  .faq-sec {
+    padding-top: 80px;
+    padding-bottom: 80px;
+  }
+
+  .faq-quote {
+    padding-top: 50px !important;
+    max-width: 630px !important;
+  }
+
+  .bod-list {
+    gap: 20px;
+  }
+
+  .newsletter-sec {
+    padding-block: 120px;
+  }
+
+  .newsletter-sec .king-innr {
+    max-width: 700px;
+  }
+
+  .about-quote-cont .quote h5 {
+    font-size: 18px;
+    margin-bottom: 4px;
+
+  }
+
+  .bod-member p {
+    font-size: 16px;
+    line-height: 1.3;
+  }
+
+  .bod-member h6 {
+    font-size: 20px;
+  }
+
+  .bod-member {
+    padding: 20px;
+  }
+
+  .authr-about-story p {
+    font-size: 16px;
+  }
+
+  .about-bnnr {
+    padding-top: 50px;
+  }
+
+  .accordion-item .accordion-button {
+    font-size: var(--size-30);
+  }
+
+  .faq-sec h3 {
+    font-size: 34px;
+  }
+}
+
+@media (max-width: 991px) {
+  body {
+    font-size: 16px;
+  }
+
+  :root {
+    --size-36: 24px;
+    --size-38: 25px;
+    --size-137: 70px;
+    --size-28: 18px;
+    --size-23: 14px;
+    --size-27: 16px;
+    --size-45: 36px;
+    --size-30: 22px;
+    --size-32: 24px;
+  }
+
+  h1 {
+    font-size: 65px;
+  }
+
+  h2 {
+    font-size: 55px;
+  }
+
+  h3 {
+    font-size: 34px;
+  }
+
+  .pt-120 {
+    padding-top: 80px;
+  }
+
+  .pt-200 {
+    padding-top: 80px;
+  }
+
+  .ft_90 {
+    font-size: 50px;
+  }
+
+  .mission-hd h3 {
+    font-size: 30px;
+  }
+
+  .navbar-toggler {
+    padding: 0;
+  }
+
+  .navbar-toggler:focus {
+    box-shadow: unset;
+  }
+
+  .bar {
+    display: block;
+    height: 2px;
+    background-color: #000;
+    width: 25px;
+    margin-bottom: 4px;
+  }
+
+  .menu-right .navbar-nav {
+    gap: 10px;
+    margin-bottom: 30px;
+  }
+
+  .header2 .navbar-brand img {
+    min-width: 147px;
+    width: 147px;
+  }
+
+  .libery-warrper .slick-prev {
+    left: -16%;
+  }
+
+  .libery-warrper .slick-next {
+    right: -16%;
+  }
+
+  .libery-warrper iframe {
+    height: 270px;
+  }
+
+  .menu-right {
+    position: absolute;
+    top: 100%;
+    z-index: 9;
+    background-color: #fff;
+    width: 100%;
+    left: 0;
+    right: 0;
+    padding: 40px;
+    height: 100vh;
+  }
+
+  .foot-rgt h5 {
+    justify-content: start;
+  }
+
+  .container-fluid {
+    padding: 0 15px;
+  }
+
+  .m-img img {
+    width: 330px;
+  }
+
+  .bar3 {
+    margin: 0;
+  }
+
+  .site-header .container-fluid {
+    padding: 0;
+  }
+
+  .site-header .navbar {
+    padding-inline: 15px;
+  }
+
+  .navbar-toggler[aria-expanded="true"] .bar.bar1 {
+    transform: rotate(45deg);
+  }
+
+  .navbar-toggler[aria-expanded="true"] .bar {
+    margin: -2px;
+    transition: all 0.3s ease-in-out;
+  }
+
+  .navbar-toggler[aria-expanded="true"] .bar.bar3 {
+    transform: rotate(-45deg);
+  }
+
+  .navbar-toggler[aria-expanded="true"] .bar.bar2 {
+    display: none;
+  }
+
+  .cnt-head h1 {
+    padding-top: 60px;
+    padding-bottom: 60px;
+  }
+
+  .under-contruction-bnr .bnr-logo img {
+    width: 200px;
+  }
+
+  .under-contruction-bnr .bnr-logo {
+    margin-bottom: 15px;
+  }
+
+  .under-contruction-bnr .m-cntnt {
+    max-width: 330px;
+  }
+
+  .under-foorter p {
+    font-size: 15px;
+  }
+
+  .header2 {
+    padding-block: 10px;
+  }
+
+  .mt-163 {
+    margin-top: 64px;
+  }
+
+  .home-bnr .m-img img {
+    width: 420px;
+  }
+
+  .home-bnr .m-img {
+    left: -20px;
+  }
+
+  .home-bnr .img-social img {
+    width: 76px;
+  }
+
+  .home-bnr .m-cntnt {
+    right: 0px;
+  }
+
+  .cta {
+    padding: 11px 32px;
+    font-size: 14px;
+  }
+
+  .raise-row,
+  .raise-crds {
+    gap: 15px;
+  }
+
+  .k-crd {
+    flex: unset;
+    width: 47%;
+  }
+
+  .raise-cnnt {
+    max-width: 100%;
+    margin-left: 0;
+  }
+
+  .king-row {
+    flex-wrap: wrap;
+    gap: 20px;
+  }
+
+  .rai-crd {
+    padding: 40px 20px;
+  }
+
+  .k-crd {
+    padding: 0;
+    padding-block: 20px;
+  }
+
+  .k-crd:not(:last-child) {
+    border-right: unset;
+    border-bottom: 1px solid;
+    border-image: linear-gradient(180deg,
+        rgba(255, 255, 255, 0.3) 0%,
+        rgba(255, 255, 255, 0.078) 100%) 1;
+  }
+
+  .k-crd:nth-child(3) {
+    border: unset;
+  }
+
+  .text-inn h3 {
+    font-size: 30px;
+  }
+
+  .foot-top {
+    padding-top: 83px;
+    padding-bottom: 65px;
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .foot-lft,
+  .foot-rgt {
+    width: 100%;
+  }
+
+  .foo-img img {
+    width: 290px;
+  }
+
+  .foot-rgt .social-list-hd {
+    padding-top: 20px !important;
+    justify-content: start;
+  }
+
+  .under-contruction-bnr.home-bnr .bnr-logo img {
+    width: 230px;
+  }
+
+  .site-header .menu-right .hdr-social ul li a i.fa-solid.fa-music {
+    font-size: 10px;
+  }
+
+  .foot-rgt .social-list-hd li:last-child a {
+    margin-top: 0px !important;
+    display: block;
+  }
+
+  .home-bnr .img-social {
+    gap: 10px;
+  }
+
+  .faq-sec h3 {
+    font-size: 34px;
+  }
+
+  /* impact */
+  .impact-para {
+    max-width: 500px;
+  }
+
+  .impact-bnnr-sec .king-row {
+    padding-top: 40px;
+    padding-bottom: 40px;
+  }
+
+  .impact-bnnr-sec .raise-cnnt {
+    max-width: 100%;
+    margin-left: 0px;
+  }
+
+  .mission-sec {
+    padding-top: 60px;
+    padding-bottom: 60px;
+  }
+
+  .mission-txt .mission-para,
+  .mission-txt:not(:first-child) .mission-para {
+    max-width: 100%;
+  }
+
+  .mission-row.sec-with-bg {
+    gap: 30px;
+  }
+
+  .mission-txt:not(:last-child) {
+    margin-bottom: 20px;
+  }
+
+  /* contact , terms, privacy */
+  .cntform {
+    padding: 45px;
+  }
+
+  .contpt-pt-pb {
+    padding: 80px 0px 80px 0px;
+  }
+
+  .pryhead {
+    margin-bottom: 30px;
+  }
+
+  .pryhead h3 {
+    margin-bottom: 20px;
+  }
+
+  .pvc-cont h6:not(:first-of-type) {
+    margin-top: 30px;
+  }
+
+  .pvc-cont p {
+    margin-bottom: 16px;
+
+  }
+
+  .workship-banner .wrk-logo img {
+    width: 80px;
+  }
+
+
+  .teach-banner .teach-banner-wrapper,
+  .workship-banner .container {
+    max-width: 85%;
+
+  }
+
+  .teach-banner .banner-slider-wrp,
+  .workship-banner .banner-slider-wrp {
+    padding-top: 35px;
+  }
+
+  .v-wrap-top {
+    padding-top: 58px;
+    padding-bottom: 65px;
+  }
+
+
+  .tech-slider-wrp .slick-arrow,
+  .libery-warrper .slick-arrow {
+    width: 35px;
+    height: 35px;
+  }
+
+  .tech-slider-wrp .slick-prev::before,
+  .tech-slider-wrp .slick-next::before,
+  .libery-warrper .slick-prev::before,
+  .libery-warrper .slick-next::before {
+    width: 13px;
+    height: 13px;
+  }
+
+  .libery-warrper .slick-prev {
+    left: -9%;
+  }
+
+  .libery-warrper .slick-next {
+    right: -9%;
+  }
+
+  .teach-play {
+    width: 50px;
+    height: 50px;
+  }
+
+  .play-icon {
+    width: 15px;
+    height: 15px;
+  }
+
+  .image-side img {
+    width: 100%;
+  }
+
+  .anchor-side {
+    padding-top: 20px;
+  }
+
+  .vid-iner-side .row> :nth-child(3) .inner-tp-con p,
+  .vid-iner-side .row> :nth-child(4) .inner-tp-con p,
+  .vid-iner-side .row> :nth-child(5) .inner-tp-con p {
+    max-width: 100%;
+  }
+
+  .social-grid {
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+  }
+
+  .x-main-con {
+    padding: 36px;
+  }
+
+  .workship-banner {
+    padding-bottom: 40px;
+  }
+
+  .workship-banner .wrk-logo {
+    margin-top: 40px;
+  }
+
+  /* giving */
+
+  .faq-sec {
+    padding-top: 60px;
+    padding-bottom: 60px;
+  }
+
+  .faq-quote {
+    padding-top: 30px;
+  }
+
+  .giving-bnnr-sec {
+    padding-block: 60px;
+  }
+
+  .giving-row .raise-cnnt {
+    max-width: 100%;
+    margin-left: 0px;
+  }
+
+  .giving-row {
+    margin-top: 50px;
+  }
+
+  .giving-opt-elemnt {
+    padding: 14px 16px;
+  }
+
+  .giving-opt .giving-checkbox {
+    width: 24px;
+    height: 24px;
+  }
+
+  .giving-opt {
+    gap: 10px;
+  }
+
+  .giving-form-sec {
+    padding-top: 50px;
+    padding-bottom: 50px;
+  }
+
+  .giving-row .giving-hd h3 {
+    text-align: left;
+  }
+
+  .gftbtnsubmit button {
+
+    padding: 15px 25px;
+  }
+
+  .amount-box,
+  .paymentoption {
+    padding: 20px;
+  }
+
+  .btnsgiv button,
+  .giftgroup input,
+  .otpmsg textarea {
+    padding: 15px;
+  }
+
+  .giftgroup {
+    margin-bottom: 15px;
+  }
+
+  .giftgroup input::placeholder,
+  .textbank {
+    font-size: 16px;
+  }
+
+  .customradio {
+    width: 25px;
+    height: 25px;
+  }
+
+  .onlintgiv-head p {
+    margin-bottom: 20px;
+  }
+
+  .paymntmthd~.otpmsg {
+    margin-top: 20px;
+  }
+
+  .otpmsg textarea {
+    min-height: 120px;
+  }
+
+  .gftbtnsubmit {
+    margin: 20px 0;
+  }
+
+  .aftercomp p {
+    padding-top: 20px;
+  }
+
+
+  .onlintgiv-head h5 {
+    font-size: 18px;
+  }
+
+  .onlintgiv-head p {
+    margin-bottom: 14px;
+    max-width: 460px;
+    font-size: 15px;
+  }
+
+  .selctgift .row>div:first-child,
+  .selctgift .row>div:nth-child(2) {
+    margin-top: 0px;
+  }
+
+  .amount-box h5 {
+    font-size: 20px;
+    margin-bottom: 6px;
+  }
+
+  .frequency-req,
+  .giftformrow {
+    gap: 16px;
+  }
+
+  .donreq p {
+    margin: 14px 0px 0px 0px;
+    font-size: 16px;
+  }
+
+  .btnsgiv button,
+  .giftgroup input,
+  .otpmsg textarea {
+    padding: 12px;
+  }
+
+  .giftgroup input::placeholder,
+  .otpmsg textarea {
+    font-size: 14px;
+
+  }
+
+  .amount-box,
+  .paymentoption {
+    padding: 16px;
+  }
+
+  .textbank,
+  .paymntmthd p,
+  .aftercomp p {
+    font-size: 16px;
+  }
+
+  .gftbtnsubmit button {
+    font-size: 14px;
+    padding: 12px 25px;
+  }
+
+  .site-header .nav-link::after,
+  .nav-link.active::after {
+    width: 20px;
+  }
+
+  .about-bnnr-img {
+    position: static;
+    width: 100%;
+
+  }
+
+  .about-bnnr {
+    padding-bottom: 0;
+  }
+
+
+  .about-content {
+    flex-direction: column-reverse;
+    gap: 30px;
+  }
+
+  .about-content-cont {
+    max-width: 100%;
+  }
+
+  .faq-sec {
+    padding-top: 60px;
+    padding-bottom: 60px;
+  }
+
+  .faq-quote {
+    padding-top: 30px !important;
+    max-width: 580px !important;
+  }
+
+  .bod-member {
+    padding: 18px 16px;
+  }
+
+  .bod-list {
+    gap: 16px;
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .BOD-sec {
+    padding-top: 80px;
+    padding-bottom: 80px;
+  }
+
+  .newsletter-sec {
+    padding-block: 90px;
+  }
+
+  .newsletter-sec .king-innr .r-btn {
+    margin-top: 14px;
+  }
+
+  .bod-member h6 {
+    margin-bottom: 5px;
+  }
+
+  .newsletter-sec .king-innr {
+    max-width: 600px;
+  }
+
+  .raise-crds {
+    gap: 40px;
+  }
+
+  .raising-up .raise-crds>div:not(:last-child) .rai-crd::after {
+    right: unset;
+    bottom: 0;
+    top: unset;
+    left: 50%;
+    transform: translate(-50%, 32px) rotate(90deg);
+  }
+}
+
+@media (max-width: 767px) {
+  :root {
+    --size-45: 34px;
+    --size-30: 20px;
+    --size-28: 18px;
+    --size-27: 16px;
+    --size-32: 22px;
+    --size-62: 40px;
+  }
+
+  h2 {
+    font-size: 48px;
+  }
+
+  h3 {
+    font-size: 35px;
+  }
+
+  .pt-120 {
+    padding-top: 70px;
+  }
+
+  .pt-200 {
+    padding-top: 60px;
+  }
+
+  .ft_90 {
+    font-size: 45px;
+  }
+
+  body {
+    font-size: 16px;
+  }
+
+  .foot-top,
+  .foot-btm {
+    padding-inline: 15px;
+  }
+
+  .f-btm-list {
+    flex-direction: column;
+  }
+
+  .fs-list {
+    justify-content: center;
+    gap: 20px;
+  }
+
+  .foo-img,
+  .foo-img a {
+    display: flex;
+    justify-content: center;
+  }
+
+  .foot-rgt {
+    display: flex;
+    flex-direction: column-reverse;
+    gap: 30px;
+    justify-content: center;
+    text-align: center;
+  }
+
+  .foot-rgt h5 {
+    justify-content: center;
+  }
+
+  .foot-rgt .social-list-hd {
+    justify-content: center;
+  }
+
+  .king-innr h3 {
+    margin-top: 10px;
+    margin-bottom: 20px;
+  }
+
+  .under-contruction-bnr .m-cntnt {
+    position: static;
+  }
+
+  .bnr-row.d-flex {
+    flex-direction: column-reverse;
+  }
+
+  .for-desk {
+    display: none;
+  }
+
+  .mob-img {
+    display: block;
+  }
+
+  .m-img img {
+    width: 100%;
+  }
+
+  .rai-crd {
+    border-radius: 15px;
+  }
+
+  /* impact */
+
+  .impact-para {
+    max-width: 100%;
+  }
+
+  .impact-bnnr-sec .king-row {
+    padding-top: 24px;
+    padding-bottom: 24px;
+  }
+
+  .impact-bnnr-sec .king-row .k-crd {
+    padding: 20px 18px;
+  }
+
+  .mission-row.sec-with-bg {
+    gap: 26px;
+  }
+
+  .impact-bnnr-sec .raise-cnnt h5 {
+    font-size: 24px;
+  }
+
+
+  /* terms , contact ,  */
+
+
+  .cntform {
+    padding: 30px;
+    border-radius: 15px;
+  }
+
+  .conttext input,
+  .conttext textarea {
+    padding: 15px;
+  }
+
+  .conttext input::placeholder {
+    font-size: 14px;
+  }
+
+  .conttext textarea::placeholder {
+    font-size: 14px;
+  }
+
+  .conttext textarea {
+    height: 100px;
+  }
+
+  .subbtncnt {
+    margin-top: 25px;
+  }
+
+  .subbtncnt button {
+    font-size: 13px;
+  }
+
+  .contpt-pt-pb {
+    padding: 50px 0px 50px 0px;
+
+  }
+
+  .pryhead {
+    margin-bottom: 20px;
+  }
+
+  .pvc-cont span {
+    font-size: 16px;
+  }
+
+  .teach-video-box {
+    border-radius: 12px;
+  }
+
+  .tech-slider-wrp .slick-prev {
+    left: -9%;
+  }
+
+  .tech-slider-wrp .slick-next {
+    right: -9%;
+  }
+
+  .teach-banner .banner-slider-wrp,
+  .workship-banner .banner-slider-wrp {
+    padding-top: 41px;
+  }
+
+  .platform-tabs {
+
+    gap: 12px;
+
+  }
+
+  .wrk-logo {
+    margin-top: 30px;
+  }
+
+  .social-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .social-card .image-side,
+  .social-card .image-side.video-side,
+  .x-main-con {
+    height: 100%;
+  }
+
+  .x-main-con {
+    padding: 50px;
+  }
+
+
+  /* giving */
+
+  .faq-quote {
+    padding-top: 20px;
+  }
+
+  .faq-sec {
+    padding-top: 40px;
+    padding-bottom: 40px;
+  }
+
+  .faq-content .accordion-item {
+    margin-bottom: 14px;
+  }
+
+  .giving-bnnr-sec {
+    padding-block: 50px;
+  }
+
+  .giving-row {
+    margin-top: 45px;
+  }
+
+  .giving-opt .giving-checkbox {
+    width: 20px;
+    height: 20px;
+    flex: 0 0 20px;
+    margin-top: 4px;
+  }
+
+  .giving-opt-elemnt {
+    padding: 12px 14px;
+  }
+
+  .pb-120 {
+    padding-bottom: 60px;
+  }
+
+  .giving-form-quote {
+    padding-top: 50px;
+
+  }
+
+  .giving-form-quote p br {
+    display: none;
+  }
+
+  .giving-opt-elemnt .giving-checkbox::before {
+    width: 10px;
+    height: 10px;
+  }
+
+  .appribtn {
+    margin: 20px 0px 0px 0px;
+  }
+
+  .frequency-req,
+  .giftformrow {
+    flex-direction: column;
+  }
+
+  .frequency-req {
+    gap: 15px;
+  }
+
+  .giftformrow {
+    gap: 0;
+  }
+
+  .amount-box input {
+    width: 50%;
+  }
+
+  .customradio {
+    width: 20px;
+    height: 20px;
+  }
+
+  .paymentoption {
+    gap: 7px;
+  }
+
+  .donfrq {
+    margin: 15px 0;
+  }
+
+  .amount-box h5 {
+    font-size: 20px;
+  }
+
+  .paymntmthd p,
+  .slctxt,
+  .aftercomp p,
+  .donreq p,
+  .btnsgiv button {
+    font-size: 16px;
+  }
+
+  .selctgift .row>div:first-child {
+    margin-top: 0px;
+  }
+
+  .selctgift .row>div:nth-child(2) {
+    margin-top: 16px;
+  }
+
+
+  .giftgroup,
+  .giftgroup::before,
+  .paymentoption,
+  .paymentoption::before,
+  .textarea-wrap,
+  .textarea-wrap::before,
+  .btnsgiv,
+  .btnsgiv::before {
+    border-radius: 8px;
+  }
+
+  .paymentoption {
+    margin-bottom: 14px;
+  }
+
+  .about-quote-cont {
+    margin-bottom: 14px;
+  }
+
+  .bod-member {
+    padding: 16px 14px;
+
+  }
+
+  .BOD-sec {
+    padding-top: 60px;
+    padding-bottom: 60px;
+  }
+
+  .accordion-item .accordion-button {
+    padding-block: 12px;
+  }
+
+  .faq-content .accordion-button::after {
+    width: 28px;
+    height: 28px;
+  }
+
+  .faq-quote {
+    padding-top: 20px !important;
+  }
+
+  .faq-sec {
+    padding-top: 40px;
+    padding-bottom: 40px;
+  }
+
+  .bod-hd {
+    margin-bottom: 16px;
+  }
+
+  .newsletter-sec {
+    padding-block: 70px;
+  }
+
+  .accordion-item .accordion-body {
+    padding-block: 12px;
+  }
+
+  .faq-content .accordion-item {
+    margin-bottom: 14px;
+  }
+
+  .bod-member h6 {
+    font-size: 18px;
+  }
+
+  .bod-list {
+    gap: 14px;
+  }
+
+  .faq-quote h3 {
+    font-size: 27px;
+  }
+}
+
+@media (max-width: 575px) {
+  :root {
+    --size-137: 51px;
+    --size-27: 16px;
+    --size-36: 18px;
+    --size-24: 18px;
+    --size-32: 17px;
+    --size-38: 20px;
+    --size-45: 32px;
+    --size-30: 18px;
+    --size-28: 16px;
+    --size-45: 28px;
+    --size-62: 32px;
+  }
+
+  h1 {
+    font-size: 50px;
+  }
+
+  h3 {
+    font-size: 28px;
+  }
+
+  h2 {
+    font-size: 38px;
+    line-height: 1.1;
+  }
+
+  h4 {
+    font-size: 24px;
+  }
+
+  h5 {
+    font-size: 23px;
+  }
+
+  .pb-140 {
+    padding-bottom: 50px;
+  }
+
+  .pb-120 {
+    padding-bottom: 60px;
+  }
+
+  .k-crd p {
+    margin: 0;
+  }
+
+  .pt-90 {
+    padding-top: 40px;
+  }
+
+  .ft_90 {
+    font-size: 37px;
+  }
+
+  .k-crd {
+    flex: unset;
+    width: 100%;
+  }
+
+  .rai-crd p {
+    margin: 0;
+  }
+
+  .raise-cnnt {
+    margin-left: 0;
+  }
+
+  .k-crd:nth-child(3) {
+    border-bottom: 1px solid;
+    border-image: linear-gradient(180deg,
+        rgba(255, 255, 255, 0.3) 0%,
+        rgba(255, 255, 255, 0.078) 100%) 1;
+  }
+
+  .under-contruction-bnr .bnr-logo img {
+    width: 170px;
+  }
+
+  .home-bnr .img-social img {
+    width: 60px;
+  }
+
+
+
+  .under-contruction-bnr.home-bnr .bnr-logo img {
+    width: 200px;
+    margin-bottom: 10px;
+  }
+
+  .home-bnr .img-social {
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+
+  .under-contruction-bnr .m-cntnt {
+    padding-bottom: 10px;
+  }
+
+  .cta {
+    padding: 11px 32px;
+    font-size: 12px;
+  }
+
+  .home-bnr .m-img {
+    left: 0;
+  }
+
+  .site-header .navbar-brand img {
+    width: 180px;
+  }
+
+  .header2.active .navbar-brand img {
+    min-width: 150px;
+    width: 150px;
+  }
+
+  .mt-163 {
+    margin-top: 79px;
+  }
+
+  .under-foorter p {
+    padding-block: 30px;
+  }
+
+  .menu-right {
+    padding: 30px;
+  }
+
+  .slick-arrow {
+    height: 40px;
+    width: 40px;
+  }
+
+  .slick-arrow img {
+    width: 12px;
+  }
+
+  .testimonials-sec {
+    padding-bottom: 150px;
+  }
+
+  .text-inn h3 {
+    font-size: 23px;
+  }
+
+  .pt-224 {
+    padding-top: 50px;
+  }
+
+  .pb-224 {
+    padding-bottom: 50px;
+  }
+
+  .pt-100 {
+    padding-top: 50px;
+  }
+
+  .pt-125 {
+    padding-top: 45px;
+  }
+
+  .pt-200 {
+    padding-top: 40px;
+  }
+
+  .pt-120 {
+    padding-top: 50px;
+  }
+
+  .foo-img img {
+    width: 60%;
+  }
+
+  .foot-top {
+    padding-top: 55px;
+    padding-bottom: 35px;
+  }
+
+  .foot-rgt .social-list-hd li a i {
+    font-size: 20px;
+  }
+
+  .fs-list li a {
+    font-size: 14px;
+  }
+
+  .fs-list {
+    gap: 18px 30px;
+    margin-top: 24px;
+  }
+
+  .foot-rgt .social-list-hd {
+    padding-top: 24px !important;
+  }
+
+  .foot-top {
+    gap: 0;
+  }
+
+  .foot-btm {
+    font-size: 14px;
+  }
+
+  .k-img img {
+    width: 50px;
+    height: 40px;
+  }
+
+  .attach-fixed {
+    background-attachment: unset;
+  }
+
+  .kingdom-sec {
+    background-position: left;
+  }
+
+  .home-bnr h1 {
+    max-width: 160px;
+    margin: auto;
+  }
+
+  .king-row {
+    max-width: 85%;
+    margin: auto;
+  }
+
+  .sli-arrws {
+    gap: 10px;
+  }
+
+
+
+  .impact-para p {
+    text-align: center;
+    font-size: 16px;
+  }
+
+  .impact-bnnr-sec .raise-cnnt p {
+
+    font-size: 16px;
+  }
+
+  .raise-row.reach-sec {
+    gap: 20px;
+  }
+
+  .mission-sec {
+    padding-top: 40px;
+    padding-bottom: 40px;
+  }
+
+  .mission-hd h3 {
+    font-size: 25px;
+  }
+
+  .home-bnr h1 {
+    max-width: 250px;
+    margin: auto;
+    font-size: 70px;
+  }
+
+  .gb2 {
+    height: 18px;
+  }
+
+  .landing-cons .m-img {
+    display: flex;
+    align-items: end;
+  }
+
+  .landing-cons .bnr-row {
+    flex-direction: column-reverse;
+    justify-content: space-between;
+    min-height: calc(100dvh - 180px);
+  }
+
+  .foot-rgt .social-list-hd li a i.fa-solid.fa-music {
+    font-size: 11px;
+    padding: 5px;
+  }
+
+  .foot-rgt .social-list-hd li:last-child a {
+    margin-top: -4px !important;
+  }
+
+
+  /* privacy , terms , contact */
+  .cntform {
+    padding: 18px;
+  }
+
+  .conttext label {
+    font-size: 15px;
+  }
+
+  .conttext {
+    margin-bottom: 15px;
+  }
+
+  .pvc-cont h6:not(:first-of-type) {
+    margin-top: 20px;
+  }
+
+  .cnt-head h1 {
+    padding-top: 40px;
+    padding-bottom: 35px;
+  }
+
+  .conttext input,
+  .conttext textarea {
+    border-radius: 5px;
+    padding: 10px 15px;
+  }
+
+  .subbtncnt button {
+    padding-top: 13px;
+
+  }
+
+  .prycsection h6 {
+    font-size: 21px;
+  }
+
+
+
+  .ban-tp-side h6 {
+    font-size: 18px;
+  }
+
+  .teach-banner .teach-banner-wrapper,
+  .workship-banner .container {
+    max-width: 100%;
+  }
+
+
+
+  .ban-tp-side p {
+    margin: 5px 0 4px;
+  }
+
+  .ban-tp-side {
+    margin-bottom: 20px;
+  }
+
+
+
+  .vid-iner-side {
+    margin-top: 15px;
+  }
+
+  .vid-iner-side .row {
+    row-gap: 20px;
+  }
+
+
+  .wrk-logo img {
+    max-width: 80%;
+  }
+
+  .wrk-logo {
+    margin-top: 90px;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 16px;
+  }
+
+
+
+  .teach-slider-main .slick-dots li button:before {
+    font-size: 12px;
+    color: var(--brown);
+  }
+
+  .teach-slider-main .slick-dots li.slick-active button:before {
+    opacity: 1;
+  }
+
+  .banner-slider-wrp.pt-200 {
+    padding-top: 22px;
+  }
+
+  .platform-tabs button {
+    padding: 10px 25px;
+  }
+
+  .all-tp-side .al-tp-ryt a.cta {
+    font-size: 12px;
+    line-height: 100%;
+  }
+
+  .social-card .inner-tp-con h5 {
+    font-size: 22px;
+  }
+
+  .x-main-con {
+    padding: 30px;
+  }
+
+  .social-card .anchor-side {
+    padding-bottom: 6px;
+  }
+
+  .teach-banner .banner-slider-wrp,
+  .workship-banner .banner-slider-wrp {
+    padding-top: 30px;
+    text-align: center;
+  }
+
+  .teach-banner .banner-slider-wrp,
+  .workship-banner .banner-slider-wrp {
+    padding-top: 25px;
+  }
+
+  .teach-banner-wrapper .ban-tp-side h5 {
+    padding-bottom: 1px;
+    font-size: 17px;
+  }
+
+  .teach-banner-wrapper .ban-tp-side h6 {
+    margin-top: -3px;
+    text-align: center;
+    width: 100%;
+    font-size: 17px;
+  }
+
+  .banner-slider-wrp .slick-dots {
+    bottom: -60px;
+  }
+
+  .platform-tabs button {
+    width: 100%;
+  }
+
+  .anchor-side a.cta {
+    font-size: 12px;
+  }
+
+  .social-card .video-play-btn {
+    height: 45px;
+    width: 45px;
+  }
+
+  .social-card .video-play-btn {
+    height: 45px;
+    width: 45px;
+  }
+
+  .social-card .video-play-btn i {
+    font-size: 17px;
+  }
+
+
+  .workship-banner .wrk-logo {
+    margin-top: 80px;
+  }
+
+  /* giving */
+
+
+  .faq-content .accordion-button::after {
+    width: 24px;
+    height: 24px;
+  }
+
+  .giving-bnnr-sec,
+  .giving-form-sec {
+    padding-block: 40px;
+  }
+
+  .giving-form-quote {
+    padding-top: 40px;
+  }
+
+  .amount-box {
+    padding: 15px;
+  }
+
+  .gftbtnsubmit button,
+  .giftgroup input::placeholder,
+  .textbank,
+  .paymntmthd p,
+  .slctxt,
+  .aftercomp p,
+  .donreq p,
+  .btnsgiv button,
+  .otpmsg textarea {
+    font-size: 14px;
+  }
+
+  .onlintgiv-head p,
+  .onlintgiv-head span {
+    font-size: 16px;
+  }
+
+
+  .amount-box input {
+    width: 50%;
+  }
+
+  .giftgroup input,
+  .otpmsg textarea {
+    padding: 10px;
+  }
+
+  .giving-row {
+    margin-top: 35px;
+  }
+
+  .donreq h6,
+  .giftform h6,
+  .choose-amount h6 {
+    font-size: 16px;
+  }
+
+  .amount-box::before {
+    border-radius: 10px;
+  }
+
+  .giving-opt-elemnt.active:first-child .giftform,
+  .giving-opt-elemnt.active:first-child .paymntmthd~.otpmsg {
+    margin-top: 12px;
+  }
+
+  .giftform h6 {
+    margin-bottom: 13px;
+  }
+
+  .giving-form-container.pb-120 {
+    padding-bottom: 50px;
+  }
+
+  .tech-slider-wrp .slick-arrow {
+    display: none !important;
+  }
+
+  .faq-content .accordion-button::after {
+    width: 24px;
+    height: 24px;
+  }
+
+  .bod-list {
+    grid-template-columns: 1fr;
+  }
+
+  .bod-member {
+    border-radius: 10px;
+  }
+
+  .BOD-sec {
+    padding-top: 40px;
+    padding-bottom: 40px;
+  }
+
+  .newsletter-sec {
+    padding-block: 50px;
+  }
+
+  .about-quote-cont .quote h5,
+  .about-quote-cont .quote-info p {
+    font-size: 16px;
+  }
+
+  .faq-quote h3 {
+    font-size: 22px;
+  }
+
+  .libery-warrper {
+    max-width: 100%;
+  }
+
+  .libery-warrper .slick-arrow {
+    top: 109%;
+    display: flex !important;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .libery-warrper .slick-next {
+    right: 33%;
+    transform: translateX(-50%);
+  }
+
+  .libery-warrper .slick-prev {
+    left: 38%;
+    transform: translateX(-50%);
+  }
+
+  .libery-sec.pb-140 {
+    padding-bottom: 90px;
+  }
+
+  .libery-warrper iframe {
+    height: 250px;
+  }
+
+  .r-btn {
+    margin-top: 20px;
+  }
+}
