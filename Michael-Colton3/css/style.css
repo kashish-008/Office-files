@@ -2675,7 +2675,7 @@ input[type="number"] {
   padding-top: 104px !important;
 }
 
-/* =====Kashish==== */
+/* =====Kashish css start here==== */
 .prayer-wall .raise-cnnt {
   max-width: 491px;
 }
@@ -2979,54 +2979,8 @@ input[type="number"] {
   pointer-events: none;
   width: 16px;
 }
-@media (max-width: 1599px) {
-  .submit-prayer-top {
-    margin-bottom: 50px;
-  }
+.submit-prayer-sec .gftbtnsubmit {
+  margin-bottom: 0;
 }
 
-@media (max-width: 1399px) {
-  .submit-prayer-top {
-    margin-bottom: 40px;
-  }
-  .prayer-wall-paymentoption.paymentoption {
-    padding: 0;
-  }
-  .prayer-card {
-    margin-top: 27px;
-    padding: 32px 45px;
-  }
-}
-
-@media (max-width: 991px) {
-  .submit-prayer-top {
-    margin-bottom: 30px;
-    text-align: center;
-  }
-}
-
-@media (max-width: 575px) {
-  .pt-80 {
-    padding-top: 50px;
-  }
-  .prayer-card {
-    margin-top: 17px;
-    padding: 22px 25px;
-  }
-  .prayer-card-btm {
-    flex-wrap: wrap;
-    gap: 10px;
-  }
-  .testimony-modal-inner {
-    padding: 22px;
-  }
-  .testimony-modal-hd h5 {
-    margin-bottom: 8px;
-  }
-  .testimony-row {
-    flex-wrap: wrap;
-  }
-  .cnt-radio-opt{
-    font-size: 15px;
-  }
-}
+/* ======kashish css end here==== */
