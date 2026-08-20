@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        /* Default: label centered vertically (no option selected) */
+        .form-floating>#modalCompanySize~label {
+            top: 50% !important;
+            transform: translateY(-50%) !important;
+            opacity: 1 !important;
+            font-size: 1rem !important;
+            transition: top 0.2s ease, transform 0.2s ease, font-size 0.2s ease, opacity 0.2s ease;
+        }
+
+        /* When option selected: label floats up to top */
+        .form-floating>#modalCompanySize.select-filled~label {
+            top: 0 !important;
+            transform: scale(0.85) translateY(-1.7rem) translateX(0.15rem) !important;
+            opacity: 0.65 !important;
+        }
+
+        /* Adjust select padding when filled */
+        #modalCompanySize.select-filled {
+            padding-top: 0.625rem !important;
+            padding-bottom: 0.625rem !important;
+        }
+
+        .form-select:focus {
+            border-color: var(--bs-border-color) !important;
+            outline: 0;
+            box-shadow: none !important;
+        }
+
+        .form-floating>.form-control:not(:placeholder-shown)~label,
+        .form-floating>.form-control-plaintext~label,
+        .form-floating>.form-control:focus~label,
+        .form-floating>.form-control:not(:placeholder-shown)~label {
+            transform: scale(0.85) translateY(-1.5rem) translateX(0.15rem);
+            color: #80868b;
+            font-size: 11px !important;
+        }
+
+        .form-floating>.form-control:not(:placeholder-shown),
+        .form-floating>.form-select,
+        .form-floating>.form-control-plaintext:focus,
+        .form-floating>.form-control-plaintext:not(:placeholder-shown),
+        .form-floating>.form-control:focus,
+        .form-floating>.form-control:not(:placeholder-shown) {
+            padding-top: 0.625rem;
+            padding-bottom: 0.625rem;
+        }
+
+        .form-floating>label {
+            position: absolute;
+            color: #80868b;
+            font-size: 16px;
+            font-weight: 400;
+            overflow: hidden;
+            white-space: nowrap;
+            user-select: none;
+            pointer-events: none;
+            padding: 13px 15px;
+        }
+
+        .form-floating>.form-control,
+        .form-floating>.form-control-plaintext,
+        .form-floating>.form-select {
+            height: 50px !important;
+            min-height: 50px !important;
+        }
+    </style>
+</head>
+
+<body class="p-5">
+    <div class="form-floating mb-3" style="max-width: 400px;">
+        <select name="company_size" id="modalCompanySize" class="form-select" required>
+            <option value="" selected disabled hidden></option>
+            <option value="1">Freelance / Solo</option>
+            <option value="2">Small Business (1-50 emp.)</option>
+            <option value="3">Mid-Market (51-1000 emp.)</option>
+            <option value="4">Enterprise (&gt;1000 emp.)</option>
+        </select>
+        <label for="modalCompanySize">Company size</label>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const select = document.getElementById('modalCompanySize');
+            if (!select) return;
+
+            function updateFloatState() {
+                if (select.value !== '') {
+                    select.classList.add('select-filled');
+                } else {
+                    select.classList.remove('select-filled');
+                }
+            }
+
+            updateFloatState();
+            select.addEventListener('change', updateFloatState);
+        });
+    </script>
+</body>
+
+</html>
